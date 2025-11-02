@@ -10,16 +10,26 @@ jobs:
       - uses: actions/github-script@v7
         with:
           script: |
-            const reviewer = process.env.CLAUDE_PROXY_REVIEWER || process.env.EVE_REVIEWER || 'kaizencycle';
-            await github.rest.pulls.requestReviewers({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: context.payload.pull_request.number,
-              reviewers: [reviewer],
-            });
+            const userReviewer = process.env.EVE_REVIEWER || process.env.CLAUDE_PROXY_REVIEWER || 'kaizencycle';
+            const teamSlug = process.env.TEAM_EVE; // e.g. 'eve' if org = kaizencycle
+            if (teamSlug) {
+              await github.rest.pulls.requestReviewers({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: context.payload.pull_request.number,
+                team_reviewers: [teamSlug],
+              });
+            } else {
+              await github.rest.pulls.requestReviewers({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: context.payload.pull_request.number,
+                reviewers: [userReviewer],
+              });
+            }
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.payload.pull_request.number,
-              body: 'EVE gate engaged: codex/agent PR detected. Please satisfy the Claude Code Reviewer Checklist in the PR template before approval.'
+              body: 'EVE team gate engaged: `codex/agent` PR detected. Please satisfy the Claude Code Reviewer Checklist before approval.'
             });

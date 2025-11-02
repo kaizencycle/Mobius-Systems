@@ -1,0 +1,43 @@
+name: gi-guard
+on: [pull_request]
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - name: Detect destructive diffs
+        run: |
+          set -e
+          base=origin/${{ github.base_ref }}
+          head=HEAD
+          files_changed=$(git diff --name-status "$base".."$head" | wc -l)
+          deletions=$(git diff --diff-filter=D --name-only "$base".."$head" | wc -l)
+          big_moves=$(git diff --summary "$base".."$head" | grep -E 'rename|copy' | wc -l || true)
+          echo "files_changed=$files_changed"
+          echo "deletions=$deletions"
+          echo "big_moves=$big_moves"
+          # hard stops
+          if [ "$files_changed" -gt 1000 ]; then echo 'Too many files changed'; exit 1; fi
+          if [ "$deletions" -gt 200 ]; then echo 'Too many deletions'; exit 1; fi
+          # soft signal for review
+          if [ "$big_moves" -gt 50 ]; then echo 'Large renames/copies detected'; exit 1; fi
+      - name: Enforce path guardrails
+        run: |
+          set -e
+          critical_paths=('.' '.github' 'apps' 'packages' 'infra')
+          for p in "${critical_paths[@]}"; do
+            if git diff --name-only origin/${{ github.base_ref }}..HEAD | grep -E ^$p/ >/dev/null; then
+              echo "Touched critical path: $p — ensure explicit approval."
+            fi
+          done
+      - name: Require approval phrase
+        run: |
+          set -e
+          pr_body=$(jq -r .pull_request.body $GITHUB_EVENT_PATH)
+          echo "PR body:
+$pr_body"
+          echo "
+Looking for approval phrase..."
+          if ! echo "$pr_body" | grep -qi 'Never delete unless asked'; then
+            echo 'Missing approval phrase from Michael.'; exit 1; fi

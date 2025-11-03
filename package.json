@@ -1,6 +1,7 @@
 {
   "name": "kaizen-os",
   "version": "1.0.0",
+  "packageManager": "npm@10.9.4",
   "description": "Kaizen OS - Continuous Integrity Architecture Monorepo",
   "private": true,
   "workspaces": [

@@ -1,8 +1,15 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "version": 2,
+  "installCommand": "bash ../../scripts/vercel-install.sh",
   "buildCommand": "cd ../.. && npm run build --workspace=apps/aurea-site",
   "devCommand": "npm run dev",
   "framework": "nextjs",
-  "installCommand": "cd ../.. && npm install",
+  "build": {
+    "env": {
+      "NODE_VERSION": "20"
+    }
+  },
   "env": {
     "AGENT_ID": "AUREA",
     "AGENT_DOMAIN": "aurea.gic"

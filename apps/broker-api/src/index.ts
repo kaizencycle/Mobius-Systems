@@ -1,5 +1,5 @@
 // Thought Broker API - Placeholder implementation
-import express from 'express';
+import express, { Request, Response } from 'express';
 import cors from 'cors';
 import { urielDeliberate, UrielQuery } from '../../sentinels/uriel/index';
 
@@ -60,7 +60,8 @@ async function routeDeliberation(intent: string, context?: any) {
         source: response.source
       };
     } catch (error) {
-      console.warn('URIEL deliberation failed, falling back to standard:', error.message);
+      const errorMessage = error instanceof Error ? error.message : String(error);
+      console.warn('URIEL deliberation failed, falling back to standard:', errorMessage);
       // Fall through to standard deliberation
     }
   }
@@ -107,7 +108,7 @@ function extractTopics(intent: string): string[] {
 }
 
 // Health check endpoint
-app.get('/v1/loop/health', (req, res) => {
+app.get('/v1/loop/health', (_req: Request, res: Response) => {
   res.json({
     status: 'healthy',
     service: 'broker-api',
@@ -117,7 +118,7 @@ app.get('/v1/loop/health', (req, res) => {
 });
 
 // Placeholder endpoints
-app.post('/intents', (req, res) => {
+app.post('/intents', (req: Request, res: Response) => {
   res.json({
     id: `intent_${Date.now()}`,
     ...req.body,
@@ -127,7 +128,7 @@ app.post('/intents', (req, res) => {
   });
 });
 
-app.get('/intents/:id', (req, res) => {
+app.get('/intents/:id', (req: Request, res: Response) => {
   res.json({
     id: req.params.id,
     description: 'Sample intent',
@@ -137,7 +138,7 @@ app.get('/intents/:id', (req, res) => {
   });
 });
 
-app.post('/intents/:id/process', async (req, res) => {
+app.post('/intents/:id/process', async (req: Request, res: Response) => {
   try {
     const intentId = req.params.id;
     const intentText = req.body.intent || `Intent ${intentId}`;
@@ -147,16 +148,17 @@ app.post('/intents/:id/process', async (req, res) => {
     res.json(deliberation);
   } catch (error) {
     console.error('Deliberation routing failed:', error);
+    const errorMessage = error instanceof Error ? error.message : String(error);
     res.status(500).json({
       error: 'Deliberation failed',
-      message: error.message,
+      message: errorMessage,
       id: `deliberation_error_${Date.now()}`,
       timestamp: new Date().toISOString()
     });
   }
 });
 
-app.get('/deliberations/:id', (req, res) => {
+app.get('/deliberations/:id', (req: Request, res: Response) => {
   res.json({
     id: req.params.id,
     intent: 'sample-intent',
@@ -171,7 +173,7 @@ app.get('/deliberations/:id', (req, res) => {
 });
 
 // URIEL Sentinel Endpoint
-app.post('/api/sentinels/uriel/query', async (req, res) => {
+app.post('/api/sentinels/uriel/query', async (req: Request, res: Response) => {
   try {
     const query: UrielQuery = {
       intent: req.body.intent,
@@ -184,25 +186,26 @@ app.post('/api/sentinels/uriel/query', async (req, res) => {
     res.json(response);
   } catch (error) {
     console.error('URIEL query failed:', error);
+    const errorMessage = error instanceof Error ? error.message : String(error);
 
     // Check if it's a rate limit or GI threshold error
-    if (error.message.includes('Rate limit exceeded')) {
+    if (errorMessage.includes('Rate limit exceeded')) {
       res.status(429).json({
         error: 'Rate limit exceeded',
-        message: error.message,
+        message: errorMessage,
         sentinel: 'URIEL'
       });
-    } else if (error.message.includes('GI below threshold')) {
+    } else if (errorMessage.includes('GI below threshold')) {
       res.status(409).json({
         error: 'GI below threshold',
-        message: error.message,
+        message: errorMessage,
         fallback: 'eve',
         sentinel: 'URIEL'
       });
     } else {
       res.status(500).json({
         error: 'Internal server error',
-        message: error.message,
+        message: errorMessage,
         sentinel: 'URIEL'
       });
     }
@@ -210,7 +213,7 @@ app.post('/api/sentinels/uriel/query', async (req, res) => {
 });
 
 // Consensus endpoint
-app.post('/api/consensus/run', async (req, res) => {
+app.post('/api/consensus/run', async (req: Request, res: Response) => {
   try {
     const { question, agents, rounds = 2, timeout_s = 20, weights = {} } = req.body;
 
@@ -240,15 +243,16 @@ app.post('/api/consensus/run', async (req, res) => {
     });
   } catch (error) {
     console.error('Consensus run failed:', error);
+    const errorMessage = error instanceof Error ? error.message : String(error);
     res.status(500).json({
       error: 'Consensus failed',
-      message: error.message
+      message: errorMessage
     });
   }
 });
 
 // Sync endpoints
-app.get('/sync/get_cycle_status', (req, res) => {
+app.get('/sync/get_cycle_status', (_req: Request, res: Response) => {
   // Return cycle status (mock for now, integrate with actual cycle tracking)
   res.json({
     cycle_id: 'C-122',
@@ -258,7 +262,7 @@ app.get('/sync/get_cycle_status', (req, res) => {
   });
 });
 
-app.get('/api/sentinels/aurea/status', (req, res) => {
+app.get('/api/sentinels/aurea/status', (_req: Request, res: Response) => {
   // Return AUREA snapshot (mock for now)
   res.json({
     gi: 0.999,

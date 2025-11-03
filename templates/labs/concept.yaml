@@ -1,0 +1,13 @@
+# Template for concept/research labs
+id: labN
+name: "Lab N - <Name>"
+stage: concept
+anchor_sentinel: "<SENTINEL_ID>"
+attestation_policy: null
+purpose: "Research and experimentation"
+
+structure:
+  - README.md
+  - research/
+  - experiments/
+  - docs/

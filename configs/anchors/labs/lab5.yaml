@@ -1,0 +1,12 @@
+id: lab5
+name: "Lab5 — Ops & Integration"
+stage: concept
+anchor_sentinel: "ATLAS"
+attestation_policy: null
+purpose: "Operations and infrastructure integration"
+
+structure:
+  - README.md
+  - research/
+  - experiments/
+  - docs/

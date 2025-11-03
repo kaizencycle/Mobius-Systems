@@ -1,0 +1,12 @@
+id: lab2
+name: "Lab2 — Research & Study"
+stage: concept
+anchor_sentinel: "JADE"
+attestation_policy: null
+purpose: "Research and empirical validation"
+
+structure:
+  - README.md
+  - research/
+  - experiments/
+  - docs/

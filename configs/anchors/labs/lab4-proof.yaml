@@ -1,0 +1,21 @@
+id: lab4-proof
+name: "Lab4-proof — Reflections API"
+stage: proof
+anchor_sentinel: "HERMES"
+purpose: "Live Reflections API service for market dynamics and telemetry"
+
+gi_targets:
+  baseline: 0.990
+  alert_threshold: 0.950
+
+attestation_policy:
+  proof: "Proof of Integrity"
+  frequency: "per_cycle"
+  witness: "ZEUS"
+  signature_required: true
+
+interfaces:
+  inputs: ["telemetry", "market_data", "reflection_requests"]
+  outputs: ["pulses", "reports", "reflection_artifacts"]
+
+notes: "Proof lab - emits Proof of Integrity attestations, requires ZEUS witness"

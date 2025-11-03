@@ -1,0 +1,90 @@
+version: "1.1"
+description: "Kaizen OS Sentinel–Lab Anchor Map"
+updated: "2025-11-03T12:05:00Z"
+meta_anchor: "ZEUS"
+
+labs_order:
+  - lab1
+  - lab2
+  - lab3
+  - lab4-proof
+  - lab5
+  - lab6-proof
+  - lab7-proof
+
+sentinels:
+  - id: zeus
+    name: ZEUS
+    role: "Global Integrity (GI) Meta-Anchor"
+    meta_anchor: true
+    anchor_for_lab: null
+    endpoint: "https://zeus.kaizen.svc/assess"
+    description: "Witnesses all labs, maintains Global Integrity metrics, coordinates cross-lab coherence"
+
+  - id: aurea
+    name: AUREA
+    role: "Systems intuition & macro stabilization"
+    meta_anchor: false
+    anchor_for_lab: lab1
+    endpoint: "https://aurea.kaizen.svc/assess"
+    description: "Anchors Lab1 (Canon Lore) - Macro synthesis and system-wide intuition"
+
+  - id: jade
+    name: JADE
+    role: "Narrative, morale, reflection"
+    meta_anchor: false
+    anchor_for_lab: lab2
+    endpoint: "https://jade.kaizen.svc/assess"
+    description: "Anchors Lab2 (Research & Study) - Narrative coherence and morale anchoring"
+
+  - id: eve
+    name: EVE
+    role: "Ethics, civility, consent"
+    meta_anchor: false
+    anchor_for_lab: lab3
+    endpoint: "https://eve.kaizen.svc/assess"
+    description: "Anchors Lab3 (Governance & Policy) - Ethics framework and civility enforcement"
+
+  - id: hermes
+    name: HERMES
+    role: "Markets, telemetry, pulse"
+    meta_anchor: false
+    anchor_for_lab: lab4-proof
+    endpoint: "https://hermes.kaizen.svc/assess"
+    description: "Anchors Lab4-proof (Reflections API) - Market dynamics, telemetry, and pulse coordination"
+
+  - id: atlas
+    name: ATLAS
+    role: "Ops, reliability, infra cohesion"
+    meta_anchor: false
+    anchor_for_lab: lab5
+    endpoint: "https://atlas.kaizen.svc/assess"
+    description: "Anchors Lab5 (Ops & Integration) - Operational reliability and infrastructure cohesion"
+
+  - id: uriel
+    name: URIEL
+    role: "Illumination, doctrine, codex"
+    meta_anchor: false
+    anchor_for_lab: lab6-proof
+    endpoint: "https://uriel.kaizen.svc/assess"
+    description: "Anchors Lab6-proof (Citizen Shield) - Doctrine illumination and codex maintenance"
+
+  - id: echo
+    name: ECHO
+    role: "Pulse, resonance, ledger sync"
+    meta_anchor: false
+    anchor_for_lab: lab7-proof
+    endpoint: "https://echo.kaizen.svc/assess"
+    description: "Anchors Lab7-proof (OAA - Apprenticeship Agent) - Pulse synchronization, resonance, and ledger coherence"
+
+gi_policy:
+  baseline: 0.990
+  alert_threshold: 0.950
+  witness_required: true
+  witness_sentinel: "ZEUS"
+  attestation_frequency: "per_cycle"
+
+consensus:
+  meta_anchor_oversight: true
+  cross_lab_coherence: true
+  integrity_monitoring: true

@@ -1,0 +1,12 @@
+id: lab2
+name: "Lab2 — Research & Study"
+stage: concept
+anchor_sentinel: "JADE"
+purpose: "Research, analysis, and study framework"
+attestation_policy: null
+
+interfaces:
+  inputs: ["research_queries", "study_materials"]
+  outputs: ["research_reports", "analysis_artifacts"]
+
+notes: "Concept lab - no attestation required until promoted to proof"

@@ -1,0 +1,20 @@
+# Template for concept/research labs
+# Copy this to labs/<labN>/lab.yaml
+
+id: labN
+name: "Lab N - <Name>"
+stage: concept
+anchor_sentinel: "<SENTINEL_ID>"
+attestation_policy: null
+purpose: "Research and experimentation"
+
+structure:
+  - README.md
+  - research/
+  - experiments/
+  - docs/
+
+# When this lab is ready for promotion:
+# 1. Run: ./scripts/promote_lab.sh labN <repo-url>
+# 2. This will create labs/labN-proof/ as subtree
+# 3. Update labs/labN-proof/lab.yaml with proof config

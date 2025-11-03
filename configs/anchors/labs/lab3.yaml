@@ -1,0 +1,12 @@
+id: lab3
+name: "Lab3 — Governance & Policy"
+stage: concept
+anchor_sentinel: "EVE"
+purpose: "Governance framework and policy engine"
+attestation_policy: null
+
+interfaces:
+  inputs: ["policy_updates", "governance_queries"]
+  outputs: ["policy_documents", "governance_decisions"]
+
+notes: "Concept lab - no attestation required until promoted to proof"

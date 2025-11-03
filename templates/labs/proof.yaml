@@ -1,0 +1,33 @@
+# Template for live/attesting proof labs
+# This file should exist in labs/<labN>-proof/lab.yaml
+# after promotion via scripts/promote_lab.sh
+
+id: labN-proof
+name: "Lab N Proof - <Name>"
+stage: proof
+anchor_sentinel: "<SENTINEL_ID>"
+
+gi_targets:
+  baseline: 0.990
+  alert_threshold: 0.950
+
+attestation_policy:
+  proof: "Proof of Integrity"
+  frequency: "per_cycle"
+  witness: "ZEUS"
+  signature_required: true
+
+structure:
+  - README.md
+  - src/
+  - tests/
+  - docs/
+  - Makefile
+  - requirements.txt
+  - lab.yaml
+
+# This lab:
+# - Emits Proof of Integrity attestations per cycle
+# - Requires ZEUS witness for GI attestation
+# - Must maintain GI score ≥ 0.990 baseline
+# - Triggers CI workflow on changes (.github/workflows/attest-proof.yml)

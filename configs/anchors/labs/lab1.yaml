@@ -1,0 +1,12 @@
+id: lab1
+name: "Lab1 — Canon Lore"
+stage: concept
+anchor_sentinel: "AUREA"
+purpose: "Canonical knowledge base and lore maintenance"
+attestation_policy: null
+
+interfaces:
+  inputs: ["canon_updates", "lore_entries"]
+  outputs: ["canon_documents", "lore_artifacts"]
+
+notes: "Concept lab - no attestation required until promoted to proof"

@@ -1,0 +1,21 @@
+id: lab6-proof
+name: "Lab6-proof — Citizen Shield"
+stage: proof
+anchor_sentinel: "URIEL"
+purpose: "Citizen Shield security layer and ethics enforcement"
+
+gi_targets:
+  baseline: 0.990
+  alert_threshold: 0.950
+
+attestation_policy:
+  proof: "Proof of Integrity"
+  frequency: "per_cycle"
+  witness: "ZEUS"
+  signature_required: true
+
+interfaces:
+  inputs: ["security_events", "ethics_queries", "shield_requests"]
+  outputs: ["shield_reports", "security_artifacts", "ethics_decisions"]
+
+notes: "Proof lab - emits Proof of Integrity attestations, requires ZEUS witness"

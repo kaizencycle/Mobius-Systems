@@ -1,0 +1,12 @@
+id: lab5
+name: "Lab5 — Ops & Integration"
+stage: concept
+anchor_sentinel: "ATLAS"
+purpose: "Operations and infrastructure integration"
+attestation_policy: null
+
+interfaces:
+  inputs: ["ops_requests", "infra_updates"]
+  outputs: ["ops_reports", "integration_artifacts"]
+
+notes: "Concept lab - no attestation required until promoted to proof"

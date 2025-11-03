@@ -167,7 +167,7 @@ function parseYAMLLike(raw: string): any {
       AUREA: { provider: "openai", model_default: "gpt-4o", weight: 1.0, safety_tier: "critical" as Tier, capabilities: [] },
       ATLAS: { provider: "anthropic", model_default: "claude-3.5-sonnet", weight: 1.0, safety_tier: "critical" as Tier, capabilities: [] },
       ZENITH: { provider: "google", model_default: "gemini-2.0-flash-exp", weight: 0.9, safety_tier: "high" as Tier, capabilities: [] },
-      SOLARA: { provider: "deepseek", model_default: "deepseek-r1", weight: 0.7, safety_tier: "standard" as Tier, capabilities: [] }
+      ECHO: { provider: "deepseek", model_default: "deepseek-r1", weight: 0.7, safety_tier: "standard" as Tier, capabilities: [] }
     },
     tiers: {
       critical: { constitutional_min: 85, gi_min: 0.95, required_votes: 3, required_critical_votes: 1 },
@@ -181,7 +181,7 @@ function parseYAMLLike(raw: string): any {
       op_tier_mapping: { critical: [], high: [], standard: [], research: [] }
     },
     consensus: {
-      weights: { AUREA: 1.0, ATLAS: 1.0, ZENITH: 0.9, SOLARA: 0.7 },
+      weights: { AUREA: 1.0, ATLAS: 1.0, ZENITH: 0.9, ECHO: 0.7 },
       output_validation: true,
       input_validation: true,
       require_attestation: true,

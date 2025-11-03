@@ -1,0 +1,26 @@
+id: lab6-proof
+name: "Lab6-proof — Citizen Shield (Ethics)"
+stage: proof
+anchor_sentinel: "URIEL"
+
+gi_targets:
+  baseline: 0.990
+  alert_threshold: 0.950
+
+attestation_policy:
+  proof: "Proof of Integrity"
+  frequency: "per_cycle"
+  witness: "ZEUS"
+  signature_required: true
+
+interfaces:
+  inputs: ["telemetry", "security_events", "attestations"]
+  outputs: ["pulses", "reports", "artifacts"]
+
+structure:
+  - README.md
+  - src/
+  - tests/
+  - docs/
+  - Makefile
+  - requirements.txt

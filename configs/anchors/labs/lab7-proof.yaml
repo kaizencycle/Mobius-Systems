@@ -1,0 +1,26 @@
+id: lab7-proof
+name: "Lab7-proof — OAA (Apprenticeship Agent)"
+stage: proof
+anchor_sentinel: "ECHO"
+
+gi_targets:
+  baseline: 0.990
+  alert_threshold: 0.950
+
+attestation_policy:
+  proof: "Proof of Integrity"
+  frequency: "per_cycle"
+  witness: "ZEUS"
+  signature_required: true
+
+interfaces:
+  inputs: ["telemetry", "apprentice_feedback", "attestations"]
+  outputs: ["pulses", "reports", "artifacts"]
+
+structure:
+  - README.md
+  - src/
+  - tests/
+  - docs/
+  - Makefile
+  - requirements.txt

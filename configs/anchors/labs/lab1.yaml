@@ -1,0 +1,12 @@
+id: lab1
+name: "Lab1 - Canon Lore"
+stage: concept
+anchor_sentinel: "AUREA"
+attestation_policy: null
+purpose: "Canonical documentation and lore management"
+
+structure:
+  - README.md
+  - research/
+  - experiments/
+  - docs/

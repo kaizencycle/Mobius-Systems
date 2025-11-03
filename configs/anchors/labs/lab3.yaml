@@ -1,0 +1,12 @@
+id: lab3
+name: "Lab3 - Governance & Policy"
+stage: concept
+anchor_sentinel: "EVE"
+attestation_policy: null
+purpose: "Governance and policy framework"
+
+structure:
+  - README.md
+  - research/
+  - experiments/
+  - docs/

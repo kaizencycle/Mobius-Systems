@@ -38,15 +38,16 @@ governance:
     virtue_accords: 90
     labs: 30
 
-agents:
-  default: ["Echo", "Jade", "Zeus", "Hermes", "Aurelian", "Eve"]
+  default: ["Echo", "Jade", "Zeus", "Hermes", "Aurelian", "Eve", "Atlas", "Uriel"]
   roles:
-    Echo: "Pulse / Resonance / Sync"
+    Echo: "Pulse / Resonance / Sync / Ledger"
     Jade: "Reflection / Ethics / Human factors"
-    Zeus: "Oversight / Arbitration / Strategy"
+    Zeus: "Oversight / Arbitration / Strategy / Meta-Anchor"
     Hermes: "Markets / Telemetry / Dispatch"
     Aurelian: "Macro synthesis / Framing"
     Eve: "Civility / Safety / Care"
+    Atlas: "Ops / Reliability / Infrastructure"
+    Uriel: "Illumination / Doctrine / Codex"
 
 labs:
   lab4_proof:

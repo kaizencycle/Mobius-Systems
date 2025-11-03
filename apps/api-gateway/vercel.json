@@ -1,7 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "version": 2,
-  "installCommand": "bash ../../scripts/vercel-install.sh",
+  "installCommand": "cd ../.. && (npm ci --legacy-peer-deps || npm install --legacy-peer-deps)",
   "buildCommand": "cd ../.. && npx turbo run build --filter=./apps/api-gateway",
   "framework": null,
   "rewrites": [

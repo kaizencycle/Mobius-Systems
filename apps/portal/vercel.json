@@ -2,7 +2,7 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "cd ../.. && npm run build --workspace=apps/portal",
   "devCommand": "npm run dev",
-  "installCommand": "cd ../.. && npm install --legacy-peer-deps",
+  "installCommand": "cd ../.. && rm -rf node_modules/.cache && npm ci --legacy-peer-deps",
   "framework": "nextjs",
   "outputDirectory": ".next",
   "ignoreCommand": "exit 1",

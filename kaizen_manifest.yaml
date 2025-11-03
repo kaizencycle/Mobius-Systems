@@ -6,8 +6,8 @@
 meta:
   system_name: "Kaizen OS"            # formerly Civic OS
   short_name: "KOS"
-  version: "1.0.0"
-  last_updated: "2025-01-27"
+  version: "1.1.0"
+  last_updated: "2025-11-03"
   owner: "Michael Judan"
   motto: "We heal as we walk."
   repository: "github.com/kaizencycle"
@@ -143,12 +143,14 @@ paths:
     kaizen_sync: ".github/workflows/kaizen-sync.yml"
     fountain_attest: ".github/workflows/fountain-attest.yml"
     portal_ci: ".github/workflows/portal-ci.yml"
+    attest_proof: ".github/workflows/attest-proof.yml"
   scripts:
     validate_manifest: "scripts/validate_manifest.py"
     integrity_report: "scripts/integrity-report.sh"
     sentinel_health: "scripts/sentinel-health.sh"
     attest_charter: "scripts/attest-charter.py"
     sign_charter: "scripts/sign-charter.py"
+    promote_lab: "scripts/promote_lab.sh"
 
 naming:
   file_pattern: "{date}_{slug}.md"

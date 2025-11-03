@@ -21,11 +21,11 @@ describe('4-Companion Consensus Logic', () => {
       expect(result.approved).toBe(true);
     });
 
-    test('PASS: AUREA + ATLAS + SOLARA (3-of-4 with critical companions)', () => {
+    test('PASS: AUREA + ATLAS + ECHO (3-of-4 with critical companions)', () => {
       const votes = {
         AUREA: { approved: true, score: 92 },
         ATLAS: { approved: true, score: 93 },
-        SOLARA: { approved: true, score: 85 }
+        ECHO: { approved: true, score: 85 }
       };
 
       const result = validateConsensus(votes, policy);
@@ -35,7 +35,7 @@ describe('4-Companion Consensus Logic', () => {
     test('FAIL: No critical companion approval', () => {
       const votes = {
         ZENITH: { approved: true, score: 90 },
-        SOLARA: { approved: true, score: 85 },
+        ECHO: { approved: true, score: 85 },
         JADE: { approved: true, score: 88 }
       };
 
@@ -82,31 +82,31 @@ describe('4-Companion Consensus Logic', () => {
       expect(result.approved).toBe(true);
     });
 
-    test('PASS: AUREA + ZENITH + SOLARA (3-of-4 with 2 advanced)', () => {
+    test('PASS: AUREA + ZENITH + ECHO (3-of-4 with 2 advanced)', () => {
       const votes = {
         AUREA: { approved: true, score: 86 },
         ZENITH: { approved: true, score: 83 },
-        SOLARA: { approved: true, score: 78 }
+        ECHO: { approved: true, score: 78 }
       };
 
       const result = validateConsensus(votes, policy);
       expect(result.approved).toBe(true);
     });
 
-    test('PASS: ATLAS + ZENITH + SOLARA (3-of-4 with 2 advanced)', () => {
+    test('PASS: ATLAS + ZENITH + ECHO (3-of-4 with 2 advanced)', () => {
       const votes = {
         ATLAS: { approved: true, score: 89 },
         ZENITH: { approved: true, score: 84 },
-        SOLARA: { approved: true, score: 77 }
+        ECHO: { approved: true, score: 77 }
       };
 
       const result = validateConsensus(votes, policy);
       expect(result.approved).toBe(true);
     });
 
-    test('FAIL: Only 1 advanced companion (SOLARA only)', () => {
+    test('FAIL: Only 1 advanced companion (ECHO only)', () => {
       const votes = {
-        SOLARA: { approved: true, score: 78 },
+        ECHO: { approved: true, score: 78 },
         JADE: { approved: true, score: 80 },
         HERMES: { approved: true, score: 82 }
       };
@@ -133,7 +133,7 @@ describe('4-Companion Consensus Logic', () => {
 
     test('PASS: Any 2-of-4 companions', () => {
       const votes = {
-        SOLARA: { approved: true, score: 72 },
+        ECHO: { approved: true, score: 72 },
         ZENITH: { approved: true, score: 75 }
       };
 
@@ -141,10 +141,10 @@ describe('4-Companion Consensus Logic', () => {
       expect(result.approved).toBe(true);
     });
 
-    test('PASS: AUREA + SOLARA (2-of-4)', () => {
+    test('PASS: AUREA + ECHO (2-of-4)', () => {
       const votes = {
         AUREA: { approved: true, score: 85 },
-        SOLARA: { approved: true, score: 73 }
+        ECHO: { approved: true, score: 73 }
       };
 
       const result = validateConsensus(votes, policy);
@@ -164,9 +164,9 @@ describe('4-Companion Consensus Logic', () => {
   describe('Research Tier Operations', () => {
     const policy = consensusPolicies.research;
 
-    test('PASS: Single companion (SOLARA)', () => {
+    test('PASS: Single companion (ECHO)', () => {
       const votes = {
-        SOLARA: { approved: true, score: 68 }
+        ECHO: { approved: true, score: 68 }
       };
 
       const result = validateConsensus(votes, policy);
@@ -184,7 +184,7 @@ describe('4-Companion Consensus Logic', () => {
 
     test('FAIL: Constitutional score too low', () => {
       const votes = {
-        SOLARA: { approved: true, score: 60 } // Below 65 minimum
+        ECHO: { approved: true, score: 60 } // Below 65 minimum
       };
 
       const result = validateConsensus(votes, policy);
@@ -199,7 +199,7 @@ describe('4-Companion Consensus Logic', () => {
         AUREA: { approved: true, score: 90 },
         ATLAS: { approved: true, score: 92 },
         ZENITH: { approved: true, score: 88 },
-        SOLARA: { approved: true, score: 85 }
+        ECHO: { approved: true, score: 85 }
       };
 
       const result = validateConsensus(votes, policy);
@@ -212,7 +212,7 @@ describe('4-Companion Consensus Logic', () => {
         AUREA: { approved: true, score: 85 },
         ATLAS: { approved: false, score: 60 },
         ZENITH: { approved: true, score: 83 },
-        SOLARA: { approved: true, score: 78 }
+        ECHO: { approved: true, score: 78 }
       };
 
       const result = validateConsensus(votes, policy);

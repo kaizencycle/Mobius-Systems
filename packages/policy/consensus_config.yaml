@@ -30,7 +30,7 @@ companions:
       enabled: true
       vote_counted: false          # Phase 1 (shadow)
       allowed_tiers: ["research","standard"]
-  SOLARA:
+  ECHO:
     provider: deepseek
     model_default: deepseek-r1
     weight: 0.7
@@ -69,10 +69,10 @@ eligibility:
   rules:
     - name: "tier-floor"
       type: "companion_tier >= op_tier"
-    - name: "solara-critical-restriction"
+    - name: "echo-critical-restriction"
       type: "forbid"
       when:
-        companion: SOLARA
+        companion: ECHO
         op_tier: ["critical"]
     - name: "zenith-high-restriction"
       type: "require_advanced"
@@ -108,7 +108,7 @@ consensus:
     AUREA: 1.0
     ATLAS: 1.0
     ZENITH: 0.9
-    SOLARA: 0.7
+    ECHO: 0.7
   output_validation: true
   input_validation: true
   require_attestation: true
@@ -162,7 +162,7 @@ observability:
       high: 5000
       critical: 4000
     cost_per_1k_tokens_usd_budget:
-      SOLARA: 0.30
+      ECHO: 0.30
       AUREA: 1.50
       ATLAS: 1.80
       ZENITH: 1.20
@@ -177,10 +177,10 @@ fail_closed:
     AUREA: 20000
     ATLAS: 20000
     ZENITH: 20000
-    SOLARA: 20000
+    ECHO: 20000
   provider_retries:
     AUREA: 2
     ATLAS: 2
     ZENITH: 3
-    SOLARA: 3
+    ECHO: 3
 

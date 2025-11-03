@@ -1,0 +1,24 @@
+# Template for live/attesting proof labs
+id: labN-proof
+name: "Lab N Proof - <Name>"
+stage: proof
+anchor_sentinel: "<SENTINEL_ID>"
+
+gi_targets:
+  baseline: 0.990
+  alert_threshold: 0.950
+
+attestation_policy:
+  proof: "Proof of Integrity"
+  frequency: "per_cycle"
+  witness: "ZEUS"
+  signature_required: true
+
+structure:
+  - README.md
+  - src/
+  - tests/
+  - docs/
+  - Makefile
+  - requirements.txt
+  - lab.yaml

@@ -1,0 +1,10 @@
+id: lab5
+name: "Lab5 — Ops & Integration"
+purpose: "Operations and infrastructure integration"
+stage: concept
+anchor_sentinel: "ATLAS"
+attestation_policy: null
+
+interfaces:
+  inputs: ["telemetry", "metrics"]
+  outputs: ["operations", "infrastructure"]

@@ -1,0 +1,10 @@
+id: lab2
+name: "Lab2 — Research & Study"
+purpose: "Research and academic study framework"
+stage: concept
+anchor_sentinel: "JADE"
+attestation_policy: null
+
+interfaces:
+  inputs: ["research", "analysis"]
+  outputs: ["papers", "findings"]

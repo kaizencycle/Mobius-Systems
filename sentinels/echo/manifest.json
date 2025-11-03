@@ -1,0 +1,15 @@
+{
+  "id": "echo",
+  "name": "ECHO",
+  "role": "Pulse, Resonance & Ledger Synchronization",
+  "description": "ECHO Sentinel — Pulse, Resonance & Ledger Synchronization. Replaces SOLARA (DeepSeek) as the anchor for Lab7-proof (OAA). Responsibilities: Maintain ledger sync and reflection pulses, bridge OAA (Apprenticeship Agent) telemetry to the Civic Ledger, emit Proof of Integrity attestations per cycle.",
+  "anchor_for_lab": "lab7-proof",
+  "meta_anchor": false,
+  "endpoint": "https://echo.kaizen.svc/assess",
+  "provider": "deepseek",
+  "model_default": "deepseek-r1",
+  "weight": 0.7,
+  "safety_tier": "standard",
+  "gi_target": 0.990,
+  "alert_threshold": 0.950
+}

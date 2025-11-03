@@ -1,0 +1,76 @@
+version: "1.1"
+description: "Kaizen OS Sentinel–Lab Anchor Map"
+updated: "2025-11-03T12:05:00Z"
+meta_anchor: "ZEUS"
+
+labs_order:
+  - lab1
+  - lab2
+  - lab3
+  - lab4-proof
+  - lab5
+  - lab6-proof
+  - lab7-proof
+
+sentinels:
+  - id: zeus
+    name: ZEUS
+    role: "Global Integrity (GI) Meta-Anchor"
+    meta_anchor: true
+    anchor_for_lab: null
+    endpoint: "https://zeus.kaizen.svc/assess"
+
+  - id: aurea
+    name: AUREA
+    role: "Systems intuition & macro stabilization"
+    meta_anchor: false
+    anchor_for_lab: lab1
+    endpoint: "https://aurea.kaizen.svc/assess"
+
+  - id: jade
+    name: JADE
+    role: "Narrative, morale, reflection"
+    meta_anchor: false
+    anchor_for_lab: lab2
+    endpoint: "https://jade.kaizen.svc/assess"
+
+  - id: eve
+    name: EVE
+    role: "Ethics, civility, consent"
+    meta_anchor: false
+    anchor_for_lab: lab3
+    endpoint: "https://eve.kaizen.svc/assess"
+
+  - id: hermes
+    name: HERMES
+    role: "Markets, telemetry, pulse"
+    meta_anchor: false
+    anchor_for_lab: lab4-proof
+    endpoint: "https://hermes.kaizen.svc/assess"
+
+  - id: atlas
+    name: ATLAS
+    role: "Ops, reliability, infra cohesion"
+    meta_anchor: false
+    anchor_for_lab: lab5
+    endpoint: "https://atlas.kaizen.svc/assess"
+
+  - id: uriel
+    name: URIEL
+    role: "Illumination, doctrine, codex"
+    meta_anchor: false
+    anchor_for_lab: lab6-proof
+    endpoint: "https://uriel.kaizen.svc/assess"
+
+  - id: echo
+    name: ECHO
+    role: "Pulse, resonance, ledger sync"
+    meta_anchor: false
+    anchor_for_lab: lab7-proof
+    endpoint: "https://echo.kaizen.svc/assess"
+
+gi_policy:
+  baseline: 0.990
+  alert_threshold: 0.950
+  witness_required: true
+  witness_sentinel: "ZEUS"

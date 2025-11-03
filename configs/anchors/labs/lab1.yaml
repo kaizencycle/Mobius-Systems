@@ -1,0 +1,10 @@
+id: lab1
+name: "Lab1 — Canon Lore"
+purpose: "Canonical documentation and foundational lore"
+stage: concept
+anchor_sentinel: "AUREA"
+attestation_policy: null
+
+interfaces:
+  inputs: ["documentation", "research"]
+  outputs: ["canon", "docs"]

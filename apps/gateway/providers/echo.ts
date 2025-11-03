@@ -1,28 +1,28 @@
 /**
- * SOLARA (DeepSeek R1) Provider Adapter
- * Cost-efficient reasoning companion for Kaizen OS
+ * ECHO (DeepSeek R1) Provider Adapter
+ * Pulse, Resonance & Ledger Synchronization companion for Kaizen OS
  * 
  * Features:
  * - Timeout protection (default 20s)
  * - Exponential backoff retry (3 attempts)
  * - Constitutional validation compatible
  * - Full audit trail support
+ * - Lab7-proof anchor for OAA telemetry
  */
 
 import fetch from 'node-fetch';
 import { setTimeout } from 'timers/promises';
 
-export interface SolaraConfig {
+export interface EchoConfig {
   prompt: string;
   model: string;
   apiKey: string;
   timeoutMs?: number;
   temperature?: number;
   maxTokens?: number;
-  temperature?: number;
 }
 
-export class SolaraProvider {
+export class EchoProvider {
   constructor(
     private apiKey: string,
     private model: string = 'deepseek-r1',
@@ -30,14 +30,14 @@ export class SolaraProvider {
     private maxRetries: number = 3
   ) {}
 
-  async call(config: SolaraConfig): Promise<string> {
+  async call(config: EchoConfig): Promise<string> {
     const { prompt, temperature = 0.2, maxTokens = 1024 } = config;
     
     let lastError: Error | null = null;
     
     for (let attempt = 0; attempt < this.maxRetries; attempt++) {
       try {
-        console.log(`🤖 SOLARA: Attempt ${attempt + 1}/${this.maxRetries}`);
+        console.log(`🤖 ECHO: Attempt ${attempt + 1}/${this.maxRetries}`);
         
         // Timeout protection
         const controller = new AbortController();
@@ -63,18 +63,18 @@ export class SolaraProvider {
         
         if (!response.ok) {
           const errorText = await response.text();
-          throw new Error(`SOLARA API error (${response.status}): ${errorText}`);
+          throw new Error(`ECHO API error (${response.status}): ${errorText}`);
         }
         
         const data = await response.json();
         const content = data.choices?.[0]?.message?.content;
         
         if (!content) {
-          throw new Error('SOLARA returned empty response');
+          throw new Error('ECHO returned empty response');
         }
         
         // Log usage for monitoring
-        console.log('✅ SOLARA call succeeded:', {
+        console.log('✅ ECHO call succeeded:', {
           model: this.model,
           promptTokens: data.usage?.prompt_tokens,
           completionTokens: data.usage?.completion_tokens,
@@ -86,34 +86,33 @@ export class SolaraProvider {
         
       } catch (error: any) {
         lastError = error;
-        console.error(`❌ SOLARA attempt ${attempt + 1} failed:`, error.message);
+        console.error(`❌ ECHO attempt ${attempt + 1} failed:`, error.message);
         
         // Don't retry on certain errors
         if (error.name === 'AbortError') {
-          throw new Error(`SOLARA timeout after ${this.timeoutMs}ms`);
+          throw new Error(`ECHO timeout after ${this.timeoutMs}ms`);
         }
         
         if (attempt < this.maxRetries - 1) {
           // Exponential backoff
           const delay = Math.pow(2, attempt) * 1000;
-          console.log(`⏳ Retrying SOLARA in ${delay}ms...`);
+          console.log(`⏳ Retrying ECHO in ${delay}ms...`);
           await new Promise(resolve => setTimeout(resolve, delay));
         }
       }
     }
     
-    throw new Error(`SOLARA failed after ${this.maxRetries} attempts: ${lastError?.message}`);
+    throw new Error(`ECHO failed after ${this.maxRetries} attempts: ${lastError?.message}`);
   }
 }
 
 // Export singleton instance
-export function createSolaraProvider(): SolaraProvider {
-  return new SolaraProvider(
-    process.env.SOLARA_API_KEY!,
-    process.env.SOLARA_MODEL || 'deepseek-r1',
-    parseInt(process.env.SOLARA_TIMEOUT_MS || '20000'),
-    parseInt(process.env.SOLARA_MAX_RETRIES || '3')
+export function createEchoProvider(): EchoProvider {
+  return new EchoProvider(
+    process.env.ECHO_API_KEY!,
+    process.env.ECHO_MODEL || 'deepseek-r1',
+    parseInt(process.env.ECHO_TIMEOUT_MS || '20000'),
+    parseInt(process.env.ECHO_MAX_RETRIES || '3')
   );
 }
-
 

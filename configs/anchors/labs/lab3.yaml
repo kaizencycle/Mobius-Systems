@@ -1,0 +1,10 @@
+id: lab3
+name: "Lab3 — Governance & Policy"
+purpose: "Governance frameworks and policy engines"
+stage: concept
+anchor_sentinel: "EVE"
+attestation_policy: null
+
+interfaces:
+  inputs: ["policies", "governance"]
+  outputs: ["frameworks", "decisions"]

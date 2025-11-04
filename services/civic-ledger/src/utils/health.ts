@@ -1,5 +1,60 @@
 import { SHARDS_PER_CREDIT } from '@civic/integrity-units';
 
+/**
+ * Calculate current epoch from genesis timestamp
+ */
+function calculateCurrentEpoch(genesisTimestamp: string): number {
+  const genesis = new Date(genesisTimestamp).getTime();
+  const now = Date.now();
+  const epochLengthMs = parseFloat(process.env.EPOCH_LENGTH_DAYS || "90") * 24 * 60 * 60 * 1000;
+  return Math.floor((now - genesis) / epochLengthMs) + 1;
+}
+
+/**
+ * Calculate days until next burn
+ */
+function calculateDaysUntilBurn(genesisTimestamp: string, lastBurnEpoch?: number): number {
+  const genesis = new Date(genesisTimestamp).getTime();
+  const now = Date.now();
+  const epochLengthMs = parseFloat(process.env.EPOCH_LENGTH_DAYS || "90") * 24 * 60 * 60 * 1000;
+  const currentEpoch = calculateCurrentEpoch(genesisTimestamp);
+  const nextBurnEpoch = lastBurnEpoch !== undefined ? lastBurnEpoch + 1 : currentEpoch;
+  const nextBurnTimestamp = genesis + (nextBurnEpoch - 1) * epochLengthMs;
+  const daysUntilBurn = Math.max(0, Math.ceil((nextBurnTimestamp - now) / (24 * 60 * 60 * 1000)));
+  return daysUntilBurn;
+}
+
+/**
+ * Fetch GI from aggregator (with fallback to config)
+ */
+async function fetchGI(): Promise<number> {
+  const aggregatorUrl = process.env.GI_AGGREGATOR_URL;
+  
+  if (aggregatorUrl) {
+    try {
+      const response = await fetch(`${aggregatorUrl}/gi`, {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json' },
+        signal: AbortSignal.timeout(5000), // 5s timeout
+      });
+      
+      if (response.ok) {
+        const data = await response.json();
+        if (typeof data.gi === 'number' && data.gi >= 0 && data.gi <= 1) {
+          return data.gi;
+        }
+      }
+    } catch (error) {
+      console.warn(`GI aggregator unavailable: ${error}`);
+      // Fall through to config default
+    }
+  }
+  
+  // Fallback: use config default
+  // In production, this should be replaced with a real calculation
+  return parseFloat(process.env.GI_DEFAULT || "0.999");
+}
+
 export interface SystemHealth {
   integrity_units: {
     conversion_constant: string;
@@ -23,11 +78,16 @@ export interface SystemHealth {
 }
 
 const SERVICE_START = Date.now();
+let lastBurnEpoch: number | undefined;
 
 export async function getSystemHealth(): Promise<SystemHealth> {
-  // TODO: Wire to actual GI aggregator and epoch tracker
-  const gi = 0.999;
+  const genesisTimestamp = process.env.LEDGER_GENESIS_TIMESTAMP || "2025-01-01T00:00:00Z";
+  const gi = await fetchGI();
   const burnEnabled = process.env.EPOCH_BURN_ENABLED !== "false";
+  const currentEpoch = calculateCurrentEpoch(genesisTimestamp);
+  const daysUntilBurn = calculateDaysUntilBurn(genesisTimestamp, lastBurnEpoch);
+  const thresholdWarn = parseFloat(process.env.GI_FLOOR_WARN || "0.950");
+  const thresholdHalt = parseFloat(process.env.GI_FLOOR_HALT || "0.900");
   
   return {
     integrity_units: {
@@ -36,13 +96,13 @@ export async function getSystemHealth(): Promise<SystemHealth> {
     },
     gi_status: {
       current: gi,
-      threshold_warn: parseFloat(process.env.GI_FLOOR_WARN || "0.950"),
-      threshold_halt: parseFloat(process.env.GI_FLOOR_HALT || "0.900"),
-      status: gi >= 0.950 ? "healthy" : gi >= 0.900 ? "warning" : "critical",
+      threshold_warn: thresholdWarn,
+      threshold_halt: thresholdHalt,
+      status: gi >= thresholdWarn ? "healthy" : gi >= thresholdHalt ? "warning" : "critical",
     },
     epoch: {
-      current_epoch: 1, // TODO: calculate from ledger start date
-      days_until_burn: 45, // TODO: calculate from last burn
+      current_epoch: currentEpoch,
+      days_until_burn: daysUntilBurn,
       burn_enabled: burnEnabled,
     },
     service: {
@@ -50,4 +110,11 @@ export async function getSystemHealth(): Promise<SystemHealth> {
       version: "1.0.0",
     },
   };
+}
+
+/**
+ * Update last burn epoch (called after epoch burn completes)
+ */
+export function updateLastBurnEpoch(epoch: number): void {
+  lastBurnEpoch = epoch;
 }

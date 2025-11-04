@@ -1,6 +1,7 @@
 import express from "express";
 import { giStatus } from "./routes/gi.js";
 import { shardsToCreditsRoute, creditsToShardsRoute } from "./routes/convert.js";
+import { mintAttestRoute, burnAttestRoute } from "./routes/attest.js";
 import { getSystemHealth } from "./utils/health.js";
 
 const app = express();
@@ -35,6 +36,10 @@ app.get("/gi", giStatus);
 app.post("/convert/shards-to-credits", shardsToCreditsRoute);
 app.post("/convert/credits-to-shards", creditsToShardsRoute);
 
+// Attestation endpoints (dual-signature required)
+app.post("/attest/mint", mintAttestRoute);
+app.post("/attest/burn", burnAttestRoute);
+
 // 404 handler
 app.use("*", (req, res) => {
   res.status(404).json({
@@ -45,7 +50,9 @@ app.use("*", (req, res) => {
       "GET /system/health",
       "GET /gi",
       "POST /convert/shards-to-credits",
-      "POST /convert/credits-to-shards"
+      "POST /convert/credits-to-shards",
+      "POST /attest/mint",
+      "POST /attest/burn"
     ]
   });
 });

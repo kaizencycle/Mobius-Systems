@@ -1,31 +1,44 @@
 # CODEOWNERS
 # Code ownership and review requirements for Kaizen OS
+#
+# NOTE: Replace @SENTINEL_NAME with actual GitHub teams (e.g., @kaizencycle/aurea)
+# OR replace with individual maintainer usernames (e.g., @username)
+# GitHub teams must be created in: Settings > Teams > New team
+#
+# Required teams:
+# - kaizencycle/aurea (AUREA - Economic Architect)
+# - kaizencycle/atlas (ATLAS - Monitoring Sentinel)
+# - kaizencycle/zeus (ZEUS - System Coordinator)
+# - kaizencycle/hermes (HERMES - Distributed Systems)
+# - kaizencycle/eve (EVE - Safety Sentinel)
+# - kaizencycle/echo (ECHO - Pulse Monitor)
+# - kaizencycle/zenith (ZENITH - Integration Sentinel)
 
 # Foundational documents require AUREA review
-/docs/foundational_*.md @AUREA
-/specs/*.md @AUREA @ATLAS
+/docs/foundational_*.md @kaizencycle/aurea
+/specs/*.md @kaizencycle/aurea @kaizencycle/atlas
 
 # Core integrity units require multi-sentinel consensus
-/packages/integrity-units/ @AUREA @ZEUS @HERMES
-/configs/integrity_units.yaml @AUREA @ZEUS @HERMES
+/packages/integrity-units/ @kaizencycle/aurea @kaizencycle/zeus @kaizencycle/hermes
+/configs/integrity_units.yaml @kaizencycle/aurea @kaizencycle/zeus @kaizencycle/hermes
 
 # Service deployments require ATLAS approval
-/services/ @ATLAS @HERMES
+/services/ @kaizencycle/atlas @kaizencycle/hermes
 
 # Sentinel permissions require Trinity Seal
-/sentinels/permissions.json @AUREA @EVE @ECHO
+/sentinels/permissions.json @kaizencycle/aurea @kaizencycle/eve @kaizencycle/echo
 
 # Documentation index
-/docs/README.md @AUREA
-/docs/MIGRATION.md @AUREA @ATLAS
+/docs/README.md @kaizencycle/aurea
+/docs/MIGRATION.md @kaizencycle/aurea @kaizencycle/atlas
 
 # Lab implementations
-/labs/lab1-civic-ledger/ @ATLAS
-/labs/lab2-thought-broker/ @ATLAS
-/labs/lab3-resource-orchestration/ @ATLAS
-/labs/lab5-humanities-healthcare/ @AUREA @ZENITH @EVE
-/labs/lab6-citizen-shield/ @AUREA @EVE
+/labs/lab1-civic-ledger/ @kaizencycle/atlas
+/labs/lab2-thought-broker/ @kaizencycle/atlas
+/labs/lab3-resource-orchestration/ @kaizencycle/atlas
+/labs/lab5-humanities-healthcare/ @kaizencycle/aurea @kaizencycle/zenith @kaizencycle/eve
+/labs/lab6-citizen-shield/ @kaizencycle/aurea @kaizencycle/eve
 
 # Root configuration
-/package.json @ATLAS @HERMES
-/tsconfig.base.json @ATLAS
+/package.json @kaizencycle/atlas @kaizencycle/hermes
+/tsconfig.base.json @kaizencycle/atlas

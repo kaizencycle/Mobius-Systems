@@ -31,9 +31,11 @@
     "gi:validate": "./scripts/gi-consensus-validate.sh",
     "console": "cd apps/console && python main.py",
     "docs:generate": "echo \"Documentation generation coming soon\"",
-    "dev:ledger": "npm run dev --workspace=@civic/ledger-service"
+    "dev:ledger": "npm run dev --workspace=@civic/ledger-service",
+    "dev:epoch-burn": "npm run dev --workspace=@civic/epoch-burn-service"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.27.1",
     "@types/node": "^20.0.0",
     "turbo": "^2.6.0",
     "typescript": "^5.0.0"

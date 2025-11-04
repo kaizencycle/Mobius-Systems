@@ -14,7 +14,8 @@
     "test": {
       "dependsOn": ["build"],
       "outputs": ["coverage/**"],
-      "cache": true
+      "cache": true,
+      "env": ["NODE_ENV", "CI"]
     },
     "lint": {
       "outputs": [],

@@ -1,5 +1,7 @@
 """Gatekeeper FastAPI application - main entry point."""
 import json
+import os
+import httpx
 from fastapi import FastAPI, Request, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from src.types import ExecRequest, ExecResponse
@@ -131,8 +133,42 @@ async def execute(req: ExecRequest, request: Request):
             # TODO: Implement DB query broker
             result = {"rc": 0, "stdout": "DB query brokered (stub)", "stderr": ""}
         elif req.action == "mint_gic":
-            # TODO: Implement GIC minting broker
-            result = {"rc": 0, "stdout": "GIC minting brokered (stub)", "stderr": ""}
+            # Call civic-ledger /attest/mint endpoint
+            import httpx
+            ledger_url = os.getenv("LEDGER_API_URL", "http://localhost:3000")
+            amount_shards = str(req.payload.get("amount_shards", "0"))
+            
+            try:
+                async with httpx.AsyncClient(timeout=10.0) as client:
+                    mint_response = await client.post(
+                        f"{ledger_url}/attest/mint",
+                        json={
+                            "amount_shards": amount_shards,
+                            "human_signature": req.actor_did,  # TODO: Extract actual signature
+                            "sentinel_signature": "gatekeeper",  # TODO: Sign with gatekeeper key
+                            "metadata": {"gatekeeper_action": req.action, "actor": req.actor_did}
+                        }
+                    )
+                    if mint_response.status_code == 201:
+                        mint_data = mint_response.json()
+                        result = {
+                            "rc": 0,
+                            "stdout": f"GIC minted: {amount_shards} shards, attestation: {mint_data.get('attestation', {}).get('hash', 'N/A')}",
+                            "stderr": ""
+                        }
+                    else:
+                        result = {
+                            "rc": 1,
+                            "stdout": "",
+                            "stderr": f"Mint failed: {mint_response.text}"
+                        }
+            except Exception as e:
+                logger.error(f"Mint broker error: {str(e)}")
+                result = {
+                    "rc": 1,
+                    "stdout": "",
+                    "stderr": f"Mint broker error: {str(e)}"
+                }
         elif req.action == "write_file":
             # TODO: Implement file write broker
             result = {"rc": 0, "stdout": "File write brokered (stub)", "stderr": ""}

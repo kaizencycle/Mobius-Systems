@@ -6,6 +6,8 @@ import { ubiPreviewRoute } from "./routes/ubi.js";
 import { ubiEligibilityRoute } from "./routes/eligibility.js";
 import { attestEpochRoute } from "./routes/attest_epoch.js";
 import { listEpochAttestations } from "./routes/attest_list.js";
+import { startUbiRun, listUbiRuns, getUbiRun, settleUbiRun } from "./routes/ubi_run.js";
+import { listOutbox, enqueueRun, dispatchNow } from "./routes/settlement.js";
 import { getSystemHealth } from "./utils/health.js";
 
 const app = express();
@@ -53,6 +55,17 @@ app.get("/ubi/preview", ubiPreviewRoute);
 app.post("/ubi/preview", ubiPreviewRoute);
 app.get("/ubi/eligibility", ubiEligibilityRoute);
 app.post("/ubi/eligibility", ubiEligibilityRoute);
+
+// UBI worker routes
+app.post("/ubi/run", startUbiRun);         // start/prepare a monthly run
+app.get("/ubi/runs", listUbiRuns);         // list runs
+app.get("/ubi/run/:id", getUbiRun);        // inspect a run + payouts
+app.post("/ubi/run/:id/settle", settleUbiRun); // mark queued payouts as sent (or subset)
+
+// Settlement routes
+app.get("/settlement/outbox", listOutbox);
+app.post("/settlement/enqueue", enqueueRun);
+app.post("/settlement/dispatch", dispatchNow);
 
 // 404 handler
 app.use("*", (req: Request, res: Response) => {

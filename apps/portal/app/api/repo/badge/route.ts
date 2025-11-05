@@ -34,6 +34,10 @@ export async function GET() {
       label: "Repo",
       message: "unavailable",
       color: "gray"
+    }, {
+      headers: {
+        "Cache-Control": "public, s-maxage=300, stale-while-revalidate=600"
+      }
     });
   }
 }

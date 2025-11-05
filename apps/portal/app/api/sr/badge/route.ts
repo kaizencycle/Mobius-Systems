@@ -36,6 +36,10 @@ export async function GET() {
       label: "SR Verdict",
       message: "UNKNOWN",
       color: "gray"
+    }, {
+      headers: {
+        "Cache-Control": "public, s-maxage=60, stale-while-revalidate=300"
+      }
     });
   }
 }

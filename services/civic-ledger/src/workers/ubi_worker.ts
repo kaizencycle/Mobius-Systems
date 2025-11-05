@@ -65,7 +65,7 @@ export async function createAndPrepareUBIRun(input: CreateRunInput) {
     GI,
     reservesShards,
     circulatingShards
-  }, cfg.ubi);
+  }, cfg.ubi as any);
 
   // GI halt (calculator already returns 0 if below floor, but we add hard stop)
   if (res.perCapitaFinal === 0n) {

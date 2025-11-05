@@ -30,7 +30,7 @@ export async function ubiPreviewRoute(req: Request, res: Response) {
     // TODO: use time-weighted GI instead of spot GI (prevent gaming)
     const r = calculateUBI(
       { N, I, Re, D, GI, reservesShards: reserves12m, circulatingShards: circulating },
-      config.ubi
+      config.ubi as any
     );
 
     // UX-friendly response

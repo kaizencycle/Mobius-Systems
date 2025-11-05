@@ -21,10 +21,30 @@ export type UbiConfig = {
   };
   price_stability: { enabled: boolean; min_multiplier: number; max_multiplier: number };
   gi_calculation?: { method: string; lookback_days: number; min_samples: number; outlier_rejection: boolean };
+  eligibility?: {
+    kyc_required: boolean;
+    active_wallet_days_min: number;
+    min_activity_threshold?: { tx_count_30d: number; min_total_shards_30d: number };
+    residency_rules?: string;
+    country_whitelist?: string[];
+    sybil?: { max_wallets_per_identity: number; device_fingerprint_required: boolean };
+  };
 };
 
 export type IntegrityConfig = {
   ubi: UbiConfig;
+  gi?: {
+    aggregator?: {
+      url?: string;
+      twa_lookback_days?: number;
+      min_samples?: number;
+      outlier_rejection?: boolean;
+    };
+    thresholds?: {
+      warn?: number;
+      halt?: number;
+    };
+  };
   treasury?: { reserves12m?: number };
   metrics?: { circulatingShards?: number };
 };

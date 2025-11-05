@@ -21,7 +21,7 @@ export interface UBICalculationResult {
   credits: number;
 }
 
-export function calculateUBI(input: UBICalculationInput, config: UBIConfig): UBICalculationResult {
+export function calculateUBI(input: UBICalculationInput, config: UBIConfig & { unit?: 'shards' | 'credits' }): UBICalculationResult {
   const { N, I, Re, D, GI, reservesShards, circulatingShards } = input;
   const { funding_weights, caps, gi_thresholds } = config;
 
@@ -65,4 +65,3 @@ export function calculateUBI(input: UBICalculationInput, config: UBIConfig): UBI
     credits: Number(perCapitaFinal) / Number(SHARDS_PER_CREDIT)
   };
 }
-

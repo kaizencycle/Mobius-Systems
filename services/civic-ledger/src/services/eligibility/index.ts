@@ -8,6 +8,20 @@ export async function checkUBIEligibility(input: EligibilityInputs): Promise<Eli
   const { walletAddress, now = new Date() } = input;
   const rules = cfg.ubi.eligibility;
 
+  if (!rules) {
+    // Default: everyone eligible if no rules configured
+    return {
+      eligible: true,
+      requirements_met: {
+        kyc_verified: true,
+        wallet_age_days: 0,
+        min_activity_threshold: true,
+        residency_verified: true,
+        sybil_check_passed: true
+      }
+    };
+  }
+
   // Identity & KYC
   const identity = await getIdentityForWallet(walletAddress);
   const kyc_verified = rules.kyc_required ? Boolean(identity && await isKYCVerified(identity.identityId)) : true;
@@ -40,7 +54,7 @@ export async function checkUBIEligibility(input: EligibilityInputs): Promise<Eli
   // Decision
   const eligible =
     kyc_verified &&
-    wallet_age_days >= (rules.active_wallet_days_min ?? 0) &&
+    wallet_age_days >= (rules?.active_wallet_days_min ?? 0) &&
     residency_verified &&
     min_activity_threshold &&
     sybil_check_passed;

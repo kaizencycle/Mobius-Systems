@@ -1,4 +1,4 @@
-import { pool } from './pool.js';
+import { pool } from '../../db/pool.js';
 
 export async function insertGISample(gi: number, source = 'unknown'): Promise<void> {
   await pool.query('INSERT INTO gi_samples (gi, source) VALUES ($1, $2)', [gi, source]);

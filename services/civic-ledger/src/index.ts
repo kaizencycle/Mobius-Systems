@@ -41,6 +41,8 @@ async function start() {
     console.log(`   POST /convert/credits-to-shards`);
     console.log(`   POST /attest/mint`);
     console.log(`   POST /attest/burn`);
+    console.log(`   GET  /ubi/preview`);
+    console.log(`   POST /ubi/preview`);
     console.log();
     console.log(`   Environment: ${process.env.NODE_ENV || "development"}`);
     console.log(`   GI Warning Threshold: ${process.env.GI_FLOOR_WARN || "0.950"}`);

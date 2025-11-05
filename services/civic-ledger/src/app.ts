@@ -2,6 +2,7 @@ import express from "express";
 import { giStatus } from "./routes/gi.js";
 import { shardsToCreditsRoute, creditsToShardsRoute } from "./routes/convert.js";
 import { mintAttestRoute, burnAttestRoute } from "./routes/attest.js";
+import { ubiPreviewRoute } from "./routes/ubi.js";
 import { getSystemHealth } from "./utils/health.js";
 
 const app = express();
@@ -40,6 +41,10 @@ app.post("/convert/credits-to-shards", creditsToShardsRoute);
 app.post("/attest/mint", mintAttestRoute);
 app.post("/attest/burn", burnAttestRoute);
 
+// UBI endpoints
+app.get("/ubi/preview", ubiPreviewRoute);
+app.post("/ubi/preview", ubiPreviewRoute);
+
 // 404 handler
 app.use("*", (req, res) => {
   res.status(404).json({
@@ -52,7 +57,9 @@ app.use("*", (req, res) => {
       "POST /convert/shards-to-credits",
       "POST /convert/credits-to-shards",
       "POST /attest/mint",
-      "POST /attest/burn"
+      "POST /attest/burn",
+      "GET /ubi/preview",
+      "POST /ubi/preview"
     ]
   });
 });

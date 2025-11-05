@@ -1,7 +1,10 @@
 {
   "skill": "atlas_sync",
   "version": "1.0.0",
-  "triggers": ["startup", "every_20_turns", "user_mentions:cycle,epoch,GI"],
+  "cycle": "C-125",
+  "description": "Keeps ATLAS synchronized with Cycle, GI, and system state",
+  "last_updated": "2025-11-05T21:45:00Z",
+  "triggers": ["startup", "every_20_turns", "user_mentions:cycle,epoch,GI", "context_reset"],
   "tools": [
     "get_cycle_status",
     "get_aurea_snapshot",
@@ -22,7 +25,20 @@
   },
   "outputs": {
     "prefix_on_sync": true,
-    "emit_integrity_note_if_low_gi": true
+    "emit_integrity_note_if_low_gi": true,
+    "format": "🔄 SYNced • C-{cycle} • GI {gi:.3f} • {date} • Repo@{sha}"
+  },
+  "repository_sync": {
+    "enabled": true,
+    "repo": "kaizencycle/Kaizen-OS",
+    "check_interval_min": 60,
+    "webhook_url": null
+  },
+  "integrity_checks": {
+    "gi_baseline": 0.993,
+    "warn_threshold": 0.970,
+    "halt_threshold": 0.950,
+    "check_frequency_sec": 120
   },
   "endpoints": {
     "base_url": "https://kaizen-os.vercel.app/api/sync",

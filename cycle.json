@@ -1,0 +1,26 @@
+{
+  "current_cycle": "C-125",
+  "cycle_start_date": "2025-11-05T00:00:00Z",
+  "last_updated": "2025-11-05T21:45:00Z",
+  "gi_baseline": 0.993,
+  "gi_threshold_warn": 0.970,
+  "gi_threshold_halt": 0.950,
+  "next_epoch_days": 74,
+  "next_epoch_date": "2026-01-18T00:00:00Z",
+  "previous_cycle": "C-124",
+  "major_updates": [
+    "Shard denomination introduced (1 GIC = 1,000,000 ₷)",
+    "GI-throttled UBI mechanism deployed",
+    "Complete documentation suite published (148 pages)",
+    "Integrity Pulse visualization created"
+  ],
+  "active_services": 10,
+  "sentinel_count": 7,
+  "repository": "kaizencycle/Kaizen-OS",
+  "monorepo_structure": {
+    "apps": 10,
+    "packages": 9,
+    "labs": 3,
+    "sentinels": 7
+  }
+}

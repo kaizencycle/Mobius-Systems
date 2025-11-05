@@ -1,0 +1,42 @@
+{
+  "skill": "atlas_repo_sync",
+  "version": "1.0.0",
+  "cycle": "C-125",
+  "description": "Keeps ATLAS aware of Kaizen-OS repository state and changes",
+  "last_updated": "2025-11-05T21:45:00Z",
+  "triggers": [
+    "startup",
+    "every_60_minutes",
+    "user_mentions:PR,deploy,tag,release,commit,push"
+  ],
+  "tools": [
+    "get_repo_digest",
+    "get_repo_changes_since",
+    "post_repo_sync_ack"
+  ],
+  "config": {
+    "repo": "kaizencycle/Kaizen-OS",
+    "owner": "kaizencycle",
+    "default_branch": "main",
+    "org_wide": false,
+    "cache_ttl_sec": 300,
+    "etag_caching": true
+  },
+  "outputs": {
+    "prefix_on_sync": true,
+    "include_changes_digest": true,
+    "format": "📦 Repo@{sha} • {prs} PRs • {issues} issues • {commits} commits"
+  },
+  "change_categories": {
+    "infra": ["vercel.json", ".github/", "Dockerfile", "render.yaml", "infra/"],
+    "docs": ["README", "docs/", ".md"],
+    "tests": ["tests/", "__tests__/", ".test.", ".spec."],
+    "data": ["data/", ".csv", ".jsonl"],
+    "app": ["apps/", "packages/", "src/", "lib/"]
+  },
+  "webhook": {
+    "enabled": false,
+    "secret_key": null,
+    "events": ["push", "pull_request", "release"]
+  }
+}

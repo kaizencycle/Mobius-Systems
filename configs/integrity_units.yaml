@@ -1,8 +1,11 @@
-# Integrity Units Configuration v1.0
+# Kaizen OS Integrity Units Configuration
+# Cycle C-125 | November 5th, 2025
 # This file contains the canonical constants for the integrity economy
 # Names are placeholders; mathematics is canonical
 
-version: 1
+version: "2.0.0"
+cycle: "C-125"
+last_updated: "2025-11-05T21:45:00Z"
 
 symbols:
   credit: "GIC"                 # Placeholder; safe to rename

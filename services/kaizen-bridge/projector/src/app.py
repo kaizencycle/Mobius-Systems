@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+import torch
 from .io_types import ProjectRequest, ProjectResponse
 from .registry import get_projector
 from .model import b64_to_tensor, tensor_to_packet_like

@@ -3,16 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { useEventStream } from "../hooks/useEventStream";
 import { emitRelay } from "../state/relayStore";
-
-const palette: Record<string, string> = {
-  AUREA: "#FFD166",
-  HERMES: "#06D6A0",
-  ZEUS:  "#EF476F",
-  EVE:   "#118AB2",
-  JADE:  "#B86BFF",
-  ATLAS: "#73DCFF",
-  ECHO:  "#FF9F1C"
-};
+import { colorFor } from "../lib/agents";
 
 export default function BridgeSignal() {
   const url = process.env.NEXT_PUBLIC_BRIDGE_SSE;
@@ -27,8 +18,8 @@ export default function BridgeSignal() {
     return () => clearTimeout(t);
   }, [last]);
 
-  const fromC = useMemo(() => (last ? palette[last.from] ?? "#fff" : "#fff"), [last]);
-  const toC   = useMemo(() => (last ? palette[last.to]   ?? "#fff" : "#fff"), [last]);
+  const fromC = useMemo(() => (last ? colorFor(last.from) : "#fff"), [last]);
+  const toC   = useMemo(() => (last ? colorFor(last.to) : "#fff"), [last]);
 
   return (
     <div style={{

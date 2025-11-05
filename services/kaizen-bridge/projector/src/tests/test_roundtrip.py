@@ -1,8 +1,11 @@
-from .registry import get_projector
+import sys
+import os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
+
+from registry import get_projector
 import numpy as np
 import base64
-import time
-from .model import b64_to_tensor, tensor_to_packet_like
+from model import b64_to_tensor, tensor_to_packet_like
 
 def test_roundtrip():
     pj = get_projector("hermes_to_aurea_v1")

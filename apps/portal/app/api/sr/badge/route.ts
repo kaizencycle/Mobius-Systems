@@ -11,18 +11,31 @@ function colorFor(verdict: string) {
 }
 
 export async function GET() {
-  // Reuse your /api/sr/latest output
-  const base = process.env.NEXT_PUBLIC_PORTAL_BASE || "http://localhost:3002";
-  const r = await fetch(`${base}/api/sr/latest`, { cache: "no-store" })
-    .catch(() => null);
-  const data = r && r.ok ? await r.json() : { details: { verdict: "UNKNOWN" } };
-
-  const verdict = String(data?.details?.verdict ?? "UNKNOWN").toUpperCase();
-  const badge = {
-    schemaVersion: 1,
-    label: "Verdict",
-    message: verdict,
-    color: colorFor(verdict)
-  };
-  return NextResponse.json(badge);
+  try {
+    // Import and call the latest SR endpoint directly
+    const { GET: getLatestSR } = await import("../latest/route");
+    const response = await getLatestSR();
+    const data = await response.json();
+    
+    const verdict = String(data?.details?.verdict ?? "UNKNOWN").toUpperCase();
+    const badge = {
+      schemaVersion: 1,
+      label: "SR Verdict",
+      message: verdict,
+      color: colorFor(verdict)
+    };
+    return NextResponse.json(badge, {
+      headers: {
+        "Cache-Control": "public, s-maxage=60, stale-while-revalidate=300"
+      }
+    });
+  } catch (error) {
+    // Fallback to default badge
+    return NextResponse.json({
+      schemaVersion: 1,
+      label: "SR Verdict",
+      message: "UNKNOWN",
+      color: "gray"
+    });
+  }
 }

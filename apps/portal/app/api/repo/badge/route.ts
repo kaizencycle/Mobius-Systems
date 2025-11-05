@@ -2,16 +2,38 @@
 import { NextResponse } from "next/server";
 
 export async function GET() {
-  const base = process.env.NEXT_PUBLIC_PORTAL_BASE || "http://localhost:3002";
-  const r = await fetch(`${base}/api/repo/digest`, { cache: "no-store" }).catch(()=>null);
-  if (!r || !r.ok) {
-    return NextResponse.json({ schemaVersion:1, label:"Repo", message:"unavailable", color:"gray" });
+  try {
+    // Import and call the digest endpoint directly
+    const { GET: getDigest } = await import("../digest/route");
+    const response = await getDigest();
+    
+    if (!response.ok) {
+      throw new Error("Digest fetch failed");
+    }
+    
+    const d = await response.json();
+    
+    // Format badge message (limit length for badge display)
+    const message = d.repo && d.head_short 
+      ? `${d.repo.split('/')[1]}@${d.head_short} • PRs ${d.open_prs} • Issues ${d.open_issues}`
+      : "unavailable";
+    
+    return NextResponse.json({
+      schemaVersion: 1,
+      label: "Repo",
+      message: message,
+      color: "blue"
+    }, {
+      headers: {
+        "Cache-Control": "public, s-maxage=300, stale-while-revalidate=600"
+      }
+    });
+  } catch (error) {
+    return NextResponse.json({
+      schemaVersion: 1,
+      label: "Repo",
+      message: "unavailable",
+      color: "gray"
+    });
   }
-  const d = await r.json();
-  return NextResponse.json({
-    schemaVersion: 1,
-    label: "Repo",
-    message: `${d.repo}@${d.head_short} • PRs ${d.open_prs} • Issues ${d.open_issues}`,
-    color: "blue"
-  });
 }

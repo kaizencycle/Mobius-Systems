@@ -119,59 +119,15 @@ attestations:
       - "ZEUS"
     scheme: "v1"
 
-# Sentinels
-sentinels:
-  meta_anchor: "ZEUS"
-  agents:
-    - id: "AUREA"
-      role: "Systems Architecture"
-      color: 0xffa94d
-      voting_weight: 1.0
-    - id: "ZEUS"
-      role: "Governance Meta-Anchor"
-      color: 0x6ae6ff
-      voting_weight: 1.15
-    - id: "HERMES"
-      role: "Economic Design"
-      color: 0x8cff6a
-      voting_weight: 1.0
-    - id: "EVE"
-      role: "Ethics & Civility"
-      color: 0xff6ad5
-      voting_weight: 1.0
-    - id: "JADE"
-      role: "Narrative & Culture"
-      color: 0xb48cff
-      voting_weight: 1.0
-    - id: "ATLAS"
-      role: "Operations & Infrastructure"
-      color: 0xffff6a
-      voting_weight: 1.0
-    - id: "ECHO"
-      role: "Ledger Synchronization"
-      color: 0x6affb7
-      voting_weight: 1.0
-  consensus:
-    mechanism: "DelibProof"
-    agreement_threshold: 0.90
-    witness: "ZEUS"
+integrations:
+  bettafish:
+    enabled: true
+    fields:
+      - avg_sentiment       # -1..+1
+      - polarization        # 0..1
+      - volume
+    mapping:
+      imi: "map(-1..+1 => 0..1)"
 
-# Metadata
-metadata:
-  specification_version: "2.0.0"
-  cycle_introduced: "C-124"
-  last_updated_cycle: "C-125"
-  changelog: |
-    C-125: Updated to v2.0.0, added sentinels section, metadata
-    C-124: Shard denomination introduced, UBI v2.0 deployed
-  documentation:
-    whitepapers: "./docs/whitepapers/"
-    architecture: "./docs/architecture/"
-    api_docs: "./docs/api/"
-  license: "CC-BY-SA-4.0"
-  authors:
-    - "Kaizen Cycle Foundation"
-    - "AUREA (Systems Architecture)"
-    - "HERMES (Economic Design)"
-    - "ZEUS (Governance)"
-    - "ATLAS (Operations)"
+governance:
+  sentiment_weight_in_gi: 0.05   # optional future hook into GI

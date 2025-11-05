@@ -12,6 +12,11 @@ const MultiAgentGrid = dynamic(
   { ssr: false }
 );
 
+const BridgeDashboard = dynamic(
+  () => import('@/components/BridgeDashboard'),
+  { ssr: false }
+);
+
 export const metadata: Metadata = {
   title: 'Integrity Pulse | Kaizen OS',
   description: 'Real-time visualization of sentinel integrity metrics - Cycle C-125',
@@ -32,6 +37,7 @@ export default function IntegrityPulsePage() {
       }}>
         <BridgeSignal />
       </div>
+      <BridgeDashboard />
       <div className="relative w-full h-screen">
         <MultiAgentGrid
           mockData={mockData}

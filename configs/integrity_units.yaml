@@ -81,3 +81,37 @@ ubi:
     lookback_days: 30
     min_samples: 100
     outlier_rejection: true
+
+  eligibility:
+    kyc_required: true
+    active_wallet_days_min: 14
+    min_activity_threshold:
+      tx_count_30d: 3
+      min_total_shards_30d: 10000
+    residency_rules: "country_whitelist"
+    country_whitelist:
+      - US
+      - CA
+      - NZ
+      - IE
+      - DE
+    sybil:
+      max_wallets_per_identity: 1
+      device_fingerprint_required: false
+
+gi:
+  aggregator:
+    url: "http://localhost:3001"
+    twa_lookback_days: 30
+    min_samples: 100
+    outlier_rejection: true
+  thresholds:
+    warn: 0.950
+    halt: 0.900
+
+attestations:
+  epoch:
+    required_signers:
+      - "AUREA"
+      - "ZEUS"
+    scheme: "v1"

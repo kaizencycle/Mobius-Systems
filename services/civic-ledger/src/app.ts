@@ -1,8 +1,11 @@
 import express, { type Request, type Response, type NextFunction } from "express";
-import { giStatus } from "./routes/gi.js";
+import { giStatus, giIngest, giTwa } from "./routes/gi.js";
 import { shardsToCreditsRoute, creditsToShardsRoute } from "./routes/convert.js";
 import { mintAttestRoute, burnAttestRoute } from "./routes/attest.js";
 import { ubiPreviewRoute } from "./routes/ubi.js";
+import { ubiEligibilityRoute } from "./routes/eligibility.js";
+import { attestEpochRoute } from "./routes/attest_epoch.js";
+import { listEpochAttestations } from "./routes/attest_list.js";
 import { getSystemHealth } from "./utils/health.js";
 
 const app = express();
@@ -32,6 +35,8 @@ app.get("/system/health", async (_req: Request, res: Response) => {
 
 // GI endpoint
 app.get("/gi", giStatus);
+app.get("/gi/twa", giTwa);
+app.post("/gi/ingest", giIngest);
 
 // Conversion endpoints
 app.post("/convert/shards-to-credits", shardsToCreditsRoute);
@@ -40,10 +45,14 @@ app.post("/convert/credits-to-shards", creditsToShardsRoute);
 // Attestation endpoints (dual-signature required)
 app.post("/attest/mint", mintAttestRoute);
 app.post("/attest/burn", burnAttestRoute);
+app.post("/attest/epoch", attestEpochRoute);
+app.get("/attest/epoch/list", listEpochAttestations);
 
 // UBI endpoints
 app.get("/ubi/preview", ubiPreviewRoute);
 app.post("/ubi/preview", ubiPreviewRoute);
+app.get("/ubi/eligibility", ubiEligibilityRoute);
+app.post("/ubi/eligibility", ubiEligibilityRoute);
 
 // 404 handler
 app.use("*", (req: Request, res: Response) => {

@@ -1,4 +1,5 @@
 import { SHARDS_PER_CREDIT } from '@civic/integrity-units';
+import { pool } from '../db/pool.js';
 
 /**
  * Calculate current epoch from genesis timestamp
@@ -71,6 +72,9 @@ export interface SystemHealth {
     days_until_burn: number;
     burn_enabled: boolean;
   };
+  storage: {
+    postgres_ok: boolean;
+  };
   service: {
     uptime_seconds: number;
     version: string;
@@ -89,6 +93,14 @@ export async function getSystemHealth(): Promise<SystemHealth> {
   const thresholdWarn = parseFloat(process.env.GI_FLOOR_WARN || "0.950");
   const thresholdHalt = parseFloat(process.env.GI_FLOOR_HALT || "0.900");
   
+  let postgres_ok = false;
+  try {
+    await pool.query('SELECT 1');
+    postgres_ok = true;
+  } catch {
+    postgres_ok = false;
+  }
+  
   return {
     integrity_units: {
       conversion_constant: SHARDS_PER_CREDIT.toString(),
@@ -104,6 +116,9 @@ export async function getSystemHealth(): Promise<SystemHealth> {
       current_epoch: currentEpoch,
       days_until_burn: daysUntilBurn,
       burn_enabled: burnEnabled,
+    },
+    storage: {
+      postgres_ok,
     },
     service: {
       uptime_seconds: Math.floor((Date.now() - SERVICE_START) / 1000),

@@ -1,58 +1,24 @@
-import type { Request, Response } from "express";
+import type { Request, Response } from 'express';
+import { insertGISample, getGI_TWA_DB } from '../services/gi/store.js';
 
-/**
- * Fetch GI from aggregator (with fallback to config)
- */
-async function fetchGI(): Promise<number> {
-  const aggregatorUrl = process.env.GI_AGGREGATOR_URL;
-  
-  if (aggregatorUrl) {
-    try {
-      const response = await fetch(`${aggregatorUrl}/gi`, {
-        method: 'GET',
-        headers: { 'Content-Type': 'application/json' },
-        signal: AbortSignal.timeout(5000), // 5s timeout
-      });
-      
-      if (response.ok) {
-        const data = await response.json();
-        if (typeof data.gi === 'number' && data.gi >= 0 && data.gi <= 1) {
-          return data.gi;
-        }
-      }
-    } catch (error) {
-      console.warn(`GI aggregator unavailable: ${error}`);
-      // Fall through to config default
-    }
-  }
-  
-  // Fallback: use config default
-  // In production, this should be replaced with a real calculation
-  // Formula: GI = 0.25*M + 0.20*H + 0.30*I + 0.25*E
-  return parseFloat(process.env.GI_DEFAULT || "0.999");
+export async function giStatus(_req: Request, res: Response) {
+  // Return TWA over default window
+  const twa = await getGI_TWA_DB(Number(process.env.GI_TWA_LOOKBACK_DAYS || 30));
+  res.json({ gi: twa, updated_at: new Date().toISOString() });
 }
 
-/**
- * GET /gi
- * Returns current Global Integrity (GI) score
- */
-export async function giStatus(_req: Request, res: Response) {
-  try {
-    const gi = await fetchGI();
-    const thresholdWarn = parseFloat(process.env.GI_FLOOR_WARN || "0.950");
-    const thresholdHalt = parseFloat(process.env.GI_FLOOR_HALT || "0.900");
-    
-    res.json({ 
-      gi, 
-      updated_at: new Date().toISOString(),
-      threshold_warn: thresholdWarn,
-      threshold_halt: thresholdHalt,
-      status: gi >= thresholdWarn ? "healthy" : gi >= thresholdHalt ? "warning" : "critical"
-    });
-  } catch (error: any) {
-    res.status(500).json({
-      error: "Failed to fetch GI",
-      message: process.env.NODE_ENV === "development" ? error.message : undefined
-    });
+export async function giIngest(req: Request, res: Response) {
+  const { gi, source } = req.body || {};
+  const val = Number(gi);
+  if (Number.isNaN(val) || val < 0 || val > 1) {
+    return res.status(400).json({ error: 'invalid_gi' });
   }
+  await insertGISample(val, source || 'manual');
+  res.json({ ok: true });
+}
+
+export async function giTwa(req: Request, res: Response) {
+  const days = Number(req.query.days || process.env.GI_TWA_LOOKBACK_DAYS || 30);
+  const twa = await getGI_TWA_DB(days);
+  res.json({ gi_twa: twa, window_days: days });
 }

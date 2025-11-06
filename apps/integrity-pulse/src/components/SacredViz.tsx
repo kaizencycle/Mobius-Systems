@@ -392,7 +392,7 @@ export default function SacredViz({ mockData = true }: SacredVizProps) {
       const t = clock.getElapsedTime();
       const currentAudio = audioContextRef.current;
       if (currentAudio && currentAudio.analyser) {
-        currentAudio.analyser.getByteFrequencyData(currentAudio.freqs);
+        currentAudio.analyser.getByteFrequencyData(currentAudio.freqs as Uint8Array);
       }
 
       // camera orbit

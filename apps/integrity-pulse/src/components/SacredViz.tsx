@@ -392,7 +392,10 @@ export default function SacredViz({ mockData = true }: SacredVizProps) {
       const t = clock.getElapsedTime();
       const currentAudio = audioContextRef.current;
       if (currentAudio && currentAudio.analyser) {
-        currentAudio.analyser.getByteFrequencyData(currentAudio.freqs as Uint8Array);
+        // TypeScript strict checking: getByteFrequencyData expects Uint8Array<ArrayBuffer>
+        // but infers Uint8Array<ArrayBufferLike>. The array is always ArrayBuffer-backed.
+        // @ts-expect-error - TypeScript incorrectly infers ArrayBufferLike, but runtime is correct
+        currentAudio.analyser.getByteFrequencyData(currentAudio.freqs);
       }
 
       // camera orbit

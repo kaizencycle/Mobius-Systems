@@ -1,18 +1,19 @@
 {
-  "current_cycle": "C-125",
-  "cycle_start_date": "2025-11-05T00:00:00Z",
-  "last_updated": "2025-11-05T21:45:00Z",
+  "current_cycle": "C-126",
+  "cycle_start_date": "2025-11-06T00:00:00Z",
+  "last_updated": "2025-11-06T15:05:00Z",
   "gi_baseline": 0.993,
   "gi_threshold_warn": 0.970,
   "gi_threshold_halt": 0.950,
-  "next_epoch_days": 74,
+  "next_epoch_days": 73,
   "next_epoch_date": "2026-01-18T00:00:00Z",
-  "previous_cycle": "C-124",
+  "previous_cycle": "C-125",
   "major_updates": [
-    "Shard denomination introduced (1 GIC = 1,000,000 ₷)",
-    "GI-throttled UBI mechanism deployed",
-    "Complete documentation suite published (148 pages)",
-    "Integrity Pulse visualization created"
+    "Drift Control governance suite deployed",
+    "Sigstore attestation workflows integrated",
+    "DVC dataset signing enforcement added",
+    "Red-Team Scoreboard framework established",
+    "TLA+ invariants defined for integrity gates"
   ],
   "active_services": 10,
   "sentinel_count": 7,

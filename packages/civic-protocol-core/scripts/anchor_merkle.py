@@ -28,8 +28,19 @@ def main():
         return 1
     
     data = json.loads(checksums_path.read_text())
+    
+    # Check if records list is empty
+    if not data.get("records") or len(data["records"]) == 0:
+        print("[ERROR] No files found to checksum. Cannot generate Merkle root.")
+        return 1
+    
     leaf_hashes = [r["sha256"] for r in data["records"]]
     root = merkle_root(leaf_hashes)
+    
+    # Handle case where merkle_root returns None (shouldn't happen if records exist, but defensive)
+    if root is None:
+        print("[ERROR] Failed to generate Merkle root. No valid hashes found.")
+        return 1
     
     out = {
         "created_utc": data["created_utc"],

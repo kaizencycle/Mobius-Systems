@@ -40,13 +40,15 @@ Successfully completed the comprehensive transition from **Civic OS** to **Kaize
 ## 🔄 Key Changes Made
 
 ### 1. System Naming Convention
-| Old Term | New Term | Scope |
-|----------|----------|-------|
-| Civic OS | Kaizen OS | System name |
-| Civic Stack | Kaizen Stack | App umbrella |
-| Civic Ledger | Kaizen Ledger | Core ledger |
-| .civic/ | .kaizen/ | Config paths |
-| @civic/ | @kaizen/ | Package names |
+| Old Term | New Term | Current Term | Scope |
+|----------|----------|--------------|-------|
+| Civic OS | Kaizen OS | Mobius Systems | System name |
+| Civic Stack | Kaizen Stack | Mobius Stack | App umbrella |
+| Civic Ledger | Kaizen Ledger | Mobius Ledger | Core ledger |
+| .civic/ | .kaizen/ | .mobius/ | Config paths |
+| @civic/ | @kaizen/ | @mobius/ | Package names |
+
+Note: This document reflects the historical Civic OS → Kaizen OS transition. For the current Kaizen OS → Mobius Systems rebrand (C-127), see the main README.md.
 
 ### 2. Canonical Manifest Structure
 - **Meta**: System identity, version, ownership

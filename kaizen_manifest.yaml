@@ -118,9 +118,11 @@ telemetry:
       - "VRL (Virtue Response Lag)"
       - "CEI (Civic Efficiency Index)"
   endpoints:
-    export_url_env: "CIVIC_OS_EXPORT_URL"     # backward-compatible env names
-    export_token_env: "CIVIC_OS_EXPORT_TOKEN" # keep until next major bump
-    # future:
+    export_url_env: "MOBIUS_EXPORT_URL"       # Current Mobius Systems naming (C-127+)
+    export_token_env: "MOBIUS_EXPORT_TOKEN"
+    # legacy (backward-compatible):
+    # civic_export_url_env: "CIVIC_OS_EXPORT_URL"
+    # civic_export_token_env: "CIVIC_OS_EXPORT_TOKEN"
     # kaizen_export_url_env: "KAIZEN_OS_EXPORT_URL"
     # kaizen_export_token_env: "KAIZEN_OS_EXPORT_TOKEN"
 

@@ -23,7 +23,7 @@ The Kaizen-OS laboratory structure implements a **7-layer civic operating system
                      ↓
 ┌─────────────────────────────────────────────────────────┐
 │ LAB7: OAA HUB (Shell/Init System)                       │
-│ • Parses human intent → .kaizen/ JSON specs             │
+│ • Parses human intent → .mobius/ JSON specs             │
 │ • System initialization and routing                     │
 │ Status: IMPLEMENTED ✅                                  │
 └────────────────────┬────────────────────────────────────┘

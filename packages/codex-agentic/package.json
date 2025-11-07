@@ -1,7 +1,7 @@
 {
-  "name": "@kaizen/codex-agentic",
+  "name": "@mobius/codex-agentic",
   "version": "0.1.0",
-  "description": "Multi-LLM router with DelibProof consensus for Kaizen OS Founding Agents",
+  "description": "Multi-LLM router with DelibProof consensus for Mobius Systems Founding Agents",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -30,7 +30,8 @@
     "vitest": "^2.1.1"
   },
   "keywords": [
-    "kaizen-os",
+    "mobius-systems",
+    "ktt",
     "llm",
     "multi-model",
     "consensus",

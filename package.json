@@ -1,8 +1,8 @@
 {
-  "name": "kaizen-os",
+  "name": "mobius-systems",
   "version": "1.0.0",
   "packageManager": "npm@10.9.4",
-  "description": "Kaizen OS - Continuous Integrity Architecture Monorepo",
+  "description": "Mobius Systems - Continuous Integrity Architecture Monorepo implementing the Kaizen Turing Test (KTT)",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -50,16 +50,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kaizencycle/kaizen-os.git"
+    "url": "https://github.com/kaizencycle/Kaizen-OS.git"
   },
   "keywords": [
-    "kaizen-os",
-    "kaizen-cycle",
+    "mobius-systems",
+    "kaizen-turing-test",
+    "ktt",
+    "mii",
+    "mic",
     "monorepo",
     "integrity",
     "ledger",
     "oaa",
-    "continuous-improvement"
+    "continuous-improvement",
+    "dva"
   ],
   "author": "Kaizen Cycle",
   "license": "MIT"

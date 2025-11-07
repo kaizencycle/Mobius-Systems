@@ -23,7 +23,7 @@
       "cortex": "Claude 3.5 Sonnet",
       "gi_contribution": 0.994,
       "signature": "atlas-sig-7c3d",
-      "comment": "URIEL manifest aligns with .kaizen/ schema. No drift detected. System coherence validated.",
+      "comment": "URIEL manifest aligns with .mobius/ schema. No drift detected. System coherence validated.",
       "timestamp": "2025-10-31T11:50:00Z"
     },
     {

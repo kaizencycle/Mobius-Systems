@@ -629,7 +629,7 @@ Operations (10%): $200K
 ```
 User: "Should we implement feature X?"
 → OAA Hub parses intent
-→ Generates .kaizen/spec.json
+→ Generates .mobius/spec.json
 ```
 
 **2. Multi-LLM Deliberation (2min)**

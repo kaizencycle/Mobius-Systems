@@ -10,8 +10,8 @@
  */
 
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { codexDeliberate } from '@kaizen/codex-agentic';
-import type { CodexRequest, DelibProof } from '@kaizen/codex-agentic';
+import { codexDeliberate } from '@mobius/codex-agentic';
+import type { CodexRequest, DelibProof } from '@mobius/codex-agentic';
 
 export default async function handler(
   req: NextApiRequest,

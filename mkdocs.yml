@@ -212,6 +212,12 @@ nav:
       - Triad of Healing: manifesto/triad_of_healing.md
       - Opening Invocation: rituals/opening_invocation.md
       - Manifesto: manifest_oaa.md
+  - Kaizen Turing Test (KTT):
+      - Overview: ktt/README.md
+      - Primer: ktt/00_primer.md
+      - Methods: ktt/02_methods.md
+      - Governance of Governors: ktt/03_governance_of_governors.md
+      - Related Work: ktt/05_related_work.md
   - Reference:
       - Repository Structure: REPOSITORY_STRUCTURE.md
       - Document Registry: DOCUMENT_REGISTRY.md

@@ -502,7 +502,7 @@
     {
       "path": "apps/hub-web/gic-indexer/README.md",
       "name": "README.md",
-      "title": "GIC Indexer",
+      "title": "MIC Indexer",
       "category": "readme",
       "status": "active",
       "size": 4265
@@ -614,7 +614,7 @@
     {
       "path": "apps/hub-web/oaa-central-hub/GIC_INTEGRATION_README.md",
       "name": "GIC_INTEGRATION_README.md",
-      "title": "🌐 GIC TLD Integration - OAA Central Hub",
+      "title": "🌐 MIC TLD Integration - OAA Central Hub",
       "category": "doc",
       "status": "active",
       "size": 7515
@@ -726,7 +726,7 @@
     {
       "path": "apps/hub-web/specs/07-incentives-gic.md",
       "name": "07-incentives-gic.md",
-      "title": "07 · Incentives — GIC Model",
+      "title": "07 · Incentives — MIC Model",
       "category": "doc",
       "status": "active",
       "size": 2666
@@ -758,7 +758,7 @@
     {
       "path": "apps/hub-web/src/gic-indexer/README.md",
       "name": "README.md",
-      "title": "GIC Indexer",
+      "title": "MIC Indexer",
       "category": "readme",
       "status": "active",
       "size": 4469
@@ -774,7 +774,7 @@
     {
       "path": "apps/hub-web/src/gic/README.md",
       "name": "README.md",
-      "title": ".gic — Global Integrity Citizen (Alt‑Root Pilot)",
+      "title": ".gic — Mobius Integrity Index Citizen (Alt‑Root Pilot)",
       "category": "readme",
       "status": "active",
       "size": 725
@@ -918,7 +918,7 @@
     {
       "path": "apps/hub-web/src/specs/07-incentives-gic.md",
       "name": "07-incentives-gic.md",
-      "title": "07 -+ Incentives G�� GIC Model",
+      "title": "07 -+ Incentives G�� MIC Model",
       "category": "doc",
       "status": "active",
       "size": 2675
@@ -1206,7 +1206,7 @@
     {
       "path": "docs/architecture/GIC_Architecture_Spec_v1.md",
       "name": "GIC_Architecture_Spec_v1.md",
-      "title": "Kaizen OS · GIC Architecture Spec (v1)",
+      "title": "Kaizen OS · MIC Architecture Spec (v1)",
       "category": "doc",
       "status": "active",
       "size": 14118
@@ -1598,7 +1598,7 @@
     {
       "path": "docs/economics/GIC_WHITEPAPER_v1.md",
       "name": "GIC_WHITEPAPER_v1.md",
-      "title": "The GIC Whitepaper: Building a Currency of Integrity",
+      "title": "The MIC Whitepaper: Building a Currency of Integrity",
       "category": "doc",
       "status": "active",
       "size": 57693
@@ -1638,7 +1638,7 @@
     {
       "path": "docs/GIC_Foundation_Up_Economics_Addendum.md",
       "name": "GIC_Foundation_Up_Economics_Addendum.md",
-      "title": "GIC Whitepaper — Addendum",
+      "title": "MIC Whitepaper — Addendum",
       "category": "doc",
       "status": "active",
       "size": 42624
@@ -1646,7 +1646,7 @@
     {
       "path": "docs/GIC_Whitepaper_Final.md",
       "name": "GIC_Whitepaper_Final.md",
-      "title": "Global Integrity Credits (GIC)",
+      "title": "Mobius Integrity Credits (MIC)",
       "category": "doc",
       "status": "active",
       "size": 15131
@@ -2366,7 +2366,7 @@
     {
       "path": "labs/lab7-proof/core/rewards/README.md",
       "name": "README.md",
-      "title": "Integrity-Based Reward Engine (GIC v1.0)",
+      "title": "Integrity-Based Reward Engine (MIC v1.0)",
       "category": "readme",
       "status": "active",
       "size": 7674
@@ -2438,7 +2438,7 @@
     {
       "path": "labs/lab7-proof/INTEGRITY_REWARD_ENGINE_SUMMARY.md",
       "name": "INTEGRITY_REWARD_ENGINE_SUMMARY.md",
-      "title": "Integrity-Based Reward Engine (GIC v1.0) - Implementation Summary",
+      "title": "Integrity-Based Reward Engine (MIC v1.0) - Implementation Summary",
       "category": "doc",
       "status": "active",
       "size": 6511
@@ -2622,7 +2622,7 @@
     {
       "path": "ledger/appendices/GIC_Whitepaper_v1/README.md",
       "name": "README.md",
-      "title": "Appendix III - The Existential Loop (GIC Whitepaper v1)",
+      "title": "Appendix III - The Existential Loop (MIC Whitepaper v1)",
       "category": "readme",
       "status": "active",
       "size": 879
@@ -2774,7 +2774,7 @@
     {
       "path": "packages/civic-ai-specs/civic-ai-specs/specs/07-incentives-gic.md",
       "name": "07-incentives-gic.md",
-      "title": "Incentives and GIC (Global Integrity Credit)",
+      "title": "Incentives and MIC (Mobius Integrity Index Credit)",
       "category": "doc",
       "status": "active",
       "size": 7819
@@ -2918,7 +2918,7 @@
     {
       "path": "packages/civic-protocol-core/gic-indexer/README.md",
       "name": "README.md",
-      "title": "GIC Indexer API",
+      "title": "MIC Indexer API",
       "category": "readme",
       "status": "active",
       "size": 1182
@@ -3134,7 +3134,7 @@
     {
       "path": "packages/oaa-api-library/gic-indexer/README.md",
       "name": "README.md",
-      "title": "GIC Indexer",
+      "title": "MIC Indexer",
       "category": "readme",
       "status": "active",
       "size": 4264
@@ -3246,7 +3246,7 @@
     {
       "path": "packages/oaa-api-library/oaa-central-hub/GIC_INTEGRATION_README.md",
       "name": "GIC_INTEGRATION_README.md",
-      "title": "🌐 GIC TLD Integration - OAA Central Hub",
+      "title": "🌐 MIC TLD Integration - OAA Central Hub",
       "category": "doc",
       "status": "active",
       "size": 7514
@@ -3358,7 +3358,7 @@
     {
       "path": "packages/oaa-api-library/specs/07-incentives-gic.md",
       "name": "07-incentives-gic.md",
-      "title": "07 · Incentives — GIC Model",
+      "title": "07 · Incentives — MIC Model",
       "category": "doc",
       "status": "active",
       "size": 2665
@@ -3390,7 +3390,7 @@
     {
       "path": "packages/oaa-api-library/src/gic-indexer/README.md",
       "name": "README.md",
-      "title": "GIC Indexer",
+      "title": "MIC Indexer",
       "category": "readme",
       "status": "active",
       "size": 4468
@@ -3406,7 +3406,7 @@
     {
       "path": "packages/oaa-api-library/src/gic/README.md",
       "name": "README.md",
-      "title": ".gic — Global Integrity Citizen (Alt‑Root Pilot)",
+      "title": ".gic — Mobius Integrity Index Citizen (Alt‑Root Pilot)",
       "category": "readme",
       "status": "active",
       "size": 724
@@ -3550,7 +3550,7 @@
     {
       "path": "packages/oaa-api-library/src/specs/07-incentives-gic.md",
       "name": "07-incentives-gic.md",
-      "title": "07 -+ Incentives G�� GIC Model",
+      "title": "07 -+ Incentives G�� MIC Model",
       "category": "doc",
       "status": "active",
       "size": 2674

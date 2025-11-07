@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: gic-indexer
+    name: miic-indexer
     env: python
     plan: free
     region: oregon

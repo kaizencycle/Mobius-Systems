@@ -95,7 +95,7 @@ class LedgerCore:
                 )
             """)
             
-            # GIC transactions table
+            # MIC transactions table
             conn.execute("""
                 CREATE TABLE IF NOT EXISTS gic_transactions (
                     tx_id TEXT PRIMARY KEY,

@@ -9,7 +9,7 @@ This example app shows how to:
 - Create new reflections
 - List existing reflections
 - Cast votes in governance
-- Check GIC balances
+- Check MIC balances
 - View civic cycles
 
 ## Prerequisites
@@ -68,7 +68,7 @@ print(f"Found {reflections['total']} reflections")
 
 # Get balance
 balance = client.get_balance("citizen_001")
-print(f"Balance: {balance.balance} GIC")
+print(f"Balance: {balance.balance} MIC")
 ```
 
 ### JavaScript Example
@@ -94,7 +94,7 @@ console.log(`Found ${reflections.total} reflections`);
 
 // Get balance
 const balance = await client.getBalance("citizen_001");
-console.log(`Balance: ${balance.balance} GIC`);
+console.log(`Balance: ${balance.balance} MIC`);
 ```
 
 ## API Endpoints Used
@@ -105,7 +105,7 @@ console.log(`Balance: ${balance.balance} GIC`);
 - `POST /attestations` - Create attestations
 - `POST /agora/votes` - Cast governance votes
 - `GET /cycles` - List civic cycles
-- `GET /balance/{address}` - Get GIC balance
+- `GET /balance/{address}` - Get MIC balance
 - `GET /earn/events` - Get earning events
 
 ## Features Demonstrated
@@ -122,7 +122,7 @@ console.log(`Balance: ${balance.balance} GIC`);
 - Understanding voting weights
 
 ### Economic Activity
-- Checking GIC balances
+- Checking MIC balances
 - Viewing earning events
 - Understanding the economic model
 

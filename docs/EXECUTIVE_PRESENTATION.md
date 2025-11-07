@@ -148,7 +148,7 @@ Question → Claude + GPT + Gemini + DeepSeek
                    ↓
 ┌────────────────────────────────────────────────┐
 │ LAB1: SUBSTRATE PROOF (Blockchain)             │
-│ Proof-of-Integrity, GI scoring, GIC token     │
+│ Proof-of-Integrity, GI scoring, MIC token     │
 └──────────────────┬─────────────────────────────┘
                    ↓
 ┌────────────────────────────────────────────────┐
@@ -204,8 +204,8 @@ Tier 4: Strategic Partner (Custom pricing)
 - Training programs ($5K-25K per cohort)
 - Annual audits and certification
 
-**3. GIC Token Economy (Future)**
-- Transaction fees (0.1% per GIC transfer)
+**3. MIC Token Economy (Future)**
+- Transaction fees (0.1% per MIC transfer)
 - Staking rewards for high-GI validators
 - Marketplace for certified add-ons
 
@@ -732,7 +732,7 @@ User: "Should we implement feature X?"
 - 200,000 developers more productive
 - $10B in recovered productivity
 - 1M+ constitutional AI decisions per day
-- Billions of GIC tokens circulating
+- Billions of MIC tokens circulating
 - New standard for ethical AI
 
 ### Legacy

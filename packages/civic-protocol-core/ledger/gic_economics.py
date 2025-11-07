@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-GIC (Governance Incentive Currency) Economics Implementation
+MIC (Governance Incentive Currency) Economics Implementation
 
 This module implements the economic model for the Civic Protocol, including
-GIC issuance, staking, burning, and reward distribution mechanisms.
+MIC issuance, staking, burning, and reward distribution mechanisms.
 """
 
 import hashlib
@@ -15,7 +15,7 @@ from enum import Enum
 import math
 
 class TransactionType(Enum):
-    """Types of GIC transactions"""
+    """Types of MIC transactions"""
     TRANSFER = "transfer"
     EARN = "earn"
     BURN = "burn"
@@ -26,7 +26,7 @@ class TransactionType(Enum):
 
 @dataclass
 class GICAccount:
-    """GIC account with balance and staking information"""
+    """MIC account with balance and staking information"""
     address: str
     nonce: int
     balance: int  # In smallest units (wei-like, 18 decimals)
@@ -40,7 +40,7 @@ class GICAccount:
 
 @dataclass
 class GICTransaction:
-    """GIC transaction"""
+    """MIC transaction"""
     tx_id: str
     tx_type: TransactionType
     from_addr: Optional[str]
@@ -87,14 +87,14 @@ class VestingSchedule:
     cliff_epochs: int
 
 class GICEconomics:
-    """GIC economic system implementation"""
+    """MIC economic system implementation"""
     
     def __init__(self, genesis_supply: int = 1000000 * 10**18):
         """
-        Initialize GIC economics
+        Initialize MIC economics
         
         Args:
-            genesis_supply: Initial GIC supply in smallest units
+            genesis_supply: Initial MIC supply in smallest units
         """
         self.genesis_supply = genesis_supply
         self.total_supply = genesis_supply
@@ -123,7 +123,7 @@ class GICEconomics:
         self._initialize_genesis_distribution()
     
     def _initialize_genesis_distribution(self):
-        """Initialize the genesis distribution of GIC"""
+        """Initialize the genesis distribution of MIC"""
         # Distribute to various pools and accounts
         treasury_amount = int(self.genesis_supply * 0.3)  # 30% to treasury
         community_amount = int(self.genesis_supply * 0.2)  # 20% to community
@@ -166,7 +166,7 @@ class GICEconomics:
         self.staking_reward_pool = staking_rewards
     
     def create_account(self, address: str, initial_balance: int = 0) -> GICAccount:
-        """Create a new GIC account"""
+        """Create a new MIC account"""
         if address in self.accounts:
             return self.accounts[address]
         
@@ -188,7 +188,7 @@ class GICEconomics:
     
     def transfer(self, from_addr: str, to_addr: str, amount: int, 
                 memo: Optional[str] = None) -> GICTransaction:
-        """Transfer GIC between accounts"""
+        """Transfer MIC between accounts"""
         # Validate accounts exist
         if from_addr not in self.accounts:
             raise Exception(f"Sender account {from_addr} does not exist")
@@ -228,7 +228,7 @@ class GICEconomics:
     
     def earn_reward(self, recipient: str, amount: int, reason: str, 
                    cycle_id: str, multiplier: float = 1.0) -> RewardEvent:
-        """Award GIC for civic activity"""
+        """Award MIC for civic activity"""
         if recipient not in self.accounts:
             self.create_account(recipient)
         
@@ -253,7 +253,7 @@ class GICEconomics:
         return event
     
     def stake(self, address: str, amount: int) -> GICTransaction:
-        """Stake GIC for governance and rewards"""
+        """Stake MIC for governance and rewards"""
         if address not in self.accounts:
             raise Exception(f"Account {address} does not exist")
         
@@ -282,7 +282,7 @@ class GICEconomics:
         return tx
     
     def unstake(self, address: str, amount: int) -> GICTransaction:
-        """Initiate unstaking of GIC"""
+        """Initiate unstaking of MIC"""
         if address not in self.accounts:
             raise Exception(f"Account {address} does not exist")
         
@@ -314,7 +314,7 @@ class GICEconomics:
         return tx
     
     def burn(self, from_addr: str, amount: int, reason: str = "voluntary") -> GICTransaction:
-        """Burn GIC (remove from circulation)"""
+        """Burn MIC (remove from circulation)"""
         if from_addr not in self.accounts:
             raise Exception(f"Account {from_addr} does not exist")
         
@@ -331,7 +331,7 @@ class GICEconomics:
             to_addr=None,
             amount=amount,
             nonce=account.nonce,
-            memo=f"Burning GIC: {reason}",
+            memo=f"Burning MIC: {reason}",
             signature="",
             timestamp=int(time.time()),
             block_height=0
@@ -344,7 +344,7 @@ class GICEconomics:
     
     def airdrop(self, recipients: List[str], amount_per_recipient: int, 
                reason: str = "community_distribution") -> List[GICTransaction]:
-        """Airdrop GIC to multiple recipients"""
+        """Airdrop MIC to multiple recipients"""
         total_amount = len(recipients) * amount_per_recipient
         
         if self.accounts["treasury"].balance < total_amount:
@@ -382,7 +382,7 @@ class GICEconomics:
         account = self.accounts[address]
         
         # Base power from staked amount
-        staked_power = account.staked / 10**18  # Convert to GIC units
+        staked_power = account.staked / 10**18  # Convert to MIC units
         
         # Activity bonus (up to 50% of staked power)
         activity_bonus = min(account.activity_score * 100, staked_power * 0.5)
@@ -405,7 +405,7 @@ class GICEconomics:
         if total_staked == 0:
             return []
         
-        # Calculate rewards per staked GIC
+        # Calculate rewards per staked MIC
         rewards_per_gic = self.staking_reward_pool / total_staked
         
         reward_events = []
@@ -576,32 +576,32 @@ class GICEconomics:
 
 # Example usage
 if __name__ == "__main__":
-    # Create GIC economics system
+    # Create MIC economics system
     gic = GICEconomics()
     
     # Create some accounts
     alice = gic.create_account("alice", 10000 * 10**18)
     bob = gic.create_account("bob", 5000 * 10**18)
     
-    print(f"Alice balance: {alice.balance / 10**18} GIC")
-    print(f"Bob balance: {bob.balance / 10**18} GIC")
+    print(f"Alice balance: {alice.balance / 10**18} MIC")
+    print(f"Bob balance: {bob.balance / 10**18} MIC")
     
-    # Transfer GIC
+    # Transfer MIC
     tx = gic.transfer("alice", "bob", 1000 * 10**18, "Payment for services")
-    print(f"Transfer: {tx.amount / 10**18} GIC from {tx.from_addr} to {tx.to_addr}")
+    print(f"Transfer: {tx.amount / 10**18} MIC from {tx.from_addr} to {tx.to_addr}")
     
-    # Stake GIC
+    # Stake MIC
     stake_tx = gic.stake("alice", 5000 * 10**18)
-    print(f"Alice staked: {stake_tx.amount / 10**18} GIC")
+    print(f"Alice staked: {stake_tx.amount / 10**18} MIC")
     
     # Earn reward
     reward = gic.earn_reward("bob", 100 * 10**18, "reflection", "cycle_001", 1.5)
-    print(f"Bob earned: {reward.amount / 10**18} GIC for {reward.reason}")
+    print(f"Bob earned: {reward.amount / 10**18} MIC for {reward.reason}")
     
     # Check balances
-    print(f"Alice balance: {gic.accounts['alice'].balance / 10**18} GIC")
-    print(f"Alice staked: {gic.accounts['alice'].staked / 10**18} GIC")
-    print(f"Bob balance: {gic.accounts['bob'].balance / 10**18} GIC")
+    print(f"Alice balance: {gic.accounts['alice'].balance / 10**18} MIC")
+    print(f"Alice staked: {gic.accounts['alice'].staked / 10**18} MIC")
+    print(f"Bob balance: {gic.accounts['bob'].balance / 10**18} MIC")
     
     # Process epoch
     epoch_result = gic.process_epoch(1)

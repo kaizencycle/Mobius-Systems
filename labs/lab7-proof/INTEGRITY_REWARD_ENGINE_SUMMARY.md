@@ -1,4 +1,4 @@
-# Integrity-Based Reward Engine (GIC v1.0) - Implementation Summary
+# Integrity-Based Reward Engine (MIC v1.0) - Implementation Summary
 
 ## 🎯 Overview
 
@@ -33,7 +33,7 @@ Successfully implemented a comprehensive Integrity-Based Reward Engine designed 
 
 ### Final Formula
 ```
-GIC = BASE * max(0, I - P)
+MIC = BASE * max(0, I - P)
 where I = 0.4*truth + 0.3*symbiosis + 0.2*verification + 0.1*novelty
 and P = 0.3*entropy + 0.5*duplication + 1.0*policy_violation + 0.6*drift_anomaly
 ```
@@ -66,11 +66,11 @@ and P = 0.3*entropy + 0.5*duplication + 1.0*policy_violation + 0.6*drift_anomaly
 ## 🧪 Testing Results
 
 All tests pass successfully:
-- ✅ High-quality content scoring (GIC: 6.27)
-- ✅ Low-quality content detection (GIC: 2.77)
-- ✅ Policy violation veto (GIC: 0.00)
-- ✅ Drift anomaly detection (GIC: 0.00)
-- ✅ Sample payload processing (GIC: 7.55)
+- ✅ High-quality content scoring (MIC: 6.27)
+- ✅ Low-quality content detection (MIC: 2.77)
+- ✅ Policy violation veto (MIC: 0.00)
+- ✅ Drift anomaly detection (MIC: 0.00)
+- ✅ Sample payload processing (MIC: 7.55)
 
 ## 📊 CI Pipeline Status
 
@@ -87,7 +87,7 @@ from core.rewards.integrity_engine import evaluate_reward, load_manifest
 
 manifest = load_manifest("core/rewards/manifest.json")
 result = evaluate_reward(payload, manifest)
-print(f"GIC Reward: {result['GIC']}")
+print(f"MIC Reward: {result['MIC']}")
 ```
 
 ### CI Integration
@@ -130,7 +130,7 @@ The engine is ready for integration with OAA Hub reflection handlers:
 ```python
 def handle_reflection_complete(reflection_data):
     result = evaluate_reward(reflection_data, manifest)
-    if result["GIC"] > 0:
+    if result["MIC"] > 0:
         issue_gic_reward(result["splits"])
         log_to_ledger(result["seal"], result)
 ```
@@ -139,13 +139,13 @@ def handle_reflection_complete(reflection_data):
 CO-LEARN_EVENT records include:
 - Payload hash (seal)
 - All scores and penalties
-- GIC reward amount and splits
+- MIC reward amount and splits
 - Citations and artifacts
 - Timestamp and signatures
 
 ### Frontend Display
 Ready for Lab4 integration to show:
-- Current GIC balance
+- Current MIC balance
 - Integrity scores
 - Drift warnings
 - Reward history
@@ -171,7 +171,7 @@ The implementation successfully achieves the core objectives:
 
 1. **Minimizes AI Slop**: Low-quality, uncited, repetitive content scores poorly
 2. **Prevents AI Drift**: Anomalous behavior triggers immediate penalties
-3. **Rewards Quality**: High-integrity human-AI collaboration earns GIC
+3. **Rewards Quality**: High-integrity human-AI collaboration earns MIC
 4. **Enforces Standards**: CI pipeline blocks low-quality content
 5. **Maintains Auditability**: Complete ledger of all evaluations
 
@@ -179,7 +179,7 @@ The implementation successfully achieves the core objectives:
 
 1. **OAA Integration**: Connect to reflection handlers
 2. **Ledger Integration**: Implement CO-LEARN_EVENT logging
-3. **Frontend Display**: Add GIC indicators to Lab4
+3. **Frontend Display**: Add MIC indicators to Lab4
 4. **Threshold Tuning**: Adjust based on real-world usage
 5. **Advanced Scoring**: Implement proper embedding-based similarity
 

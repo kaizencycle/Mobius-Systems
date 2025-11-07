@@ -66,7 +66,7 @@ The Lab6 Citizen Shield integration connects with:
 
 - **Civic Ledger API**: Event anchoring and verification
 - **Lab4 Reflections API**: Citizen reflection management
-- **GIC Indexer**: Balance and reward computation
+- **MIC Indexer**: Balance and reward computation
 - **Frontend Applications**: User interface integration
 
 ### Development

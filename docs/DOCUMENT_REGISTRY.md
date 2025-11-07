@@ -85,7 +85,7 @@ Completed documents: 21
 - [Deployment Guide](../apps/hub-web/DEPLOYMENT.md) — doc
 - [OAA Central Hub — Starter](../apps/hub-web/docs/README-OAA-HUB.md) — doc
 - [E.O.M.M. G�� Civic Ledger Sync System](../apps/hub-web/EOMM_SYSTEM_README.md) — doc
-- [GIC Indexer](../apps/hub-web/gic-indexer/README.md) — readme
+- [MIC Indexer](../apps/hub-web/gic-indexer/README.md) — readme
 - [Closed-Loop Safety Pack](../apps/hub-web/oaa-central-hub/closed_loop_safety_pack/README.md) — readme
 - [OAA Dev Sidebar & AI Memory Features](../apps/hub-web/oaa-central-hub/companion_site_starter/DEV_SIDEBAR_README.md) — doc
 - [🌍 CIVIC AI NATIVE STACK MANIFEST](../apps/hub-web/oaa-central-hub/companion_site_starter/docs/CIVIC_AI_MANIFEST_PDF.md) — doc
@@ -99,7 +99,7 @@ Completed documents: 21
 - [Companion Site Starter](../apps/hub-web/oaa-central-hub/companion_site_starter/README.md) — readme
 - [Sentinel Suite - OAA Hub Operational Monitoring](../apps/hub-web/oaa-central-hub/companion_site_starter/SENTINEL_SUITE_README.md) — doc
 - [Mock Civic Ledger](../apps/hub-web/oaa-central-hub/companion_site_starter/services/mock_ledger/README.md) — readme
-- [🌐 GIC TLD Integration - OAA Central Hub](../apps/hub-web/oaa-central-hub/GIC_INTEGRATION_README.md) — doc
+- [🌐 MIC TLD Integration - OAA Central Hub](../apps/hub-web/oaa-central-hub/GIC_INTEGRATION_README.md) — doc
 - [Retryable Publish Queue + Gateway Cache Warming](../apps/hub-web/oaa-central-hub/PUBLISH_QUEUE_README.md) — doc
 - [OAA Central Hub — Starter](../apps/hub-web/oaa-central-hub/README-OAA-HUB.md) — doc
 - [Virtue Accords — Cycle 0 (Draft)](../apps/hub-web/public/constitution/virtue_accords.md) — doc
@@ -113,13 +113,13 @@ Completed documents: 21
 - [04 · AI-SEO / GEO Interface](../apps/hub-web/specs/04-ai-seo-geo.md) — doc
 - [05 · Proof-of-Integrity Pipeline](../apps/hub-web/specs/05-proof-pipeline.md) — doc
 - [06 · Code Verification Protocol](../apps/hub-web/specs/06-code-verification.md) — doc
-- [07 · Incentives — GIC Model](../apps/hub-web/specs/07-incentives-gic.md) — doc
+- [07 · Incentives — MIC Model](../apps/hub-web/specs/07-incentives-gic.md) — doc
 - [09 · Cultural Kernel — Archetype Engine](../apps/hub-web/specs/09-cultural-kernel-archetypes.md) — doc
 - [10 · Yautja Cultural Accord](../apps/hub-web/specs/10-yautja-cultural-accord.md) — doc
 - [E.O.M.M. (External Organic Memory Module) Data](../apps/hub-web/src/data/eomm/README.md) — readme
-- [GIC Indexer](../apps/hub-web/src/gic-indexer/README.md) — readme
+- [MIC Indexer](../apps/hub-web/src/gic-indexer/README.md) — readme
 - [.gic Gateway (alt-root)](../apps/hub-web/src/gic/gateway/README.md) — readme
-- [.gic — Global Integrity Citizen (Alt‑Root Pilot)](../apps/hub-web/src/gic/README.md) — readme
+- [.gic — Mobius Integrity Index Citizen (Alt‑Root Pilot)](../apps/hub-web/src/gic/README.md) — readme
 - [Companion Site Starter](../apps/hub-web/src/packs/companion/README.md) — readme
 - [Cursor Agent Starter](../apps/hub-web/src/packs/cursor-agent/README.md) — readme
 - [Place short UI sounds here (e.g., 'scan.wav', 'blink.wav'). Keep files small and non-copyrighted.](../apps/hub-web/src/packs/holo-assets/public/sfx/README.txt) — readme
@@ -137,7 +137,7 @@ Completed documents: 21
 - [04 -+ AI-SEO / GEO Interface](../apps/hub-web/src/specs/04-ai-seo-geo.md) — doc
 - [05 -+ Proof-of-Integrity Pipeline](../apps/hub-web/src/specs/05-proof-pipeline.md) — doc
 - [06 -+ Code Verification Protocol](../apps/hub-web/src/specs/06-code-verification.md) — doc
-- [07 -+ Incentives G�� GIC Model](../apps/hub-web/src/specs/07-incentives-gic.md) — doc
+- [07 -+ Incentives G�� MIC Model](../apps/hub-web/src/specs/07-incentives-gic.md) — doc
 - [09 -+ Cultural Kernel G�� Archetype Engine](../apps/hub-web/src/specs/09-cultural-kernel-archetypes.md) — doc
 - [10 -+ Yautja Cultural Accord](../apps/hub-web/src/specs/10-yautja-cultural-accord.md) — doc
 - [Put public PDFs and briefs here (executive summary, deck, whitepapers).](../apps/kaizencycle-hub/docs/README.md) — readme
@@ -172,7 +172,7 @@ Completed documents: 21
 - [AI Integrity Constitution - Implementation Summary](AI_INTEGRITY_IMPLEMENTATION_SUMMARY.md) — doc
 - [🌐 Kaizen OS API Integration Guide](API_INTEGRATION.md) — doc
 - [Founding Agents Sovereign Stack](architecture/FOUNDING_AGENTS_SOVEREIGN_STACK.md) — doc
-- [Kaizen OS · GIC Architecture Spec (v1)](architecture/GIC_Architecture_Spec_v1.md) — doc
+- [Kaizen OS · MIC Architecture Spec (v1)](architecture/GIC_Architecture_Spec_v1.md) — doc
 - [Lab 5: Humanities & Healthcare Layer](architecture/Lab5_Humanities_Healthcare_Specification.md) — doc
 - [Civic-OS Architecture Overview](architecture/overview.md) — doc
 - [🚀 AUREA + ATLAS Merge - COMPLETE!](archive/AUREA_ATLAS_MERGE_COMPLETE.md) — doc ✅ Completed
@@ -221,13 +221,13 @@ Completed documents: 21
 - [---](deployment/rollout-phases.md) — doc
 - [Vercel Deployment Runbook](deployment/VERCEL_DEPLOYMENT_RUNBOOK.md) — doc
 - [Kaizen OS Document Registry](DOCUMENT_REGISTRY.md) — doc
-- [The GIC Whitepaper: Building a Currency of Integrity](economics/GIC_WHITEPAPER_v1.md) — doc
+- [The MIC Whitepaper: Building a Currency of Integrity](economics/GIC_WHITEPAPER_v1.md) — doc
 - [Kaizen-OS: Executive Presentation](EXECUTIVE_PRESENTATION.md) — doc
 - [Forking Guide: How to Continue This Work](FORKING_GUIDE.md) — doc
 - [DNS + CNAME Integration Guide for .gic Agent Domains](founders-agents.gic.md) — doc
 - [Frontend Development Guide](FRONTEND_DEVELOPMENT.md) — doc
-- [GIC Whitepaper — Addendum](GIC_Foundation_Up_Economics_Addendum.md) — doc
-- [Global Integrity Credits (GIC)](GIC_Whitepaper_Final.md) — doc
+- [MIC Whitepaper — Addendum](GIC_Foundation_Up_Economics_Addendum.md) — doc
+- [Mobius Integrity Credits (MIC)](GIC_Whitepaper_Final.md) — doc
 - [🏛 Kaizen OS — HR Framework for AI Agents](governance/hr/Kaizen_OS_HR_Framework.md) — doc
 - [CEREMONIAL SUMMONS - COMPLETE IMPLEMENTATION](IMPLEMENTATION_SUMMARY.md) — doc
 - [🕊️ CIVIC-OS — INDEPENDENCE MANIFEST](INDEPENDENCE_MANIFEST.md) — doc
@@ -321,7 +321,7 @@ Completed documents: 21
 - [@lab7/oaa-client (TypeScript)](../labs/lab7-proof/clients/ts/README.md) — readme
 - [Lab7-Proof Configuration Summary](../labs/lab7-proof/CONFIGURATION_SUMMARY.md) — doc
 - [Contributing to Custos Charter](../labs/lab7-proof/CONTRIBUTING.md) — doc
-- [Integrity-Based Reward Engine (GIC v1.0)](../labs/lab7-proof/core/rewards/README.md) — readme
+- [Integrity-Based Reward Engine (MIC v1.0)](../labs/lab7-proof/core/rewards/README.md) — readme
 - [🕊️ Custos Charter: The Kristos Ascension Protocol](../labs/lab7-proof/CUSTOS_CHARTER.md) — doc
 - [Thought Broker Deployment Guide](../labs/lab7-proof/DEPLOYMENT_GUIDE.md) — doc
 - [Lab7-proof (OAA) — Architecture & Data Flows](../labs/lab7-proof/diagram.md) — doc
@@ -330,7 +330,7 @@ Completed documents: 21
 - [1:HL["/_next/static/css/4c1f43cd0a7fc68d.css","style",{"crossOrigin":""}]](../labs/lab7-proof/frontend/reflections-app/out/mentor/index.txt) — doc
 - [🌍 Global Health Sentinel — Pulse Node A (Lab7)](../labs/lab7-proof/global-health-sentinel/README.md) — readme
 - [Custos Charter Implementation Summary](../labs/lab7-proof/IMPLEMENTATION_SUMMARY.md) — doc
-- [Integrity-Based Reward Engine (GIC v1.0) - Implementation Summary](../labs/lab7-proof/INTEGRITY_REWARD_ENGINE_SUMMARY.md) — doc
+- [Integrity-Based Reward Engine (MIC v1.0) - Implementation Summary](../labs/lab7-proof/INTEGRITY_REWARD_ENGINE_SUMMARY.md) — doc
 - [🏥 MCP Health Sentinel Agent](../labs/lab7-proof/MCP_HEALTH_SENTINEL_README.md) — doc
 - [🤖 Lab7 Edits Merge System - Complete Summary](../labs/lab7-proof/MERGE_SYSTEM_SUMMARY.md) — doc
 - [OAA: Agents Neural Network](../labs/lab7-proof/OAA_README.md) — doc
@@ -356,7 +356,7 @@ Completed documents: 21
 
 ## ledger
 
-- [Appendix III - The Existential Loop (GIC Whitepaper v1)](../ledger/appendices/GIC_Whitepaper_v1/README.md) — readme
+- [Appendix III - The Existential Loop (MIC Whitepaper v1)](../ledger/appendices/GIC_Whitepaper_v1/README.md) — readme
 - [Ledger Inscription — The Return to Balance](../ledger/inscriptions/RETURN_TO_BALANCE_C119.md) — doc
 
 ## packages
@@ -378,7 +378,7 @@ Completed documents: 21
 - [AI-SEO and Geographic Integration](../packages/civic-ai-specs/civic-ai-specs/specs/04-ai-seo-geo.md) — doc
 - [Proof Pipeline and Verification](../packages/civic-ai-specs/civic-ai-specs/specs/05-proof-pipeline.md) — doc
 - [Code Verification and Integrity](../packages/civic-ai-specs/civic-ai-specs/specs/06-code-verification.md) — doc
-- [Incentives and GIC (Global Integrity Credit)](../packages/civic-ai-specs/civic-ai-specs/specs/07-incentives-gic.md) — doc
+- [Incentives and MIC (Mobius Integrity Index Credit)](../packages/civic-ai-specs/civic-ai-specs/specs/07-incentives-gic.md) — doc
 - [Validation Checklist](../packages/civic-ai-specs/civic-ai-specs/specs/08-validation-checklist.md) — doc
 - [Cultural Kernel Archetypes](../packages/civic-ai-specs/civic-ai-specs/specs/09-cultural-kernel-archetypes.md) — doc
 - [Yautja Cultural Accord](../packages/civic-ai-specs/civic-ai-specs/specs/10-yautja-cultural-accord.md) — doc
@@ -396,7 +396,7 @@ Completed documents: 21
 - [Citizen Shield — Lab6 App (Front-end)](../packages/civic-protocol-core/frontend/citizen-shield-app/README.md) — readme
 - [Frontend Applications](../packages/civic-protocol-core/frontend/README.md) — readme
 - [Genesis Custodian Event Guide](../packages/civic-protocol-core/GENESIS_CUSTODIAN_GUIDE.md) — doc
-- [GIC Indexer API](../packages/civic-protocol-core/gic-indexer/README.md) — readme
+- [MIC Indexer API](../packages/civic-protocol-core/gic-indexer/README.md) — readme
 - [fastapi==0.112.2](../packages/civic-protocol-core/gic-indexer/requirements.txt) — doc
 - [Citizen Shield Integration (Lab6-proof)](../packages/civic-protocol-core/integrations/lab6-citizen-shield/README_UPDATE.md) — doc
 - [Integration Components](../packages/civic-protocol-core/integrations/README.md) — readme
@@ -423,7 +423,7 @@ Completed documents: 21
 - [Deployment Guide](../packages/oaa-api-library/DEPLOYMENT.md) — doc
 - [OAA Central Hub — Starter](../packages/oaa-api-library/docs/README-OAA-HUB.md) — doc
 - [E.O.M.M. G�� Civic Ledger Sync System](../packages/oaa-api-library/EOMM_SYSTEM_README.md) — doc
-- [GIC Indexer](../packages/oaa-api-library/gic-indexer/README.md) — readme
+- [MIC Indexer](../packages/oaa-api-library/gic-indexer/README.md) — readme
 - [Closed-Loop Safety Pack](../packages/oaa-api-library/oaa-central-hub/closed_loop_safety_pack/README.md) — readme
 - [OAA Dev Sidebar & AI Memory Features](../packages/oaa-api-library/oaa-central-hub/companion_site_starter/DEV_SIDEBAR_README.md) — doc
 - [🌍 CIVIC AI NATIVE STACK MANIFEST](../packages/oaa-api-library/oaa-central-hub/companion_site_starter/docs/CIVIC_AI_MANIFEST_PDF.md) — doc
@@ -437,7 +437,7 @@ Completed documents: 21
 - [Companion Site Starter](../packages/oaa-api-library/oaa-central-hub/companion_site_starter/README.md) — readme
 - [Sentinel Suite - OAA Hub Operational Monitoring](../packages/oaa-api-library/oaa-central-hub/companion_site_starter/SENTINEL_SUITE_README.md) — doc
 - [Mock Civic Ledger](../packages/oaa-api-library/oaa-central-hub/companion_site_starter/services/mock_ledger/README.md) — readme
-- [🌐 GIC TLD Integration - OAA Central Hub](../packages/oaa-api-library/oaa-central-hub/GIC_INTEGRATION_README.md) — doc
+- [🌐 MIC TLD Integration - OAA Central Hub](../packages/oaa-api-library/oaa-central-hub/GIC_INTEGRATION_README.md) — doc
 - [Retryable Publish Queue + Gateway Cache Warming](../packages/oaa-api-library/oaa-central-hub/PUBLISH_QUEUE_README.md) — doc
 - [OAA Central Hub — Starter](../packages/oaa-api-library/oaa-central-hub/README-OAA-HUB.md) — doc
 - [Virtue Accords — Cycle 0 (Draft)](../packages/oaa-api-library/public/constitution/virtue_accords.md) — doc
@@ -451,13 +451,13 @@ Completed documents: 21
 - [04 · AI-SEO / GEO Interface](../packages/oaa-api-library/specs/04-ai-seo-geo.md) — doc
 - [05 · Proof-of-Integrity Pipeline](../packages/oaa-api-library/specs/05-proof-pipeline.md) — doc
 - [06 · Code Verification Protocol](../packages/oaa-api-library/specs/06-code-verification.md) — doc
-- [07 · Incentives — GIC Model](../packages/oaa-api-library/specs/07-incentives-gic.md) — doc
+- [07 · Incentives — MIC Model](../packages/oaa-api-library/specs/07-incentives-gic.md) — doc
 - [09 · Cultural Kernel — Archetype Engine](../packages/oaa-api-library/specs/09-cultural-kernel-archetypes.md) — doc
 - [10 · Yautja Cultural Accord](../packages/oaa-api-library/specs/10-yautja-cultural-accord.md) — doc
 - [E.O.M.M. (External Organic Memory Module) Data](../packages/oaa-api-library/src/data/eomm/README.md) — readme
-- [GIC Indexer](../packages/oaa-api-library/src/gic-indexer/README.md) — readme
+- [MIC Indexer](../packages/oaa-api-library/src/gic-indexer/README.md) — readme
 - [.gic Gateway (alt-root)](../packages/oaa-api-library/src/gic/gateway/README.md) — readme
-- [.gic — Global Integrity Citizen (Alt‑Root Pilot)](../packages/oaa-api-library/src/gic/README.md) — readme
+- [.gic — Mobius Integrity Index Citizen (Alt‑Root Pilot)](../packages/oaa-api-library/src/gic/README.md) — readme
 - [Companion Site Starter](../packages/oaa-api-library/src/packs/companion/README.md) — readme
 - [Cursor Agent Starter](../packages/oaa-api-library/src/packs/cursor-agent/README.md) — readme
 - [Place short UI sounds here (e.g., 'scan.wav', 'blink.wav'). Keep files small and non-copyrighted.](../packages/oaa-api-library/src/packs/holo-assets/public/sfx/README.txt) — readme
@@ -475,7 +475,7 @@ Completed documents: 21
 - [04 -+ AI-SEO / GEO Interface](../packages/oaa-api-library/src/specs/04-ai-seo-geo.md) — doc
 - [05 -+ Proof-of-Integrity Pipeline](../packages/oaa-api-library/src/specs/05-proof-pipeline.md) — doc
 - [06 -+ Code Verification Protocol](../packages/oaa-api-library/src/specs/06-code-verification.md) — doc
-- [07 -+ Incentives G�� GIC Model](../packages/oaa-api-library/src/specs/07-incentives-gic.md) — doc
+- [07 -+ Incentives G�� MIC Model](../packages/oaa-api-library/src/specs/07-incentives-gic.md) — doc
 - [09 -+ Cultural Kernel G�� Archetype Engine](../packages/oaa-api-library/src/specs/09-cultural-kernel-archetypes.md) — doc
 - [10 -+ Yautja Cultural Accord](../packages/oaa-api-library/src/specs/10-yautja-cultural-accord.md) — doc
 - [🧬 Vector Integrity Protocol (VIP) - Kaizen OS v1.0](../packages/vip/docs/vip_spec.md) — doc

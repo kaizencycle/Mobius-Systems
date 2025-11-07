@@ -12,7 +12,7 @@ labs:
     routes: ["/gateway/*", "/agent/*"]
   - id: civic-ledger
     routes: ["/ledger/*"]
-  - id: gic-indexer
+  - id: miic-indexer
     routes: ["/gic/*"]
 
 tools:

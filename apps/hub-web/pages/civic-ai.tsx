@@ -51,7 +51,7 @@ const faqJsonld = {
       "name": "What is the Civic Ledger?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The Civic Ledger is a blockchain-based system that records and verifies civic contributions, attestations, and integrity scores. It provides cryptographic proof of civic work and enables the GIC reward system."
+        "text": "The Civic Ledger is a blockchain-based system that records and verifies civic contributions, attestations, and integrity scores. It provides cryptographic proof of civic work and enables the MIC reward system."
       }
     },
     {
@@ -100,7 +100,7 @@ export default function CivicAI() {
           </div>
           <div style={{border: "1px solid #e1e5e9", padding: "20px", borderRadius: "8px"}}>
             <h3 style={{color: "#dc2626", margin: "0 0 12px 0"}}>Civic Ledger</h3>
-            <p style={{margin: 0}}>Blockchain-based system for recording civic contributions, verifying attestations, and managing the GIC reward economy.</p>
+            <p style={{margin: 0}}>Blockchain-based system for recording civic contributions, verifying attestations, and managing the MIC reward economy.</p>
           </div>
         </div>
 
@@ -110,7 +110,7 @@ export default function CivicAI() {
           <li><strong>Geographic Optimization:</strong> Location-aware content discovery and civic relevance</li>
           <li><strong>AI-SEO Beacons:</strong> Structured data for AI crawlers and search engines</li>
           <li><strong>Virtue Accords:</strong> Truth, Trust, and Care as foundational principles</li>
-          <li><strong>GIC Economy:</strong> Reward system for verified civic contributions</li>
+          <li><strong>MIC Economy:</strong> Reward system for verified civic contributions</li>
         </ul>
 
         <h2>Read the Specs</h2>
@@ -121,7 +121,7 @@ export default function CivicAI() {
           <li><a href="/specs/04-ai-seo-geo.md">04 · AI-SEO / GEO Interface</a></li>
           <li><a href="/specs/05-proof-pipeline.md">05 · Proof-of-Integrity Pipeline</a></li>
           <li><a href="/specs/06-code-verification.md">06 · Code Verification Protocol</a></li>
-          <li><a href="/specs/07-incentives-gic.md">07 · Incentives — GIC Model</a></li>
+          <li><a href="/specs/07-incentives-gic.md">07 · Incentives — MIC Model</a></li>
         </ul>
 
         <h2>Explore</h2>
@@ -136,7 +136,7 @@ export default function CivicAI() {
         <ul>
           <li><a href="/ethics">Ethics</a> — Integrity Core framework</li>
           <li><a href="/virtue-accords">Virtue Accords</a> — Behavioral guidelines</li>
-          <li><a href="/gic">GIC</a> — Reward economy</li>
+          <li><a href="/gic">MIC</a> — Reward economy</li>
         </ul>
 
         <h2>Ecosystem Links</h2>

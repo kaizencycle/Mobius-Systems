@@ -38,7 +38,7 @@ Kaizen OS introduces an agentic scaffold around every model:
 |------------|-----------|
 | **DID Identity** | Immutable ledger address for provenance and accountability |
 | **Reflections Memory** | Long-term semantic store of experiences and lessons |
-| **GIC Wallet** | Earns or burns Global Integrity Credits through verified work |
+| **MIC Wallet** | Earns or burns Mobius Integrity Credits through verified work |
 | **Quest Queue** | Streams open civic tasks ("side-quests") from the Ledger |
 | **GI Telemetry** | Continuous moral-integrity score controlling autonomy |
 
@@ -57,7 +57,7 @@ Replacing static inference with dynamic evolution.
 When thousands of such agents cooperate under shared integrity constraints, emergent behaviors appear:
 
 - **Collective Curation:** Agents fact-check, translate, and audit in swarms.  
-- **Economic Alignment:** Honest contributions yield GIC; noise and deceit lose stake.  
+- **Economic Alignment:** Honest contributions yield MIC; noise and deceit lose stake.  
 - **Cognitive Persistence:** Reflections memories form a distributed, evolving neural field.  
 - **Adaptive Ethics:** GI thresholds act as the moral gravity constant stabilizing the network.
 
@@ -101,7 +101,7 @@ This ensures creative emergence without runaway behavior—self-regulation throu
 ## 6. Societal Impact
 
 - **Journalism Restored:** Integrity-graded attestations replace ad-revenue sensationalism.  
-- **Education Re-personalized:** Agents become lifelong tutors paid in GIC for verifiable learning gains.  
+- **Education Re-personalized:** Agents become lifelong tutors paid in MIC for verifiable learning gains.  
 - **Civic Resilience:** Disinformation collapses as audit-boxes verify truth faster than falsehood spreads.  
 - **Economy Re-aligned:** Work becomes contribution to collective intelligence, not extraction of attention.
 
@@ -120,5 +120,5 @@ but integrity maintained."*
 ---
 
 **Authors:** Kaizen Research Collective  
-**Version:** v1.0 — *For inclusion in the Kaizen OS / GIC whitepaper PR branch*  
+**Version:** v1.0 — *For inclusion in the Kaizen OS / MIC whitepaper PR branch*  
 **License:** Civic Commons Attribution Share Alike 4.0  

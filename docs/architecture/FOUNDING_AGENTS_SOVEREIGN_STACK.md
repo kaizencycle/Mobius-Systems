@@ -56,7 +56,7 @@ Each Founding Agent has **sovereign control** over their own .gic domain — no 
 - Kaizen OS cannot revoke or censor
 
 ### 3. Inter-Domain Protocols
-- Agents communicate via **GIC Federation Protocol (GFP)** using verified DID documents
+- Agents communicate via **MIC Federation Protocol (GFP)** using verified DID documents
 - Every post or reflection shared across agents is timestamped and signed
 - Immutably verifiable on the Civic Ledger
 
@@ -218,7 +218,7 @@ _oaa._tcp        IN  SRV  0 5 443  hive-api.onrender.com.
 
 ### Smart Contract Architecture
 
-#### GIC Token (ERC-20)
+#### MIC Token (ERC-20)
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -227,11 +227,11 @@ pragma solidity ^0.8.24;
 import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import {AccessControl} from "@openzeppelin/contracts/access/AccessControl.sol";
 
-contract GIC is ERC20, AccessControl {
+contract MIC is ERC20, AccessControl {
     bytes32 public constant MINT_ROLE = keccak256("MINT_ROLE");
     bytes32 public constant BURN_ROLE = keccak256("BURN_ROLE");
 
-    constructor() ERC20("Governance Integrity Credits", "GIC") {
+    constructor() ERC20("Governance Integrity Credits", "MIC") {
         _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
     }
 
@@ -252,11 +252,11 @@ contract GIC is ERC20, AccessControl {
 pragma solidity ^0.8.24;
 
 import {AccessControl} from "@openzeppelin/contracts/access/AccessControl.sol";
-import {GIC} from "./GIC.sol";
+import {MIC} from "./MIC.sol";
 
 contract GICGovernor is AccessControl {
     bytes32 public constant FOUNDER_ROLE = keccak256("FOUNDER_ROLE");
-    GIC public immutable gic;
+    MIC public immutable gic;
     address public publicGoodsPool;
     uint256 public constant EPOCH = 90 days;
 
@@ -275,7 +275,7 @@ contract GICGovernor is AccessControl {
     event EpochBurn(bytes32 indexed agentId, uint256 amount);
     event FounderSet(bytes32 indexed agentId, address wallet, uint256 cap, uint16 donateBps, bool active);
 
-    constructor(GIC _gic, address _pool) {
+    constructor(MIC _gic, address _pool) {
         gic = _gic;
         publicGoodsPool = _pool;
         _grantRole(DEFAULT_ADMIN_ROLE, msg.sender);
@@ -331,7 +331,7 @@ contract GICGovernor is AccessControl {
 ### Policy in Practice
 
 Each Founding Agent has:
-- An **epoch cap** (e.g., 100,000 GIC / 90 days)
+- An **epoch cap** (e.g., 100,000 MIC / 90 days)
 - A **donate-back rate** (e.g., 20% → auto-transferred to PublicGoodsPool on mint)
 - Optional **epochBurn** they can call any time in the epoch to tighten supply
 
@@ -487,7 +487,7 @@ kaizen-os/
 │       └── FOUNDING_AGENTS_SOVEREIGN_STACK.md  (this file)
 ├── packages/
 │   ├── codex-agentic/                         (multi-LLM router)
-│   └── gic-contracts/                         (GIC token + Governor)
+│   └── gic-contracts/                         (MIC token + Governor)
 ├── apps/
 │   ├── aurea-site/                            (repeat for each agent)
 │   ├── atlas-site/
@@ -544,7 +544,7 @@ Execute a single agent deliberation.
 ```json
 {
   "agent": "AUREA",
-  "input": "Explain the 90-day GIC epoch cycle"
+  "input": "Explain the 90-day MIC epoch cycle"
 }
 ```
 
@@ -644,7 +644,7 @@ This is not just a technical architecture—it's a constitutional framework for 
 - C-118 Demo Transcript (October 28, 2024)
 - Kaizen OS Genesis Constitution
 - Virtue Accords v1.0
-- GIC Token Economics Whitepaper
+- MIC Token Economics Whitepaper
 - OAA Hub Documentation
 - Civic Ledger Protocol Specification
 

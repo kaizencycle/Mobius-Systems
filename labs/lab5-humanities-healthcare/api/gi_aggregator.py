@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-GI Aggregator - Tracks Global Integrity metrics from IntegrityEvents
+GI Aggregator - Tracks Mobius Integrity Index metrics from IntegrityEvents
 Provides rolling GI, per-gate deltas, fairness tallies, and DP burn metrics
 """
 
@@ -102,7 +102,7 @@ class GIAggregator:
 
     def snapshot_summary(self) -> Dict[str, Any]:
         return {
-            "gi": {
+            "mii": {
                 "baseline": self.gi_baseline,
                 "current": round(self.gi_current, 6),
                 "rolling_delta_24h": round(self.delta_ring.sum(), 6),

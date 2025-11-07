@@ -17,8 +17,8 @@ This migration guide helps you update your code, configurations, and deployments
 |----------|----------|----------|
 | **Platform** | Kaizen OS | Mobius Systems |
 | **Evaluation Framework** | *(implicit)* | Kaizen Turing Test (KTT) |
-| **Integrity Metric** | GI (Global Integrity) | MII (Mobius Integrity Index) |
-| **Token/Credits** | GIC (Global Integrity Credits) | MIC (Mobius Integrity Credits) |
+| **Integrity Metric** | GI (Mobius Integrity Index) | MII (Mobius Integrity Index) |
+| **Token/Credits** | MIC (Mobius Integrity Credits) | MIC (Mobius Integrity Credits) |
 | **Collectibles** | Kaizen Shards | Mobius Fractal Shards (MFS) |
 
 ### Technical Changes

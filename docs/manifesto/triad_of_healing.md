@@ -21,7 +21,7 @@ Japanese philosophy: 改 (kai, "change") + 善 (zen, "good").
 Post-WWII industrial practice became spiritual discipline.
 
 ### In Kaizen OS
-- **Small steps, not revolutions:** GIC epochs (90 days), not perpetual growth
+- **Small steps, not revolutions:** MIC epochs (90 days), not perpetual growth
 - **Compounding effects:** Daily reflections → GI score → UBI eligibility
 - **No endpoint:** Always improving, never "done"
 - **Humble velocity:** Walk, don't sprint; pulse, don't burn
@@ -122,7 +122,7 @@ At every gathering, we open with:
 ### Kaizen (Continuous Improvement)
 ```
 - Daily E.O.M.M. reflections
-- 90-day GIC epochs (not infinite growth)
+- 90-day MIC epochs (not infinite growth)
 - Incremental releases, not big bang
 - Feedback loops everywhere
 ```

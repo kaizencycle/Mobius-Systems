@@ -37,7 +37,7 @@ Matrilineal wisdom teaches:
 **Kaizen OS embodies this return — not as ideology, but as architecture.**
 
 ### Design Principles in Code
-- **GIC Token:** Wealth flows to caregivers, not conquerors
+- **MIC Token:** Wealth flows to caregivers, not conquerors
 - **Gaia Staking:** Wealth FROM healing, not extraction
 - **Custodianship:** Power passes through stewards, not bloodlines
 - **Multi-agent consensus:** Circles decide, not kings

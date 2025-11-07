@@ -173,14 +173,14 @@ nav:
       - Overview: INDEX.md
       - Architecture:
           - System Overview: architecture/overview.md
-          - GIC Architecture: architecture/GIC_Architecture_Spec_v1.md
+          - MIC Architecture: architecture/GIC_Architecture_Spec_v1.md
           - Founding Agents Stack: architecture/FOUNDING_AGENTS_SOVEREIGN_STACK.md
           - Lab Architecture: LABS_MASTER_ARCHITECTURE.md
       - Governance:
           - Kintsugi Protocol: governance/kintsugi_protocol.md
           - HR Framework: governance/hr/Kaizen_OS_HR_Framework.md
       - Economics:
-          - GIC Whitepaper: economics/GIC_WHITEPAPER_v1.md
+          - MIC Whitepaper: economics/GIC_WHITEPAPER_v1.md
           - Foundation Up Addendum: GIC_Foundation_Up_Economics_Addendum.md
       - Sentinels:
           - Overview: sentinels/uriel.md
@@ -203,7 +203,7 @@ nav:
           - Guide: onboarding/guide.md
           - README: onboarding/README.md
   - Whitepapers:
-      - GIC Whitepaper Final: GIC_Whitepaper_Final.md
+      - MIC Whitepaper Final: GIC_Whitepaper_Final.md
       - Foundational Blueprint: foundational_blueprint_integrity_economy_v2.md
       - UBI Mechanism: whitepapers/UBI_Mechanism_v2.0.md
       - Shard Economics: whitepapers/Shard_Economics_Addendum.md

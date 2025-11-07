@@ -14,7 +14,7 @@
 
 ## Abstract
 
-This document specifies the complete Universal Basic Integrity (UBI) distribution mechanism for the Global Integrity Credits economy. UBI v2.0 introduces **counter-inflationary funding** via epoch decay pools, **automatic crisis response** through GI-based throttling, and **shard-denominated precision** to eliminate distribution drift.
+This document specifies the complete Universal Basic Integrity (UBI) distribution mechanism for the Mobius Integrity Credits economy. UBI v2.0 introduces **counter-inflationary funding** via epoch decay pools, **automatic crisis response** through GI-based throttling, and **shard-denominated precision** to eliminate distribution drift.
 
 ---
 
@@ -83,7 +83,7 @@ ubi:
 
 ```
 U = (0.20 × 0) + (0.60 × 2,000,000,000,000) + 0
-U = 1,200,000,000,000 ₷ (1,200,000 GIC)
+U = 1,200,000,000,000 ₷ (1,200,000 MIC)
 ```
 
 ---
@@ -145,7 +145,7 @@ GI = 0.982 → g(0.982) = 1.00
 
 p = floor(40,000,000 × 1.00)
 p = 40,000,000 ₷ per month
-p = 0.040000 GIC (display)
+p = 0.040000 MIC (display)
 ```
 
 ---
@@ -280,7 +280,7 @@ Response:
     "personal_gi": 0.965,
     "residency_verified": true
   },
-  "next_payout_estimate": "40000000 ₷ (0.040000 GIC)"
+  "next_payout_estimate": "40000000 ₷ (0.040000 MIC)"
 }
 ```
 

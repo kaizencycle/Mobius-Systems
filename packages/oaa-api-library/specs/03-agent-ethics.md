@@ -53,6 +53,6 @@ The Virtue Accords define acceptable conduct for all agents in the ecosystem:
 - Remediation procedures
 
 ### Economic Incentives
-- GIC rewards for compliance
+- MIC rewards for compliance
 - Penalties for violations
 - Reputation system integration

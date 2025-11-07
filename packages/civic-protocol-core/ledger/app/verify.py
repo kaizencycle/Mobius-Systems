@@ -77,7 +77,7 @@ class EventValidator:
             "festival_participation",
             "governance_action",
             
-            # GIC events
+            # MIC events
             "gic_minted",
             "gic_burned",
             "gic_transfer",
@@ -144,7 +144,7 @@ class EventValidator:
         return True
     
     def _validate_gic_event(self, payload: Dict[str, Any]) -> bool:
-        """Validate GIC events"""
+        """Validate MIC events"""
         if "amount" not in payload:
             raise HTTPException(400, "Missing required field: amount")
         

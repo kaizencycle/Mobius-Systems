@@ -22,7 +22,7 @@ class EchoSentinel:
     ECHO Sentinel implementation for Lab7-proof.
     
     Primary functions:
-    - Monitor pulse health across Labs 4/6/7, Civic Ledger, GIC Indexer
+    - Monitor pulse health across Labs 4/6/7, Civic Ledger, MIC Indexer
     - Emit Proof of Integrity attestations with ZEUS as witness
     - Synchronize ledger state and track resonance patterns
     """

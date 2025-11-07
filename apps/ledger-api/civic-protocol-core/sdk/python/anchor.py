@@ -199,7 +199,7 @@ def anchor_shield_verification(anchor: CivicAnchor, civic_id: str, token: str,
 def anchor_gic_transaction(anchor: CivicAnchor, civic_id: str, token: str,
                          tx_type: str, amount: int, from_civic_id: str = None,
                          to_civic_id: str = None) -> Dict[str, Any]:
-    """Anchor a GIC transaction event"""
+    """Anchor a MIC transaction event"""
     payload = {
         "tx_type": tx_type,
         "amount": amount,

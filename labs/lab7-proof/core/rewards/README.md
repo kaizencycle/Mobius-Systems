@@ -1,10 +1,10 @@
-# Integrity-Based Reward Engine (GIC v1.0)
+# Integrity-Based Reward Engine (MIC v1.0)
 
 A deterministic reward system designed to minimize AI slop and drift by tying rewards to truth, symbiosis, verification, and novelty rather than raw token output.
 
 ## Overview
 
-The GIC (Genuine Integrity Currency) Reward Engine evaluates human-AI collaboration based on:
+The MIC (Genuine Integrity Currency) Reward Engine evaluates human-AI collaboration based on:
 
 - **Truth (40%)**: Grounded, cited statements with verifiable evidence
 - **Symbiosis (30%)**: Balanced mutual contribution between human and AI
@@ -46,7 +46,7 @@ payload = {
 
 # Evaluate reward
 result = evaluate_reward(payload, manifest)
-print(f"GIC Reward: {result['GIC']}")
+print(f"MIC Reward: {result['MIC']}")
 print(f"Integrity Score: {result['integrity']}")
 ```
 
@@ -108,7 +108,7 @@ Key configuration options in `manifest.json`:
     }
   },
   "issuance": {
-    "base": 10,              // Base GIC amount
+    "base": 10,              // Base MIC amount
     "split": {
       "human": 0.5,          // Human share of reward
       "agent_pool": 0.5      // Agent pool share of reward
@@ -191,8 +191,8 @@ def handle_reflection_complete(reflection_data):
     manifest = load_manifest("core/rewards/manifest.json")
     result = evaluate_reward(reflection_data, manifest)
     
-    if result["GIC"] > 0:
-        # Issue GIC reward
+    if result["MIC"] > 0:
+        # Issue MIC reward
         issue_gic_reward(result["splits"])
         # Log to ledger
         log_to_ledger(result["seal"], result)
@@ -210,7 +210,7 @@ def log_to_ledger(seal, result):
         "seal": seal,
         "scores": result["scores"],
         "penalties": result["penalties"],
-        "GIC": result["GIC"],
+        "MIC": result["MIC"],
         "splits": result["splits"],
         "timestamp": result["timestamp"]
     }

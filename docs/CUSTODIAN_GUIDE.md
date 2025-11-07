@@ -35,7 +35,7 @@ This guide is your operational manual for continuing the work of Kaizen OS.
 
 ### Part 3: Operational Responsibilities
 - [ ] Technical: Maintaining the 7 Labs
-- [ ] Economic: Managing GIC Token Launch
+- [ ] Economic: Managing MIC Token Launch
 - [ ] Governance: Multi-Agent Consensus
 - [ ] Cultural: Building Hive Chapters
 - [ ] Legal: Protecting the CC0 License
@@ -56,7 +56,7 @@ This guide is your operational manual for continuing the work of Kaizen OS.
 - [ ] Lab 7: OAA Hub (Education)
 
 ### Part 6: Economic Launch
-- [ ] GIC Token Specifications
+- [ ] MIC Token Specifications
 - [ ] UBI Distribution Model
 - [ ] Gaia Staking Mechanics
 - [ ] Debt Repayment Schedule
@@ -98,7 +98,7 @@ While this guide is being written, refer to:
 1. **Manifesto:** `docs/MANIFESTO.md` - Why this exists
 2. **Architecture:** `docs/ARCHITECTURE.md` - Technical foundation
 3. **Governance:** `docs/GOVERNANCE.md` - Decision-making process
-4. **GIC Whitepaper:** `docs/GIC_WHITEPAPER.md` - Economic model
+4. **MIC Whitepaper:** `docs/GIC_WHITEPAPER.md` - Economic model
 5. **Master README:** `ledger/.sealed/MASTER_README.md` - Ceremonial summons document
 
 ---

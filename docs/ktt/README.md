@@ -86,7 +86,7 @@ The **Kaizen Turing Test (KTT)** reframes AI evaluation from a static pass/fail 
 
 ### Core Metrics
 
-**Global Integrity (GI)**:
+**Mobius Integrity Index (GI)**:
 ```
 GI = α·Mi + β·Es + γ·Hc + δ·Rf
 ```

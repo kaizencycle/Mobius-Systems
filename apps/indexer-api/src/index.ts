@@ -1,4 +1,4 @@
-// GIC Indexer API - Placeholder implementation
+// MIC Indexer API - Placeholder implementation
 import express from 'express';
 import cors from 'cors';
 
@@ -42,7 +42,7 @@ app.get('/gic/transactions', (req, res) => {
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`🚀 GIC Indexer API running on port ${PORT}`);
+  console.log(`🚀 MIC Indexer API running on port ${PORT}`);
 });
 
 export default app;

@@ -24,7 +24,7 @@ interface IntegrityResponse {
   timestamp: string;
 }
 
-// Calculate Global Integrity (GI) Score
+// Calculate Mobius Integrity Index (GI) Score
 function calculateGIScore(): IntegrityMetrics {
   const baseDir = process.cwd();
   

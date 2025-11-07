@@ -8,7 +8,7 @@ interface SentinelSphereProps {
   agentId: string;
   position: [number, number, number];
   color: number;
-  gi: number;        // Global Integrity (0.95-1.0)
+  mii: number;        // Mobius Integrity Index (0.95-1.0)
   eventRate: number; // Events per second
   particleCount?: number;
   radius?: number;
@@ -115,7 +115,7 @@ export function SentinelSphere({
     material.uniforms.uFreq.value = THREE.MathUtils.clamp(0.6 + eventRate * 0.08, 0.6, 2.2);
 
     // Pulse intensity based on GI health
-    const intensity = gi >= 0.99 ? 1.2 : gi >= 0.97 ? 1.0 : 0.8;
+    const intensity = gi >= 0.99 ? 1.2 : mii >= 0.97 ? 1.0 : 0.8;
     material.uniforms.uIntensity.value = THREE.MathUtils.lerp(
       material.uniforms.uIntensity.value,
       intensity,

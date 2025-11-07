@@ -111,7 +111,7 @@ export default function VirtueAccords() {
         <h2>Related Topics</h2>
         <ul>
           <li><a href="/ethics">Ethics</a> — Integrity Core framework</li>
-          <li><a href="/gic">GIC</a> — Rewards for virtuous behavior</li>
+          <li><a href="/gic">MIC</a> — Rewards for virtuous behavior</li>
           <li><a href="/civic-ai">Civic AI Overview</a> — Complete ecosystem</li>
         </ul>
       </main>

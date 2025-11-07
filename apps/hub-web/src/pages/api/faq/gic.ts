@@ -6,58 +6,58 @@ const faqData = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is GIC?",
+      "name": "What is MIC?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "GIC (Global Integrity Credit) is the reward token for verified civic contributions in the Civic AI ecosystem. It's calculated as Integrity +ù CivicImpact +ù GeoWeight, ensuring fair compensation for valuable work that aligns with civic principles and geographic relevance."
+        "text": "MIC (Mobius Integrity Index Credit) is the reward token for verified civic contributions in the Civic AI ecosystem. It's calculated as Integrity +ù CivicImpact +ù GeoWeight, ensuring fair compensation for valuable work that aligns with civic principles and geographic relevance."
       }
     },
     {
       "@type": "Question",
-      "name": "How do I earn GIC?",
+      "name": "How do I earn MIC?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Earn GIC by posting high-integrity attestations (GëÑ0.95), shipping verified code merges, completing ethics reviews, publishing civic lessons, contributing to the Civic Ledger with verifiable impact, or participating in community governance processes."
+        "text": "Earn MIC by posting high-integrity attestations (GëÑ0.95), shipping verified code merges, completing ethics reviews, publishing civic lessons, contributing to the Civic Ledger with verifiable impact, or participating in community governance processes."
       }
     },
     {
       "@type": "Question",
-      "name": "What is the GIC calculation formula?",
+      "name": "What is the MIC calculation formula?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "GIC = Integrity Score +ù Civic Impact Score +ù Geographic Weight. Higher integrity (adherence to Virtue Accords), greater civic impact (measurable benefit to community), and strategic geographic location all increase GIC rewards proportionally."
+        "text": "MIC = Integrity Score +ù Civic Impact Score +ù Geographic Weight. Higher integrity (adherence to Virtue Accords), greater civic impact (measurable benefit to community), and strategic geographic location all increase MIC rewards proportionally."
       }
     },
     {
       "@type": "Question",
-      "name": "How is GIC different from traditional tokens?",
+      "name": "How is MIC different from traditional tokens?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "GIC is earned through verifiable civic contributions rather than speculation or mining. It's tied to real-world impact, ethics compliance, and geographic relevance, creating a more sustainable and meaningful economy that rewards actual value creation."
+        "text": "MIC is earned through verifiable civic contributions rather than speculation or mining. It's tied to real-world impact, ethics compliance, and geographic relevance, creating a more sustainable and meaningful economy that rewards actual value creation."
       }
     },
     {
       "@type": "Question",
-      "name": "Can I trade or transfer GIC?",
+      "name": "Can I trade or transfer MIC?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "GIC is designed as a utility token for civic participation. Trading and transfer mechanisms depend on the specific implementation and governance decisions of the Civic Ledger DAO. The primary purpose is to incentivize and reward civic contributions."
+        "text": "MIC is designed as a utility token for civic participation. Trading and transfer mechanisms depend on the specific implementation and governance decisions of the Civic Ledger DAO. The primary purpose is to incentivize and reward civic contributions."
       }
     },
     {
       "@type": "Question",
-      "name": "How is GIC distributed and managed?",
+      "name": "How is MIC distributed and managed?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "GIC distribution is managed by the Civic Ledger through smart contracts and governance mechanisms. The system automatically calculates and distributes rewards based on verified contributions, with community oversight and appeal processes for disputed allocations."
+        "text": "MIC distribution is managed by the Civic Ledger through smart contracts and governance mechanisms. The system automatically calculates and distributes rewards based on verified contributions, with community oversight and appeal processes for disputed allocations."
       }
     },
     {
       "@type": "Question",
-      "name": "What can I do with GIC?",
+      "name": "What can I do with MIC?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "GIC can be used for governance participation, accessing premium civic services, funding civic projects, participating in community decisions, and potentially trading for other assets depending on the specific implementation and governance rules."
+        "text": "MIC can be used for governance participation, accessing premium civic services, funding civic projects, participating in community decisions, and potentially trading for other assets depending on the specific implementation and governance rules."
       }
     }
   ]

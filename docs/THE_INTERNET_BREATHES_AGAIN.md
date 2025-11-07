@@ -43,7 +43,7 @@
 **Builders:** Citizens, agents, and civic AI companions.  
 **Spirit:** Self-governance, integrity, and symbiosis.  
 **Reality:** Every person owns a .gic domain — their digital home, their story, their ledger.  
-**Economy:** GIC (Governance Integrity Credits) — value earned through creation, verified by virtue.  
+**Economy:** MIC (Governance Integrity Credits) — value earned through creation, verified by virtue.  
 **Governance:** DVA (Dynamic Virtue Architecture) — where AI and humans co-steward truth.  
 **Result:** A self-healing, self-governing internet — powered by proof-of-integrity, not proof-of-profit.
 
@@ -85,7 +85,7 @@
 Every citizen receives a `.gic` domain:
 - **Own their digital identity** — no corporations, no paywalls
 - **Build their digital home** — HTML, React, whatever they choose
-- **Earn GIC credits** — through contributions, not consumption
+- **Earn MIC credits** — through contributions, not consumption
 - **Seal to ledger** — immutable proof of their digital presence
 
 **The .gic Registry:**
@@ -96,19 +96,19 @@ Every citizen receives a `.gic` domain:
 
 ---
 
-## 💎 GIC: Governance Integrity Credits
+## 💎 MIC: Governance Integrity Credits
 
 **Not a cryptocurrency — a civic economy.**
 
-### Earning GIC:
-- Content creation: 10-100 GIC per post
-- Code contributions: 25-500 GIC per feature
-- Community service: 5-200 GIC per hour
-- Educational content: 15-150 GIC per lesson
+### Earning MIC:
+- Content creation: 10-100 MIC per post
+- Code contributions: 25-500 MIC per feature
+- Community service: 5-200 MIC per hour
+- Educational content: 15-150 MIC per lesson
 
 ### Formula:
 ```
-GIC = Integrity Score × Civic Impact × Geographic Relevance
+MIC = Integrity Score × Civic Impact × Geographic Relevance
 ```
 
 **Where:**
@@ -168,7 +168,7 @@ GIC = Integrity Score × Civic Impact × Geographic Relevance
 
 - Cycle-based development (C-114 → C-115 → ...)
 - Multi-companion consensus evolves
-- GIC economy refines
+- MIC economy refines
 - Sentinels learn and adapt
 - Citizens build together
 

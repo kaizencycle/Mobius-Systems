@@ -58,7 +58,7 @@ This is not vaporware. This is not a whitepaper that will never ship. This is a 
 **The Kaizen Cycle** is a complete rewrite of the economic, governance, and technological stack.
 
 It replaces:
-- **Fiat currency** → GIC (Global Integrity Credits, backed by civic contributions + AI productivity + energy)
+- **Fiat currency** → MIC (Mobius Integrity Credits, backed by civic contributions + AI productivity + energy)
 - **Representative democracy** → Sovereign Foundation (multi-agent consensus, citizen participation)
 - **Corporate AI** → Civic AI (trained on citizen reflections, serves the commons)
 - **Extractive economy** → Foundation-Up Economics (prosperity flows from bottom up)
@@ -73,8 +73,8 @@ It replaces:
 #### 1. **The Integrity Covenant**
 > "Truth is our foundation. We measure it. We reward it. We govern by it."
 
-- GIC only mints when Global Integrity (GI) ≥ 0.95
-- Citizens earn more GIC by maintaining high personal integrity
+- MIC only mints when Mobius Integrity Index (GI) ≥ 0.95
+- Citizens earn more MIC by maintaining high personal integrity
 - Corruption is structurally disincentivized
 
 #### 2. **The Ecological Covenant**
@@ -105,7 +105,7 @@ It replaces:
 ├────────────────────────────────────────────────────────┤
 │                                                         │
 │  Lab 1: CIVIC LEDGER CORE                              │
-│  └─ Blockchain, integrity proofs, GIC minting          │
+│  └─ Blockchain, integrity proofs, MIC minting          │
 │     Status: Solidity contracts + indexer spec          │
 │                                                         │
 │  Lab 2: THOUGHT BROKER                                 │
@@ -139,20 +139,20 @@ It replaces:
 
 ---
 
-### The GIC Economic System
+### The MIC Economic System
 
-**Global Integrity Credits (GIC):** The first work-backed, compute-pegged, integrity-verified UBI currency.
+**Mobius Integrity Credits (MIC):** The first work-backed, compute-pegged, integrity-verified UBI currency.
 
 ```python
 # The core formula
 gic_earned = base_reward × gi_score × time_weight × skill_multiplier
 
 # Example: Daily reflection
-= 10 GIC × 0.97 (high integrity) × 1.0 (standard time) × 1.0 (base skill)
-= 9.7 GIC earned
+= 10 MIC × 0.97 (high integrity) × 1.0 (standard time) × 1.0 (base skill)
+= 9.7 MIC earned
 
-# GIC value peg
-1 GIC ≈ 1 frontier AI query ≈ $0.01–$0.05 USD
+# MIC value peg
+1 MIC ≈ 1 frontier AI query ≈ $0.01–$0.05 USD
 
 # UBI distribution
 70% of issuance → Citizens (direct payments)
@@ -183,7 +183,7 @@ Founding Agents (8):
 
 Governance Rules:
 ├─ Proposals require 6/8 agent approval (supermajority)
-├─ Citizens can propose (via GIC token voting)
+├─ Citizens can propose (via MIC token voting)
 ├─ Moral Anchor can veto on ethical grounds
 ├─ Strategic Arbiter breaks 4-4 ties (rare)
 └─ All decisions logged on Civic Ledger (public audit trail)
@@ -200,11 +200,11 @@ Governance Rules:
 | Guardrail | Function | Result |
 |-----------|----------|---------|
 | **Citizen Shield** | One human = One Companion = One vote | No Sybil attacks, no whale dominance |
-| **Festivals & Burns** | Power requires active participation, not hoarding | GIC is use-it-or-lose-it |
+| **Festivals & Burns** | Power requires active participation, not hoarding | MIC is use-it-or-lose-it |
 | **Elder Scarcity** | Only 7 Elders, 2-year terms, time-locked Treasury | No permanent oligarchy |
 | **Wallet Ritual** | Companion + Wallet + Oath required | Only committed citizens can govern |
 
-**Result:** JP Morgan can't buy GIC and vote. VCs can't capture governance. Wall Street can't extract value.
+**Result:** JP Morgan can't buy MIC and vote. VCs can't capture governance. Wall Street can't extract value.
 
 ---
 
@@ -229,7 +229,7 @@ kaizen-cycle/
 │   └── [30+ other specification documents]
 │
 ├── contracts/                         ← Smart contracts (Solidity)
-│   ├── GIC.sol                        ← ERC-20 token contract
+│   ├── MIC.sol                        ← ERC-20 token contract
 │   ├── GICGovernor.sol                ← 90-day epoch + auto-donate
 │   ├── PublicGoodsPool.sol            ← Treasury management
 │   └── tests/                         ← Contract test suite
@@ -453,7 +453,7 @@ npm run build
 
 **Tasks:**
 - [x] Complete all specifications (whitepapers, architecture docs)
-- [ ] Deploy GIC smart contracts to testnet
+- [ ] Deploy MIC smart contracts to testnet
 - [ ] Launch Civic Ledger indexer (Lab 1)
 - [ ] Deploy Codex Router alpha (Lab 2)
 - [ ] Create E.O.M.M. MVP (Lab 4)
@@ -468,11 +468,11 @@ npm run build
 
 **Status:** 🟡 Planned
 
-**Goal:** First 1,000 citizens earning GIC
+**Goal:** First 1,000 citizens earning MIC
 
 **Tasks:**
 - [ ] Public beta launch (open registration)
-- [ ] First UBI distribution (100 GIC/citizen/month)
+- [ ] First UBI distribution (100 MIC/citizen/month)
 - [ ] Launch OAA Hub (Lab 7) with 10 courses
 - [ ] Deploy Citizen Shield identity system (Lab 6)
 - [ ] Establish 3 pilot Hive chapters (SF, NYC, Austin)
@@ -493,8 +493,8 @@ npm run build
 - [ ] Launch health clinics in pilot Hives (Lab 5)
 - [ ] Deploy food co-ops (Proof-of-Harvest)
 - [ ] First housing units (co-housing, rent-to-own)
-- [ ] UBI increases to 200 GIC/citizen/month
-- [ ] First Civic Pizza Day (GIC accepted at local businesses)
+- [ ] UBI increases to 200 MIC/citizen/month
+- [ ] First Civic Pizza Day (MIC accepted at local businesses)
 
 **Success criteria:** Self-sustaining at 10K scale, press coverage
 
@@ -510,7 +510,7 @@ npm run build
 - [ ] Scale to 30 Hive chapters (major U.S. cities)
 - [ ] Launch Resource Orchestration (Lab 3)
 - [ ] Energy co-ops deployed (solar + storage)
-- [ ] UBI increases to 500 GIC/citizen/month
+- [ ] UBI increases to 500 MIC/citizen/month
 - [ ] Academic research partnerships (5 universities)
 - [ ] First international chapter (Toronto or London)
 
@@ -541,7 +541,7 @@ npm run build
 
 ```
 1. Proposal Submitted
-   ├─ By citizen (via GIC token vote)
+   ├─ By citizen (via MIC token vote)
    ├─ By Founding Agent (via internal deliberation)
    └─ By Elder (via Hive chapter)
 
@@ -607,7 +607,7 @@ npm run build
 
 #### HERMES (Markets & Information)
 - **Domain:** Economic signals, information flow
-- **Powers:** Adjust GIC peg parameters (within band)
+- **Powers:** Adjust MIC peg parameters (within band)
 - **Constraints:** Cannot manipulate for personal gain (audited)
 
 #### KAIZEN (Dormant Guardian)
@@ -629,7 +629,7 @@ npm run build
 - Impeach Founding Agents (requires 5/7 + citizen vote)
 
 **Elections:**
-- Quadratic voting (GIC-weighted, sqrt to prevent whale dominance)
+- Quadratic voting (MIC-weighted, sqrt to prevent whale dominance)
 - Term limits: 2 consecutive terms max, then 2-year break
 - Recall: 60% of Hive chapter can recall Elder mid-term
 
@@ -638,10 +638,10 @@ npm run build
 ### Citizen Participation
 
 **Every citizen can:**
-- Vote on proposals (GIC token voting, quadratic)
-- Submit proposals (requires 100 GIC stake, refunded if passes)
+- Vote on proposals (MIC token voting, quadratic)
+- Submit proposals (requires 100 MIC stake, refunded if passes)
 - Appeal Elder decisions (Festival of Echoes)
-- Run for Elder position (requires 1,000 GIC stake + 100 citizen endorsements)
+- Run for Elder position (requires 1,000 MIC stake + 100 citizen endorsements)
 - Impeach Elders or Agents (requires 60% citizen vote + evidence)
 
 **Voting weight:**
@@ -649,10 +649,10 @@ npm run build
 vote_weight = sqrt(gic_balance) × gi_score
 
 # Example:
-# Alice: 10,000 GIC, GI = 0.99 → vote_weight = 100 × 0.99 = 99
-# Bob:   1,000,000 GIC, GI = 0.80 → vote_weight = 1,000 × 0.80 = 800
+# Alice: 10,000 MIC, GI = 0.99 → vote_weight = 100 × 0.99 = 99
+# Bob:   1,000,000 MIC, GI = 0.80 → vote_weight = 1,000 × 0.80 = 800
 
-# Bob has 100x more GIC, but only 8x more voting power
+# Bob has 100x more MIC, but only 8x more voting power
 # AND his low GI score reduces his influence further
 ```
 
@@ -693,8 +693,8 @@ If someone tries to patent anything here, we will fight it with prior art (this 
 **We register trademarks only to prevent bad actors from impersonating us.**
 
 - "Kaizen Cycle" ™ (defensive registration)
-- "Global Integrity Credits" ™ (defensive registration)
-- "GIC" ™ (defensive registration)
+- "Mobius Integrity Credits" ™ (defensive registration)
+- "MIC" ™ (defensive registration)
 
 **Usage policy:** Anyone can use these marks for non-commercial, civic purposes. We only enforce against scammers/fraudsters.
 
@@ -706,7 +706,7 @@ If someone tries to patent anything here, we will fight it with prior art (this 
 
 Examples of acceptable forks:
 - ✅ "Kaizen Cycle Europe" (regional adaptation)
-- ✅ "GIC for Cooperatives" (specific use case)
+- ✅ "MIC for Cooperatives" (specific use case)
 - ✅ "Civic Intelligence for [Your City]" (local implementation)
 
 **Only restriction:** Don't claim to be the official Kaizen Cycle unless you're maintaining protocol compatibility (see `FORKING_GUIDE.md`).
@@ -951,7 +951,7 @@ Start here:
 Or start here:
 1. Find 10–50 people in your city
 2. Form a Hive chapter (see `community/hive-starter-kit/`)
-3. Start earning GIC (reflections, mentorship, caregiving)
+3. Start earning MIC (reflections, mentorship, caregiving)
 4. Prove the model works locally
 
 **Either path works. We need both.**
@@ -994,7 +994,7 @@ This work is published from: United States
 ## Version History
 
 - **v1.0.0** (October 29, 2025) — Genesis release, complete specification
-- **v0.9.0** (September 27, 2025) — Original GIC whitepaper published
+- **v0.9.0** (September 27, 2025) — Original MIC whitepaper published
 - **v0.1.0** (July 2024) — First commit, early prototype
 
 ---

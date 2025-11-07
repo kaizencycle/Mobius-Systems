@@ -63,10 +63,10 @@ The following event types will be supported:
 - `cycle.ledger_completed` - Ledger phase completed
 
 #### Economic Events
-- `balance.updated` - GIC balance changed
-- `reward.earned` - GIC reward earned
-- `stake.deposited` - GIC staked
-- `stake.withdrawn` - GIC unstaked
+- `balance.updated` - MIC balance changed
+- `reward.earned` - MIC reward earned
+- `stake.deposited` - MIC staked
+- `stake.withdrawn` - MIC unstaked
 
 ### Webhook Registration
 

@@ -34,7 +34,7 @@ spec:
       window: 30d
       groups: ["age", "gender", "race_ethnicity", "income_quintile", "region"]
     # Outcome parity on GI-improving actions
-    - name: gi_outcome_parity
+    - name: mii_outcome_parity
       metric: delta_gi_mean_gap_max
       threshold_max: 0.05   # ≤ 5% gap across groups
       window: 30d
@@ -45,8 +45,8 @@ spec:
       threshold_max: "PT48H" # ≤ 48h difference across groups
       window: 30d
       groups: ["region", "income_quintile"]
-    # Spend/equity distribution parity for GIC
-    - name: gic_distribution_parity
+    # Spend/equity distribution parity for MIC
+    - name: miic_distribution_parity
       metric: per_capita_gic_gap_max
       threshold_max: 0.10   # ≤ 10% gap normalized per need index
       window: 30d

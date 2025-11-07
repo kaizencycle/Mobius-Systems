@@ -11,7 +11,7 @@ Spec: See `docs/architecture/Kaizen_OS_Complete_Lab_Architecture.md` (Lab 6 sect
 
 Security gatekeeper for agent tool calls. Enforces:
 - DID signature verification
-- GI (Global Integrity) floor checks (≥ 0.95)
+- GI (Mobius Integrity Index) floor checks (≥ 0.95)
 - DelibProof consensus for high-risk actions
 - Sandboxed execution
 - RBAC (Role-Based Access Control)

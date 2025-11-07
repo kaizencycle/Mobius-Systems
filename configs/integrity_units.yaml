@@ -8,7 +8,7 @@ cycle: "C-125"
 last_updated: "2025-11-05T21:45:00Z"
 
 symbols:
-  credit: "GIC"                 # Placeholder; safe to rename
+  credit: "MIC"                 # Placeholder; safe to rename
   shard: "SHD"
   shard_symbol_unicode: "₷"
 

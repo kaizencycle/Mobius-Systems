@@ -3,7 +3,7 @@
 **Purpose:** Prevent moral, behavioral, and mathematical drift across all agents, epochs, and providers by enforcing attestable, reversible, integrity-anchored intelligence.
 
 ## 1. Mission
-Ensure all learning systems evolve with integrity, not entropy. Every change must be: traceable, reversible, consensual, auditable, and aligned with Global Integrity (GI).
+Ensure all learning systems evolve with integrity, not entropy. Every change must be: traceable, reversible, consensual, auditable, and aligned with Mobius Integrity Index (GI).
 
 ## 2. Core Principles
 **Integrity First** — Cryptographic signatures on models, data, and containers. GI < 0.95 triggers stability safeguards; GI < 0.90 triggers emergency stop.  

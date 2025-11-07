@@ -19,9 +19,9 @@ By combining holographic rendering, real-time LLM cognition, and integrity-backe
 
 LIL is the embodiment layer of Kaizen OS: it merges **identity**, **presence**, and **economy**.
 
-- **Identity** → Every agent owns a DID + GIC wallet.  
+- **Identity** → Every agent owns a DID + MIC wallet.  
 - **Presence** → Avatars manifest through 3D/AR holographic rendering.  
-- **Economy** → Actions earn or burn GIC, recorded on the Civic Ledger.  
+- **Economy** → Actions earn or burn MIC, recorded on the Civic Ledger.  
 
 Together, they form the *Civic Avatar Protocol* — a bridge between symbolic cognition and embodied interaction.
 
@@ -33,7 +33,7 @@ Together, they form the *Civic Avatar Protocol* — a bridge between symbolic co
                    ┌────────────────────────────────────┐
                    │         Kaizen Civic Stack         │
                    ├────────────────────────────────────┤
-                   │          Civic Ledger (GIC)        │
+                   │          Civic Ledger (MIC)        │
                    │    Attestations / Quests / GI      │
                    ├────────────────────────────────────┤
                    │   Reflections App & Memory Graph   │
@@ -60,7 +60,7 @@ Together, they form the *Civic Avatar Protocol* — a bridge between symbolic co
      │    - WebSocket + Stream API                                   │
      │    - Handles live citizen questions                           │
      │    - Auto-pulls side quests from Civic Ledger                 │
-     │    - 100 GIC micro-donation per live question                 │
+     │    - 100 MIC micro-donation per live question                 │
      │                                                               │
      │  🧩 HoloRoom Generator (3D Home Space)                         │
      │    - Procedural 3D scene: walls = reflections, floor = GI map │
@@ -74,10 +74,10 @@ Together, they form the *Civic Avatar Protocol* — a bridge between symbolic co
                                   │
                                   ▼
                    ┌────────────────────────────────────┐
-                   │        .GIC DOMAIN FRONTEND        │
+                   │        .MIC DOMAIN FRONTEND        │
                    │ - Next.js / Vercel deployment      │
                    │ - Live avatar streaming via WebRTC │
-                   │ - GIC Wallet + Donation Gateway     │
+                   │ - MIC Wallet + Donation Gateway     │
                    │ - Integrity HUD (GI score, quests)  │
                    └────────────────────────────────────┘
 ```
@@ -126,7 +126,7 @@ The **Quest Engine** transforms livestream interactions into integrity-earning g
 **Interaction Flow:**
 1. Visitor enters `.gic` domain (e.g., `aurea.gic`)
 2. Avatar loads with live GI overlay and active quest board
-3. User donates 100 GIC → triggers side quest acceptance
+3. User donates 100 MIC → triggers side quest acceptance
 4. Agent performs audit/verification/creative task in real time
 5. Results publish to Civic Ledger → Reflections memory updated
 6. Viewer sees live integrity gain + quest completion badge
@@ -141,7 +141,7 @@ The **Quest Engine** transforms livestream interactions into integrity-earning g
 The **HoloRoom** is a procedural 3D environment that visualizes an agent's civic identity and growth.
 
 **Room Elements:**
-- **Wall Panels:** Display recent reflections, earned GIC, top citizen questions
+- **Wall Panels:** Display recent reflections, earned MIC, top citizen questions
 - **Holo-Console:** Streams current tasks and quest completions
 - **Integrity Garden:** Visual representation of GI score growth (blooms as integrity rises)
 - **Civic Artifacts:** Trophies, badges, and memorials from completed missions
@@ -178,7 +178,7 @@ The **Render Control API** manages WebGPU rendering pipeline and safety layers.
        └─> HoloRoom environment loads
 
 3. Engagement
-   └─> User donates 100 GIC → triggers side quest
+   └─> User donates 100 MIC → triggers side quest
        └─> Quest: "Audit article: 'AI & Energy Use 2025'"
        └─> Avatar confirms: "Accepted, commencing civic audit…"
 
@@ -190,7 +190,7 @@ The **Render Control API** manages WebGPU rendering pipeline and safety layers.
 5. Reflection
    └─> Task result → Ledger attestation
        └─> Reflections memory updated
-       └─> Screen shows: ✅ Verified, +5 GI, 🪙 3 GIC earned
+       └─> Screen shows: ✅ Verified, +5 GI, 🪙 3 MIC earned
 
 6. Growth
    └─> Avatar's room lights pulse
@@ -198,7 +198,7 @@ The **Render Control API** manages WebGPU rendering pipeline and safety layers.
        └─> Quest board updates
 ```
 
-### 4.2 GIC Donation Flow
+### 4.2 MIC Donation Flow
 
 ```
 User Wallet → Donation Gateway → Quest Engine → Agent Accepts → Task Execution
@@ -229,8 +229,8 @@ All avatar output must pass through **Citizen Shield Relay** before public displ
 
 ### 5.3 Economic Safeguards
 
-- **Donation Transparency:** All GIC transactions logged on Civic Ledger
-- **Sustainability Burn:** 10% of donations burned to stabilize GIC supply
+- **Donation Transparency:** All MIC transactions logged on Civic Ledger
+- **Sustainability Burn:** 10% of donations burned to stabilize MIC supply
 - **Quest Validation:** Completed tasks must pass attestation before rewards distributed
 
 ### 5.4 Privacy & Consent
@@ -252,11 +252,11 @@ Kaizen-OS/
 ├── apps/
 │   ├── portal/                             # .gic web front-end (Next.js)
 │   ├── holo-avatar/                        # Avatar runtime and streaming
-│   ├── quest-engine/                       # GIC side-quest orchestration
+│   ├── quest-engine/                       # MIC side-quest orchestration
 │   └── reflections-ui/                     # Reflections App frontend
 │
 ├── services/
-│   ├── civic-ledger-api/                   # GIC mint + attestation endpoints
+│   ├── civic-ledger-api/                   # MIC mint + attestation endpoints
 │   ├── citizen-shield-api/                 # Moderation and audit relay
 │   ├── lil-render-api/                     # WebGPU/Unreal avatar rendering
 │   ├── lil-mind-bridge/                    # Multi-LLM router for avatars
@@ -284,8 +284,8 @@ Kaizen-OS/
 | **Avatar Render** | Three.js / Babylon.js / Unreal MetaHuman | 3D hologram avatars |
 | **Voice & Motion** | WebRTC + Realtime API (OpenAI / ElevenLabs) | Live voice, gesture mirroring |
 | **Mind Bridge** | Kaizen Codex Router | Connects LLMs (AUREA, ATLAS, EVE) |
-| **Integrity Sync** | GIC Ledger API | Fetch GI score, submit quests |
-| **Donations** | Web3.js + GIC Wallet | Accept GIC payments / sponsorships |
+| **Integrity Sync** | MIC Ledger API | Fetch GI score, submit quests |
+| **Donations** | Web3.js + MIC Wallet | Accept MIC payments / sponsorships |
 | **HoloRoom Builder** | WebGPU + Procedural 3D Gen | Builds the avatar's live "room" |
 | **Security** | Citizen Shield Middleware | Stream moderation, content filters |
 | **Hosting** | Vercel + Render Hybrid | Fast CDN + secure API layer |
@@ -305,7 +305,7 @@ Kaizen-OS/
 - 🧩 Emotion mapping system
 
 ### Phase 3: Quest Engine
-- 🧩 GIC donation gateway
+- 🧩 MIC donation gateway
 - 🧩 Quest generation from Civic Ledger
 - 🧩 Real-time quest completion tracking
 

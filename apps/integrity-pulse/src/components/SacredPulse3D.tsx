@@ -33,7 +33,7 @@ export function FractalSpheres({ gi = 0.98, eventsPerMin = 1 }: { gi?: number; e
   return <instancedMesh ref={mesh} args={[geo, undefined, N]} />;
 }
 
-export default function SacredPulse3D({ gi, eventsPerMin }: { gi: number; eventsPerMin: number }) {
+export default function SacredPulse3D({ gi, eventsPerMin }: { mii: number; eventsPerMin: number }) {
   return (
     <Canvas camera={{ position: [0, 0, 18], fov: 55 }}>
       {/* @ts-ignore */}

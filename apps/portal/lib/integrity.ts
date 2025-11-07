@@ -5,7 +5,7 @@ export type SRItem = {
   event_id: string;
   kind: 'situational_report' | string;
   source: string;            // "JADE"
-  gi: number;
+  mii: number;
   timestamp: string;
   details: {
     subject?: string;

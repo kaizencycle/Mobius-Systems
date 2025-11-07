@@ -127,7 +127,7 @@ data/
     ├── 2025-09-29.echo.json     # API sweep data
     ├── 2025-09-29.seal.json     # API seal data
     ├── 2025-09-29.ledger.json   # API ledger data
-    └── 2025-09-29.gic.jsonl     # GIC transactions
+    └── 2025-09-29.gic.jsonl     # MIC transactions
 
 archive/
 └── 2025-09-29.zip               # Complete day archive (if Merkle root exists)

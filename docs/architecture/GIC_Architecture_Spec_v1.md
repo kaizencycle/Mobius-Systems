@@ -1,6 +1,6 @@
-# Kaizen OS · GIC Architecture Spec (v1)
+# Kaizen OS · MIC Architecture Spec (v1)
 
-Perfect — here’s a commit-ready technical architecture spec for dropping GIC into Kaizen OS. It’s structured for immediate implementation: repo layout, service contracts, DB schemas, on-chain interfaces, message formats, diagrams, and runbooks.
+Perfect — here’s a commit-ready technical architecture spec for dropping MIC into Kaizen OS. It’s structured for immediate implementation: repo layout, service contracts, DB schemas, on-chain interfaces, message formats, diagrams, and runbooks.
 
 ---
 
@@ -14,12 +14,12 @@ kaizen-os/
 │  ├─ earn-engine/                  # contributions → score → mint requests
 │  ├─ oracle-service/               # compute basket, price root, proofs
 │  ├─ peg-controller/               # peg deviation PID + AMM skew
-│  ├─ amm-gateway/                  # quotes/trades against GIC inventory
+│  ├─ amm-gateway/                  # quotes/trades against MIC inventory
 │  ├─ compute-router/               # redeem-for-compute executor
 │  ├─ governance-api/               # proposals, votes, tallies
 │  └─ observability/                # dashboards, metrics, alerts
 ├─ contracts/
-│  ├─ GIC.sol
+│  ├─ MIC.sol
 │  ├─ GICGovernor.sol
 │  ├─ GICAMM.sol
 │  ├─ GICVault.sol
@@ -49,7 +49,7 @@ kaizen-os/
 ## 1) System diagram (ASCII)
 
 ```
-[Human Intent] --> OAA Hub --> Codex Router --> Earn Engine ---> Civic Ledger ---> GIC Contracts
+[Human Intent] --> OAA Hub --> Codex Router --> Earn Engine ---> Civic Ledger ---> MIC Contracts
                                                |        ^            ^
                                                |        |            |
                                                v        |            |
@@ -338,12 +338,12 @@ interface IAMM {
 interface IVault {
   // Mint when compute collateral is deposited off-chain (proof required)
   function mintAgainstReceipt(address to, uint256 amountGIC, bytes calldata proof) external;
-  // Burn GIC to receive compute execution
+  // Burn MIC to receive compute execution
   function redeemForCompute(uint256 amountGIC, bytes calldata jobSpec) external returns (bytes32 jobId);
 }
 ```
 
-Policy guard: GIC.mint reverts if currentGI < GI_FLOOR (95).
+Policy guard: MIC.mint reverts if currentGI < GI_FLOOR (95).
 
 ---
 
@@ -387,8 +387,8 @@ e_prev = e
 ## 9) Governance parameters
 
 - GI_FLOOR = 0.95 (halts mint)
-- Vote curve = sqrt(GIC) with **5% whale cap**
-- Vote burn = 50% of staked GIC
+- Vote curve = sqrt(MIC) with **5% whale cap**
+- Vote burn = 50% of staked MIC
 - Emergency pause: 6-of-8 Sentinels multisig
 - **Change control:** proposal → 7-day comment → Elder review → citizen vote (60% yes, 40% quorum) → 48h timelock
 
@@ -450,7 +450,7 @@ e_prev = e
 ## 14) Test plan (MVP)
 
 - **Unit:** scoring, timeWeights, PID controller, vote curve
-- **Integration:** earn→ledger→GIC.mint; oracle→peg→AMM; redeem→compute proofs
+- **Integration:** earn→ledger→MIC.mint; oracle→peg→AMM; redeem→compute proofs
 - **Chaos:** kill one region; oracle variance spike; spam 100k submissions
 - **Load:** 10k tx/min mint/burn; 1k quotes/s; 5k redemptions/hr
 - **Security:** forged signatures; replay; role escalation; MEV sandwich around AMM
@@ -462,7 +462,7 @@ e_prev = e
 **Day 0–14**
 - Stand up Civic Ledger (mint/burn/attest)
 - Oracle v0 (hourly C_t, κ, p*)
-- Contracts on testnet (GIC, Governor)
+- Contracts on testnet (MIC, Governor)
 
 **Day 15–45**
 - Earn Engine with 3 tasks (reflections, course, mentor)
@@ -521,7 +521,7 @@ make dev
 | Reviewers_min | 3 | DelibProof |
 | Vote burn | 50% | anti-spam |
 | Whale cap | 5% | of voting power |
-| UBI base (phase 1) | 6000 GIC/mo | adjustable by p* |
+| UBI base (phase 1) | 6000 MIC/mo | adjustable by p* |
 
 ---
 

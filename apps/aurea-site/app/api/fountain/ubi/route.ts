@@ -10,7 +10,7 @@ import {
 /**
  * POST /api/fountain/ubi
  *
- * Claim daily UBI from the Civic GIC Fountain.
+ * Claim daily UBI from the Civic MIC Fountain.
  *
  * Body:
  * {
@@ -63,7 +63,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({
       success: true,
       distribution: result.distribution,
-      message: `UBI claimed successfully: ${result.distribution?.amount} GIC`,
+      message: `UBI claimed successfully: ${result.distribution?.amount} MIC`,
     })
   } catch (error) {
     console.error('UBI claim error:', error)

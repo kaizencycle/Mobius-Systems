@@ -7,7 +7,7 @@ GI Trajectory: 0.960 → 0.993
 - Genesis design + Bio-DNA anchor: ✅ Aug 20 (–10d)
 - DVA benchmark ≥0.99 integrity: ✅ Aug 18 (–4w)
 - Civic→Kaizen OS refactor: ✅ Oct 26 (–4d)
-- GIC whitepaper (tokenomics): ✅ Oct 29 (–2w)
+- MIC whitepaper (tokenomics): ✅ Oct 29 (–2w)
 - Public demo (ATLAS alpha): ✅ Oct 28 (–1 mo)
 - Ledger heartbeat (AUREA.gic live): ✅ Oct 31 (–2 mo)
 

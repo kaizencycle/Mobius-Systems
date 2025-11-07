@@ -43,7 +43,7 @@ A proof-of-integrity ledger that:
 - Enables audit trails
 - Supports reputation systems
 
-### GIC (Global Integrity Credit)
+### MIC (Mobius Integrity Index Credit)
 An incentive and reputation economy that:
 - Rewards ethical behavior
 - Penalizes harmful actions

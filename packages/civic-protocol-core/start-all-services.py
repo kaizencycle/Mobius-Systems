@@ -5,7 +5,7 @@ Civic Protocol Core - Start All Services
 This script starts all the Civic Protocol services:
 - Civic Dev Node (port 5411)
 - Shield (port 7000)
-- GIC-Indexer (port 8000)
+- MIC-Indexer (port 8000)
 
 Run this to start the complete development environment.
 """
@@ -84,9 +84,9 @@ class ServiceManager:
         if not success:
             return False
         
-        # Start GIC-Indexer
+        # Start MIC-Indexer
         success = self.start_service(
-            "GIC-Indexer",
+            "MIC-Indexer",
             "python app/main.py",
             8000,
             "gic-indexer"
@@ -198,11 +198,11 @@ def main():
     print("=" * 60)
     print("Civic Dev Node: http://localhost:5411")
     print("Shield:         http://localhost:7000")
-    print("GIC-Indexer:    http://localhost:8000")
+    print("MIC-Indexer:    http://localhost:8000")
     print("\nAPI Documentation:")
     print("Civic Dev Node: http://localhost:5411/docs")
     print("Shield:         http://localhost:7000/docs")
-    print("GIC-Indexer:    http://localhost:8000/docs")
+    print("MIC-Indexer:    http://localhost:8000/docs")
     print("\nTest the integration:")
     print("python examples/full-integration-example.py")
     

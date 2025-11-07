@@ -8,13 +8,13 @@ import crypto from 'crypto';
 
 interface UrielContext {
   cycle: string;
-  gi: number;
+  mii: number;
   domain?: 'physics' | 'curiosity' | 'entropy' | 'delib_proof' | 'cosmos';
 }
 
 interface UrielDeliberationResult {
   illumination: string;
-  gi: number;
+  mii: number;
   sentinel: string;
   uriel_sig?: string;
   usage?: {
@@ -100,7 +100,7 @@ export class UrielThoughtProvider {
 
       return {
         illumination: response,
-        gi: giScore,
+        mii: miiScore,
         sentinel: 'URIEL',
         uriel_sig: urielSig,
         usage: {

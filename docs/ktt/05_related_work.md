@@ -241,7 +241,7 @@ The KTT framework can be viewed as a **"living safety case"** where the GI score
 | **Adaptation** | Manual re-argumentation | Automated (active learning + Morale Anchor) |
 | **Artifacts** | GSN diagrams, test reports | Cryptographic attestations, GI/KTI metrics |
 
-**Citation Context**: "Safety-critical engineering relies on structured assurance arguments to demonstrate system safety (Kelly & Weaver, 2004). The KTT framework extends this paradigm to AI by providing a 'living safety case' where the Global Integrity (GI) score and tamper-evident audit trail continuously update the evidence base for system trustworthiness."
+**Citation Context**: "Safety-critical engineering relies on structured assurance arguments to demonstrate system safety (Kelly & Weaver, 2004). The KTT framework extends this paradigm to AI by providing a 'living safety case' where the Mobius Integrity Index (GI) score and tamper-evident audit trail continuously update the evidence base for system trustworthiness."
 
 ---
 

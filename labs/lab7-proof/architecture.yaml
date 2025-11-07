@@ -3,7 +3,7 @@ version: 0.1.0
 owner: Michael (Kaizen)
 summary: >
   Online Apprenticeship Agent (OAA) that pairs a user with a Mentor ensemble
-  (Gemini, Claude, DeepSeek, Perplexity). Learning progress mints XP -> Levels -> GIC,
+  (Gemini, Claude, DeepSeek, Perplexity). Learning progress mints XP -> Levels -> MIC,
   with integrity anchored via Attestation + Citizen Shield and logged to the Ledger.
 
 domains:
@@ -43,7 +43,7 @@ components:
     env: PERPLEXITY_API_KEY
 
   service.xp_engine:
-    desc: Converts rubric scores/rubrics→XP→Level; emits GIC reward intents.
+    desc: Converts rubric scores/rubrics→XP→Level; emits MIC reward intents.
     rules:
       - xp_per_task: 1–100
       - leveling_curve: quadratic (base=100, growth=1.35)
@@ -51,14 +51,14 @@ components:
       - anti-farm: diminishing returns per duplicate-task window (24h)
 
   service.reward_minter:
-    desc: Translates Level milestones + verified XP into on-ledger GIC mints or drips.
+    desc: Translates Level milestones + verified XP into on-ledger MIC mints or drips.
     inputs:
       - RewardIntent{user_id, xp, level, attestation_id}
     outputs:
       - GICTransfer{tx_id, amount, reason}
 
   service.gic_indexer:
-    desc: Index GIC balances, txs, staking locks; expose read API to frontend.
+    desc: Index MIC balances, txs, staking locks; expose read API to frontend.
     deps: civic-ledger-core (read-only)
 
   service.attestation:
@@ -102,7 +102,7 @@ components:
     desc: Curates tasks by domain (STEM) & difficulty; aligns to rubrics.
 
   ledger.civic_protocol_core:
-    desc: GIC ledger (write via reward_minter; read via gic_indexer).
+    desc: MIC ledger (write via reward_minter; read via gic_indexer).
     endpoints:
       - POST /ledger/attest
       - POST /ledger/transfer
@@ -197,9 +197,9 @@ configs:
       - L3: 235–…   # computed by curve
   rewards:
     per_level:
-      - L1→L2: 0.5 GIC
-      - L2→L3: 1.0 GIC
-      - every_5_levels: bonus 3 GIC (attested)
+      - L1→L2: 0.5 MIC
+      - L2→L3: 1.0 MIC
+      - every_5_levels: bonus 3 MIC (attested)
   shields:
     max_turns_per_hour: 60
     max_mints_per_day: 2

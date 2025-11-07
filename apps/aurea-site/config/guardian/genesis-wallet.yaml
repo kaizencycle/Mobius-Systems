@@ -10,7 +10,7 @@ wallet:
   did: "did:gic:kaizen.genesis"
   address: "0xGENESIS"
   total_supply: 1_000_000
-  denomination: GIC
+  denomination: MIC
   type: founder_time_lock
   created_cycle: C-118
   locked_until_cycle: C-200
@@ -57,7 +57,7 @@ donation_policy:
     Every 90 real days, AUREA donates 1% × GI stability coefficient of
     the Genesis Wallet balance to the Community Treasury Pool.
     This prevents hoarding, encourages civic circulation, and sustains
-    public goods funding through GIC redistribution.
+    public goods funding through MIC redistribution.
 
 revival_protocol:
   release_conditions:

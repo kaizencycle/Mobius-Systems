@@ -45,7 +45,7 @@ This system implements comprehensive quality tracking to prevent "AI slop" throu
 - **Provenance-by-default**: Every output is tracked with source attribution
 - **Memory hygiene**: Schema validation and quarantine for malformed data  
 - **Human-in-the-loop**: Multi-agent cross-checks and Copilot verification
-- **Incentive alignment**: Quality gates tied to GIC rewards
+- **Incentive alignment**: Quality gates tied to MIC rewards
 - **Retrieval grounding**: Beaconed objects with verifiable metadata
 
 ### Quality Dashboard

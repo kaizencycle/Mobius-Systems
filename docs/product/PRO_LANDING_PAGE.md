@@ -9,7 +9,7 @@
 Bloomberg gave Wall Street a terminal.
 Kaizen OS gives the world one — a civic intelligence stack powered by integrity.
 
-- **$10 / month** or **100 GIC / cycle**
+- **$10 / month** or **100 MIC / cycle**
 - Integrity-audited answers (GI ≥ 0.99)
 - Federated multi-LLM routing (OpenAI · Anthropic · Gemini · DeepSeek)
 - Private reflections, public proofs
@@ -22,7 +22,7 @@ Kaizen OS gives the world one — a civic intelligence stack powered by integrit
 |-------|----------|-------------|
 | **DVA Companion** | Local + Cloud LLM | Choose private, hybrid, or full-cloud inference. |
 | **Codex Router** | Smart Policy Routing | Auto-selects fastest + cheapest model per query. |
-| **OAA Hub** | Learn & Earn | Apprenticeship missions that reward GIC. |
+| **OAA Hub** | Learn & Earn | Apprenticeship missions that reward MIC. |
 | **Citizen Shield** | Privacy & Audit | Local encryption · Integrity dashboards. |
 | **Civic Ledger** | Proof of Integrity | Every major action logged, verifiable on-chain. |
 
@@ -30,8 +30,8 @@ Kaizen OS gives the world one — a civic intelligence stack powered by integrit
 
 ## 🪙 Token Economy
 
-- **Earn** 50 GIC / week for verified reflections
-- **Spend** GIC for compute boosts, API calls, premium lessons
+- **Earn** 50 MIC / week for verified reflections
+- **Spend** MIC for compute boosts, API calls, premium lessons
 - **Donate** 10% to the Public Fountain — funds open education
 
 ---
@@ -56,8 +56,8 @@ Kaizen OS gives the world one — a civic intelligence stack powered by integrit
 
 | Plan | Monthly | Features |
 |------|----------|-----------|
-| **Free Citizen** | $0 · 10 GIC UBI | Local DVA · OAA Access |
-| **Pro Terminal** | $10/mo · 100 GIC UBI | Cloud routing · Ledger Proof · Priority Support |
+| **Free Citizen** | $0 · 10 MIC UBI | Local DVA · OAA Access |
+| **Pro Terminal** | $10/mo · 100 MIC UBI | Cloud routing · Ledger Proof · Priority Support |
 | **Institutional** | Custom | Governance Dash · Private Ledger Node |
 
 ---
@@ -71,7 +71,7 @@ Kaizen OS gives the world one — a civic intelligence stack powered by integrit
 | **Privacy** | Data used for training | Data stored indefinitely | Google ecosystem | **Encrypted, you own keys** |
 | **Governance** | Corporate decides | Corporate decides | Corporate decides | **You vote** |
 | **Exit option** | Export limited | Export limited | Export limited | **Full export + self-host** |
-| **Free tier** | No | No | No | **Yes (500 GIC/month)** |
+| **Free tier** | No | No | No | **Yes (500 MIC/month)** |
 | **Community** | None | None | None | **Hive chapters** |
 | **Integrity proofs** | No | No | No | **Yes (GI attestation)** |
 
@@ -95,7 +95,7 @@ or
 
 1. **[Sign up for free](https://kaizen.os/signup)** — No credit card required
 2. **Install the DVA** — Desktop app (Mac/Windows/Linux) or browser extension
-3. **Earn your first GIC** — Complete a reflection or OAA course
+3. **Earn your first MIC** — Complete a reflection or OAA course
 4. **Upgrade to Pro** — Unlock full frontier AI access
 
 ---

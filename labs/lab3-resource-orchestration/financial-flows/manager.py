@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Lab 3 - Module 4: Financial Flows Manager
-Manages GIC settlement, epoch processing, PublicGoodsPool allocation
+Manages MIC settlement, epoch processing, PublicGoodsPool allocation
 """
 
 from dataclasses import dataclass
@@ -27,12 +27,12 @@ class Transaction:
     metadata: Dict
 
 class FinancialFlowsManager:
-    """Manages all GIC financial flows"""
+    """Manages all MIC financial flows"""
 
     def __init__(self):
         self.epoch_length_days = 90
         self.current_epoch = 120  # C-120
-        self.public_goods_pool_balance = 1_000_000.0  # GIC
+        self.public_goods_pool_balance = 1_000_000.0  # MIC
         self.total_gic_supply = 10_000_000.0
         self.transactions = []
 
@@ -43,7 +43,7 @@ class FinancialFlowsManager:
         amount: float,
         reason: str
     ) -> Transaction:
-        """Process GIC transfer between citizens"""
+        """Process MIC transfer between citizens"""
         tx = Transaction(
             tx_id=f"tx_{len(self.transactions)}",
             type=TransactionType.GIC_TRANSFER,
@@ -80,7 +80,7 @@ class FinancialFlowsManager:
         return tx
 
     def get_balance(self, citizen_did: str) -> float:
-        """Get citizen's GIC balance"""
+        """Get citizen's MIC balance"""
         balance = 0.0
         for tx in self.transactions:
             if tx.to_did == citizen_did:

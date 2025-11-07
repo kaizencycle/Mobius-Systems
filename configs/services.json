@@ -18,7 +18,7 @@
       },
       "ledger-api": {
         "name": "Civic Ledger Core",
-        "description": "Proof-of-Integrity ledger (GI ≥ 0.95) + GIC UBI economy",
+        "description": "Proof-of-Integrity ledger (GI ≥ 0.95) + MIC UBI economy",
         "type": "api",
         "port": 4001,
         "healthCheck": "/healthz",
@@ -27,8 +27,8 @@
         "path": "apps/ledger-api"
       },
       "indexer-api": {
-        "name": "GIC Indexer",
-        "description": "GIC economy indexing and attestation storage",
+        "name": "MIC Indexer",
+        "description": "MIC economy indexing and attestation storage",
         "type": "api",
         "port": 4002,
         "healthCheck": "/healthz",

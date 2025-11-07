@@ -46,18 +46,18 @@ export default function Consensus(){
   return (
     <section className="container">
       <h1 className="title">Consensus Chamber</h1>
-      <p className="muted">Unlocked at 100 GIC. All companions weigh in; later we'll add voting & staking.</p>
+      <p className="muted">Unlocked at 100 MIC. All companions weigh in; later we'll add voting & staking.</p>
       <div className="card">
         <input className="field" value={topic} onChange={e=>setTopic(e.target.value)} placeholder="Proposal or festival theme…" />
         <div className="row" style={{gap:8,alignItems:"center"}}>
           <select className="field" value={mode} onChange={e=>setMode(e.target.value as any)}>
             <option value="equal">Equal weighting</option>
-            <option value="gic">GIC-weighted</option>
-            <option value="quad">Quadratic (√GIC)</option>
+            <option value="gic">MIC-weighted</option>
+            <option value="quad">Quadratic (√MIC)</option>
           </select>
           <button className="btn primary" onClick={deliberate} disabled={!topic.trim()}>Deliberate</button>
         </div>
-        <small className="muted">Your balance: {gic.toFixed(3)} GIC</small>
+        <small className="muted">Your balance: {gic.toFixed(3)} MIC</small>
       </div>
       <div className="card" style={{marginTop:12}}>
         <strong>Outputs</strong>

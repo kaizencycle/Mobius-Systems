@@ -40,12 +40,12 @@ export default function SidebarStatus(){
       </div>
       <div className="row">
         <span className="mini">🪙</span>
-        <span className="mono">GIC {gic.toFixed(2)}</span>
+        <span className="mono">MIC {gic.toFixed(2)}</span>
       </div>
       <div className="prog">
         <div className="bar" style={{width:`${p10}%`}} />
       </div>
-      <small className="muted">Next companion at 10 GIC</small>
+      <small className="muted">Next companion at 10 MIC</small>
       <div className="row">
         <a className="tag" href="/forest" title="Go to Forest">
           🌳 {trees.toFixed(1)} (mo)
@@ -54,7 +54,7 @@ export default function SidebarStatus(){
       <div className="prog">
         <div className="bar" style={{width:`${p100}%`}} />
       </div>
-      <small className="muted">Consensus at 100 GIC</small>
+      <small className="muted">Consensus at 100 MIC</small>
       {canConsensus && (
         <a className="btn tiny" href="/consensus" title="Enter Consensus">Enter Consensus</a>
       )}

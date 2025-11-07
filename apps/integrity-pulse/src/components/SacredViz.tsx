@@ -5,7 +5,7 @@ import * as THREE from 'three';
 
 type Telemetry = {
   agent: string;
-  gi: number;           // 0..1
+  mii: number;           // 0..1
   throughput: number;   // events/sec
   errorRate: number;    // 0..1
 };
@@ -364,7 +364,7 @@ export default function SacredViz({ mockData = true }: SacredVizProps) {
           AGENT_LAYERS.forEach((agent, i) => {
             telem[agent.id] = {
               agent: agent.id,
-              gi: 0.96 + 0.03 * (0.5 + 0.5 * Math.sin(now*0.1 + i)),
+              mii: 0.96 + 0.03 * (0.5 + 0.5 * Math.sin(now*0.1 + i)),
               throughput: 4 + 3 * (0.5 + 0.5 * Math.sin(now*0.35 + i*0.7)),
               errorRate: Math.max(0, 0.02 + 0.02 * Math.sin(now*0.27 + i*1.3))
             };

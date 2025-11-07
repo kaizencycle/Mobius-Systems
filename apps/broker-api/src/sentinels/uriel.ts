@@ -119,7 +119,7 @@ router.get('/health', (req: Request, res: Response) => {
 });
 
 router.post('/query', async (req: Request, res: Response) => {
-  const { intent, gi: reportedGi, model, maxTokens }: UrielRequestBody = req.body || {};
+  const { intent, mii: reportedGi, model, maxTokens }: UrielRequestBody = req.body || {};
 
   if (!intent || typeof intent !== 'string' || intent.trim().length === 0) {
     return res.status(400).json({ error: 'intent is required' });
@@ -179,7 +179,7 @@ router.post('/query', async (req: Request, res: Response) => {
       // Log structured event
       console.log(JSON.stringify({
         event: 'sentinel_uriel',
-        gi: giScore,
+        mii: miiScore,
         latency_ms: durationMs,
         topic: 'unknown',
         ok: false,
@@ -203,7 +203,7 @@ router.post('/query', async (req: Request, res: Response) => {
     // Log structured event
     console.log(JSON.stringify({
       event: 'sentinel_uriel',
-      gi: giScore,
+      mii: miiScore,
       latency_ms: durationMs,
       topic,
       ok: true
@@ -212,7 +212,7 @@ router.post('/query', async (req: Request, res: Response) => {
     return res.json({
       sentinel: 'URIEL',
       illumination: content,
-      gi: giScore,
+      mii: miiScore,
       latencyMs: durationMs,
       model: completionModel
     });
@@ -224,7 +224,7 @@ router.post('/query', async (req: Request, res: Response) => {
     // Log structured error
     console.log(JSON.stringify({
       event: 'sentinel_uriel',
-      gi: 0,
+      mii: 0,
       latency_ms: durationMs,
       topic: 'unknown',
       ok: false,

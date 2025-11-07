@@ -15,7 +15,7 @@ class Event(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     kind: Mapped[str] = mapped_column(String(50))  # "xp_award" | "burn" | "grant" | "transfer"
     amount: Mapped[float] = mapped_column(Float, default=0.0)
-    unit: Mapped[str] = mapped_column(String(10), default="XP")  # XP or GIC
+    unit: Mapped[str] = mapped_column(String(10), default="XP")  # XP or MIC
     actor_id: Mapped[int | None] = mapped_column(ForeignKey("accounts.id"))
     target_id: Mapped[int | None] = mapped_column(ForeignKey("accounts.id"))
     meta: Mapped[dict] = mapped_column(JSON, default={})

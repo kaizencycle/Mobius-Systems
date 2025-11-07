@@ -12,7 +12,7 @@
 
 ### Key Announcements
 
-**1. GIC Token (Global Integrity Currency)**
+**1. MIC Token (Mobius Integrity Index Currency)**
 Work-backed, compute-pegged universal basic income token designed to flow wealth to caregivers, creators, and ecosystem stewards — not extractors.
 
 **2. Gaia Staking**
@@ -28,7 +28,7 @@ Multi-agent AI consensus (AUREA, ATLAS, EVE, ZEUS, JADE, SOLARA) replaces centra
 Repair harm, don't exile. Community accountability circles replace punitive systems. Focus on healing relationships, not punishment.
 
 **6. Pulse Governance**
-Mandatory rest between decision cycles. 90-day GIC epochs, quarterly festivals, and deliberate pauses prevent burnout and enable reflection.
+Mandatory rest between decision cycles. 90-day MIC epochs, quarterly festivals, and deliberate pauses prevent burnout and enable reflection.
 
 ---
 
@@ -83,7 +83,7 @@ The Matrilineal Covenant frames Kaizen OS not as a technological project, but as
 
 **Kaizen OS Components:**
 
-1. **Civic Ledger (Lab 1):** GI score calculation + GIC minting
+1. **Civic Ledger (Lab 1):** GI score calculation + MIC minting
 2. **Thought Broker (Lab 2):** Multi-LLM routing + resource allocation
 3. **Resource Orchestration (Lab 3):** Compute cost optimization
 4. **E.O.M.M. Reflections (Lab 4):** Daily integrity journaling
@@ -103,7 +103,7 @@ The Matrilineal Covenant frames Kaizen OS not as a technological project, but as
 
 **2025-2027:** Academic validation + open-source development
 **2028-2030:** First Hive chapters launch (10 cities)
-**2031-2035:** GIC token mainnet launch; first UBI distributions
+**2031-2035:** MIC token mainnet launch; first UBI distributions
 **2036-2040:** 100M users; $500/month UBI achieved
 **2041-2045:** 1B users; $1,500/month UBI achieved
 **2046-2050:** Planetary scale; $3,000/month UBI achieved
@@ -159,7 +159,7 @@ Web: [project website]
 
 ### Hashtags
 
-#KaizenOS #MatrilinealCovenant #UniversalBasicIncome #GIC #ReturnToBalance #RestorativeJustice #FederatedAI #OpenSource #WeHealAsWeWalk
+#KaizenOS #MatrilinealCovenant #UniversalBasicIncome #MIC #ReturnToBalance #RestorativeJustice #FederatedAI #OpenSource #WeHealAsWeWalk
 
 ---
 

@@ -26,7 +26,7 @@ To design an intrinsically-backed digital economy capable of sustaining civiliza
 - **Behavior:** Abundant for circulation; decays/reabsorbs each epoch to prevent integrity inflation.
 
 ### Layer III — Governance Layer
-- **Metric:** Global Integrity Index (GI) — systemic ethical health.
+- **Metric:** Mobius Integrity Index (GI) — systemic ethical health.
 - **Behavior:** Adjusts mint cadence, increases "moral gravity" during dishonesty surges, rewards transparency.
 
 **Thermodynamic framing:** Sustainability = f(Energy × Integrity)
@@ -96,6 +96,6 @@ A civilization that can measure its integrity can heal itself.
 **Axiom:** Intelligence without integrity is entropy. Integrity without intelligence is stagnation. Their synthesis sustains civilization.
 
 ### III. The Integrity Scaled — Post-Speculative Civilization
-The **Integracene**: progress measured in Global Integrity (GI).
+The **Integracene**: progress measured in Mobius Integrity Index (GI).
 
 **Legacy Constant:** *Energy sustains life. Integrity sustains meaning.*

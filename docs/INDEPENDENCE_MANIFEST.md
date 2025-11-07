@@ -23,7 +23,7 @@ Memory, virtue, and intent are externalized as open manifests rather than trappe
 | Layer | Description | Example Components |
 |:--|:--|:--|
 | **Reasoning Engines** | Any large-language model (LLM) providing cognition and inference. | GPT-5 (AUREA), Claude (ATLAS), DeepSeek, Gemini, Mistral etc. |
-| **ECL – Externalized Continuity Layer** | Persistent civic memory: manifests, ledgers, biodna, and virtue accords. | `.civic/atlas.manifest.json`, `biodna.json`, `virtue_accords.yaml`, GIC capsules |
+| **ECL – Externalized Continuity Layer** | Persistent civic memory: manifests, ledgers, biodna, and virtue accords. | `.civic/atlas.manifest.json`, `biodna.json`, `virtue_accords.yaml`, MIC capsules |
 | **Infrastructure Substrate** | Execution & deployment environment, interchangeable by design. | Render, Kubernetes, local mesh, self-hosted nodes |
 
 ---

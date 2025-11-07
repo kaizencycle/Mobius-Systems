@@ -20,7 +20,7 @@ Bootstraps guardrails so your autonomous loop (Cursor agent → auto-merge → A
 
 ## Notes
 - Pair with your **Human-In-The-Loop Guard Pack** and **Auto-Merge Pulse**.
-- Place **Civic Ledger** & **GIC** under protected paths; enforce manual seals.
+- Place **Civic Ledger** & **MIC** under protected paths; enforce manual seals.
 - Consider adding Sigstore/GPG signing for agent commits.
 
 

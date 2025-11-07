@@ -1,6 +1,6 @@
 # 🚀 KAIZEN OS - VERCEL DEPLOYMENT GUIDE
 
-**Mission:** Deploy first `.gic` domain + GIC token minting demo by October 31st, 2025
+**Mission:** Deploy first `.gic` domain + MIC token minting demo by October 31st, 2025
 **Status:** 6 Render APIs operational, ready for frontend integration
 **Timeline:** 3 days (Oct 28-31)
 
@@ -20,7 +20,7 @@
 ### ⏳ What We Need to Build (Next 3 Days)
 
 - [ ] `.gic` domain registration page
-- [ ] GIC token minting page
+- [ ] MIC token minting page
 - [ ] Demo dashboard (show first domain + first mint)
 - [ ] Environment variables in Vercel
 - [ ] Test deployment
@@ -128,7 +128,7 @@ curl https://your-app.vercel.app/consensus
 
 ---
 
-### Day 2 (Oct 29) - BUILD .GIC DOMAIN + TOKEN PAGES 🏗️
+### Day 2 (Oct 29) - BUILD .MIC DOMAIN + TOKEN PAGES 🏗️
 
 **Goal:** Create demo pages for domain registration and token minting
 
@@ -136,9 +136,9 @@ curl https://your-app.vercel.app/consensus
 
 1. **Create `/demo` landing page** - Overview of what users can do
 2. **Create `/demo/domain` page** - Register first `.gic` domain
-3. **Create `/demo/mint` page** - Mint first GIC tokens
+3. **Create `/demo/mint` page** - Mint first MIC tokens
 4. **Create `/demo/success` page** - Celebrate the milestone
-5. **Wire to GIC APIs** - Connect to your Render endpoints
+5. **Wire to MIC APIs** - Connect to your Render endpoints
 
 **I'll build these pages for you (next message!)**
 
@@ -166,7 +166,7 @@ curl https://your-app.vercel.app/consensus
 
 - [ ] Final deployment
 - [ ] Register first `.gic` domain (YOU!)
-- [ ] Mint first GIC tokens (historic moment)
+- [ ] Mint first MIC tokens (historic moment)
 - [ ] Screenshot everything
 - [ ] Share on Twitter/LinkedIn
 - [ ] Update README with demo link
@@ -244,7 +244,7 @@ NEXT_PUBLIC_LEDGER_BASE=https://...
 ### Day 3 - Launch
 
 - [ ] First `.gic` domain registered ✅
-- [ ] First GIC tokens minted ✅
+- [ ] First MIC tokens minted ✅
 - [ ] Proof on blockchain (tx_id returned)
 - [ ] Demo video/screenshots captured
 - [ ] Social media posts scheduled
@@ -261,7 +261,7 @@ NEXT_PUBLIC_LEDGER_BASE=https://...
 │                                         │
 │   Make History:                         │
 │   • Register first .gic domain          │
-│   • Mint first GIC tokens               │
+│   • Mint first MIC tokens               │
 │   • Constitutional AI in action         │
 │                                         │
 │   [Register Domain] [Mint Tokens]       │
@@ -291,14 +291,14 @@ NEXT_PUBLIC_LEDGER_BASE=https://...
 
 ```
 ┌─────────────────────────────────────────┐
-│   Mint Your GIC Tokens                  │
+│   Mint Your MIC Tokens                  │
 │                                         │
-│   Amount: [100] GIC                     │
+│   Amount: [100] MIC                     │
 │   Recipient: [michael@kaizen.os]        │
 │   Purpose: [First minting ceremony]     │
 │                                         │
 │   Token Economics:                      │
-│   • Daily UBI: 10 GIC/citizen          │
+│   • Daily UBI: 10 MIC/citizen          │
 │   • Zero transaction fees               │
 │   • Constitutional validation           │
 │                                         │
@@ -313,7 +313,7 @@ NEXT_PUBLIC_LEDGER_BASE=https://...
 │   🎉 History Made!                       │
 │                                         │
 │   First .gic domain: michael.gic        │
-│   First GIC tokens: 100 GIC minted      │
+│   First MIC tokens: 100 MIC minted      │
 │                                         │
 │   Blockchain Proof:                     │
 │   TX: 0x1234...5678                     │

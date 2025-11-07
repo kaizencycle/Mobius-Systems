@@ -1,8 +1,8 @@
 /**
- * Example API Endpoint: GIC Burn
+ * Example API Endpoint: MIC Burn
  * POST /api/gic/burn
  *
- * Burn GIC tokens for supply management
+ * Burn MIC tokens for supply management
  *
  * Usage in Next.js:
  * - Place in: pages/api/gic/burn.ts
@@ -66,13 +66,13 @@ export default async function handler(
     const amountWei = ethers.parseEther(amount);
 
     // Execute burn
-    console.log(`[GIC] Burning ${amount} GIC for ${agentId}...`);
+    console.log(`[MIC] Burning ${amount} MIC for ${agentId}...`);
     const tx = await governor.epochBurn(agentIdBytes, amountWei);
 
-    console.log(`[GIC] Transaction submitted: ${tx.hash}`);
+    console.log(`[MIC] Transaction submitted: ${tx.hash}`);
     await tx.wait();
 
-    console.log(`[GIC] Burn complete: ${tx.hash}`);
+    console.log(`[MIC] Burn complete: ${tx.hash}`);
 
     return res.status(200).json({
       success: true,
@@ -80,7 +80,7 @@ export default async function handler(
     });
 
   } catch (error: any) {
-    console.error('[GIC] Burn error:', error);
+    console.error('[MIC] Burn error:', error);
     return res.status(500).json({
       success: false,
       error: error?.message || 'Internal server error'

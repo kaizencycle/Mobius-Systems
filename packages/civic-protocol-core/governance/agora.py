@@ -104,7 +104,7 @@ class AgoraGovernance:
         Initialize Agora governance
         
         Args:
-            gic_economics: GIC economics system for voting power calculation
+            gic_economics: MIC economics system for voting power calculation
             consensus_system: Consensus system for block height tracking
         """
         self.gic_economics = gic_economics
@@ -115,7 +115,7 @@ class AgoraGovernance:
         self.executions: Dict[str, ProposalExecution] = {}
         
         # Governance parameters
-        self.min_proposal_deposit = 1000 * 10**18  # 1000 GIC
+        self.min_proposal_deposit = 1000 * 10**18  # 1000 MIC
         self.voting_period = 7 * 24 * 60 * 60 // 300  # 7 days in blocks (5min blocks)
         self.execution_delay = 24 * 60 * 60 // 300  # 1 day in blocks
         self.quorum_threshold = 0.20  # 20% participation required
@@ -337,7 +337,7 @@ class AgoraGovernance:
         account = self.gic_economics.accounts[address]
         
         # Get staked amount
-        staked_amount = account.staked / 10**18  # Convert to GIC units
+        staked_amount = account.staked / 10**18  # Convert to MIC units
         
         # Get activity score
         activity_score = account.activity_score
@@ -458,7 +458,7 @@ class AgoraGovernance:
     
     def _execute_parameter_update(self, payload: Dict[str, Any]) -> str:
         """Execute a parameter update proposal"""
-        # Update GIC economics parameters
+        # Update MIC economics parameters
         if "inflation_rate" in payload:
             self.gic_economics.inflation_rate = payload["inflation_rate"]
         if "staking_reward_rate" in payload:
@@ -480,7 +480,7 @@ class AgoraGovernance:
         # Transfer from treasury
         self.gic_economics.transfer("treasury", recipient, amount, reason)
         
-        return f"Treasury spend executed: {amount / 10**18} GIC to {recipient}"
+        return f"Treasury spend executed: {amount / 10**18} MIC to {recipient}"
     
     def _execute_protocol_upgrade(self, payload: Dict[str, Any]) -> str:
         """Execute a protocol upgrade proposal"""

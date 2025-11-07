@@ -424,7 +424,7 @@ export default function MentorPage() {
       )}
 
       <footer style={{ marginTop: 32, opacity: 0.7, fontSize: 13 }}>
-        Powered by OAA Orchestrator ↔ Rubric ↔ Citizen Shield ↔ GIC Indexer.
+        Powered by OAA Orchestrator ↔ Rubric ↔ Citizen Shield ↔ MIC Indexer.
       </footer>
     </div>
   );

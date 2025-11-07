@@ -68,10 +68,10 @@ export class IntegrityChecker {
     return recommendations;
   }
 
-  createHealthReport(service: string, checks: IntegrityChecks, gi: number): {
+  createHealthReport(service: string, checks: IntegrityChecks, mii: number): {
     service: string;
     timestamp: string;
-    gi: number;
+    mii: number;
     status: string;
     checks: IntegrityChecks;
     recommendations: string[];

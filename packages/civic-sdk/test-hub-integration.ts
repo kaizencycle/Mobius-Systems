@@ -31,7 +31,7 @@ async function testCivicOSHub() {
     console.log('   Username:', identity.username);
     console.log('   Domain:', identity.domain);
     console.log('   Public Key:', identity.publicKey);
-    console.log('   GIC Balance:', identity.gicBalance);
+    console.log('   MIC Balance:', identity.gicBalance);
     console.log('   GI Score:', identity.giScore);
     
   } catch (error) {
@@ -62,8 +62,8 @@ async function testCivicOSHub() {
 
   console.log('\n🎉 Kaizen OS Hub Integration Test Complete!');
   console.log('\n📋 Next Steps:');
-  console.log('   1. Deploy the missing APIs (Lab6, OAA, Ledger, GIC Indexer)');
-  console.log('   2. Start the GIC Gateway service');
+  console.log('   1. Deploy the missing APIs (Lab6, OAA, Ledger, MIC Indexer)');
+  console.log('   2. Start the MIC Gateway service');
   console.log('   3. Start the .gic Registry service');
   console.log('   4. Test the complete citizen creation flow');
 }

@@ -158,7 +158,7 @@ export default function CompanionPage() {
           </div>
           <div className="user">
             <input value={user} readOnly className="readonly" />
-            {balance && <span className="badge">GIC {balance.total_gic.toFixed(3)}</span>}
+            {balance && <span className="badge">MIC {balance.total_gic.toFixed(3)}</span>}
             {forestMonth && (
               <a
                 className="badge"

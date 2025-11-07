@@ -51,14 +51,14 @@ export default function ForestClient(){
     setBusy(false);
     const j = await r.json();
     if (!r.ok) return alert(j.error || "Stake failed");
-    alert(`🌳 Staked ${j.staked} GIC → ~${j.trees.toFixed(2)} trees`);
+    alert(`🌳 Staked ${j.staked} MIC → ~${j.trees.toFixed(2)} trees`);
     loadStats();
   }
 
   return (
     <section className="container">
       <h1 className="title">Forest</h1>
-      <p className="muted">Stake GIC to fund tree planting. Public stats are derived from the civic ledger.</p>
+      <p className="muted">Stake MIC to fund tree planting. Public stats are derived from the civic ledger.</p>
 
       {/* Season selector */}
       <div className="card" style={{marginBottom:12}}>
@@ -111,7 +111,7 @@ export default function ForestClient(){
 
       <div className="card">
         <div className="row" style={{justifyContent:"space-between"}}>
-          <strong>Stake GIC</strong>
+          <strong>Stake MIC</strong>
           <small className="muted">1 stake = burn (records on ledger)</small>
         </div>
         <div className="row">
@@ -120,7 +120,7 @@ export default function ForestClient(){
             {busy ? "Staking..." : "Stake"}
           </button>
         </div>
-        <small className="muted">You'll burn {amt} GIC → plant ~{(Number(amt)||0).toFixed(2)} trees</small>
+        <small className="muted">You'll burn {amt} MIC → plant ~{(Number(amt)||0).toFixed(2)} trees</small>
       </div>
 
       {stats && (
@@ -129,7 +129,7 @@ export default function ForestClient(){
           <div className="row" style={{marginTop:8}}>
             <div className="col">
               <div className="muted">Total Staked</div>
-              <div className="title">{stats.total_staked_gic?.toFixed(2) || 0} GIC</div>
+              <div className="title">{stats.total_staked_gic?.toFixed(2) || 0} MIC</div>
             </div>
             <div className="col">
               <div className="muted">Trees Planted</div>
@@ -137,14 +137,14 @@ export default function ForestClient(){
             </div>
             <div className="col">
               <div className="muted">Rate</div>
-              <div className="title">{stats.gic_per_tree || 1} GIC/tree</div>
+              <div className="title">{stats.gic_per_tree || 1} MIC/tree</div>
             </div>
           </div>
           <div className="card mini" style={{marginTop:12}}>
             <strong>Top Planters</strong>
             <ul>
               {stats.leaderboard.map((x:any, i:number)=>(
-                <li key={i} style={{margin:"6px 0"}}>{x.handle}: {x.staked.toFixed(2)} GIC → {x.trees.toFixed(2)} trees</li>
+                <li key={i} style={{margin:"6px 0"}}>{x.handle}: {x.staked.toFixed(2)} MIC → {x.trees.toFixed(2)} trees</li>
               ))}
             </ul>
           </div>

@@ -6,12 +6,12 @@ This example demonstrates the complete flow:
 1. Shield enrollment and zkRL verification
 2. Lab4 reflection posting and day sealing
 3. Day root anchoring
-4. GIC-Indexer balance computation
+4. MIC-Indexer balance computation
 
 Run this after starting:
 - Civic Dev Node (port 5411)
 - Shield (port 7000) 
-- GIC-Indexer (port 8000)
+- MIC-Indexer (port 8000)
 """
 
 import requests
@@ -151,8 +151,8 @@ def test_anchor_day():
         return None
 
 def test_gic_indexer():
-    """Test GIC-Indexer functionality"""
-    print_separator("5. GIC-Indexer Testing")
+    """Test MIC-Indexer functionality"""
+    print_separator("5. MIC-Indexer Testing")
     
     # Test health check
     try:
@@ -171,7 +171,7 @@ def test_gic_indexer():
         policy = response.json()
         print(f"✓ Policy loaded: {policy['name']} v{policy['version']}")
         print(f"✓ Reflections per day: {policy['rate_limits']['reflections_per_day']}")
-        print(f"✓ Epoch pool GIC: {policy['rewards']['epoch_pool_gic']}")
+        print(f"✓ Epoch pool MIC: {policy['rewards']['epoch_pool_gic']}")
     except Exception as e:
         print(f"✗ Policy retrieval failed: {e}")
     
@@ -181,7 +181,7 @@ def test_gic_indexer():
         response = requests.get(f"{INDEXER_BASE}/balance/{test_address}")
         response.raise_for_status()
         result = response.json()
-        print(f"✓ Balance for {test_address}: {result['balance']} GIC")
+        print(f"✓ Balance for {test_address}: {result['balance']} MIC")
     except Exception as e:
         print(f"✗ Balance check failed: {e}")
     
@@ -190,7 +190,7 @@ def test_gic_indexer():
         response = requests.get(f"{INDEXER_BASE}/stats")
         response.raise_for_status()
         stats = response.json()
-        print(f"✓ Total balance: {stats['total_balance']} GIC")
+        print(f"✓ Total balance: {stats['total_balance']} MIC")
         print(f"✓ Total events: {stats['total_events']}")
         print(f"✓ Unique addresses: {stats['unique_addresses']}")
     except Exception as e:
@@ -217,14 +217,14 @@ def main():
     print("1. Shield enrollment and zkRL verification")
     print("2. Civic reflection posting")
     print("3. Day root anchoring")
-    print("4. GIC-Indexer balance computation")
+    print("4. MIC-Indexer balance computation")
     print("5. Governance system")
     
     # Check if services are running
     services = [
         ("Civic Dev Node", CIVIC_BASE),
         ("Shield", SHIELD_BASE),
-        ("GIC-Indexer", INDEXER_BASE)
+        ("MIC-Indexer", INDEXER_BASE)
     ]
     
     print_separator("Service Health Checks")
@@ -269,7 +269,7 @@ def main():
     print("✓ Shield enrollment and zkRL verification working")
     print("✓ Civic reflection posting working")
     print("✓ Day root anchoring working")
-    print("✓ GIC-Indexer balance computation working")
+    print("✓ MIC-Indexer balance computation working")
     print("✓ Governance system ready")
     
     print("\nNext steps:")

@@ -382,8 +382,8 @@ def sign_gi_score(engine: CryptoAttestationEngine, scorer_id: str, gi_score: Dic
         data=gi_score,
         data_type="gi_score",
         metadata={
-            "agent_id": gi_score.get("agent_id"),
-            "score": gi_score.get("score")
+            "agent_id": mii_score.get("agent_id"),
+            "score": mii_score.get("score")
         }
     )
 

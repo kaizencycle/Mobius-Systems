@@ -50,9 +50,9 @@ async function testCivicSDK() {
   try {
     const gic = new GICIndexerClient();
     const health = await gic.getHealth();
-    console.log('✅ GIC Indexer:', health.status);
+    console.log('✅ MIC Indexer:', health.status);
   } catch (error) {
-    console.log('❌ GIC Indexer:', error instanceof Error ? error.message : 'Unknown error');
+    console.log('❌ MIC Indexer:', error instanceof Error ? error.message : 'Unknown error');
   }
 
   console.log('\n2. Testing Kaizen OS Gateway...');
@@ -80,7 +80,7 @@ async function testCivicSDK() {
       console.log('✅ Citizen Creation Success!');
       console.log('   Username:', result.identity.username);
       console.log('   .gic Domain:', result.identity.gicDomain);
-      console.log('   GIC Balance:', result.identity.gicBalance);
+      console.log('   MIC Balance:', result.identity.gicBalance);
       console.log('   GI Score:', result.identity.giScore.toFixed(3));
     } else {
       console.log('❌ Citizen Creation Failed:', result.errors);

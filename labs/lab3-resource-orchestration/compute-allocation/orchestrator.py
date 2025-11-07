@@ -25,7 +25,7 @@ class Priority(str, Enum):
 class Provider:
     """AI compute provider configuration"""
     name: str
-    cost_per_1k_tokens: float    # USD/GIC cost
+    cost_per_1k_tokens: float    # USD/MIC cost
     avg_latency_ms: int          # Average response time
     quality_score: float         # 0.0-1.0 output quality
     max_context_tokens: int
@@ -104,9 +104,9 @@ class ComputeOrchestrator:
             )
         }
 
-        # Citizen quotas (in GIC per month)
+        # Citizen quotas (in MIC per month)
         self.monthly_quotas = {}  # citizen_did -> quota_remaining
-        self.default_quota = 100.0  # 100 GIC/month for standard citizens
+        self.default_quota = 100.0  # 100 MIC/month for standard citizens
 
         # Provider health tracking
         self.provider_health = {p: 1.0 for p in self.providers}

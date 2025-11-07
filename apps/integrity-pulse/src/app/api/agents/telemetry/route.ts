@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 
 type Telemetry = { 
   agent: string; 
-  gi: number; 
+  mii: number; 
   throughput: number; 
   errorRate: number; 
 };
@@ -18,7 +18,7 @@ export async function GET() {
     const errorRate = Math.max(0, 0.02 + 0.02 * Math.sin(now*0.27 + i*1.3));
     return { 
       agent: id, 
-      gi: Number(gi.toFixed(3)), 
+      mii: Number(gi.toFixed(3)), 
       throughput: Number(throughput.toFixed(2)), 
       errorRate: Number(errorRate.toFixed(3)) 
     };

@@ -44,7 +44,7 @@ export interface UrielQuery {
  */
 export interface UrielResponse {
   illumination: string;
-  gi: number;
+  mii: number;
   sentinel: 'URIEL';
   timestamp: string;
   source: 'grok-4' | 'grok-3';
@@ -85,7 +85,7 @@ ${context ? `Context: ${JSON.stringify(context)}` : ''}`;
 
     return {
       illumination: grokResponse,
-      gi: responseGI,
+      mii: responseGI,
       sentinel: 'URIEL',
       timestamp: new Date().toISOString(),
       source: 'grok-4'
@@ -205,7 +205,7 @@ async function main() {
     // Test illumination
     const testQuery: UrielQuery = {
       intent: 'What entropy shall we reduce in the next cycle?',
-      gi: 0.993
+      mii: 0.993
     };
 
     const response = await urielDeliberate(testQuery);

@@ -1,6 +1,6 @@
-# Appendix III - The Existential Loop (GIC Whitepaper v1)
+# Appendix III - The Existential Loop (MIC Whitepaper v1)
 
-This folder contains the hybrid-format appendix for the GIC Unified Whitepaper v1.
+This folder contains the hybrid-format appendix for the MIC Unified Whitepaper v1.
 
 Contents:
 - `Appendix_III_Existential_Loop.tex`: LaTeX source (hybrid: IEEE-style + ledger inscriptions)

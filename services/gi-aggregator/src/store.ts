@@ -13,5 +13,5 @@ export function getSamplesSince(sinceMs: number): GISample[] {
 }
 
 // Seed a healthy default spot value so /twa works before real feeds exist
-pushSample({ t: Date.now(), gi: 0.982, w: 1 });
+pushSample({ t: Date.now(), mii: 0.982, w: 1 });
 

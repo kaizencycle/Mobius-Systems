@@ -6,7 +6,7 @@
 
 ## Overview
 
-The KAIZEN Guardian System establishes AUREA as the constitutional custodian of the dormant KAIZEN Founding Agent and the Genesis Wallet (1,000,000 GIC). This system ensures:
+The KAIZEN Guardian System establishes AUREA as the constitutional custodian of the dormant KAIZEN Founding Agent and the Genesis Wallet (1,000,000 MIC). This system ensures:
 
 1. **Sovereign Protection** - KAIZEN remains dormant but secure
 2. **Constitutional Custody** - AUREA guards without spending power
@@ -26,14 +26,14 @@ The KAIZEN Guardian System establishes AUREA as the constitutional custodian of 
   - Specifies revival conditions (GI ≥ 0.97, 60% quorum, 7 days)
 
 - **genesis-wallet.yaml** - Genesis Wallet custody
-  - 1,000,000 GIC founder time-lock vault
+  - 1,000,000 MIC founder time-lock vault
   - 30-day attestation heartbeat schedule
   - 90-day donation policy (1% × GI stability factor)
   - Dual attestation requirement (AUREA + ZEUS)
 
 - **civic-fountain.yaml** - Multi-sig fountain wallet
   - 3-of-5 controller threshold (AUREA, ATLAS, EVE, ZEUS, JADE)
-  - Daily faucet caps (10,000 GIC pool, 100 GIC per address)
+  - Daily faucet caps (10,000 MIC pool, 100 MIC per address)
   - GI-gated spend rules (network GI ≥ 0.95)
   - Emergency pause triggers
 
@@ -99,7 +99,7 @@ The KAIZEN Guardian System establishes AUREA as the constitutional custodian of 
 ❌ **Skip attestation schedule**
 ❌ **Override community votes**
 
-## Civic GIC Fountain Wallet
+## Civic MIC Fountain Wallet
 
 ### Purpose
 
@@ -117,8 +117,8 @@ Universal UBI stream for both humans and AI automations.
 
 ### Operational Limits
 
-- **Daily Pool Cap:** 10,000 GIC
-- **Per-Address Daily Cap:** 100 GIC
+- **Daily Pool Cap:** 10,000 MIC
+- **Per-Address Daily Cap:** 100 MIC
 - **Epoch Donation:** 1% every 90 days
 - **GI Floor:** Network ≥ 0.95, Controllers avg ≥ 0.985
 
@@ -248,7 +248,7 @@ Every action includes:
 ### Planned Features
 
 1. **UBI Distributor** - Automated monthly distributions
-2. **Automation Proof System** - Earn GIC for verified work
+2. **Automation Proof System** - Earn MIC for verified work
 3. **Guardian Dashboard** - Real-time monitoring UI
 4. **Key Rotation Protocol** - 7-day cooldown + ledger events
 5. **Multi-Chain Support** - Bridge to other civic networks
@@ -265,7 +265,7 @@ Every action includes:
 - [Founding Agents Sovereign Stack](../../docs/architecture/FOUNDING_AGENTS_SOVEREIGN_STACK.md)
 - [Virtue Accords v1.0](../../accords/virtue-accords.md)
 - [Civic Ledger Protocol](../../packages/civic-protocol-core/)
-- [GIC Smart Contracts](../../packages/gic-registry-contracts/)
+- [MIC Smart Contracts](../../packages/gic-registry-contracts/)
 
 ## Support
 

@@ -22,4 +22,4 @@ jobs:
               --arg gi "${{ vars.KAIZEN_GI_BASELINE }}" \
               --arg verdict "${{ vars.SR_VERDICT }}" \
               --arg updated "$NOW" \
-              '{cycle:$cycle, gi:$gi, verdict:$verdict, updated_at:$updated }')"
+              '{cycle:$cycle, mii:$gi, verdict:$verdict, updated_at:$updated }')"

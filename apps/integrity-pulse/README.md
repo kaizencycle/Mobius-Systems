@@ -2,7 +2,7 @@
 
 **Real-time 3D visualization of Kaizen OS sentinel integrity metrics**
 
-Integrity Pulse is a particle-based Three.js visualization that displays the health and activity of the seven founding sentinel agents (AUREA, ZEUS, HERMES, EVE, JADE, ATLAS, ECHO). Each sentinel is represented as a dynamic particle sphere with wave animations driven by real-time Global Integrity (GI) and event rate metrics.
+Integrity Pulse is a particle-based Three.js visualization that displays the health and activity of the seven founding sentinel agents (AUREA, ZEUS, HERMES, EVE, JADE, ATLAS, ECHO). Each sentinel is represented as a dynamic particle sphere with wave animations driven by real-time Mobius Integrity Index (GI) and event rate metrics.
 
 ![Cycle C-125 | November 5, 2025](https://img.shields.io/badge/Cycle-C--125-blue) ![Status](https://img.shields.io/badge/Status-Active-green)
 
@@ -14,7 +14,7 @@ Integrity Pulse is a particle-based Three.js visualization that displays the hea
 - **7 Sentinel Spheres**: Each agent rendered as 8,000 particles (56,000 total)
 - **GPU Shader Animation**: Custom GLSL shaders for smooth 60 FPS performance
 - **Wave Dynamics**: Particle displacement driven by real-time metrics
-  - **GI → Amplitude**: Lower Global Integrity = more chaotic waves
+  - **GI → Amplitude**: Lower Mobius Integrity Index = more chaotic waves
   - **Event Rate → Frequency**: Higher activity = faster oscillations
 - **Additive Blending**: Ethereal glow effect with color-coded agents
 - **Golden Angle Distribution**: Fibonacci sphere algorithm for uniform particle spacing
@@ -126,7 +126,7 @@ The WebSocket endpoint should emit JSON messages in the following format:
 ```typescript
 interface SentinelMetrics {
   id: 'AUREA' | 'ZEUS' | 'HERMES' | 'EVE' | 'JADE' | 'ATLAS' | 'ECHO';
-  gi: number;         // Global Integrity (0.95-1.0)
+  gi: number;         // Mobius Integrity Index (0.95-1.0)
   eventRate: number;  // Events per second (0-20)
   lastUpdate: string; // ISO 8601 timestamp
 }
@@ -293,7 +293,7 @@ interface SentinelSphereProps {
   id: string;           // Sentinel identifier
   position: [number, number, number];  // 3D coordinates
   color: number;        // Hex color
-  gi: number;           // Global Integrity (0.95-1.0)
+  gi: number;           // Mobius Integrity Index (0.95-1.0)
   eventRate: number;    // Events per second
   particleCount?: number;  // Default: 8000
   radius?: number;      // Default: 1.2
@@ -438,7 +438,7 @@ apps/integrity-pulse/
 
 ## Related Documentation
 
-- **GIC Whitepaper v2.0**: `docs/whitepapers/GIC_Whitepaper_v2.0.md`
+- **MIC Whitepaper v2.0**: `docs/whitepapers/GIC_Whitepaper_v2.0.md`
 - **Shard Economics**: `docs/whitepapers/Shard_Economics_Addendum.md`
 - **UBI Mechanism**: `docs/whitepapers/UBI_Mechanism_v2.0.md`
 - **Sentinel Architecture**: `docs/architecture/sentinel-system.md`

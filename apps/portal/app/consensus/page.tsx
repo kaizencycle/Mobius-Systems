@@ -128,10 +128,10 @@ function AgentCard({
   name: string;
   provider: string;
   domain: string;
-  gi: number;
+  mii: number;
   compact?: boolean;
 }) {
-  const giColor = gi >= 0.98 ? 'text-green-600' : gi >= 0.95 ? 'text-blue-600' : 'text-yellow-600';
+  const giColor = gi >= 0.98 ? 'text-green-600' : mii >= 0.95 ? 'text-blue-600' : 'text-yellow-600';
 
   if (compact) {
     return (

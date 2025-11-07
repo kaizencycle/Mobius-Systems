@@ -9,7 +9,7 @@ LAB4 = os.getenv("LAB4_BASE", "").rstrip("/")
 POLICY_PATH = os.getenv("POLICY_PATH", "./policy.yaml")
 INDEX_DB_PATH = os.getenv("INDEX_DB", "./data/index.db")
 
-app = FastAPI(title="GIC Indexer", version="0.1.0")
+app = FastAPI(title="MIC Indexer", version="0.1.0")
 os.makedirs(os.path.dirname(INDEX_DB_PATH), exist_ok=True)
 
 def load_policy():

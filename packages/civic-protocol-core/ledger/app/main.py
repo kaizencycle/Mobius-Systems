@@ -3,7 +3,7 @@
 Civic Ledger API - The Blockchain Kernel
 
 This is the central immutable anchor service that all Civic Protocol
-components write to. Think of it as the "Bitcoin Core" for GIC.
+components write to. Think of it as the "Bitcoin Core" for MIC.
 
 Every reflection, shield action, companion event, and governance decision
 gets anchored here as an immutable event in the ledger.

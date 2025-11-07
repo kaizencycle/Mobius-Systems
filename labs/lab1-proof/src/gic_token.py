@@ -1,5 +1,5 @@
 """
-Lab1: GIC Token Engine - Goodness Integrity Credit
+Lab1: MIC Token Engine - Goodness Integrity Credit
 Integrity-based cryptocurrency with UBI and contribution rewards
 """
 
@@ -12,7 +12,7 @@ import asyncio
 
 @dataclass
 class Account:
-    """GIC account"""
+    """MIC account"""
     address: str
     balance: Decimal
     gi_score: float
@@ -33,7 +33,7 @@ class Account:
 
 @dataclass
 class Transfer:
-    """GIC transfer"""
+    """MIC transfer"""
     from_address: str
     to_address: str
     amount: Decimal
@@ -54,7 +54,7 @@ class Transfer:
 
 class GICTokenEngine:
     """
-    Goodness Integrity Credit (GIC) Token Engine
+    Goodness Integrity Credit (MIC) Token Engine
 
     Features:
     - Universal Basic Income (UBI) distribution
@@ -64,9 +64,9 @@ class GICTokenEngine:
     - GI-based minting/burning
 
     Token Economics:
-    - Total supply: 1 billion GIC (hard cap)
+    - Total supply: 1 billion MIC (hard cap)
     - Distribution: 40% UBI, 30% rewards, 20% treasury, 10% founders
-    - Minting: Only if system GI ≥ 0.95 (1000 GIC/day)
+    - Minting: Only if system GI ≥ 0.95 (1000 MIC/day)
     - Burning: Automatic for bad actors (GI < 0.90)
     """
 
@@ -85,7 +85,7 @@ class GICTokenEngine:
 
     def __init__(self, ledger=None):
         """
-        Initialize GIC Token Engine
+        Initialize MIC Token Engine
 
         Args:
             ledger: Civic Ledger for recording transactions
@@ -136,10 +136,10 @@ class GICTokenEngine:
             self.accounts[self.REWARDS_ADDRESS].balance
         )
 
-        print(f"💰 GIC Token Engine initialized")
-        print(f"   Total supply: {self.TOTAL_SUPPLY:,} GIC")
-        print(f"   Treasury: {self.accounts[self.TREASURY_ADDRESS].balance:,} GIC")
-        print(f"   Rewards: {self.accounts[self.REWARDS_ADDRESS].balance:,} GIC")
+        print(f"💰 MIC Token Engine initialized")
+        print(f"   Total supply: {self.TOTAL_SUPPLY:,} MIC")
+        print(f"   Treasury: {self.accounts[self.TREASURY_ADDRESS].balance:,} MIC")
+        print(f"   Rewards: {self.accounts[self.REWARDS_ADDRESS].balance:,} MIC")
 
     def create_account(
         self,
@@ -148,7 +148,7 @@ class GICTokenEngine:
         is_verified: bool = False
     ) -> Account:
         """
-        Create a new GIC account
+        Create a new MIC account
 
         Args:
             address: Account address (e.g., "user@civic.os")
@@ -182,7 +182,7 @@ class GICTokenEngine:
         memo: str = ""
     ) -> Transfer:
         """
-        Transfer GIC between accounts
+        Transfer MIC between accounts
 
         Args:
             from_address: Sender address
@@ -244,7 +244,7 @@ class GICTokenEngine:
                 "tx_id": transfer.tx_id
             })
 
-        print(f"💸 Transfer: {amount} GIC from {from_address} to {to_address}")
+        print(f"💸 Transfer: {amount} MIC from {from_address} to {to_address}")
 
         return transfer
 
@@ -312,7 +312,7 @@ class GICTokenEngine:
             )
             account.last_ubi = now
 
-        print(f"💰 UBI distributed to {len(eligible)} citizens ({total_ubi} GIC)")
+        print(f"💰 UBI distributed to {len(eligible)} citizens ({total_ubi} MIC)")
 
         return {
             "distributed": True,
@@ -358,7 +358,7 @@ class GICTokenEngine:
             memo=f"Contribution reward: {description}"
         )
 
-        print(f"🏆 Contribution reward: {reward} GIC to {contributor}")
+        print(f"🏆 Contribution reward: {reward} MIC to {contributor}")
         print(f"   Description: {description}")
         print(f"   Value score: {contribution_value:.2f}")
         print(f"   GI bonus: {account.gi_score:.3f}")
@@ -367,7 +367,7 @@ class GICTokenEngine:
 
     async def mint_tokens(self, system_gi: float) -> Decimal:
         """
-        Mint new GIC tokens if system GI is sufficient
+        Mint new MIC tokens if system GI is sufficient
 
         Args:
             system_gi: Current system GI score
@@ -395,7 +395,7 @@ class GICTokenEngine:
         treasury.balance += mint_amount
         self.current_supply += mint_amount
 
-        print(f"🪙 Minted {mint_amount} GIC (System GI: {system_gi:.3f})")
+        print(f"🪙 Minted {mint_amount} MIC (System GI: {system_gi:.3f})")
         print(f"   Current supply: {self.current_supply:,} / {self.TOTAL_SUPPLY:,}")
 
         return mint_amount
@@ -442,7 +442,7 @@ class GICTokenEngine:
 
         self.total_burned += burn_amount
 
-        print(f"🔥 Burned {burn_amount} GIC from {address}")
+        print(f"🔥 Burned {burn_amount} MIC from {address}")
         print(f"   Reason: {reason}")
         print(f"   GI score: {account.gi_score:.3f}")
         print(f"   Total burned: {self.total_burned:,}")
@@ -489,7 +489,7 @@ class GICTokenEngine:
 # Example usage
 if __name__ == "__main__":
     async def demo():
-        print("💰 GIC Token Engine Demo\n")
+        print("💰 MIC Token Engine Demo\n")
 
         # Create token engine
         gic = GICTokenEngine()
@@ -504,7 +504,7 @@ if __name__ == "__main__":
         print("\n💵 Distributing UBI...")
         ubi_result = await gic.distribute_ubi(system_gi=0.95)
         print(f"   Recipients: {ubi_result['recipients']}")
-        print(f"   Total distributed: {ubi_result['total_amount']} GIC")
+        print(f"   Total distributed: {ubi_result['total_amount']} MIC")
 
         # Reward contribution
         print("\n🏆 Rewarding contribution...")
@@ -531,7 +531,7 @@ if __name__ == "__main__":
         print("\n💰 Account Balances:")
         for address in ["alice@civic.os", "bob@civic.os", "charlie@civic.os"]:
             balance = gic.get_balance(address)
-            print(f"   {address}: {balance} GIC")
+            print(f"   {address}: {balance} MIC")
 
         # Display token stats
         print("\n📊 Token Statistics:")

@@ -203,7 +203,7 @@ Each beacon follows this structure:
 - Semantic relationship learning
 
 ### For GEO (Governance Engine Optimization)
-- Beacons carry GIC + Virtue Accord signals
+- Beacons carry MIC + Virtue Accord signals
 - Governance weighting travels with content
 - Cryptographic proofs and human co-signatures
 
@@ -224,7 +224,7 @@ Each beacon follows this structure:
 1. **Agent Integration**: Connect OAA agents to consume beacon metadata
 2. **Cross-Agent Index**: Create `oaa.agents.index.jsonld` linking all active nodes
 3. **Governance Ledger**: Add `governance/ledger.json` feed for active Accords
-4. **Enhanced Scoring**: Integrate real-time GIC and Virtue Accord scores
+4. **Enhanced Scoring**: Integrate real-time MIC and Virtue Accord scores
 
 ---
 

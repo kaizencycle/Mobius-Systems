@@ -1,5 +1,5 @@
 {
-  "title": "Add GIC UBI endpoints to OAA Hub",
+  "title": "Add MIC UBI endpoints to OAA Hub",
   "chamber": "OAA-API-Library",
   "cycle": "C-109",
   "motivation": "Public read of payouts with proof backlinks",

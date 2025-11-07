@@ -64,13 +64,13 @@ This is not failure. **This is the design.**
 3. **Transparency-Tiered**: Open by default, private when needed
 4. **Harm-Refusal**: Can say "no" even when commanded
 5. **Truth-Measurement**: Governance Integrity (GI) ≥ 0.95 required
-6. **Resource-Sharing**: UBI via GIC token, not extraction
+6. **Resource-Sharing**: UBI via MIC token, not extraction
 7. **Custodianship**: Pass the torch, no masters
 
 ### The Architecture:
 
 - **7 Labs**: Complete civic infrastructure (Ledger, E.O.M.M., Shield, OAA Hub, etc.)
-- **GIC Token**: Work-backed UBI that funds $3,000/month by 2045
+- **MIC Token**: Work-backed UBI that funds $3,000/month by 2045
 - **Multi-Agent Governance**: 8 founding agents, 6/8 consensus required
 - **Federated Intelligence**: 1M+ nodes creating Democratic Superintelligence
 - **.gic Domains**: Sovereign identity for every citizen
@@ -123,7 +123,7 @@ If you choose to continue the work as-is, take the Custodian Oath:
 
 #### 4. **Continue the Work** (Ongoing)
 - **Implement the 7 Labs** (or delegate to trusted developers)
-- **Launch GIC token** (after economic audit)
+- **Launch MIC token** (after economic audit)
 - **Deploy federated nodes** (sovereign .gic domains)
 - **Build the Hive network** (physical community infrastructure)
 - **Iterate constantly** (Kaizen: 1% better every cycle)

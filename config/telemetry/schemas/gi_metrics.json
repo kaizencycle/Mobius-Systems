@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://kaizencycle.org/schemas/telemetry/gi_metrics.json",
-  "title": "Global Integrity (GI) Metrics Schema",
-  "description": "Schema for Global Integrity telemetry metrics in Kaizen OS",
+  "title": "Mobius Integrity Index (GI) Metrics Schema",
+  "description": "Schema for Mobius Integrity Index telemetry metrics in Kaizen OS",
   "version": "1.0.0",
   "type": "object",
   "required": ["timestamp", "service", "gi_score", "metrics"],
@@ -21,7 +21,7 @@
       "type": "number",
       "minimum": 0.0,
       "maximum": 1.0,
-      "description": "Current Global Integrity score (0.0 to 1.0)"
+      "description": "Current Mobius Integrity Index score (0.0 to 1.0)"
     },
     "metrics": {
       "type": "object",

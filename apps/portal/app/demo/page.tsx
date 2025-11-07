@@ -14,7 +14,7 @@ export default function DemoLanding() {
           </p>
           <p className="text-lg text-gray-600">
             Be among the first to register a <code className="bg-gray-200 px-2 py-1 rounded">.gic</code> domain
-            and mint GIC tokens on the Proof-of-Integrity blockchain
+            and mint MIC tokens on the Proof-of-Integrity blockchain
           </p>
         </div>
 
@@ -28,7 +28,7 @@ export default function DemoLanding() {
           />
           <StatCard
             icon="🪙"
-            title="GIC Tokens Minted"
+            title="MIC Tokens Minted"
             value="0"
             subtitle="Make history!"
           />
@@ -62,11 +62,11 @@ export default function DemoLanding() {
           {/* Token Minting */}
           <ActionCard
             icon="🪙"
-            title="Mint GIC Tokens"
-            description="Create the first GIC (Good Intent Credit) tokens.
+            title="Mint MIC Tokens"
+            description="Create the first MIC (Good Intent Credit) tokens.
                         Based on Proof-of-Integrity, not Proof-of-Work."
             features={[
-              "Daily UBI: 10 GIC per citizen",
+              "Daily UBI: 10 MIC per citizen",
               "Zero transaction fees",
               "Constitutional compliance",
               "Burning for bad actors"
@@ -154,7 +154,7 @@ export default function DemoLanding() {
               status="operational"
             />
             <APIStatus
-              name="GIC Indexer"
+              name="MIC Indexer"
               url="gic-indexer.onrender.com"
               status="operational"
             />

@@ -31,11 +31,11 @@ labs:
     status: "active"
     description: "Immutable storage and audit trail services"
     
-  - id: gic-indexer
-    name: "GIC Indexer"
+  - id: miic-indexer
+    name: "MIC Indexer"
     routes: ["/gic/*"]
     status: "active"
-    description: "Global Integrity Chain indexing services"
+    description: "Mobius Integrity Index Chain indexing services"
 
 tools:
   webDataScout:

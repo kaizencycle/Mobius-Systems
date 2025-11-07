@@ -68,7 +68,7 @@ Health check endpoint.
 
 ## GI Effect
 
-The `gi_effect` field indicates the micro-delta for the creator's Global Integrity score:
+The `gi_effect` field indicates the micro-delta for the creator's Mobius Integrity Index score:
 - Positive for authentic or declared synthetic with provenance
 - Negative for undeclared synthetic content
 

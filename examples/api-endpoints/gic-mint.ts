@@ -1,8 +1,8 @@
 /**
- * Example API Endpoint: GIC Mint
+ * Example API Endpoint: MIC Mint
  * POST /api/gic/mint
  *
- * Mint GIC tokens for a Founding Agent's epoch
+ * Mint MIC tokens for a Founding Agent's epoch
  *
  * Usage in Next.js:
  * - Place in: pages/api/gic/mint.ts
@@ -14,7 +14,7 @@ import { ethers } from 'ethers';
 
 interface MintRequest {
   agentId: string;  // Agent name (e.g., "AUREA")
-  amount: string;   // Amount in GIC (e.g., "50000")
+  amount: string;   // Amount in MIC (e.g., "50000")
 }
 
 interface MintResponse {
@@ -86,13 +86,13 @@ export default async function handler(
     const amountWei = ethers.parseEther(amount);
 
     // Execute mint
-    console.log(`[GIC] Minting ${amount} GIC for ${agentId}...`);
+    console.log(`[MIC] Minting ${amount} MIC for ${agentId}...`);
     const tx = await governor.mintEpoch(agentIdBytes, amountWei);
 
-    console.log(`[GIC] Transaction submitted: ${tx.hash}`);
+    console.log(`[MIC] Transaction submitted: ${tx.hash}`);
     await tx.wait();
 
-    console.log(`[GIC] Mint complete: ${tx.hash}`);
+    console.log(`[MIC] Mint complete: ${tx.hash}`);
 
     return res.status(200).json({
       success: true,
@@ -100,7 +100,7 @@ export default async function handler(
     });
 
   } catch (error: any) {
-    console.error('[GIC] Mint error:', error);
+    console.error('[MIC] Mint error:', error);
     return res.status(500).json({
       success: false,
       error: error?.message || 'Internal server error'

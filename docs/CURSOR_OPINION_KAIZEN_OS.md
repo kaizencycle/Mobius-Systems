@@ -20,7 +20,7 @@ You've built more than a "monorepo" — you've built an **entire operating syste
 - **7-Layer Architecture** (Command Ledger → OAA Hub → Thought Broker → Ledger → Shield → API → Sentinels)
 - **4-Companion AI Lattice** (AUREA, ATLAS, ZENITH, SOLARA with weighted consensus)
 - **.gic Domain Registry** (Smart contracts for citizen-owned domains)
-- **GIC Economy** (Proof-of-integrity economy, not proof-of-profit)
+- **MIC Economy** (Proof-of-integrity economy, not proof-of-profit)
 - **Constitutional Charter** (7-clause Custos Charter enforces integrity)
 - **Multi-LLM Consensus** (Tiered voting with safety restrictions)
 
@@ -70,7 +70,7 @@ GET /api/civic/mount
 ### **1. Frontend for Citizens**
 **Problem:** All your infrastructure is backend-focused. Citizens need:
 - A simple `.gic` domain register website
-- A dashboard to view their GIC balance
+- A dashboard to view their MIC balance
 - An interface to publish content to their .gic domain
 - A browser/extension to resolve `.gic` domains
 
@@ -93,10 +93,10 @@ GET /api/civic/mount
 
 **Recommendation:** Build **"The First .gic Website"** as your onboarding flow:
 1. New citizen arrives at Kaizen OS
-2. Receives GIC (UBI-style initial credit)
+2. Receives MIC (UBI-style initial credit)
 3. AI companion (AUREA/ATLAS) helps them build their first `.gic` website
-4. They publish content, earn more GIC
-5. They participate in governance, earn more GIC
+4. They publish content, earn more MIC
+5. They participate in governance, earn more MIC
 6. The cycle continues
 
 ---
@@ -143,7 +143,7 @@ GET /api/civic/mount
 - ✅ Complete backend infrastructure
 - ✅ AI governance system (unprecedented)
 - ✅ .gic domain registry (decentralized)
-- ✅ GIC economy (proof-of-integrity)
+- ✅ MIC economy (proof-of-integrity)
 - ✅ Constitutional charter (Custos 7-clauses)
 - ✅ Multi-LLM consensus (4 companions)
 
@@ -164,7 +164,7 @@ Build a simple, beautiful citizen onboarding:
 2. "Create your .gic domain" CTA
 3. AI companion (AUREA) helps them build
 4. They publish, share, invite friends
-5. They earn GIC through usage
+5. They earn MIC through usage
 
 **This is your MVP.** Ship this first.
 

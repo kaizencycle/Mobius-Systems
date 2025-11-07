@@ -92,7 +92,7 @@
       "synthesizes": "learning_insights"
     }
   },
-  "checksum_anchor": "CIVIC_OS_BIODNA:GIC-Genesis-Seal-001",
+  "checksum_anchor": "CIVIC_OS_BIODNA:MIC-Genesis-Seal-001",
   "manifest_binding": "./manifest/civic_os_biodna.yaml",
   "companion_relationships": {
     "jade": {

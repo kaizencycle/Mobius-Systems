@@ -10,14 +10,14 @@ app.get('/health', (_req: Request, res: Response) => {
   res.json({ status: 'ok', service: 'gi-aggregator', version: '0.1.0' });
 });
 
-// POST a new sample: { gi: number (0..1), w?: number, t?: number(ms) }
+// POST a new sample: { mii: number (0..1), w?: number, t?: number(ms) }
 app.post('/gi/sample', (req: Request, res: Response) => {
   const { gi, w, t } = req.body ?? {};
   const g = Number(gi);
   if (!Number.isFinite(g) || g < 0 || g > 1) {
     return res.status(400).json({ error: 'gi must be 0..1' });
   }
-  pushSample({ gi: g, w: Number.isFinite(w) ? Number(w) : 1, t: Number.isFinite(t) ? Number(t) : Date.now() });
+  pushSample({ mii: g, w: Number.isFinite(w) ? Number(w) : 1, t: Number.isFinite(t) ? Number(t) : Date.now() });
   res.json({ ok: true });
 });
 
@@ -25,7 +25,7 @@ app.post('/gi/sample', (req: Request, res: Response) => {
 app.get('/gi/spot', (_req: Request, res: Response) => {
   const samples = getSamplesSince(0);
   const last = samples.at(-1);
-  res.json({ gi: last?.gi ?? 0.0, updated_at: last ? new Date(last.t).toISOString() : null });
+  res.json({ mii: last?.gi ?? 0.0, updated_at: last ? new Date(last.t).toISOString() : null });
 });
 
 // Time-weighted average over lookback days (default 30)
@@ -37,7 +37,7 @@ app.get('/gi/twa', (req: Request, res: Response) => {
   if (samples.length >= minSamples) samples = rejectOutliers(samples);
   const twa = timeWeightedAverage(samples);
   res.json({
-    gi: twa ?? null,
+    mii: twa ?? null,
     samples: samples.length,
     lookback_days: days,
     updated_at: new Date().toISOString()

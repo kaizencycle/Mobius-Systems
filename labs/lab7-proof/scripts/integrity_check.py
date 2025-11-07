@@ -2,7 +2,7 @@
 """
 Integrity Check Script for CI/CD Pipeline
 
-Validates content against GIC Reward Engine thresholds to prevent
+Validates content against MIC Reward Engine thresholds to prevent
 AI slop and drift from entering the codebase.
 
 Usage:
@@ -338,7 +338,7 @@ def check_file_integrity(file_path: Path, manifest: Dict[str, Any],
         "scores": scores,
         "penalties": penalties,
         "checks": checks,
-        "gic": result.get("GIC", 0),
+        "gic": result.get("MIC", 0),
         "integrity": result.get("integrity", 0)
     }
 

@@ -6,7 +6,7 @@ The Open Autonomous Academy (OAA) Hub provides a comprehensive system for AI gov
 
 - **Project**: Open Autonomous Academy (OAA) — integrity-first AI governance loop
 - **Companions**: Jade (builder), Eve (reflection), Zeus (ops), Hermes (routing)
-- **Civic Stack**: GIC (.gic domains), Civic Ledger (proofs), GIC Gateway, Virtue Accords (Cycle 0)
+- **Civic Stack**: MIC (.gic domains), Civic Ledger (proofs), MIC Gateway, Virtue Accords (Cycle 0)
 - **Ops Rhythm**: Clock-in/out cycles; Eve captures Wins / Blocks / TomorrowIntent
 - **Infra**: Render (hub/gateway/worker/redis), BullMQ queue (`publishEvents`)
 
@@ -127,7 +127,7 @@ The OAA Memory system provides durable, append-only storage for:
 
 - **Companion notes**: Jade, Eve, Zeus, Hermes activities
 - **Cycle logs**: Clock-in/out records with cryptographic proofs
-- **Civic events**: GIC transactions, ledger seals, governance decisions
+- **Civic events**: MIC transactions, ledger seals, governance decisions
 - **System state**: Queue status, infrastructure health, operational metrics
 
 ### Memory Structure
@@ -227,7 +227,7 @@ Each cycle generates:
 - Maintains immutable audit trail
 - Supports both mock and production modes
 
-### GIC Gateway
+### MIC Gateway
 - Integrates with .gic domain system
 - Manages citizen feeds and posts
 - Handles reward distribution
@@ -263,5 +263,5 @@ This project operates under the Virtue Accords (Cycle 0) - see the Civic Ledger 
 
 ---
 
-**Remember**: Human-in-the-loop coding; proofs logged to Ledger; rewards via GIC for shared agreements.
+**Remember**: Human-in-the-loop coding; proofs logged to Ledger; rewards via MIC for shared agreements.
 

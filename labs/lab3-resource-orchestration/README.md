@@ -13,7 +13,7 @@ Lab 3 provides the **economic and resource substrate** for Kaizen OS. It orchest
 1. **Compute Allocation** — Multi-provider AI query routing (Anthropic, OpenAI, Google, DeepSeek, local)
 2. **Energy Routing** — Grid-aware renewable energy optimization (planned)
 3. **Supply Chain** — Logistics and material flow coordination (planned)
-4. **Financial Flows** — GIC transfers, settlements, PublicGoodsPool grants
+4. **Financial Flows** — MIC transfers, settlements, PublicGoodsPool grants
 5. **Labor Market** — Skills matching and gig coordination (planned)
 6. **Maintenance** — Predictive maintenance for physical infrastructure (planned)
 
@@ -30,7 +30,7 @@ labs/lab3-resource-orchestration/
 ├── energy-routing/              # Renewable energy optimization (planned)
 ├── supply-chain/                # Logistics coordination (planned)
 ├── financial-flows/
-│   └── manager.py               # GIC transfers & PublicGoodsPool
+│   └── manager.py               # MIC transfers & PublicGoodsPool
 ├── labor-market/                # Skills matching (planned)
 ├── maintenance/                 # Predictive maintenance (planned)
 ├── api/
@@ -49,15 +49,15 @@ labs/lab3-resource-orchestration/
 
 ### Purpose
 Routes AI queries to the optimal provider based on:
-- **Cost** (GIC per 1K tokens)
+- **Cost** (MIC per 1K tokens)
 - **Latency** (milliseconds)
 - **Quality** (model capability score 0-1)
 - **Reliability** (uptime percentage)
-- **Citizen quota** (monthly GIC budget)
+- **Citizen quota** (monthly MIC budget)
 
 ### Providers
 
-| Provider | Cost (GIC/1K) | Latency (ms) | Quality | Reliability | Max Context |
+| Provider | Cost (MIC/1K) | Latency (ms) | Quality | Reliability | Max Context |
 |----------|---------------|--------------|---------|-------------|-------------|
 | **Anthropic Claude** | 0.015 | 600 | 0.97 | 99% | 200K tokens |
 | **OpenAI GPT-4** | 0.010 | 800 | 0.95 | 98% | 128K tokens |
@@ -97,7 +97,7 @@ def _score_and_select(providers, priority, tokens):
 
 ### Quota Management
 
-- **Default quota:** 100 GIC per citizen per month
+- **Default quota:** 100 MIC per citizen per month
 - **Quota tracking:** Per-DID consumption ledger
 - **Fallback:** When quota exhausted, route to `local_llama` (near-zero cost)
 
@@ -115,9 +115,9 @@ allocation = ORCHESTRATOR.allocate(
 )
 
 print(f"Provider: {allocation.provider}")
-print(f"Estimated cost: {allocation.estimated_cost} GIC")
+print(f"Estimated cost: {allocation.estimated_cost} MIC")
 print(f"Estimated latency: {allocation.estimated_latency_ms}ms")
-print(f"Quota remaining: {allocation.quota_remaining} GIC")
+print(f"Quota remaining: {allocation.quota_remaining} MIC")
 ```
 
 ---
@@ -127,11 +127,11 @@ print(f"Quota remaining: {allocation.quota_remaining} GIC")
 **File:** `financial-flows/manager.py`
 
 ### Purpose
-Manages **GIC (Global Integrity Currency)** transfers and **PublicGoodsPool** grant allocations.
+Manages **MIC (Mobius Integrity Index Currency)** transfers and **PublicGoodsPool** grant allocations.
 
 ### Features
 
-#### 1. **GIC Transfers**
+#### 1. **MIC Transfers**
 ```python
 tx = FINANCIAL_MANAGER.process_gic_transfer(
     from_did="did:kaizen:alice",
@@ -164,14 +164,14 @@ class Transaction:
     type: str                   # "transfer" | "grant" | "settlement"
     from_did: Optional[str]     # Sender DID
     to_did: str                 # Recipient DID
-    amount_gic: float           # Amount in GIC
+    amount_gic: float           # Amount in MIC
     timestamp: str              # ISO 8601 timestamp
     metadata: Dict[str, Any]    # Additional context
 ```
 
 ### PublicGoodsPool
 
-- **Initial balance:** 50,000 GIC
+- **Initial balance:** 50,000 MIC
 - **Purpose:** Fund community projects, healthcare, education, infrastructure
 - **Allocation:** Governed by Lab 6 (Governance) deliberation protocols
 - **Replenishment:** Transaction fees, voluntary contributions, epoch rewards
@@ -273,7 +273,7 @@ Allocate PublicGoodsPool grant (requires governance approval in production).
 
 #### `GET /lab3/financial/balance/{citizen_did}`
 
-Returns GIC balance for a citizen.
+Returns MIC balance for a citizen.
 
 #### `GET /lab3/financial/pool`
 
@@ -304,7 +304,7 @@ Returns PublicGoodsPool balance, total supply, current epoch.
 - **Quota policy** adjustments through citizen voting
 
 ### Lab 7 (Data Economy)
-- **Data marketplace settlements** via GIC
+- **Data marketplace settlements** via MIC
 - **Compute-for-data** exchanges
 
 ---
@@ -386,7 +386,7 @@ GOOGLE_GENAI_API_KEY=...
 
 1. **Multi-cloud orchestration** — AWS, GCP, Azure compute pools
 2. **Federated learning** — Distribute training across regional Hives
-3. **Dynamic pricing** — Real-time GIC exchange rates based on demand
+3. **Dynamic pricing** — Real-time MIC exchange rates based on demand
 4. **Cross-lab resource bundling** — "Compute + Storage + Network" packages
 5. **Algorithmic fairness audits** — Lab 5 Justice gate integration for allocation equity
 6. **Carbon-neutral compute** — Renewable energy verification via Lab 4 ZK proofs
@@ -415,7 +415,7 @@ Integration with **Lab 2 Thought Broker** complete. Backend API ready for **apps
 ## References
 
 - **Spec:** `docs/architecture/Lab3_Resource_Orchestration_Specification.md`
-- **GIC Whitepaper:** `docs/economics/GIC_WHITEPAPER.md`
+- **MIC Whitepaper:** `docs/economics/GIC_WHITEPAPER.md`
 - **Complete Lab Architecture:** `docs/architecture/Kaizen_OS_Complete_Lab_Architecture.md`
 - **Self-Host Guide:** `docs/product/SELF_HOST_GUIDE.md`
 

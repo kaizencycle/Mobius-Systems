@@ -27,7 +27,7 @@ profile:
       description: "Transforms AI dialogue into apprenticeship cycles: PRESENT → REFLECT → CONNECT → REINFORCE."
       path: "services/oaa-core/"
     - title: "🏛 Civic Ledger"
-      description: "Integrity-backed value layer that powers Global Integrity Credits and shard economics."
+      description: "Integrity-backed value layer that powers Mobius Integrity Credits and shard economics."
       path: "services/civic-ledger/"
     - title: "🌐 Reflections API"
       description: "Collective memory and journaling service that anchors morale, ethics, and human feedback."

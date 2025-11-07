@@ -183,7 +183,7 @@ for (const check of statusChecks) {
 
 ### 4. Civic/Education Datasets
 
-Pull city/open-data tables into GIC Indexer:
+Pull city/open-data tables into MIC Indexer:
 
 ```typescript
 // Extract civic data
@@ -193,7 +193,7 @@ const civicData = await extract('https://data.cityofchicago.org/api/views/exampl
   { name: 'metadata', type: 'object' }
 ]);
 
-// Normalize and push to GIC Indexer
+// Normalize and push to MIC Indexer
 if (civicData.ok) {
   const normalizedData = {
     source: 'chicago_open_data',

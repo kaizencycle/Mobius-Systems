@@ -33,7 +33,7 @@ const faqData = {
       "name": "What happens when agents violate the Virtue Accords?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Violations result in integrity score penalties, reduced GIC rewards, and potential exclusion from the civic ecosystem until remediation. The system is designed to encourage self-correction and learning while maintaining high ethical standards."
+        "text": "Violations result in integrity score penalties, reduced MIC rewards, and potential exclusion from the civic ecosystem until remediation. The system is designed to encourage self-correction and learning while maintaining high ethical standards."
       }
     },
     {

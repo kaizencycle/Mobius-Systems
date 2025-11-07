@@ -11,7 +11,7 @@ const SR_SECRET = process.env.SR_SECRET ?? "";
 
 type SRPayload = {
   cycle: string;              // e.g. "C-121"
-  gi: number | string;        // e.g. 0.993
+  mii: number | string;        // e.g. 0.993
   verdict: "ADOPT" | "SHADOW" | "DEFER" | "UNKNOWN";
   notes?: string;             // short human note (optional)
   updated_at?: string;        // ISO; auto-filled if absent
@@ -47,7 +47,7 @@ export async function POST(req: NextRequest) {
 
   const sr = {
     cycle: body.cycle ?? "C-121",
-    gi: Number(body.gi ?? 0).toFixed(3),
+    mii: Number(body.gi ?? 0).toFixed(3),
     details: {
       verdict: String(body.verdict ?? "UNKNOWN").toUpperCase(),
       notes: body.notes ?? "",

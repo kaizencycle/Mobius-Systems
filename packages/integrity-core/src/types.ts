@@ -12,7 +12,7 @@ export interface IntegrityChecks {
 
 export interface IntegrityResult {
   service: string;
-  gi: number; // Governance Integrity score (0-1)
+  mii: number; // Governance Integrity score (0-1)
   status: 'healthy' | 'degraded' | 'unhealthy';
   timestamp: string;
   checks: IntegrityChecks;
@@ -39,7 +39,7 @@ export interface ServiceMetrics {
   service: string;
   timestamp: string;
   checks: IntegrityChecks;
-  gi: number;
+  mii: number;
   status: string;
 }
 

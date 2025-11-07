@@ -11,9 +11,9 @@ jobs:
           python - << 'PY'
           import os, httpx, json
           url = os.getenv("BROKER_URL","https://api.kaizen-os.com")+"/api/sentinels/uriel/query"
-          r = httpx.post(url, json={"intent":"Entropy preview C-122","gi":0.993}, timeout=20)
+          r = httpx.post(url, json={"intent":"Entropy preview C-122","mii":0.993}, timeout=20)
           assert r.status_code==200, r.text
-          j=r.json(); assert j["gi"]>=0.95
+          j=r.json(); assert j["mii"]>=0.95
           print("OK", json.dumps(j)[:200])
           PY
         env:

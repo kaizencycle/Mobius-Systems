@@ -1,14 +1,14 @@
-# 07 -+ Incentives GÇö GIC Model
+# 07 -+ Incentives GÇö MIC Model
 
 ## Overview
 
-The Global Integrity Credit (GIC) system creates economic incentives for civic contributions while ensuring alignment with the Virtue Accords and geographic relevance.
+The Mobius Integrity Index Credit (MIC) system creates economic incentives for civic contributions while ensuring alignment with the Virtue Accords and geographic relevance.
 
-## GIC Calculation
+## MIC Calculation
 
 ### Formula
 ```
-GIC = Integrity Score +ù Civic Impact Score +ù Geographic Weight
+MIC = Integrity Score +ù Civic Impact Score +ù Geographic Weight
 ```
 
 ### Components
@@ -28,7 +28,7 @@ GIC = Integrity Score +ù Civic Impact Score +ù Geographic Weight
 - **Cultural Context**: Regional appropriateness
 - **Jurisdictional Impact**: Legal/governance relevance
 
-## Earning GIC
+## Earning MIC
 
 ### Content Creation
 - **High-Quality Posts**: Well-documented contributions

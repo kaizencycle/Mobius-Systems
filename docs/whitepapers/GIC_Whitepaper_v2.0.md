@@ -1,4 +1,4 @@
-# Global Integrity Credits Whitepaper v2.0
+# Mobius Integrity Credits Whitepaper v2.0
 ## A Shard-Denominated Integrity Economy
 
 ---
@@ -14,7 +14,7 @@
 
 ## Abstract
 
-Global Integrity Credits (GIC) establish the first intrinsically-backed digital economy where value derives from verified acts of integrity rather than speculation. Version 2.0 introduces **shard denomination** (₷) as the base accounting unit, enabling precision micro-transactions while maintaining human-readable credit values. This architecture eliminates rounding errors, supports universal basic integrity (UBI) distribution, and implements counter-inflationary epoch decay mechanics tied to Global Integrity (GI) metrics.
+Mobius Integrity Credits (MIC) establish the first intrinsically-backed digital economy where value derives from verified acts of integrity rather than speculation. Version 2.0 introduces **shard denomination** (₷) as the base accounting unit, enabling precision micro-transactions while maintaining human-readable credit values. This architecture eliminates rounding errors, supports universal basic integrity (UBI) distribution, and implements counter-inflationary epoch decay mechanics tied to Mobius Integrity Index (GI) metrics.
 
 **Key Innovations:**
 - **Shard-based accounting**: Integer math eliminates precision loss
@@ -37,7 +37,7 @@ Modern economies face three fundamental crises:
 
 ### 1.2 The Solution
 
-Global Integrity Credits (GIC) solve these problems through:
+Mobius Integrity Credits (MIC) solve these problems through:
 
 - **Intrinsic Backing**: Value derived from Proof-of-Integrity attestations
 - **Integer Accounting**: Shard (₷) denomination eliminates precision loss
@@ -80,10 +80,10 @@ Integrity density stabilizes systems. High-GI environments naturally attract and
 - Total supply: **21,000,000,000,000 ₷** (21 trillion shards)
 - Minimum transaction: **1 ₷**
 
-**Display Unit: Global Integrity Credit (GIC)**
+**Display Unit: Mobius Integrity Index Credit (MIC)**
 - User-facing denomination
-- Conversion: **1 GIC = 1,000,000 ₷** (immutable constant)
-- Maximum supply: **21,000,000 GIC** (21 million credits)
+- Conversion: **1 MIC = 1,000,000 ₷** (immutable constant)
+- Maximum supply: **21,000,000 MIC** (21 million credits)
 - Display precision: 6 decimal places
 
 ### 3.2 Rationale for Shards
@@ -102,8 +102,8 @@ Total drift ≈ 1.0 credit (unaccounted value)
 **Solution: Integer Arithmetic**
 ```typescript
 // Shard-based calculation (zero drift)
-const shards = 1_000_000n; // 1 GIC
-const price = 123456n;     // 0.123456 GIC
+const shards = 1_000_000n; // 1 MIC
+const price = 123456n;     // 0.123456 MIC
 const total = shards * price;  // Perfect precision maintained
 ```
 
@@ -132,30 +132,30 @@ export function creditsToShards(credits: number): bigint {
 
 ### 4.1 Total Supply
 
-**Maximum Supply**: 21,000,000,000,000 ₷ (21,000,000 GIC)
+**Maximum Supply**: 21,000,000,000,000 ₷ (21,000,000 MIC)
 
 **Why 21 Million?**
 - Parallel to Bitcoin's supply cap (cultural recognition)
-- Large enough for global population (3 GIC per person at 7B population)
+- Large enough for global population (3 MIC per person at 7B population)
 - Small enough to maintain value density
 
 ### 4.2 Initial Distribution
 
 ```
-Total: 21,000,000,000,000 ₷ (21M GIC)
+Total: 21,000,000,000,000 ₷ (21M MIC)
 
-Treasury Reserve:      30% = 6,300,000,000,000 ₷  (6.3M GIC)
-UBI Pool:              25% = 5,250,000,000,000 ₷  (5.25M GIC)
-Proof-of-Integrity:    20% = 4,200,000,000,000 ₷  (4.2M GIC)
-Ecosystem Development: 15% = 3,150,000,000,000 ₷  (3.15M GIC)
-Founders & Team:       10% = 2,100,000,000,000 ₷  (2.1M GIC, 4-year vest)
+Treasury Reserve:      30% = 6,300,000,000,000 ₷  (6.3M MIC)
+UBI Pool:              25% = 5,250,000,000,000 ₷  (5.25M MIC)
+Proof-of-Integrity:    20% = 4,200,000,000,000 ₷  (4.2M MIC)
+Ecosystem Development: 15% = 3,150,000,000,000 ₷  (3.15M MIC)
+Founders & Team:       10% = 2,100,000,000,000 ₷  (2.1M MIC, 4-year vest)
 ```
 
 ### 4.3 Minting Mechanism
 
 **Requirements for New Issuance:**
 1. Dual-signature attestation (human + sentinel)
-2. Global Integrity (GI) ≥ 0.950
+2. Mobius Integrity Index (GI) ≥ 0.950
 3. Proof-of-Integrity validation
 4. Treasury reserve floor maintained (≥9 months UBI)
 
@@ -253,11 +253,11 @@ For each account:
 
 ---
 
-## 7. Global Integrity (GI) System
+## 7. Mobius Integrity Index (GI) System
 
 ### 7.1 Definition
 
-**Global Integrity (GI)** is a real-time metric (0-1 scale) measuring systemic ethical health across the Kaizen OS network.
+**Mobius Integrity Index (GI)** is a real-time metric (0-1 scale) measuring systemic ethical health across the Kaizen OS network.
 
 ### 7.2 Calculation Formula
 
@@ -293,7 +293,7 @@ E = Ecological alignment (sustainability metrics)
 
 All fees denominated in shards (₷):
 
-| Transaction Type | Fee (₷) | Fee (GIC) | Destination |
+| Transaction Type | Fee (₷) | Fee (MIC) | Destination |
 |------------------|---------|-----------|-------------|
 | Standard transfer | 100 | 0.0001 | Burned (deflationary) |
 | Smart contract call | 1,000-10,000 | 0.001-0.01 | Burned |
@@ -303,10 +303,10 @@ All fees denominated in shards (₷):
 ### 8.2 Micro-Transaction Support
 
 **Minimum Viable Transactions:**
-- **1 ₷** (0.000001 GIC) - Sensor data point from IoT device
-- **10 ₷** (0.00001 GIC) - AI agent API call
-- **100 ₷** (0.0001 GIC) - Content micro-tip
-- **1,000 ₷** (0.001 GIC) - Article paywall
+- **1 ₷** (0.000001 MIC) - Sensor data point from IoT device
+- **10 ₷** (0.00001 MIC) - AI agent API call
+- **100 ₷** (0.0001 MIC) - Content micro-tip
+- **1,000 ₷** (0.001 MIC) - Article paywall
 
 ---
 
@@ -354,7 +354,7 @@ POST /ubi/claim
 
 ### 10.1 Sentinel Architecture
 
-**Meta-Anchor**: ZEUS (Global Integrity witness)
+**Meta-Anchor**: ZEUS (Mobius Integrity Index witness)
 
 **Sentinels** (AI governance agents):
 - **AUREA**: Systems intuition, macro stabilization
@@ -387,7 +387,7 @@ For high-risk actions:
 
 **Non-Adjustable (Immutable):**
 - SHARDS_PER_CREDIT = 1,000,000
-- Maximum supply = 21,000,000 GIC
+- Maximum supply = 21,000,000 MIC
 - Epoch length = 90 days
 
 ---
@@ -452,7 +452,7 @@ For high-risk actions:
 
 ## 13. Conclusion
 
-Global Integrity Credits v2.0 represent a paradigm shift from speculative to intrinsic value economics. By denominating the economy in shards (₷), we eliminate precision loss while maintaining human-readable credits. The GI-throttled UBI system creates automatic crisis response, and epoch decay mechanics fund distribution counter-inflationally.
+Mobius Integrity Credits v2.0 represent a paradigm shift from speculative to intrinsic value economics. By denominating the economy in shards (₷), we eliminate precision loss while maintaining human-readable credits. The GI-throttled UBI system creates automatic crisis response, and epoch decay mechanics fund distribution counter-inflationally.
 
 **Core Achievements:**
 1. **Mathematical Integrity**: Zero precision loss via integer arithmetic
@@ -468,9 +468,9 @@ This is not merely a cryptocurrency — it is **civilization-scale infrastructur
 
 ### Appendix A: Glossary
 
-- **Shard (₷)**: Base accounting unit, 1 GIC = 1,000,000 ₷
-- **GIC**: Global Integrity Credit, display unit
-- **GI**: Global Integrity, system health metric (0-1)
+- **Shard (₷)**: Base accounting unit, 1 MIC = 1,000,000 ₷
+- **MIC**: Mobius Integrity Index Credit, display unit
+- **GI**: Mobius Integrity Index, system health metric (0-1)
 - **Epoch**: 90-day cycle for decay and UBI distribution
 - **Proof-of-Integrity**: Dual-signature attestation for value creation
 - **DelibProof**: Multi-agent consensus mechanism

@@ -13,7 +13,7 @@ Lab1 provides the **foundational blockchain substrate** for Kaizen-OS, implement
 - Proof-of-Integrity (PoI) consensus mechanism
 - GI (Good Intent) scoring algorithms (threshold ≥ 0.95)
 - Civic Ledger primitives for immutable record-keeping
-- GIC (Goodness Integrity Credit) token mechanics
+- MIC (Goodness Integrity Credit) token mechanics
 - Cryptographic attestation framework
 
 **Core Innovation:** Traditional blockchains use Proof-of-Work (energy waste) or Proof-of-Stake (capital concentration). Lab1 implements **Proof-of-Integrity** - consensus based on demonstrated good intent and ethical behavior.
@@ -44,7 +44,7 @@ Lab1 provides the **foundational blockchain substrate** for Kaizen-OS, implement
 │  └────────────────────────────────────────────────┘    │
 │                         ↓                               │
 │  ┌────────────────────────────────────────────────┐    │
-│  │ GIC Token Engine                               │    │
+│  │ MIC Token Engine                               │    │
 │  │ • Universal Basic Income (UBI) distribution    │    │
 │  │ • Contribution rewards                         │    │
 │  │ • Integrity-based staking                      │    │
@@ -196,7 +196,7 @@ def validate_block(block):
 
 ---
 
-### 3. GIC Token Engine
+### 3. MIC Token Engine
 
 **Purpose:** Integrity-based cryptocurrency for Kaizen-OS economy.
 
@@ -204,7 +204,7 @@ def validate_block(block):
 ```yaml
 gic_token:
   name: "Goodness Integrity Credit"
-  symbol: "GIC"
+  symbol: "MIC"
   decimals: 18
   total_supply: 1_000_000_000  # 1 billion
 
@@ -215,13 +215,13 @@ gic_token:
     founders: 10%     # Initial team allocation
 
   minting_rules:
-    - New GIC minted based on system GI score
-    - If GI ≥ 0.95: mint 1000 GIC/day
+    - New MIC minted based on system GI score
+    - If GI ≥ 0.95: mint 1000 MIC/day
     - If GI < 0.95: no minting (deflationary)
     - Max supply: 1 billion (hard cap)
 
   burning_rules:
-    - Bad behavior burns GIC
+    - Bad behavior burns MIC
     - GI < 0.90: burn 10% of balance
     - Constitutional violation: burn 50%
 ```
@@ -233,7 +233,7 @@ def distribute_ubi():
     Universal Basic Income for all verified citizens
     """
     eligible_citizens = get_verified_citizens(gi_threshold=0.95)
-    daily_ubi = 10  # 10 GIC per day per citizen
+    daily_ubi = 10  # 10 MIC per day per citizen
 
     for citizen in eligible_citizens:
         transfer_gic(
@@ -254,7 +254,7 @@ def reward_contribution(contribution):
     value_score = calculate_contribution_value(contribution)
 
     # Base reward
-    base_reward = 100  # 100 GIC
+    base_reward = 100  # 100 MIC
 
     # Multiply by value score
     reward = base_reward * value_score
@@ -360,7 +360,7 @@ GET  /api/v1/ledger/transactions/{tx_id}
 POST /api/v1/ledger/submit
 GET  /api/v1/ledger/state
 
-# GIC Token
+# MIC Token
 GET  /api/v1/gic/balance/{address}
 POST /api/v1/gic/transfer
 GET  /api/v1/gic/history/{address}
@@ -436,7 +436,7 @@ curl -X POST http://localhost:5001/api/v1/ledger/submit \
 
 **Horizontal Scaling:**
 - Multiple validator nodes
-- Shard by GIC address range
+- Shard by MIC address range
 - Parallel transaction processing
 
 **Vertical Scaling:**
@@ -584,7 +584,7 @@ def test_throughput():
 
 1. **Proof-of-Integrity Whitepaper** - docs/poi-consensus.pdf
 2. **Constitutional AI Framework** - AI_INTEGRITY_CONSTITUTION.md
-3. **GIC Token Economics** - docs/gic-tokenomics.pdf
+3. **MIC Token Economics** - docs/gic-tokenomics.pdf
 4. **Cryptographic Standards** - NIST SP 800-186 (ED25519)
 5. **Blockchain Design Patterns** - Ethereum Yellow Paper
 
@@ -597,7 +597,7 @@ Lab1 is considered complete when:
 - [ ] GI scoring engine produces scores within ±0.01 of expected
 - [ ] Civic Ledger sustains 1,000+ TPS under load
 - [ ] Block confirmation time < 1s at p95
-- [ ] GIC token transfers execute correctly
+- [ ] MIC token transfers execute correctly
 - [ ] All cryptographic signatures validate correctly
 - [ ] 80%+ code coverage with passing tests
 - [ ] Security audit completed with no critical issues

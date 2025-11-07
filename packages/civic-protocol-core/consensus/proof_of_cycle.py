@@ -74,7 +74,7 @@ class Cycle:
 
 @dataclass
 class GICAccount:
-    """GIC (Governance Incentive Currency) account"""
+    """MIC (Governance Incentive Currency) account"""
     address: str
     nonce: int
     balance: int  # In smallest units (wei-like)
@@ -84,7 +84,7 @@ class GICAccount:
 
 @dataclass
 class GICTransaction:
-    """GIC transaction"""
+    """MIC transaction"""
     tx_id: str
     from_addr: str
     to_addr: str
@@ -260,7 +260,7 @@ class ProofOfCycle:
         self.balances[citizen_id] = GICAccount(
             address=citizen_id,
             nonce=0,
-            balance=1000 * 10**18,  # 1000 GIC with 18 decimals
+            balance=1000 * 10**18,  # 1000 MIC with 18 decimals
             vesting=0,
             staked=0,
             last_updated=int(time.time())
@@ -521,7 +521,7 @@ class ProofOfCycle:
         return hashlib.sha256(proof_data.encode()).hexdigest()
     
     def _hash_transaction(self, tx: GICTransaction) -> str:
-        """Hash a GIC transaction"""
+        """Hash a MIC transaction"""
         tx_data = f"{tx.tx_id}{tx.from_addr}{tx.to_addr}{tx.amount}{tx.nonce}{tx.timestamp}"
         return hashlib.sha256(tx_data.encode()).hexdigest()
     
@@ -549,7 +549,7 @@ class ProofOfCycle:
         return hashlib.sha256(state_data.encode()).hexdigest()
     
     def _validate_transaction(self, tx: GICTransaction) -> bool:
-        """Validate a GIC transaction"""
+        """Validate a MIC transaction"""
         # Check if sender has sufficient balance
         if tx.from_addr in self.balances:
             account = self.balances[tx.from_addr]
@@ -588,7 +588,7 @@ class ProofOfCycle:
         return True
     
     def _apply_transaction(self, tx: GICTransaction):
-        """Apply a GIC transaction to state"""
+        """Apply a MIC transaction to state"""
         if tx.from_addr in self.balances:
             self.balances[tx.from_addr].balance -= tx.amount
             self.balances[tx.from_addr].nonce += 1
@@ -684,7 +684,7 @@ if __name__ == "__main__":
     # Create an earn transaction
     earn_tx = poc.create_earn_transaction(
         to_addr=citizen1,
-        amount=100 * 10**18,  # 100 GIC
+        amount=100 * 10**18,  # 100 MIC
         reason="reflection",
         cycle_id=cycle.cycle_id,
         attestation_hash="0xattestation123"
@@ -711,5 +711,5 @@ if __name__ == "__main__":
         print("✗ Failed to add block to chain")
     
     print(f"Chain height: {len(poc.blocks)}")
-    print(f"Citizen 1 balance: {poc.balances[citizen1].balance / 10**18} GIC")
+    print(f"Citizen 1 balance: {poc.balances[citizen1].balance / 10**18} MIC")
 

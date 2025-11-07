@@ -8,7 +8,7 @@ The first complete Founding Agent site for Kaizen OS. AUREA serves as the consti
 - ✅ **Real-time GI Monitoring** - Live Governance Integrity score via SSE
 - ✅ **Epoch Dashboard** - 90-day cycle tracking with mint/burn/donate
 - ✅ **Attestation Records** - Immutable deliberation history on Civic Ledger
-- ✅ **GIC Panel** - Mint, burn, and donate GIC tokens
+- ✅ **MIC Panel** - Mint, burn, and donate MIC tokens
 - ✅ **DID Integration** - W3C DID documents at /.well-known/did.json
 - ✅ **Sovereign Control** - Full Ed25519 root-key ownership
 
@@ -44,7 +44,7 @@ Edit `.env.local` with your API keys and configuration:
 OPENAI_API_KEY=sk-...
 OLLAMA_URL=http://localhost:11434
 
-# Required for GIC operations
+# Required for MIC operations
 RPC_URL=https://sepolia.infura.io/v3/...
 AGENT_SIGNER_KEY=0x...
 GIC_GOVERNOR_ADDRESS=0x...
@@ -122,8 +122,8 @@ aurea-site/
 
 - `POST /api/codex/query` - Execute deliberation
 - `GET /api/gi/stream` - Real-time GI metrics (SSE)
-- `POST /api/gic/mint` - Mint GIC tokens (epoch-gated)
-- `POST /api/gic/burn` - Burn GIC tokens
+- `POST /api/gic/mint` - Mint MIC tokens (epoch-gated)
+- `POST /api/gic/burn` - Burn MIC tokens
 
 ## Usage Examples
 
@@ -146,7 +146,7 @@ eventSource.addEventListener('heartbeat', (e) => {
 });
 ```
 
-### Mint GIC Tokens
+### Mint MIC Tokens
 
 ```bash
 curl -X POST http://localhost:3000/api/gic/mint \
@@ -193,7 +193,7 @@ npm start
 | **Min Agreement** | 0.90 (90%) |
 | **GI Target** | 0.99 |
 | **GI Baseline** | 0.993 |
-| **Epoch Mint Cap** | 100,000 GIC |
+| **Epoch Mint Cap** | 100,000 MIC |
 | **Donate-back** | 20% (2,000 bps) |
 
 ### Codex-Agentic Providers
@@ -321,7 +321,7 @@ const limiter = rateLimit({
 
 - [Founding Agents Sovereign Stack](../../docs/architecture/FOUNDING_AGENTS_SOVEREIGN_STACK.md)
 - [Codex-Agentic Package](../../packages/codex-agentic/README.md)
-- [GIC Smart Contracts](../../packages/gic-registry-contracts/)
+- [MIC Smart Contracts](../../packages/gic-registry-contracts/)
 - [API Endpoint Examples](../../examples/api-endpoints/README.md)
 
 ## Support

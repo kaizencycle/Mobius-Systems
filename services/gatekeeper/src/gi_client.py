@@ -1,4 +1,4 @@
-"""GI (Global Integrity) client for checking actor integrity scores."""
+"""GI (Mobius Integrity Index) client for checking actor integrity scores."""
 import httpx
 import os
 
@@ -7,7 +7,7 @@ GI_INDEXER_URL = os.getenv("GI_INDEXER_URL", "https://gic-indexer.onrender.com")
 
 async def get_gi(actor_did: str) -> float:
     """
-    Fetch GI score for an actor from the GIC Indexer.
+    Fetch GI score for an actor from the MIC Indexer.
     
     Args:
         actor_did: DID of the actor
@@ -26,7 +26,7 @@ async def get_gi(actor_did: str) -> float:
             )
             response.raise_for_status()
             data = response.json()
-            return float(data.get("gi", 0.0))
+            return float(data.get("mii", 0.0))
         except httpx.TimeoutException:
             # Timeout defaults to 0.0 (fail closed)
             return 0.0

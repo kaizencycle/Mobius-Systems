@@ -28,7 +28,7 @@ import { codexDeliberate } from '@mobius/codex-agentic';
 // Execute a single agent deliberation
 const proof = await codexDeliberate({
   agent: 'AUREA',
-  input: 'Explain the 90-day GIC epoch cycle',
+  input: 'Explain the 90-day MIC epoch cycle',
 });
 
 console.log(proof.winner.output); // Winner's response
@@ -308,7 +308,7 @@ MIT
 
 - `@mobius/civic-protocol-core` - Civic Ledger client
 - `@mobius/oaa-api-library` - OAA Hub integration
-- `@mobius/gic-contracts` - GIC token & governor contracts
+- `@mobius/gic-contracts` - MIC token & governor contracts
 
 ## Support
 

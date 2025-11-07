@@ -97,7 +97,7 @@ data/
 ├── 2025-10-02/
 │   ├── smoke-test.json          # Smoke test JSON
 │   ├── smoke-test.md            # Smoke test Markdown
-│   ├── 2025-10-02.gic.jsonl     # GIC transactions
+│   ├── 2025-10-02.gic.jsonl     # MIC transactions
 │   └── [other day files]
 ├── 2025-10-02.seed.json         # Seed data
 ├── 2025-10-02.echo.json         # Sweep data

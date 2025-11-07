@@ -4,7 +4,7 @@ Echo Bridge — unifies service telemetry into a single Echo Pulse and
 optionally posts it to OAA (Lab7) and Civic Ledger.
 
 Inputs:
-  - Health endpoints for Labs 4/6/7, Civic Ledger, GIC Indexer
+  - Health endpoints for Labs 4/6/7, Civic Ledger, MIC Indexer
   - Optional: Global Health Pulse payload (from pulse_sentinel.py)
 
 Outputs:

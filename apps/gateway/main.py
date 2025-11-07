@@ -206,7 +206,7 @@ async def gi_gate(request: Request, call_next):
     """
     if request.method not in ("GET", "HEAD", "OPTIONS"):
         claims = _verify_jwt(request.headers.get("Authorization"))
-        gi = float(claims.get("gi", 0))
+        gi = float(claims.get("mii", 0))
         
         if gi < GI_GATE:
             raise HTTPException(

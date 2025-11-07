@@ -7,7 +7,7 @@ import { SentinelSphere, SENTINEL_CONFIG } from './SentinelSphere';
 
 interface SentinelMetrics {
   id: string;
-  gi: number;
+  mii: number;
   eventRate: number;
   lastUpdate: string;
 }
@@ -44,7 +44,7 @@ export function MultiAgentGrid({
       SENTINEL_CONFIG.forEach(sentinel => {
         mockMetrics[sentinel.id] = {
           id: sentinel.id,
-          gi: 0.95 + Math.random() * 0.05, // 0.95-1.0
+          mii: 0.95 + Math.random() * 0.05, // 0.95-1.0
           eventRate: Math.random() * 15,    // 0-15 events/sec
           lastUpdate: new Date().toISOString()
         };
@@ -75,7 +75,7 @@ export function MultiAgentGrid({
           ...prev,
           [data.agentId]: {
             id: data.agentId,
-            gi: data.gi,
+            mii: data.gi,
             eventRate: data.eventRate,
             lastUpdate: data.timestamp
           }

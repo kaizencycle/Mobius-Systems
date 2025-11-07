@@ -85,7 +85,7 @@ kaizen-cycle/
 │   ├── package.json
 │   │
 │   ├── contracts/                     ← Solidity source
-│   │   ├── GIC.sol                    ← ERC-20 token
+│   │   ├── MIC.sol                    ← ERC-20 token
 │   │   ├── GICGovernor.sol            ← 90-day epoch + auto-donate
 │   │   ├── PublicGoodsPool.sol        ← Treasury management
 │   │   ├── CivicLedger.sol            ← On-chain integrity proofs
@@ -98,7 +98,7 @@ kaizen-cycle/
 │   │   └── verify.js
 │   │
 │   ├── test/                          ← Contract tests
-│   │   ├── GIC.test.js
+│   │   ├── MIC.test.js
 │   │   ├── GICGovernor.test.js
 │   │   └── integration.test.js
 │   │
@@ -106,7 +106,7 @@ kaizen-cycle/
 │       ├── mainnet.json
 │       └── testnet.json
 │
-├── civic-ledger/                      ← 🔍 Lab 1: Integrity proofs & GIC minting
+├── civic-ledger/                      ← 🔍 Lab 1: Integrity proofs & MIC minting
 │   ├── README.md
 │   ├── docker-compose.yml
 │   │
@@ -186,7 +186,7 @@ kaizen-cycle/
 │   │   │   └── route_optimizer.py
 │   │   └── tests/
 │   │
-│   └── financial-flows/               ← GIC settlement
+│   └── financial-flows/               ← MIC settlement
 │       ├── src/
 │       │   ├── settlement_engine.py
 │       │   ├── ubi_distributor.py
@@ -239,10 +239,10 @@ kaizen-cycle/
 │   │   └── mental-health-triage/      ← E.O.M.M. integration
 │   │
 │   ├── food-network/                  ← Farm-to-Hive coordination
-│   │   ├── proof-of-harvest/          ← Upload photos → earn GIC
+│   │   ├── proof-of-harvest/          ← Upload photos → earn MIC
 │   │   ├── inventory-tracker/         ← Food co-op inventory
 │   │   ├── delivery-router/           ← Logistics optimization
-│   │   └── pricing-calculator/        ← GIC-denominated basket
+│   │   └── pricing-calculator/        ← MIC-denominated basket
 │   │
 │   ├── housing-trust/                 ← Rent-to-own tracking
 │   │   ├── unit-registry/             ← Available housing units
@@ -496,7 +496,7 @@ docs/architecture/
 
 ```
 docs/protocols/
-├── gic_token_protocol.md              ← How GIC works
+├── gic_token_protocol.md              ← How MIC works
 ├── gaia_staking_protocol.md           ← How ecological staking works
 ├── delib_proof_protocol.md            ← Multi-LLM consensus algorithm
 ├── gi_scoring_protocol.md             ← How integrity is measured
@@ -510,7 +510,7 @@ docs/protocols/
 ```
 contracts/
 ├── contracts/
-│   ├── GIC.sol                        ← ERC-20 token
+│   ├── MIC.sol                        ← ERC-20 token
 │   ├── GICGovernor.sol                ← 90-day epoch + auto-donate
 │   ├── PublicGoodsPool.sol            ← Treasury
 │   └── GaiaStaking.sol                ← Ecological staking
@@ -525,7 +525,7 @@ contracts/
 ### Running Services (Implementation)
 
 ```
-civic-ledger/           ← GI scoring + GIC minting
+civic-ledger/           ← GI scoring + MIC minting
 codex-router/           ← Multi-LLM routing
 eomm/                   ← Reflection app
 humanities-healthcare/  ← Clinic/food/housing software
@@ -609,7 +609,7 @@ oaa-hub/                ← Education + API gateway
 
 | Specification | Location |
 |--------------|----------|
-| GIC token economics | `docs/protocols/gic_token_protocol.md` |
+| MIC token economics | `docs/protocols/gic_token_protocol.md` |
 | Gaia Staking rules | `docs/protocols/gaia_staking_protocol.md` |
 | GI scoring algorithm | `docs/protocols/gi_scoring_protocol.md` |
 | DelibProof consensus | `docs/protocols/delib_proof_protocol.md` |
@@ -674,10 +674,10 @@ humanities-healthcare/*/config/        ← Service-specific configs
 2. Reflection analyzed for integrity (GI score)
    └─ civic-ledger/indexer/ → calculates GI
 
-3. If GI ≥ 0.95, citizen earns GIC
-   └─ civic-ledger/api/ → mints GIC via contracts/GIC.sol
+3. If GI ≥ 0.95, citizen earns MIC
+   └─ civic-ledger/api/ → mints MIC via contracts/MIC.sol
 
-4. Citizen spends GIC on AI query
+4. Citizen spends MIC on AI query
    └─ codex-router/ → routes to cheapest LLM provider
 
 5. Query cost logged
@@ -810,7 +810,7 @@ cd eomm/reflection-app/ && npm test
 | Directory | Meaning |
 |-----------|---------|
 | `contracts/` | Solidity smart contracts (blockchain) |
-| `civic-ledger/` | GI scoring + GIC minting (Lab 1) |
+| `civic-ledger/` | GI scoring + MIC minting (Lab 1) |
 | `codex-router/` | AI query routing (Lab 2) |
 | `resource-orchestration/` | Resource allocation (Lab 3) |
 | `eomm/` | "Echoes of My Mind" reflection app (Lab 4) |

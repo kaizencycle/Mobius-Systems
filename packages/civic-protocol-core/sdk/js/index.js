@@ -224,7 +224,7 @@ class CivicClient {
     }
 
     /**
-     * Get GIC balance for an address
+     * Get MIC balance for an address
      * @param {string} address - Citizen or companion address
      * @returns {Promise<Object>} Balance object
      */
@@ -233,7 +233,7 @@ class CivicClient {
     }
 
     /**
-     * Get GIC earning events for an address
+     * Get MIC earning events for an address
      * @param {string} address - Citizen or companion address
      * @param {Object} options - Filtering options
      * @param {string} options.date - Filter by date (YYYY-MM-DD)
@@ -328,7 +328,7 @@ if (typeof window === 'undefined' && typeof process !== 'undefined') {
             
             // Get balance
             const balance = await client.getBalance("citizen_001");
-            console.log(`Balance: ${balance.balance} GIC`);
+            console.log(`Balance: ${balance.balance} MIC`);
             
         } catch (error) {
             console.error('Example failed:', error.message);

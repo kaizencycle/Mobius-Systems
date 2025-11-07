@@ -1,6 +1,6 @@
 # Lab4-Proof 🚀
 
-A secure, open-source ledger system combining **FastAPI backend** with **Next.js frontend** for reflection tracking and GIC rewards.
+A secure, open-source ledger system combining **FastAPI backend** with **Next.js frontend** for reflection tracking and MIC rewards.
 
 [![Security](https://img.shields.io/badge/Security-Public%20Safe-green.svg)](SECURITY.md)
 [![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://python.org)
@@ -11,7 +11,7 @@ A secure, open-source ledger system combining **FastAPI backend** with **Next.js
 
 - 🔐 **Secure Ledger System** - Immutable daily records with Merkle tree integrity
 - 🤖 **AI-Powered Reflections** - Intelligent companion system for personal growth
-- 💰 **GIC Rewards** - Gamified incentive system for engagement
+- 💰 **MIC Rewards** - Gamified incentive system for engagement
 - 🔄 **Auto-Merge Workflows** - Automated PR management and deployment
 - 🛡️ **Public-Safe** - No hardcoded secrets, environment-based configuration
 - 📊 **Admin Dashboard** - Real-time monitoring and analytics

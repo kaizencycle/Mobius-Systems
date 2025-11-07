@@ -61,7 +61,7 @@ class Cycle:
 
 @dataclass
 class Balance:
-    """Represents a GIC balance"""
+    """Represents a MIC balance"""
     address: str
     balance: str
     vesting: str
@@ -70,7 +70,7 @@ class Balance:
 
 @dataclass
 class EarnEvent:
-    """Represents a GIC earning event"""
+    """Represents a MIC earning event"""
     event_id: str
     address: str
     amount: str
@@ -324,7 +324,7 @@ class CivicClient:
     
     def get_balance(self, address: str) -> Balance:
         """
-        Get GIC balance for an address
+        Get MIC balance for an address
         
         Args:
             address: Citizen or companion address
@@ -338,7 +338,7 @@ class CivicClient:
     def get_earn_events(self, address: str, date: Optional[str] = None,
                        limit: int = 50) -> Dict[str, Any]:
         """
-        Get GIC earning events for an address
+        Get MIC earning events for an address
         
         Args:
             address: Citizen or companion address
@@ -397,5 +397,5 @@ if __name__ == "__main__":
     
     # Get balance
     balance = client.get_balance("citizen_001")
-    print(f"Balance: {balance.balance} GIC")
+    print(f"Balance: {balance.balance} MIC")
 

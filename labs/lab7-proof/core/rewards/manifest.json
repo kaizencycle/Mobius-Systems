@@ -2,7 +2,7 @@
   "version": "1.0",
   "id": "gic.reward.manifest",
   "policy_ref": "ops/policy.json",
-  "issuance_asset": "GIC",
+  "issuance_asset": "MIC",
   "units_per_block_cap": 100,
   "decay": {
     "epoch_length_cycles": 100,
@@ -119,7 +119,7 @@
     }
   },
   "issuance": {
-    "formula": "GIC = BASE * max(0, I - P)",
+    "formula": "MIC = BASE * max(0, I - P)",
     "base": 10,
     "integrity_I": "0.4*truth + 0.3*symbiosis + 0.2*verification + 0.1*novelty",
     "penalty_P": "0.3*entropy + 0.5*duplication + 1.0*policy_violation + 0.6*drift_anomaly",
@@ -133,7 +133,7 @@
     "fields": [
       "hash(payload)",
       "scores",
-      "GIC",
+      "MIC",
       "signatures",
       "citations",
       "artifacts"

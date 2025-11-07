@@ -69,4 +69,4 @@ export default async function handler(
 // Example curl usage:
 // curl -X POST http://localhost:3000/api/codex/query \
 //   -H "Content-Type: application/json" \
-//   -d '{"agent":"AUREA","input":"Explain the 90-day GIC epoch cycle"}'
+//   -d '{"agent":"AUREA","input":"Explain the 90-day MIC epoch cycle"}'

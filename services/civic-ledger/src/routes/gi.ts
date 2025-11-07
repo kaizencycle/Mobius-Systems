@@ -4,7 +4,7 @@ import { insertGISample, getGI_TWA_DB } from '../services/gi/store.js';
 export async function giStatus(_req: Request, res: Response) {
   // Return TWA over default window
   const twa = await getGI_TWA_DB(Number(process.env.GI_TWA_LOOKBACK_DAYS || 30));
-  res.json({ gi: twa, updated_at: new Date().toISOString() });
+  res.json({ mii: twa, updated_at: new Date().toISOString() });
 }
 
 export async function giIngest(req: Request, res: Response) {

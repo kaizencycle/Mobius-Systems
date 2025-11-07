@@ -30,7 +30,7 @@ function SuccessContent() {
   const shareOnTwitter = () => {
     const text = type === 'domain'
       ? `I just registered the first .gic domain on Kaizen OS! 🌐 ${domainData?.domain} - Powered by Constitutional AI and Proof-of-Integrity blockchain. #KaizenOS #Web3 #ConstitutionalAI`
-      : `I just minted the first GIC tokens on Kaizen OS! 🪙 ${mintData?.amount} GIC - Zero fees, Proof-of-Integrity consensus. #KaizenOS #Crypto #ConstitutionalAI`;
+      : `I just minted the first MIC tokens on Kaizen OS! 🪙 ${mintData?.amount} MIC - Zero fees, Proof-of-Integrity consensus. #KaizenOS #Crypto #ConstitutionalAI`;
 
     const url = 'https://kaizen-os.vercel.app';
     const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
@@ -62,7 +62,7 @@ function SuccessContent() {
           <p className="text-2xl text-gray-700">
             {type === 'domain'
               ? 'You registered the first .gic domain'
-              : 'You minted the first GIC tokens'}
+              : 'You minted the first MIC tokens'}
           </p>
         </div>
 
@@ -139,7 +139,7 @@ function SuccessContent() {
                 <>
                   <NextStepCard
                     icon="🪙"
-                    title="Mint GIC Tokens"
+                    title="Mint MIC Tokens"
                     description="Create your first Good Intent Credits"
                     href="/demo/mint"
                   />
@@ -161,7 +161,7 @@ function SuccessContent() {
                   <NextStepCard
                     icon="🏛️"
                     title="Join Consensus"
-                    description="Use your GIC in governance"
+                    description="Use your MIC in governance"
                     href="/consensus"
                   />
                 </>
@@ -237,7 +237,7 @@ function MintSuccess({ data }: { data: GICMint }) {
     <>
       <div className="text-center mb-8">
         <div className="text-5xl font-bold text-green-600 mb-2">
-          {data.amount} GIC
+          {data.amount} MIC
         </div>
         <p className="text-gray-600">Successfully minted!</p>
       </div>
@@ -246,7 +246,7 @@ function MintSuccess({ data }: { data: GICMint }) {
         <InfoCard label="Recipient" value={data.recipient} />
         <InfoCard label="Purpose" value={data.purpose} />
         <InfoCard label="Minting Date" value={new Date(data.minted_at).toLocaleDateString()} />
-        <InfoCard label="Transaction Fees" value="0 GIC" highlight />
+        <InfoCard label="Transaction Fees" value="0 MIC" highlight />
       </div>
 
       <div className="mt-6 bg-green-50 border border-green-200 rounded-lg p-4">

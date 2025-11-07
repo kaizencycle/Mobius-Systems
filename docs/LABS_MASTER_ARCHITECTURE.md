@@ -48,7 +48,7 @@ The Kaizen-OS laboratory structure implements a **7-layer civic operating system
 │ LAB1: SUBSTRATE PROOF (Foundation) ← NEW                │
 │ • Proof-of-Integrity blockchain                         │
 │ • GI scoring engine (≥ 0.95 threshold)                  │
-│ • GIC token mechanics and UBI                           │
+│ • MIC token mechanics and UBI                           │
 │ • Cryptographic attestation (ED25519)                   │
 │ Status: SPEC COMPLETE → Implementation pending          │
 └────────────────────┬────────────────────────────────────┘
@@ -169,7 +169,7 @@ Response to User
 **Build Lab1 (Substrate Proof)**
 - Implement GI scoring engine
 - Create Civic Ledger with PoI consensus
-- Deploy GIC token mechanics
+- Deploy MIC token mechanics
 - **Rationale:** Everything depends on this foundation
 
 ### Phase 2: Consensus (Weeks 3-4) - HIGH
@@ -319,7 +319,7 @@ LAB3: API Fabric (Gateway)
      │
      ├─→ LAB1: Substrate (Ledger & GI)
      │        │
-     │        └─→ GIC Token Engine
+     │        └─→ MIC Token Engine
      │
      ├─→ LAB6: Citizen Shield (Security)
      │        │
@@ -338,7 +338,7 @@ LAB3: API Fabric (Gateway)
 - [ ] GI scores calculated within ±0.01 accuracy
 - [ ] Civic Ledger sustains 1,000+ TPS
 - [ ] Block confirmation < 1s (p95)
-- [ ] GIC transfers execute correctly
+- [ ] MIC transfers execute correctly
 
 ### Lab2 (Thought Broker)
 - [ ] 3+ models orchestrated in deliberation
@@ -391,7 +391,7 @@ LAB3: API Fabric (Gateway)
 4. Create integration test framework
 
 ### Short-term (Next 2-4 Weeks)
-1. Implement Lab1 core (Substrate + GI + GIC)
+1. Implement Lab1 core (Substrate + GI + MIC)
 2. Implement Lab2 core (Multi-LLM orchestration)
 3. Test Lab1 ↔ Lab2 integration
 4. Deploy to testnet

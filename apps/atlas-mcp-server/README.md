@@ -116,7 +116,7 @@ End ATLAS work cycle with wins, blocks, and next intent
 ### In Claude Desktop:
 ```
 You: "Hey ATLAS, check the health of all services"
-ATLAS: [Calls health_check tool] All 6 APIs are healthy! Lab7, Lab4, Lab6, OAA, Ledger, and GIC Indexer all responding.
+ATLAS: [Calls health_check tool] All 6 APIs are healthy! Lab7, Lab4, Lab6, OAA, Ledger, and MIC Indexer all responding.
 
 You: "What's our system GI score?"
 ATLAS: [Calls calculate_gi_score] System GI Score: 0.965 (PASS) - Above threshold of 0.95
@@ -141,7 +141,7 @@ ATLAS: [Executes tool] Clocked in for cycle 72 with monitoring and auditing inte
 3. **Lab6** - https://lab6-proof-api.onrender.com (Citizen Shield)
 4. **OAA** - https://oaa-api-library.onrender.com (Memory & Cycles)
 5. **Ledger** - https://civic-protocol-core-ledger.onrender.com (Proof-of-Integrity)
-6. **GIC Indexer** - https://gic-indexer.onrender.com (GIC Economy)
+6. **MIC Indexer** - https://gic-indexer.onrender.com (MIC Economy)
 
 ## Development
 

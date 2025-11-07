@@ -49,7 +49,7 @@ export async function GET() {
   // Fallback to env defaults if nothing persisted yet
   const fallback = {
     cycle: process.env.NEXT_PUBLIC_KAIZEN_CURRENT_CYCLE ?? "C-121",
-    gi: parseFloat(process.env.NEXT_PUBLIC_KAIZEN_GI_BASELINE ?? "0.993"),
+    mii: parseFloat(process.env.NEXT_PUBLIC_KAIZEN_GI_BASELINE ?? "0.993"),
     details: {
       verdict: (process.env.NEXT_PUBLIC_SR_VERDICT ?? "UNKNOWN").toUpperCase(),
       updated_at: new Date().toISOString()

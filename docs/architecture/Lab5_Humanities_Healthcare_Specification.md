@@ -20,7 +20,7 @@
 - Lab 6: Citizen Shield (security, defense) ✅
 - Lab 7: OAA Hub (education, shell) ✅
 
-**The gap:** We have economics (GIC), governance (Civic Protocol), intelligence (AI), education (OAA), and security (Shield)...
+**The gap:** We have economics (MIC), governance (Civic Protocol), intelligence (AI), education (OAA), and security (Shield)...
 
 **But missing:** The human support systems that make UBI meaningful:
 - Physical health (if you're sick, $3,000/month doesn't help)
@@ -80,7 +80,7 @@
 
 **Traditional healthcare:** Fee-for-service → Incentive to treat, not prevent → Debt spiral
 
-**Lab 5 healthcare:** GIC-funded → Incentive to keep people healthy → Prevention > treatment
+**Lab 5 healthcare:** MIC-funded → Incentive to keep people healthy → Prevention > treatment
 
 ### 1A. Primary Care Cooperatives
 
@@ -89,10 +89,10 @@
 ```
 Each Hive Chapter (target: 500–2,000 citizens) has:
 
-├─ 1 Nurse Practitioner (full-time, GIC-salaried)
+├─ 1 Nurse Practitioner (full-time, MIC-salaried)
 │  └─ Handles: 80% of primary care (checkups, minor injuries, chronic disease mgmt)
 │
-├─ 2–3 Community Health Workers (part-time, earn GIC)
+├─ 2–3 Community Health Workers (part-time, earn MIC)
 │  └─ Handles: Home visits, health coaching, appointment coordination
 │
 ├─ Telehealth Access (via Codex Router)
@@ -108,16 +108,16 @@ Each Hive Chapter (target: 500–2,000 citizens) has:
 # Funding source
 primary_care_budget = PublicGoodsPool.allocate(
     category="health_commons",
-    percentage=0.30  # 30% of 5% PublicGoodsPool = 1.5% total GIC issuance
+    percentage=0.30  # 30% of 5% PublicGoodsPool = 1.5% total MIC issuance
 )
 
 # Compensation
-nurse_practitioner_salary = 6_000  # GIC/month (~$3,000 USD equivalent)
-community_health_worker = 100      # GIC/visit (~$50 USD equivalent)
+nurse_practitioner_salary = 6_000  # MIC/month (~$3,000 USD equivalent)
+community_health_worker = 100      # MIC/visit (~$50 USD equivalent)
 
 # Patient cost
 citizen_copay = 0  # Free at point of service
-# (funded by GIC issuance, not individual payment)
+# (funded by MIC issuance, not individual payment)
 ```
 
 **Why this works:**
@@ -152,11 +152,11 @@ Traditional mental health system:
 │                                                   │
 │  TIER 2: PEER SUPPORT (Within 24 hours)         │
 │  ├─ Certified peer counselors (OAA trained)     │
-│  ├─ Earn GIC for crisis calls (50 GIC/session)  │
+│  ├─ Earn MIC for crisis calls (50 MIC/session)  │
 │  └─ Focus: Listening, empathy, de-escalation    │
 │                                                   │
 │  TIER 3: LICENSED THERAPY (Within 1 week)       │
-│  ├─ Licensed therapists (GIC-contracted)        │
+│  ├─ Licensed therapists (MIC-contracted)        │
 │  ├─ 8 free sessions/year per citizen            │
 │  └─ Specialized: Trauma, addiction, family      │
 │                                                   │
@@ -226,7 +226,7 @@ Pharmaceutical industry:
 │                                                   │
 │  3. CITIZEN PHARMACIES                           │
 │     ├─ Every Hive has pharmacy co-op            │
-│     ├─ Drugs sold at cost (GIC-denominated)     │
+│     ├─ Drugs sold at cost (MIC-denominated)     │
 │     └─ Free for those who can't afford          │
 │                                                   │
 │  4. RESEARCH FUNDING                             │
@@ -287,7 +287,7 @@ Aging population:
 │  └─ Shared meals, gardens, workshops             │
 │                                                   │
 │  CARE PROVISION                                   │
-│  ├─ 4-hour shifts (young citizens earn GIC)      │
+│  ├─ 4-hour shifts (young citizens earn MIC)      │
 │  ├─ Tasks: Cooking, cleaning, companionship      │
 │  ├─ Medical: Nurse on-site (from Pillar 1A)      │
 │  └─ Specialized: Hospice, dementia care          │
@@ -309,25 +309,25 @@ Aging population:
 
 ```python
 # Elder pays (if able)
-elder_contribution = min(elder_ubi, 1000)  # Max 1,000 GIC/month
+elder_contribution = min(elder_ubi, 1000)  # Max 1,000 MIC/month
 
 # Young caregiver earns
-caregiver_wage = 25  # GIC/hour (~$12.50 equivalent)
+caregiver_wage = 25  # MIC/hour (~$12.50 equivalent)
 
 # PublicGoodsPool subsidizes gap
 subsidy = total_care_cost - elder_contribution
 
 # Example:
-# Elder needs: 100 hours/month care = 2,500 GIC
-# Elder contributes: 1,000 GIC
-# Subsidy: 1,500 GIC (from PublicGoodsPool)
+# Elder needs: 100 hours/month care = 2,500 MIC
+# Elder contributes: 1,000 MIC
+# Subsidy: 1,500 MIC (from PublicGoodsPool)
 ```
 
 **Why this works:**
 - **Intergenerational**: Young gain wisdom, elders gain care (mutual benefit)
 - **Affordable**: Subsidy is way cheaper than nursing home
 - **Dignified**: Elders stay in community, not warehoused
-- **Job creation**: Care work is meaningful GIC income source
+- **Job creation**: Care work is meaningful MIC income source
 
 ---
 
@@ -437,16 +437,16 @@ Current food system:
 │  ├─ Regenerative Farms (PublicGoodsPool funded)  │
 │  ├─ Urban Farms (Hive rooftop gardens)           │
 │  ├─ Vertical Farms (warehouse-scale, solar)      │
-│  └─ Home Gardens (citizens earn GIC for surplus) │
+│  └─ Home Gardens (citizens earn MIC for surplus) │
 │                                                   │
 │  DISTRIBUTION LAYER                               │
 │  ├─ Hive Food Co-ops (members-only)              │
-│  ├─ Weekly farmers markets (GIC-denominated)     │
+│  ├─ Weekly farmers markets (MIC-denominated)     │
 │  ├─ Community Supported Agriculture (CSA boxes)  │
 │  └─ Emergency Food Pantries (free, no stigma)    │
 │                                                   │
 │  PRICING LAYER                                    │
-│  ├─ GIC-denominated food basket (stable prices)  │
+│  ├─ MIC-denominated food basket (stable prices)  │
 │  ├─ Cost-plus pricing (farmer cost + 20%)        │
 │  ├─ Sliding scale (pay what you can)             │
 │  └─ Work-for-food (volunteer → earn credits)     │
@@ -463,16 +463,16 @@ Current food system:
 **Economic Model:**
 
 ```python
-# GIC-denominated food basket (stable pricing)
+# MIC-denominated food basket (stable pricing)
 food_basket = {
-    "grains": 50,      # GIC/month (rice, oats, bread)
-    "vegetables": 75,  # GIC/month (seasonal variety)
-    "fruits": 50,      # GIC/month (seasonal variety)
-    "protein": 100,    # GIC/month (beans, eggs, some meat)
-    "dairy": 40,       # GIC/month (milk, cheese, yogurt)
-    "oils_fats": 20    # GIC/month (olive oil, butter)
+    "grains": 50,      # MIC/month (rice, oats, bread)
+    "vegetables": 75,  # MIC/month (seasonal variety)
+    "fruits": 50,      # MIC/month (seasonal variety)
+    "protein": 100,    # MIC/month (beans, eggs, some meat)
+    "dairy": 40,       # MIC/month (milk, cheese, yogurt)
+    "oils_fats": 20    # MIC/month (olive oil, butter)
 }
-total_monthly_food_cost = 335  # GIC (~$167 USD at $0.50 peg)
+total_monthly_food_cost = 335  # MIC (~$167 USD at $0.50 peg)
 
 # With $3,000/month UBI, food = 11% of income (affordable)
 ```
@@ -480,10 +480,10 @@ total_monthly_food_cost = 335  # GIC (~$167 USD at $0.50 peg)
 **Proof-of-Harvest (Gamification):**
 
 ```python
-# Citizens earn GIC for growing food
+# Citizens earn MIC for growing food
 def proof_of_harvest(harvest_data):
     """
-    Citizen uploads photo of harvest → AI verifies → Earn GIC
+    Citizen uploads photo of harvest → AI verifies → Earn MIC
     """
     if verify_authentic_photo(harvest_data.image):
         # Estimate yield
@@ -509,9 +509,9 @@ def proof_of_harvest(harvest_data):
 ```
 
 **Example:**
-- Alice grows 5kg tomatoes in backyard → Earns 25 GIC
-- Bob manages community garden (50kg/month mixed vegetables) → Earns 500 GIC
-- Carol runs regenerative farm (5,000kg/month) → Earns 50,000 GIC + sells to Hive co-ops
+- Alice grows 5kg tomatoes in backyard → Earns 25 MIC
+- Bob manages community garden (50kg/month mixed vegetables) → Earns 500 MIC
+- Carol runs regenerative farm (5,000kg/month) → Earns 50,000 MIC + sells to Hive co-ops
 
 ---
 
@@ -540,7 +540,7 @@ Housing crisis:
 │                                                   │
 │  OWNERSHIP MODEL                                  │
 │  ├─ Trust owns land (forever, no speculation)    │
-│  ├─ Residents lease housing (pay rent in GIC)    │
+│  ├─ Residents lease housing (pay rent in MIC)    │
 │  ├─ Rent → Equity (50% of rent becomes equity)   │
 │  └─ After 20 years: Resident owns housing unit   │
 │                                                   │
@@ -552,7 +552,7 @@ Housing crisis:
 │                                                   │
 │  GOVERNANCE                                       │
 │  ├─ Residents vote on house rules                │
-│  ├─ Rotating maintenance duties (earn GIC)       │
+│  ├─ Rotating maintenance duties (earn MIC)       │
 │  ├─ Conflict resolution (Hive mediators)         │
 │  └─ New member selection (consensus)             │
 │                                                   │
@@ -564,24 +564,24 @@ Housing crisis:
 ```python
 # Housing unit cost
 construction_cost = 150_000  # USD (modular, efficient)
-gic_cost = 300_000           # GIC (at $0.50 peg)
+gic_cost = 300_000           # MIC (at $0.50 peg)
 
 # Monthly rent (pays off unit over 20 years)
 monthly_rent = gic_cost / 240  # 240 months (20 years)
-monthly_rent = 1_250           # GIC (~$625 USD)
+monthly_rent = 1_250           # MIC (~$625 USD)
 
 # Equity accumulation
 equity_percentage = 0.50       # 50% of rent goes to equity
-monthly_equity = 625           # GIC
+monthly_equity = 625           # MIC
 
 # After 20 years:
-total_paid = 1_250 * 240 = 300_000 GIC
-equity_earned = 625 * 240 = 150_000 GIC
+total_paid = 1_250 * 240 = 300_000 MIC
+equity_earned = 625 * 240 = 150_000 MIC
 resident_now_owns_unit = True
 
 # With $3,000 UBI:
-# Rent = 1,250 GIC (42% of income, manageable)
-# After housing: 1,750 GIC left (58% for food, healthcare, discretionary)
+# Rent = 1,250 MIC (42% of income, manageable)
+# After housing: 1,750 MIC left (58% for food, healthcare, discretionary)
 ```
 
 **Homelessness Prevention:**
@@ -634,7 +634,7 @@ Water privatization:
 │                                                   │
 │  MONITORING                                       │
 │  ├─ IoT sensors (water quality real-time)        │
-│  ├─ Citizen scientists earn GIC for testing      │
+│  ├─ Citizen scientists earn MIC for testing      │
 │  ├─ Data published openly (civic ledger)         │
 │  └─ Alerts: Contamination triggers response      │
 │                                                   │
@@ -645,8 +645,8 @@ Water privatization:
 │  └─ Luxury uses: Last (golf courses, fountains)  │
 │                                                   │
 │  CONSERVATION                                     │
-│  ├─ GIC rewards for water-saving (proof-of-conservation) │
-│  ├─ Rainwater harvesting (earn GIC for systems)  │
+│  ├─ MIC rewards for water-saving (proof-of-conservation) │
+│  ├─ Rainwater harvesting (earn MIC for systems)  │
 │  ├─ Greywater recycling (showers → gardens)      │
 │  └─ Desalination (PublicGoodsPool funded)        │
 │                                                   │
@@ -658,14 +658,14 @@ Water privatization:
 ```python
 def proof_of_conservation(household_data):
     """
-    Households install smart meters → Track water usage → Earn GIC for conservation
+    Households install smart meters → Track water usage → Earn MIC for conservation
     """
     baseline_usage = household_data.historical_average  # Liters/day
     current_usage = household_data.current_month
     
     if current_usage < baseline_usage:
         water_saved = baseline_usage - current_usage
-        gic_reward = water_saved * 0.01  # 0.01 GIC per liter saved
+        gic_reward = water_saved * 0.01  # 0.01 MIC per liter saved
         
         mint_gic(household_data.citizen_did, gic_reward, reason="water_conservation")
         
@@ -708,14 +708,14 @@ Energy poverty:
 │                                                   │
 │  FINANCING                                        │
 │  ├─ PublicGoodsPool loans (0% interest)          │
-│  ├─ Pay back via energy savings (GIC)            │
+│  ├─ Pay back via energy savings (MIC)            │
 │  ├─ Ownership after 10 years (full equity)       │
-│  └─ Sell surplus → Earn GIC                      │
+│  └─ Sell surplus → Earn MIC                      │
 │                                                   │
 │  RESILIENCE                                       │
 │  ├─ Microgrid mode (Hive isolated if grid fails) │
 │  ├─ Mutual aid (Hives share power in emergencies)│
-│  └─ EV charging network (GIC-denominated)        │
+│  └─ EV charging network (MIC-denominated)        │
 │                                                   │
 └──────────────────────────────────────────────────┘
 ```
@@ -731,7 +731,7 @@ Car dependency:
 - Urban sprawl (requires car to access jobs, services)
 - Carbon emissions (largest source in U.S.)
 
-**Lab 5 Solution: Mobility-as-a-Service (GIC Edition)**
+**Lab 5 Solution: Mobility-as-a-Service (MIC Edition)**
 
 ```
 ┌──────────────────────────────────────────────────┐
@@ -740,20 +740,20 @@ Car dependency:
 │                                                   │
 │  MICRO-MOBILITY                                   │
 │  ├─ E-bikes (Hive-shared fleet)                  │
-│  ├─ E-scooters (unlock with GIC)                 │
+│  ├─ E-scooters (unlock with MIC)                 │
 │  ├─ Cargo bikes (for groceries, kids)            │
-│  └─ Maintenance: Citizens earn GIC for repairs   │
+│  └─ Maintenance: Citizens earn MIC for repairs   │
 │                                                   │
 │  CAR-SHARING                                      │
 │  ├─ EV fleet (owned by Hive)                     │
-│  ├─ Reserve via app (pay in GIC)                 │
-│  ├─ Cost: 5 GIC/hour (~$2.50 vs. $15 Uber)       │
+│  ├─ Reserve via app (pay in MIC)                 │
+│  ├─ Cost: 5 MIC/hour (~$2.50 vs. $15 Uber)       │
 │  └─ Insurance: Covered by Hive pool              │
 │                                                   │
 │  PUBLIC TRANSIT                                   │
 │  ├─ Lobby for free/subsidized transit            │
 │  ├─ Hive-organized shuttles (to jobs, services)  │
-│  ├─ Volunteer drivers earn GIC                   │
+│  ├─ Volunteer drivers earn MIC                   │
 │  └─ Accessible transport (wheelchair, elderly)   │
 │                                                   │
 │  LAND USE                                         │
@@ -774,7 +774,7 @@ Car dependency:
 - Share physical space (community center, co-housing, etc.)
 - Coordinate mutual aid (childcare, eldercare, skill-sharing)
 - Govern locally (decide on Hive-specific rules)
-- Connect globally (part of GIC network)
+- Connect globally (part of MIC network)
 
 **Structure:**
 
@@ -802,7 +802,7 @@ Car dependency:
 │  ├─ Childcare co-op (parents take turns)         │
 │  ├─ Tool library (borrow instead of buy)         │
 │  ├─ Ride-sharing board (coordinate trips)        │
-│  └─ Emergency fund (members contribute GIC)      │
+│  └─ Emergency fund (members contribute MIC)      │
 │                                                   │
 │  CULTURAL LIFE                                    │
 │  ├─ Monthly potlucks (build community)           │
@@ -902,25 +902,25 @@ Age segregation:
 │  ├─ Life skills: Cooking, gardening, repair      │
 │  ├─ Career guidance: "Here's what I learned"     │
 │  ├─ Historical memory: "This is what happened"   │
-│  └─ Earn GIC: 50 GIC/session                     │
+│  └─ Earn MIC: 50 MIC/session                     │
 │                                                   │
 │  MIDLIFE → YOUTH (Career Mentorship)             │
 │  ├─ Job shadowing: See what work is like         │
-│  ├─ Internships: Paid in GIC                     │
+│  ├─ Internships: Paid in MIC                     │
 │  ├─ Portfolio reviews: Get feedback              │
-│  └─ Earn GIC: 100 GIC/mentee/month               │
+│  └─ Earn MIC: 100 MIC/mentee/month               │
 │                                                   │
 │  YOUTH → ELDERS (Tech Support)                   │
 │  ├─ Smartphone tutoring: Stay connected          │
 │  ├─ Social media: See grandkids' photos          │
-│  ├─ Companion setup: Help with GIC system        │
-│  └─ Earn GIC: 25 GIC/session                     │
+│  ├─ Companion setup: Help with MIC system        │
+│  └─ Earn MIC: 25 MIC/session                     │
 │                                                   │
 │  PEER MENTORSHIP (All Ages)                      │
 │  ├─ Parenting circles: New parents support       │
 │  ├─ Grief groups: Loss support                   │
 │  ├─ Addiction recovery: Peer accountability      │
-│  └─ Earn GIC: 10 GIC/session for facilitation    │
+│  └─ Earn MIC: 10 MIC/session for facilitation    │
 │                                                   │
 └──────────────────────────────────────────────────┘
 ```
@@ -964,7 +964,7 @@ Age segregation:
 │  └─ Check-ins: Weekly progress reports           │
 │                                                   │
 │  STEP 5: RESTORATION                              │
-│  ├─ Offender completes plan (GIC payment, labor) │
+│  ├─ Offender completes plan (MIC payment, labor) │
 │  ├─ Victim acknowledges (closure)                │
 │  ├─ Community witnesses (reintegration)          │
 │  └─ Record in Civic Ledger (precedent)           │
@@ -976,7 +976,7 @@ Age segregation:
 - Alice's bike stolen by Bob (both Hive members)
 - Restorative circle convened
 - Bob admits guilt, explains desperation (needed transportation for job)
-- Repair plan: Bob works 20 hours for Hive (earns GIC) → Buys Alice new bike + apologizes
+- Repair plan: Bob works 20 hours for Hive (earns MIC) → Buys Alice new bike + apologizes
 - Hive addresses root cause: Bob gets access to car-share program
 - Outcome: Bike replaced, Bob has transport, community trust restored
 
@@ -1006,10 +1006,10 @@ Age segregation:
 │  GRANT PROCESS                                    │
 │  ├─ Open call (quarterly)                        │
 │  ├─ Proposals reviewed (citizen committee)       │
-│  ├─ Funding: 1,000–50,000 GIC per project        │
+│  ├─ Funding: 1,000–50,000 MIC per project        │
 │  └─ Requirements: Art must be CC0 (public domain)│
 │                                                   │
-│  THEMES (Aligned with GIC Mission)               │
+│  THEMES (Aligned with MIC Mission)               │
 │  ├─ Civic virtue (integrity, compassion, truth)  │
 │  ├─ Ecological healing (nature, regeneration)    │
 │  ├─ Social justice (equity, dignity, solidarity) │
@@ -1018,7 +1018,7 @@ Age segregation:
 │                                                   │
 │  ARTIST RESIDENCIES                               │
 │  ├─ 3-month residencies at Hive chapters         │
-│  ├─ Housing + stipend (3,000 GIC/month)          │
+│  ├─ Housing + stipend (3,000 MIC/month)          │
 │  ├─ Requirement: Teach workshop, create public art│
 │  └─ Goal: Integrate art into daily civic life    │
 │                                                   │
@@ -1044,7 +1044,7 @@ Access:
 ├─ Free for Hive members
 ├─ Training required (safety certification)
 ├─ Book time slots (online calendar)
-└─ Earn GIC for teaching others (25 GIC/workshop)
+└─ Earn MIC for teaching others (25 MIC/workshop)
 
 Projects:
 ├─ Repair cafes (fix instead of replace)
@@ -1086,7 +1086,7 @@ def curate_reflections_for_anthology():
             title=f"Echoes of {theme.title()}",
             content=reflections,
             license="CC0",  # Public domain
-            reward_authors=True  # Each author gets 10 GIC per inclusion
+            reward_authors=True  # Each author gets 10 MIC per inclusion
         )
 ```
 
@@ -1178,7 +1178,7 @@ Lab 5 writes to Ledger:
 └─ Arts funding (grant allocation, project completion)
 
 Lab 1 provides to Lab 5:
-├─ Proof-of-contribution (earn GIC for civic work)
+├─ Proof-of-contribution (earn MIC for civic work)
 ├─ Governance votes (citizen proposals on health, housing)
 ├─ GI score (gates access to certain services)
 └─ Audit trail (transparency, accountability)
@@ -1266,35 +1266,35 @@ OAA certifies Lab 5 practitioners:
 
 ---
 
-## GIC Earning Opportunities in Lab 5
+## MIC Earning Opportunities in Lab 5
 
-**Citizens can earn GIC through Lab 5 activities:**
+**Citizens can earn MIC through Lab 5 activities:**
 
 ### Health Commons
-- Primary care volunteer: 25 GIC/hour
-- Peer counseling: 50 GIC/session
-- Elder care shifts: 25 GIC/hour
-- Medical data verification: 10 GIC/record
+- Primary care volunteer: 25 MIC/hour
+- Peer counseling: 50 MIC/session
+- Elder care shifts: 25 MIC/hour
+- Medical data verification: 10 MIC/record
 
 ### Life Infrastructure
-- Grow food (Proof-of-Harvest): Variable (25–50,000 GIC/month)
-- Housing maintenance: 50 GIC/hour
-- Water quality testing: 25 GIC/test
-- Energy system maintenance: 100 GIC/repair
+- Grow food (Proof-of-Harvest): Variable (25–50,000 MIC/month)
+- Housing maintenance: 50 MIC/hour
+- Water quality testing: 25 MIC/test
+- Energy system maintenance: 100 MIC/repair
 
 ### Social Fabric
-- Hive coordination: 2,000 GIC/month (part-time)
-- Buddy program: 10 GIC/visit
-- Mentorship: 50–100 GIC/session
-- Restorative justice facilitation: 100 GIC/circle
+- Hive coordination: 2,000 MIC/month (part-time)
+- Buddy program: 10 MIC/visit
+- Mentorship: 50–100 MIC/session
+- Restorative justice facilitation: 100 MIC/circle
 
 ### Creative Expression
-- Arts grants: 1,000–50,000 GIC/project
-- Teaching workshops: 25 GIC/session
-- Storytelling (E.O.M.M. publishing): 10 GIC/piece
-- Ritual leadership: 50 GIC/ceremony
+- Arts grants: 1,000–50,000 MIC/project
+- Teaching workshops: 25 MIC/session
+- Storytelling (E.O.M.M. publishing): 10 MIC/piece
+- Ritual leadership: 50 MIC/ceremony
 
-**Total earning potential from Lab 5 alone: 500–2,000 GIC/month for active participants**
+**Total earning potential from Lab 5 alone: 500–2,000 MIC/month for active participants**
 
 ---
 
@@ -1350,7 +1350,7 @@ OAA certifies Lab 5 practitioners:
 - 10,000 Hive chapters (10M citizens)
 - Healthcare: Competitive with private insurance
 - Food network: 50% of citizens grow some food
-- Culture: GIC arts scene recognized globally
+- Culture: MIC arts scene recognized globally
 
 ---
 
@@ -1362,7 +1362,7 @@ OAA certifies Lab 5 practitioners:
 - Human flourishing (connection, meaning, beauty)
 
 **Without Lab 5:**
-- GIC is just money (doesn't address physical needs)
+- MIC is just money (doesn't address physical needs)
 - Kaizen OS is just software (doesn't touch the body)
 - Civic Protocol is just governance (doesn't heal loneliness)
 

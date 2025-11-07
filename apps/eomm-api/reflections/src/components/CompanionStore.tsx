@@ -6,7 +6,7 @@ type Props = {
   handle: string;
   balance: number;       // total_gic
   onUnlocked?: (key: string) => void;
-  cost?: number;         // default 10 GIC per unlock
+  cost?: number;         // default 10 MIC per unlock
 };
 
 export default function CompanionStore({ handle, balance, onUnlocked, cost = 10 }: Props) {
@@ -25,7 +25,7 @@ export default function CompanionStore({ handle, balance, onUnlocked, cost = 10 
   const canBuy = balance >= cost;
 
   async function create() {
-    if (!canBuy) return alert("Earn more GIC to unlock.");
+    if (!canBuy) return alert("Earn more MIC to unlock.");
     if (!name.trim()) return alert("Give your companion a name.");
     const r = await fetch("/api/unlock", {
       method: "POST",
@@ -48,12 +48,12 @@ export default function CompanionStore({ handle, balance, onUnlocked, cost = 10 
     <div className="card mini">
       <div className="row" style={{justifyContent:"space-between"}}>
         <strong>Create a new companion</strong>
-        <span className="badge">{balance.toFixed(2)} GIC</span>
+        <span className="badge">{balance.toFixed(2)} MIC</span>
       </div>
-      <small className="muted">Cost: <b>{cost} GIC</b>. The first companion is free.</small>
+      <small className="muted">Cost: <b>{cost} MIC</b>. The first companion is free.</small>
       <input className="field" placeholder="Name your companion (e.g., Athena)" value={name} onChange={e=>setName(e.target.value)} />
       <button className={`btn ${canBuy ? "primary" : ""}`} disabled={!canBuy} onClick={create}>
-        {canBuy ? "Create companion" : "Earn GIC to unlock"}
+        {canBuy ? "Create companion" : "Earn MIC to unlock"}
       </button>
     </div>
   );

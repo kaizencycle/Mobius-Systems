@@ -22,7 +22,7 @@
 
 | Domain | Current Failure | Kaizen Solution |
 |--------|-----------------|-----------------|
-| **Monetary Systems** | Driven by scarcity rather than contribution | GIC: Backed by verified ethical contribution |
+| **Monetary Systems** | Driven by scarcity rather than contribution | MIC: Backed by verified ethical contribution |
 | **AI Systems** | Optimized for engagement rather than truth | GI Score: Measures cooperative truth-seeking |
 | **Governance** | Trapped in incomplete human legal frameworks | Virtue Accords: Algorithmic constitutional enforcement |
 | **Economics** | Rewards extraction over cooperation | Epoch Decay: Recycles idle capital to UBI |

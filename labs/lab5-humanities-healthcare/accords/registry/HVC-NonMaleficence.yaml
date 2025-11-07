@@ -9,7 +9,7 @@ spec:
   # ----------------------------------------------------------------------
   principle: NonMaleficence
   description: |
-    Mandates a high Global Integrity (GI) threshold for all operations
+    Mandates a high Mobius Integrity Index (GI) threshold for all operations
     involving direct human health intervention, preventing automated execution
     of low-confidence medical diagnoses or treatment plans.
 

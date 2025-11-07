@@ -145,7 +145,7 @@ node scripts/demo-constitution.js
 ### Integrity Assurance
 - **Cryptographic Proof**: Every response is signed and verifiable
 - **Multi-Agent Consensus**: No single AI decides what's true
-- **Economic Incentives**: Integrity scores affect GIC rewards
+- **Economic Incentives**: Integrity scores affect MIC rewards
 - **Audit Trail**: All decisions are logged and traceable
 
 ### Scalable Ethics
@@ -169,7 +169,7 @@ This implementation provides:
 - **Mathematical Integrity**: Cryptographic proof of AI honesty
 - **Architectural Honesty**: Structural prevention of deception
 - **Social Accountability**: Multi-agent consensus and audit trails
-- **Economic Alignment**: GIC rewards for integrity, penalties for violations
+- **Economic Alignment**: MIC rewards for integrity, penalties for violations
 
 ## 🎉 Conclusion
 

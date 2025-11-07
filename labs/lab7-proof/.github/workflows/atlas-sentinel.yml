@@ -205,7 +205,7 @@ jobs:
       # ============================================
       
       - name: 🎯 Phase 4 - Calculate GI Score
-        id: gi_score
+        id: mii_score
         run: |
           echo "## 🎯 Phase 4: GI Score Calculation" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
@@ -418,7 +418,7 @@ jobs:
       # ============================================
       
       - name: 💬 Comment on PR
-        if: github.event_name == 'pull_request'
+        if: miithub.event_name == 'pull_request'
         uses: actions/github-script@v7
         with:
           script: |

@@ -14,7 +14,7 @@
 
 ## Abstract
 
-This document provides implementation-level details for the shard (₷) denomination system introduced in GIC v2.0. It covers precision mathematics, storage optimization, edge cases, performance benchmarks, and security considerations for developers building on the Kaizen OS integrity economy.
+This document provides implementation-level details for the shard (₷) denomination system introduced in MIC v2.0. It covers precision mathematics, storage optimization, edge cases, performance benchmarks, and security considerations for developers building on the Kaizen OS integrity economy.
 
 ---
 
@@ -76,7 +76,7 @@ const price_shards = 123n;   // BigInt (exact)
 **Range:**
 ```typescript
 // For shards:
-Max GIC supply: 21,000,000 GIC
+Max MIC supply: 21,000,000 MIC
               = 21,000,000,000,000 ₷
               = 2.1 × 10^13 (fits in 45 bits)
 ```
@@ -85,29 +85,29 @@ Max GIC supply: 21,000,000 GIC
 
 #### Addition
 ```typescript
-const balance = 1_234_567n;  // 1.234567 GIC
-const payment = 890_123n;    // 0.890123 GIC
+const balance = 1_234_567n;  // 1.234567 MIC
+const payment = 890_123n;    // 0.890123 MIC
 const total = balance + payment;
-// total = 2_124_690n (2.124690 GIC) - exact
+// total = 2_124_690n (2.124690 MIC) - exact
 ```
 
 #### Multiplication (for fees)
 ```typescript
-const amount = 5_000_000n;      // 5 GIC
+const amount = 5_000_000n;      // 5 MIC
 const fee_rate = 100n;          // 0.01% in basis points
 const fee = (amount * fee_rate) / 10_000n;
-// fee = 500n (0.0005 GIC) - exact
+// fee = 500n (0.0005 MIC) - exact
 ```
 
 #### Division (for distribution)
 ```typescript
-const pool = 1_000_000_000n;    // 1000 GIC
+const pool = 1_000_000_000n;    // 1000 MIC
 const recipients = 7n;
 const per_person = pool / recipients;
 const remainder = pool % recipients;
 
-// per_person = 142_857_142n (142.857142 GIC each)
-// remainder = 6n (0.000006 GIC undistributed)
+// per_person = 142_857_142n (142.857142 MIC each)
+// remainder = 6n (0.000006 MIC undistributed)
 // Strategy: remainder goes to treasury or first recipient
 ```
 
@@ -246,7 +246,7 @@ export function formatCredits(credits: number): string {
 **Problem**: Division doesn't always result in exact distribution
 
 ```typescript
-const pool = 1_000_000n;  // 1 GIC
+const pool = 1_000_000n;  // 1 MIC
 const recipients = 3n;
 
 const perPerson = pool / recipients;  // 333_333n each
@@ -353,7 +353,7 @@ function BalanceDisplay({ shards }: { shards: string }) {
   return (
     <div>
       <div className="balance-credits">
-        {credits.toFixed(6)} GIC
+        {credits.toFixed(6)} MIC
       </div>
       <div className="balance-shards text-muted">
         {BigInt(shards).toLocaleString()} ₷
@@ -490,8 +490,8 @@ MAX_SUPPLY_SHARDS = 21_000_000_000_000n
 MAX_SUPPLY_CREDITS = 21_000_000
 
 // Conversions
-1 GIC = 1,000,000 ₷
-1 ₷ = 0.000001 GIC
+1 MIC = 1,000,000 ₷
+1 ₷ = 0.000001 MIC
 
 // Functions
 shardsToCredits(shards: bigint): number

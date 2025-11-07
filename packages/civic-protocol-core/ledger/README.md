@@ -1,6 +1,6 @@
 # Civic Ledger API - The Blockchain Kernel
 
-The Civic Ledger API is the central immutable anchor service that all Civic Protocol components write to. Think of it as the "Bitcoin Core" for GIC (Governance Incentive Currency).
+The Civic Ledger API is the central immutable anchor service that all Civic Protocol components write to. Think of it as the "Bitcoin Core" for MIC (Governance Incentive Currency).
 
 ## Overview
 
@@ -33,7 +33,7 @@ Civic Ledger API
 - **Memory**: `memory_created`, `memory_updated`
 - **Governance**: `agora_vote_cast`, `governance_proposal`, `governance_execution`
 - **Shield**: `shield_enrollment`, `shield_verification`, `citizen_attestation`
-- **GIC**: `gic_minted`, `gic_burned`, `gic_transfer`, `gic_staked`
+- **MIC**: `gic_minted`, `gic_burned`, `gic_transfer`, `gic_staked`
 - **Cycles**: `day_cycle_seed`, `day_cycle_sweep`, `day_cycle_seal`, `day_cycle_ledger`
 
 ## API Endpoints
@@ -130,7 +130,7 @@ CREATE TABLE identities (
 );
 ```
 
-### GIC Transactions Table
+### MIC Transactions Table
 ```sql
 CREATE TABLE gic_transactions (
     tx_id TEXT PRIMARY KEY,
@@ -285,7 +285,7 @@ The Ledger API provides several endpoints for monitoring:
 
 - **Merkle Batching**: Group events into blocks for efficiency
 - **Consensus**: Multiple ledger nodes with consensus
-- **GIC Rules**: Enforce balance checks and transfer rules
+- **MIC Rules**: Enforce balance checks and transfer rules
 - **Explorer UI**: Web interface for browsing the ledger
 - **API Rate Limiting**: Protect against abuse
 - **Event Filtering**: Advanced query capabilities

@@ -2,9 +2,9 @@
 
 ## ✅ What's Been Added
 
-### 1. **New GIC Tier: `publish_feature`**
-- **Base Reward**: +25 GIC (same as publish tier)
-- **Weekly Bonus**: +50-100 GIC (via admin endpoint)
+### 1. **New MIC Tier: `publish_feature`**
+- **Base Reward**: +25 MIC (same as publish tier)
+- **Weekly Bonus**: +50-100 MIC (via admin endpoint)
 - **Minimum Length**: 200+ characters required
 - **Featured Flag**: Automatically marked in sweep record
 
@@ -13,7 +13,7 @@
 #### Updated `/sweep` Endpoint
 - **New Intent**: `publish_feature` alongside `private` and `publish`
 - **Featured Queue**: Automatically queues eligible entries for weekly bonus
-- **GIC Logic**: Awards +25 GIC base, queues for bonus consideration
+- **MIC Logic**: Awards +25 MIC base, queues for bonus consideration
 
 #### New `/bonus/run` Admin Endpoint
 - **Admin Protected**: Requires `X-Admin-Key` header
@@ -34,7 +34,7 @@ data/YYYY-MM-DD/
 ├── YYYY-MM-DD.echo.json
 ├── YYYY-MM-DD.seal.json
 ├── YYYY-MM-DD.ledger.json
-├── YYYY-MM-DD.gic.jsonl          # GIC transactions
+├── YYYY-MM-DD.gic.jsonl          # MIC transactions
 └── YYYY-MM-DD.featured_queue.jsonl  # NEW: Featured candidates
 ```
 
@@ -42,13 +42,13 @@ data/YYYY-MM-DD/
 
 ### 1. **Simple Reflection (PowerShell)**
 ```powershell
-# Private reflection (+10 GIC)
+# Private reflection (+10 MIC)
 .\reflect.ps1 -note "My private thought"
 
-# Published reflection (+25 GIC)
+# Published reflection (+25 MIC)
 .\reflect.ps1 -note "This is a published reflection with enough content..." -intent publish
 
-# Featured reflection (+25 GIC + weekly bonus eligible)
+# Featured reflection (+25 MIC + weekly bonus eligible)
 .\reflect.ps1 -note "This is a featured reflection that could win weekly bonuses..." -intent publish_feature
 ```
 
@@ -82,9 +82,9 @@ curl -X POST "http://127.0.0.1:8000/bonus/run" \
   -d '{"week":"latest","dry":false}'
 ```
 
-## 🎯 GIC Reward Tiers
+## 🎯 MIC Reward Tiers
 
-| Tier | Base GIC | Weekly Bonus | Min Length | Description |
+| Tier | Base MIC | Weekly Bonus | Min Length | Description |
 |------|----------|--------------|------------|-------------|
 | **Private** | +10 | ❌ | Any | Encrypted/private reflections |
 | **Publish** | +25 | ❌ | 200+ chars | Public civic library content |
@@ -128,16 +128,16 @@ echo "ADMIN_KEY=your-admin-key" >> .env
 ### 3. **Payout Phase**
 - **Linear Distribution**: Top winner gets max bonus, others scaled down
 - **Idempotent**: Prevents duplicate payments
-- **Audit Trail**: All bonuses logged in GIC transaction file
+- **Audit Trail**: All bonuses logged in MIC transaction file
 
 ### 4. **Verification**
-- Use `/verify/{date}` to see total GIC including bonuses
+- Use `/verify/{date}` to see total MIC including bonuses
 - Check `*.gic.jsonl` for detailed transaction history
 
 ## 🧪 Testing Results
 
 ### ✅ **Feature Tier Working**
-- **Base Reward**: +25 GIC awarded correctly
+- **Base Reward**: +25 MIC awarded correctly
 - **Featured Queue**: Entries added to `*.featured_queue.jsonl`
 - **Length Validation**: 200+ character requirement enforced
 - **Duplicate Detection**: Prevents gaming with same content hash
@@ -153,7 +153,7 @@ echo "ADMIN_KEY=your-admin-key" >> .env
 - ✅ **Weekly Bonuses**: Admin endpoint for bonus processing
 - ✅ **Featured Queue**: Automatic candidate collection
 - ✅ **Idempotent Payouts**: No duplicate bonus payments
-- ✅ **Audit Trail**: Complete GIC transaction logging
+- ✅ **Audit Trail**: Complete MIC transaction logging
 - ✅ **Helper Scripts**: Updated for new tier
 - ✅ **MCP Integration**: Cursor AI support
 
@@ -173,5 +173,5 @@ echo "ADMIN_KEY=your-admin-key" >> .env
 - **Leaderboards**: Top contributors and bonus earners
 - **Notifications**: Weekly bonus announcements
 
-Your Reflections app now has a complete three-tier GIC reward system with weekly bonus capabilities! 🎯✨
+Your Reflections app now has a complete three-tier MIC reward system with weekly bonus capabilities! 🎯✨
 

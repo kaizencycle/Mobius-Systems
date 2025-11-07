@@ -44,10 +44,10 @@ lab4-proof/
 # Seed the day
 mcp run seed --data '{"date":"2025-09-23","time":"09:00:00","intent":"ship"}'
 
-# Private reflection (+10 GIC)
+# Private reflection (+10 MIC)
 mcp run sweep --data '{"date":"2025-09-23","chamber":"Reflections","note":"my private thought","meta":{"gic_intent":"private","content_hash":"hash123","ui":"mcp"}}'
 
-# Publish reflection (+25 GIC)
+# Publish reflection (+25 MIC)
 mcp run sweep --data '{"date":"2025-09-23","chamber":"Reflections","note":"This is a longer reflection that qualifies for the publish tier...","meta":{"gic_intent":"publish","content_hash":"hash456","ui":"mcp"}}'
 
 # Seal the day
@@ -164,9 +164,9 @@ mcp run verify --params '{"date":"2025-09-23"}'
 ## 🎯 Tips
 
 - Use `reflect.ps1` for automatic content hashing
-- Publish tier requires ≥200 characters for full +25 GIC
-- Private tier always gives +10 GIC
-- Check your GIC totals with `mcp run verify`
+- Publish tier requires ≥200 characters for full +25 MIC
+- Private tier always gives +10 MIC
+- Check your MIC totals with `mcp run verify`
 - Use `mcp run index` to see all your days
 
 ## 🔐 Security

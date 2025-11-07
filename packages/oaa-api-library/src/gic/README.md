@@ -1,4 +1,4 @@
-# .gic — Global Integrity Citizen (Alt‑Root Pilot)
+# .gic — Mobius Integrity Index Citizen (Alt‑Root Pilot)
 
 Contents:
 - contracts/GICRegistry.sol — name → {owner, ipfs CID, integrityProof, expiry}

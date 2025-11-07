@@ -182,7 +182,7 @@ class HealthMonitor:
                 "restart_success": success,
                 "activity_check": is_active,
                 "process_check": is_running,
-                "git_check": git_ok
+                "git_check": miit_ok
             })
             
             return success
@@ -192,7 +192,7 @@ class HealthMonitor:
                 "needs_restart": False,
                 "activity_check": is_active,
                 "process_check": is_running,
-                "git_check": git_ok
+                "git_check": miit_ok
             })
             return True
     

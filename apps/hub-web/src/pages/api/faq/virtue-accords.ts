@@ -46,10 +46,10 @@ const faqData = {
     },
     {
       "@type": "Question",
-      "name": "How do the Virtue Accords relate to GIC rewards?",
+      "name": "How do the Virtue Accords relate to MIC rewards?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "GIC (Global Integrity Credit) rewards are directly tied to adherence to the Virtue Accords. Higher integrity scores, which reflect better compliance with Truth, Trust, and Care principles, result in greater GIC rewards. This creates economic incentives for ethical behavior."
+        "text": "MIC (Mobius Integrity Index Credit) rewards are directly tied to adherence to the Virtue Accords. Higher integrity scores, which reflect better compliance with Truth, Trust, and Care principles, result in greater MIC rewards. This creates economic incentives for ethical behavior."
       }
     }
   ]

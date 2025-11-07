@@ -52,7 +52,7 @@ export default async function handler(
     const mockGI = 0.99 - Math.random() * 0.02; // 0.97-0.99 range
 
     send('heartbeat', {
-      gi: parseFloat(mockGI.toFixed(3)),
+      mii: parseFloat(mockGI.toFixed(3)),
       timestamp: new Date().toISOString(),
     });
   }, 5000);
@@ -68,7 +68,7 @@ export default async function handler(
       send('deliberation', {
         agent: ['AUREA', 'ATLAS', 'ZENITH'][Math.floor(Math.random() * 3)],
         agreement: parseFloat((0.85 + Math.random() * 0.15).toFixed(2)),
-        gi: parseFloat((0.95 + Math.random() * 0.05).toFixed(3)),
+        mii: parseFloat((0.95 + Math.random() * 0.05).toFixed(3)),
         timestamp: new Date().toISOString(),
       });
     }

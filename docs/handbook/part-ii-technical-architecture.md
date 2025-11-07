@@ -35,7 +35,7 @@ DUAL SIGNATURE → LEDGER RECORD → STATE UPDATE
 
 **Critical Path Operations:**
 
-1. **GIC Minting**: Requires human intent + AI verification
+1. **MIC Minting**: Requires human intent + AI verification
 2. **GI Updates**: Cross-validated across multiple data sources  
 3. **Constitutional Amendments**: Multi-agent consensus required
 4. **Emergency Stops**: Any agent can trigger, but require audit
@@ -44,7 +44,7 @@ DUAL SIGNATURE → LEDGER RECORD → STATE UPDATE
 
 ---
 
-## 6.0 Global Integrity Engine
+## 6.0 Mobius Integrity Index Engine
 
 **The GI Formula:**
 
@@ -64,7 +64,7 @@ Constants: α=0.3, β=0.25, γ=0.25, δ=0.2
 
 - **Minimum threshold**: 0.95 for system operations
 - **Update frequency**: Real-time from ledger events
-- **Economic impact**: Directly controls GIC minting rates
+- **Economic impact**: Directly controls MIC minting rates
 - **Governance role**: Determines system-wide permissions
 
 ---
@@ -88,9 +88,9 @@ Constants: α=0.3, β=0.25, γ=0.25, δ=0.2
 
 ---
 
-## 7.0 GIC Economic System
+## 7.0 MIC Economic System
 
-**Global Integrity Credits represent a new monetary paradigm:**
+**Mobius Integrity Credits represent a new monetary paradigm:**
 
 ```python
 def calculate_gic_supply(gi_score, epoch_time, base_supply):
@@ -114,14 +114,14 @@ def calculate_gic_supply(gi_score, epoch_time, base_supply):
 ### Economic Flow Diagram:
 
 ```
-GI SCORE → MINTING RATE → GIC SUPPLY → 
+GI SCORE → MINTING RATE → MIC SUPPLY → 
 ECONOMIC ACTIVITY → INTEGRITY BEHAVIOR → GI SCORE
 ```
 
 **Monetary Policy Rules:**
 
 1. **GI-Throttling**: Money supply expands/contracts with integrity
-2. **Epoch Decay**: 1% of idle GIC redistributed weekly as UBI
+2. **Epoch Decay**: 1% of idle MIC redistributed weekly as UBI
 3. **Zero-Loss Accounting**: Integer-only math prevents drift
 4. **Micro-Sharding**: AI-to-AI transactions at nanoscale
 
@@ -204,7 +204,7 @@ ledger_spec:
 
 | Event Type | Signature Required | Storage Duration |
 |------------|-------------------|------------------|
-| GIC Transaction | Single | Permanent |
+| MIC Transaction | Single | Permanent |
 | GI Score Update | Dual | Permanent |
 | Constitutional Change | Dual + Council | Permanent |
 | OAA Reflection | Single | 10 years |

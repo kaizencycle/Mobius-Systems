@@ -1,6 +1,6 @@
 # Lab 1 — Civic Ledger Core
 
-**Purpose:** Sovereign blockchain for civilization state - integrity proofs, GIC minting, DID registry, and public audit trail with Proof-of-Cycle (PoC) consensus.
+**Purpose:** Sovereign blockchain for civilization state - integrity proofs, MIC minting, DID registry, and public audit trail with Proof-of-Cycle (PoC) consensus.
 
 **Spec:** See `docs/architecture/Kaizen_OS_Complete_Lab_Architecture.md` (Lab 1 section)
 
@@ -11,7 +11,7 @@
 Lab 1 implements the **foundational ledger infrastructure** for Kaizen OS. It provides:
 
 1. **Civic Ledger API** — Blockchain kernel with Proof-of-Cycle (PoC) consensus
-2. **GIC (Global Integrity Currency)** — Economic incentive layer tied to civic participation
+2. **MIC (Mobius Integrity Index Currency)** — Economic incentive layer tied to civic participation
 3. **DID Registry** — Decentralized identity for citizens and AI companions
 4. **Integrity Proofs** — GI score attestations and cryptographic verification
 5. **Cycle Management** — Seed → Sweep → Seal → Ledger lifecycle
@@ -31,12 +31,12 @@ Lab 1: Civic Ledger Core
 │   │   │   ├── app/main.py           # FastAPI ledger service
 │   │   │   ├── app/ledger.py         # Core ledger logic (blocks, txs)
 │   │   │   └── app/verify.py         # Signature verification
-│   │   ├── gic-indexer/              # GIC transaction indexer
-│   │   │   └── app/main.py           # GIC mint/burn/transfer indexing
+│   │   ├── gic-indexer/              # MIC transaction indexer
+│   │   │   └── app/main.py           # MIC mint/burn/transfer indexing
 │   │   └── sdk/                      # Client SDKs (Python, JavaScript)
 │   └── packages/gic-registry-contracts/  # Smart contracts
 │       └── contracts/
-│           ├── GIC.sol               # ERC-20 compatible GIC token
+│           ├── MIC.sol               # ERC-20 compatible MIC token
 │           ├── GICGovernor.sol       # Governance contract
 │           └── deploy/               # Deployment scripts
 │
@@ -78,12 +78,12 @@ Seed (Intent) → Sweep (Deliberation) → Seal (Commit) → Ledger (Attest)
 - Block finality: Immediate (no mining, no forking)
 - Validator set: All active AI agents + human witnesses
 
-### 2. Global Integrity Currency (GIC)
+### 2. Mobius Integrity Index Currency (MIC)
 
 **Token Economics:**
-- **Symbol:** GIC
+- **Symbol:** MIC
 - **Decimals:** 18
-- **Initial Supply:** 1,000,000 GIC (minted at genesis)
+- **Initial Supply:** 1,000,000 MIC (minted at genesis)
 - **Inflation:** 0% (fixed supply, no mining rewards)
 - **Distribution:**
   - 50% → PublicGoodsPool (community projects)
@@ -97,10 +97,10 @@ Seed (Intent) → Sweep (Deliberation) → Seal (Commit) → Ledger (Attest)
 - **Public goods funding** (Lab 5 healthcare, education)
 
 **Minting Rules:**
-- ✅ Civic actions with GI ≥ 0.95: +0.01 GIC per action
-- ✅ DelibProof consensus with agreement ≥ 0.90: +0.05 GIC per proof
-- ❌ Actions with GI < 0.90: No GIC reward
-- 🔴 Malicious actions: -1.0 GIC penalty + reputation impact
+- ✅ Civic actions with GI ≥ 0.95: +0.01 MIC per action
+- ✅ DelibProof consensus with agreement ≥ 0.90: +0.05 MIC per proof
+- ❌ Actions with GI < 0.90: No MIC reward
+- 🔴 Malicious actions: -1.0 MIC penalty + reputation impact
 
 ### 3. Decentralized Identity (DID)
 
@@ -183,13 +183,13 @@ curl http://localhost:5411/blocks
 
 **GET `/tx/{tx_id}`** - Get transaction details
 
-#### GIC Indexer Endpoints (`gic-indexer/`)
+#### MIC Indexer Endpoints (`gic-indexer/`)
 
-**GET `/gic/balance/{did}`** - Get GIC balance
+**GET `/gic/balance/{did}`** - Get MIC balance
 
 **GET `/gic/history/{did}`** - Get transaction history
 
-**POST `/gic/mint`** - Mint GIC (requires proof of civic action)
+**POST `/gic/mint`** - Mint MIC (requires proof of civic action)
 
 #### Cycle Endpoints
 
@@ -238,11 +238,11 @@ client = CivicClient(base_url="http://localhost:5411")
 did = client.create_did("alice")
 print(f"Created DID: {did}")
 
-# Check GIC balance
+# Check MIC balance
 balance = client.get_gic_balance("did:kaizen:alice")
-print(f"Balance: {balance} GIC")
+print(f"Balance: {balance} MIC")
 
-# Transfer GIC
+# Transfer MIC
 tx = client.transfer_gic(
     from_did="did:kaizen:alice",
     to_did="did:kaizen:bob",
@@ -274,7 +274,7 @@ console.log(`Created DID: ${did}`);
 
 // Check balance
 const balance = await client.getGICBalance('did:kaizen:alice');
-console.log(`Balance: ${balance} GIC`);
+console.log(`Balance: ${balance} MIC`);
 
 // Transfer
 const tx = await client.transferGIC({
@@ -291,11 +291,11 @@ const tx = await client.transferGIC({
 
 ### Lab 2 (Thought Broker)
 - **Attestation target:** All DelibProof consensus results
-- **GIC rewards:** Successful deliberations with agreement ≥ 0.90
+- **MIC rewards:** Successful deliberations with agreement ≥ 0.90
 - **DID lookup:** Agent identity resolution
 
 ### Lab 3 (Resource Orchestration)
-- **GIC settlement:** Compute resource payments
+- **MIC settlement:** Compute resource payments
 - **PublicGoodsPool:** Grant disbursements
 - **Balance queries:** Quota tracking
 
@@ -309,13 +309,13 @@ const tx = await client.transferGIC({
 - **Differential privacy:** Budget consumption ledger
 
 ### Lab 6 (Governance)
-- **Voting weight:** GIC balance determines vote power
+- **Voting weight:** MIC balance determines vote power
 - **Proposal history:** All governance actions on-chain
 - **Agora integration:** Democratic deliberation records
 
 ### Lab 7 (Data Economy)
 - **Data provenance:** Ownership and lineage tracking
-- **Marketplace settlements:** GIC as payment rail
+- **Marketplace settlements:** MIC as payment rail
 
 ---
 
@@ -334,7 +334,7 @@ pip install -r gic-indexer/requirements.txt
 python ledger/app/main.py
 # Runs on http://localhost:5411
 
-# Start GIC indexer (separate terminal)
+# Start MIC indexer (separate terminal)
 cd gic-indexer
 python app/main.py
 # Runs on http://localhost:8000
@@ -388,7 +388,7 @@ LEDGER_DB_PATH=./data/ledger.db
 CYCLE_DURATION_HOURS=24
 GI_MINIMUM_THRESHOLD=0.90
 
-# GIC Indexer
+# MIC Indexer
 GIC_INDEXER_PORT=8000
 GIC_CONTRACT_ADDRESS=0x...
 RPC_URL=https://eth-mainnet.g.alchemy.com/v2/...
@@ -408,7 +408,7 @@ PUBLIC_GOODS_POOL_PERCENT=50
 All ledger operations enforce **Virtue Accords** constraints:
 - **NonMaleficence:** Block transactions with GI < 0.90
 - **Beneficence:** Reward civic actions that increase GI
-- **Justice:** Fair GIC distribution via quadratic voting
+- **Justice:** Fair MIC distribution via quadratic voting
 - **Autonomy:** Informed consent for all data writes
 
 ### Incident Response
@@ -425,7 +425,7 @@ See `docs/runbooks/incident_response_citizen_shield.md` for security protocols.
 ## Status
 
 ✅ **Blockchain Kernel** — Active (Proof-of-Cycle consensus)
-✅ **GIC Token** — Active (ERC-20 deployed to testnet)
+✅ **MIC Token** — Active (ERC-20 deployed to testnet)
 ✅ **DID Registry** — Active (did:kaizen namespace)
 ✅ **Integrity Proofs** — Active (Lab 2, 5, 6 integration)
 ✅ **Cycle Management** — Active (24-hour epochs)

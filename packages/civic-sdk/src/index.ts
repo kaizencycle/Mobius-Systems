@@ -16,7 +16,7 @@ export interface CivicService {
 
 export interface IntegrityCheck {
   service: string;
-  gi: number;
+  mii: number;
   status: 'healthy' | 'degraded' | 'unhealthy';
   timestamp: string;
   checks: {

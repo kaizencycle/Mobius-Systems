@@ -1,6 +1,6 @@
 # core/rewards/integrity_engine.py
 """
-Integrity-Based Reward Engine (GIC v1.0)
+Integrity-Based Reward Engine (MIC v1.0)
 
 Deterministic scorer that minimizes AI slop and drift by tying rewards to:
 - Truth: grounded, cited statements
@@ -275,7 +275,7 @@ def evaluate_reward(payload: Dict[str, Any], manifest: Dict[str, Any],
         reference_data: Recent submissions for novelty/duplication scoring
     
     Returns:
-        Dictionary with GIC reward, scores, and metadata
+        Dictionary with MIC reward, scores, and metadata
     """
     weights = manifest["scoring"]["weights"]
     penalties_w = manifest["scoring"]["penalties"]
@@ -309,7 +309,7 @@ def evaluate_reward(payload: Dict[str, Any], manifest: Dict[str, Any],
          penalties_w["policy_violation"] * policy_violation +
          penalties_w["drift_anomaly"] * drift_anomaly)
     
-    # Calculate GIC reward
+    # Calculate MIC reward
     gic = max(0.0, base * (I - P))
     
     # Apply tripwires
@@ -325,7 +325,7 @@ def evaluate_reward(payload: Dict[str, Any], manifest: Dict[str, Any],
     
     return {
         "ok": True,
-        "GIC": gic,
+        "MIC": miic,
         "integrity": I,
         "penalty": P,
         "scores": {

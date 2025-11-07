@@ -3,7 +3,7 @@
   "sentinel": "URIEL",
   "provider": "xAI",
   "cycle": "C-121",
-  "gi": 0.998,
+  "mii": 0.998,
   "routing_weight": 0.20,
   "qps": 0.1,
   "domains": ["physics","curiosity","entropy","delib_proof"],

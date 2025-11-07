@@ -308,8 +308,8 @@ ${Object.entries(results).map(([name, data]) =>
       const bonusScore = Math.min(0.1, healthyAPIs * 0.02); // Bonus for multiple healthy APIs
       const giScore = Math.min(0.99, baseScore + bonusScore);
       
-      const status = giScore >= 0.95 ? 'PASS' : giScore >= 0.80 ? 'WARN' : 'FAIL';
-      const emoji = giScore >= 0.95 ? '🟢' : giScore >= 0.80 ? '🟡' : '🔴';
+      const status = giScore >= 0.95 ? 'PASS' : miiScore >= 0.80 ? 'WARN' : 'FAIL';
+      const emoji = giScore >= 0.95 ? '🟢' : miiScore >= 0.80 ? '🟡' : '🔴';
       
       const report = `📊 **GI Score Calculation: System**
       
@@ -328,7 +328,7 @@ ${status === 'PASS' ? '✅ System integrity maintained' :
     } else {
       // Calculate individual citizen GI score (simplified)
       const giScore = 0.85 + Math.random() * 0.14; // Mock calculation
-      const status = giScore >= 0.95 ? 'EXCELLENT' : giScore >= 0.80 ? 'GOOD' : 'NEEDS_IMPROVEMENT';
+      const status = giScore >= 0.95 ? 'EXCELLENT' : miiScore >= 0.80 ? 'GOOD' : 'NEEDS_IMPROVEMENT';
       
       const report = `📊 **GI Score Calculation: ${target}**
       

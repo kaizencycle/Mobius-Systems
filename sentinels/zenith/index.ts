@@ -5,7 +5,7 @@
 
 export interface SentinelHealth {
   status: 'healthy' | 'degraded' | 'critical';
-  gi: number;
+  mii: number;
   uptime: number;
   latency: number;
   cycles?: number;
@@ -49,7 +49,7 @@ export class ZenithSentinel {
       console.error('ZENITH health check failed:', error);
       return {
         status: 'critical',
-        gi: 0.0,
+        mii: 0.0,
         uptime: this.getUptime(),
         latency: -1,
         cycles: this.deliberations.length

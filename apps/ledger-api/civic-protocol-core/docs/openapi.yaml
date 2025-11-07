@@ -306,8 +306,8 @@ paths:
 
   /balance/{address}:
     get:
-      summary: Get GIC balance
-      description: Retrieve the GIC balance for a given address
+      summary: Get MIC balance
+      description: Retrieve the MIC balance for a given address
       parameters:
         - name: address
           in: path
@@ -330,7 +330,7 @@ paths:
   /earn/events:
     get:
       summary: Get earn events
-      description: Retrieve GIC earning events for an address
+      description: Retrieve MIC earning events for an address
       parameters:
         - name: address
           in: query
@@ -566,7 +566,7 @@ components:
           description: Citizen or companion address
         balance:
           type: string
-          description: GIC balance (as string to handle large numbers)
+          description: MIC balance (as string to handle large numbers)
         vesting:
           type: string
           description: Vesting balance
@@ -589,7 +589,7 @@ components:
           description: Recipient address
         amount:
           type: string
-          description: GIC amount earned
+          description: MIC amount earned
         reason:
           type: string
           description: Reason for earning

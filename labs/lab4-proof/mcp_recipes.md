@@ -10,7 +10,7 @@ mcp run seed --data "{""date"":""$(Get-Date -Format yyyy-MM-dd)"",""time"":""$(G
 mcp run seed --data "{\"date\":\"$(date +%F)\",\"time\":\"$(date +%T)\",\"intent\":\"ship\"}"
 ```
 
-## 2. Sweep (Private Reflection, +10 GIC)
+## 2. Sweep (Private Reflection, +10 MIC)
 
 ```powershell
 # Windows
@@ -20,14 +20,14 @@ mcp run sweep --data "{""date"":""$(Get-Date -Format yyyy-MM-dd)"",""chamber"":"
 mcp run sweep --data "{\"date\":\"$(date +%F)\",\"chamber\":\"Reflections\",\"note\":\"private encrypted sweep\",\"meta\":{\"gic_intent\":\"private\",\"content_hash\":\"hash-private\",\"ui\":\"mcp\"}}"
 ```
 
-## 3. Sweep (Publish Reflection, +25 GIC if ≥200 chars)
+## 3. Sweep (Publish Reflection, +25 MIC if ≥200 chars)
 
 ```powershell
 # Windows
-mcp run sweep --data "{""date"":""$(Get-Date -Format yyyy-MM-dd)"",""chamber"":""Reflections"",""note"":""This is a publish-tier reflection written out at length so it exceeds the minimum character threshold for the higher GIC reward..."",""meta"":{""gic_intent"":""publish"",""content_hash"":""hash-publish"",""ui"":""mcp""}}"
+mcp run sweep --data "{""date"":""$(Get-Date -Format yyyy-MM-dd)"",""chamber"":""Reflections"",""note"":""This is a publish-tier reflection written out at length so it exceeds the minimum character threshold for the higher MIC reward..."",""meta"":{""gic_intent"":""publish"",""content_hash"":""hash-publish"",""ui"":""mcp""}}"
 
 # Mac/Linux
-mcp run sweep --data "{\"date\":\"$(date +%F)\",\"chamber\":\"Reflections\",\"note\":\"This is a publish-tier reflection written out at length so it exceeds the minimum character threshold for the higher GIC reward...\",\"meta\":{\"gic_intent\":\"publish\",\"content_hash\":\"hash-publish\",\"ui\":\"mcp\"}}"
+mcp run sweep --data "{\"date\":\"$(date +%F)\",\"chamber\":\"Reflections\",\"note\":\"This is a publish-tier reflection written out at length so it exceeds the minimum character threshold for the higher MIC reward...\",\"meta\":{\"gic_intent\":\"publish\",\"content_hash\":\"hash-publish\",\"ui\":\"mcp\"}}"
 ```
 
 ## 4. Seal the day
@@ -60,10 +60,10 @@ mcp run index
 
 ### reflect.ps1 (Windows)
 ```powershell
-# Private reflection (+10 GIC)
+# Private reflection (+10 MIC)
 .\reflect.ps1 -note "This is my private reflection"
 
-# Publish reflection (+25 GIC)
+# Publish reflection (+25 MIC)
 .\reflect.ps1 -note "This is my published reflection with ≥200 chars..." -intent publish
 ```
 
@@ -90,5 +90,5 @@ Copy-Item .cursor\mcp.prod.json .cursor\mcp.json -Force
 - Replace "ship" in **seed** with "reflect", "research", etc.
 - Replace "private encrypted sweep" or "publish reflection" with your actual notes.
 - content_hash should ideally be a real SHA-256 of your reflection text (use reflect.ps1 for auto-hashing).
-- For publish tier, ensure your note is ≥200 characters to get the full +25 GIC reward.
+- For publish tier, ensure your note is ≥200 characters to get the full +25 MIC reward.
 

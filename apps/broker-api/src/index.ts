@@ -177,7 +177,7 @@ app.post('/api/sentinels/uriel/query', async (req: Request, res: Response) => {
   try {
     const query: UrielQuery = {
       intent: req.body.intent,
-      gi: req.body.gi || 0.993,
+      mii: req.body.gi || 0.993,
       context: req.body.context || {}
     };
 
@@ -235,7 +235,7 @@ app.post('/api/consensus/run', async (req: Request, res: Response) => {
     }));
 
     res.json({
-      gi: deliberation.consensus,
+      mii: deliberation.consensus,
       final_answer: deliberation.decision,
       votes,
       reasoning: deliberation.reasoning,
@@ -265,7 +265,7 @@ app.get('/sync/get_cycle_status', (_req: Request, res: Response) => {
 app.get('/api/sentinels/aurea/status', (_req: Request, res: Response) => {
   // Return AUREA snapshot (mock for now)
   res.json({
-    gi: 0.999,
+    mii: 0.999,
     epoch: 'E-561',
     last_attestation_id: 'att-latest',
     ts: new Date().toISOString()

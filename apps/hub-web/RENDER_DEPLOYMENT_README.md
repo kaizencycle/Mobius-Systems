@@ -1,6 +1,6 @@
 # Civic Internet - Render Deployment Guide
 
-This guide covers deploying the Civic Internet ecosystem to Render, including the GIC Gateway, OAA Hub, and supporting services.
+This guide covers deploying the Civic Internet ecosystem to Render, including the MIC Gateway, OAA Hub, and supporting services.
 
 ## Architecture Overview
 
@@ -12,13 +12,13 @@ The Civic Internet is a bio-digital microcosm with the following components:
 - **Nervous system** → Queues (BullMQ), pulses, health sentinels
 - **Immune system** → Citizen Shield (HMAC/attestations)
 - **Circulatory** → .gic gateway ↔ IPFS ↔ Civic Ledger
-- **Metabolism** → GIC Treasury feedback & rewards
+- **Metabolism** → MIC Treasury feedback & rewards
 - **Homeostasis** → monitoring + auto-retry + cache warm
 - **Reproduction** → starter templates that spawn new agents/sites
 
 ## Services Deployed
 
-### 1. GIC Gateway (`gic-gateway`)
+### 1. MIC Gateway (`gic-gateway`)
 - **Type**: Web service
 - **Port**: 8787
 - **Purpose**: Core gateway for .gic domain resolution and IPFS integration
@@ -47,7 +47,7 @@ The Civic Internet is a bio-digital microcosm with the following components:
 
 ### Required Secrets (set in Render dashboard)
 
-#### GIC Gateway
+#### MIC Gateway
 - `RPC_URL`: Ethereum RPC endpoint (e.g., Infura, Alchemy)
 - `REGISTRY_ADDR`: Smart contract address for .gic registry
 - `GATEWAY_HMAC_SECRET`: Auto-generated secret for HMAC authentication
@@ -213,7 +213,7 @@ After successful deployment:
 2. **Set up monitoring**: Configure alerts for service health
 3. **Add more companions**: Deploy additional companion sites
 4. **Governance**: Set up Agora (Cognitive Commons) for community governance
-5. **Treasury**: Deploy GIC Treasury dApp for token management
+5. **Treasury**: Deploy MIC Treasury dApp for token management
 
 ## Support
 

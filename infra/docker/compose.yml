@@ -38,7 +38,7 @@ services:
       timeout: 10s
       retries: 3
 
-  # GIC Indexer
+  # MIC Indexer
   indexer:
     build:
       context: ../../

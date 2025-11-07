@@ -1,8 +1,8 @@
 /**
- * GIC API Integration Utilities
+ * MIC API Integration Utilities
  *
  * Provides functions to interact with:
- * - GIC Indexer (token operations)
+ * - MIC Indexer (token operations)
  * - Civic Ledger (domain registration, attestation)
  * - Citizen Shield (GI validation)
  */
@@ -87,7 +87,7 @@ export async function registerGICDomain(params: {
         domain: params.domain,
         owner: params.owner,
         agent_id: params.agent_id,
-        gi_score: giValidation.data.overall_score,
+        gi_score: miiValidation.data.overall_score,
         timestamp: new Date().toISOString()
       })
     });
@@ -144,7 +144,7 @@ export async function checkDomainAvailability(domain: string): Promise<{
 // ============================================================================
 
 /**
- * Mint GIC tokens
+ * Mint MIC tokens
  */
 export async function mintGICTokens(params: {
   amount: number;
@@ -170,7 +170,7 @@ export async function mintGICTokens(params: {
         amount: params.amount.toString(),
         recipient: params.recipient,
         purpose: params.purpose,
-        gi_score: giValidation.data.overall_score,
+        gi_score: miiValidation.data.overall_score,
         timestamp: new Date().toISOString()
       })
     });
@@ -193,7 +193,7 @@ export async function mintGICTokens(params: {
 }
 
 /**
- * Get GIC token balance for an address
+ * Get MIC token balance for an address
  */
 export async function getGICBalance(address: string): Promise<{
   success: boolean;

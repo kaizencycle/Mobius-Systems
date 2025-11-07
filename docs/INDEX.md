@@ -36,7 +36,7 @@
 | **Start developing** | [Start Here](START_HERE.md) |
 | **Deploy services** | [Deployment Guide](DEPLOYMENT_GUIDE.md) |
 | **Learn architecture** | [Architecture Overview](architecture/overview.md) |
-| **Understand economics** | [GIC Whitepaper](economics/GIC_WHITEPAPER_v1.md) |
+| **Understand economics** | [MIC Whitepaper](economics/GIC_WHITEPAPER_v1.md) |
 | **Meet the agents** | [Founding Agents](agents/FOUNDING_AGENTS.md) |
 | **Contribute** | [Contributing Guide](../CONTRIBUTING.md) |
 
@@ -48,7 +48,7 @@
 System design, specifications, and technical architecture documents.
 
 - [System Overview](architecture/overview.md)
-- [GIC Architecture Spec](architecture/GIC_Architecture_Spec_v1.md)
+- [MIC Architecture Spec](architecture/GIC_Architecture_Spec_v1.md)
 - [Founding Agents Stack](architecture/FOUNDING_AGENTS_SOVEREIGN_STACK.md)
 - [Labs Architecture](LABS_MASTER_ARCHITECTURE.md)
 
@@ -60,9 +60,9 @@ Governance protocols, policies, and frameworks.
 - [AI Integrity Constitution](AI_INTEGRITY_CONSTITUTION.md)
 
 ### 💰 Economics
-Economic models, GIC system, and UBI mechanisms.
+Economic models, MIC system, and UBI mechanisms.
 
-- [GIC Whitepaper](economics/GIC_WHITEPAPER_v1.md)
+- [MIC Whitepaper](economics/GIC_WHITEPAPER_v1.md)
 - [Foundation Up Addendum](GIC_Foundation_Up_Economics_Addendum.md)
 - [UBI Mechanism](whitepapers/UBI_Mechanism_v2.0.md)
 
@@ -89,7 +89,7 @@ Lab proof systems and implementations.
 - [Lab 7: OAA Hub](lab7/004-evolution-language.md)
 
 ### 📊 Integrity
-Global Integrity (GI) system and drift control.
+Mobius Integrity Index (GI) system and drift control.
 
 - [GI Formula](ledger/gi-formula.md)
 - [Drift Control](drift/README.md)

@@ -14,9 +14,9 @@ graph TB
         B3["Lab 7 - OAA Hub<br/>Learning & Apprenticeship"]
     end
     
-    subgraph "⚖️ Civic Consciousness - Civic Ledger & GIC"
+    subgraph "⚖️ Civic Consciousness - Civic Ledger & MIC"
         C1["Civic Ledger<br/>Permanent Record"]
-        C2["Global Integrity Credit<br/>Moral Economics"]
+        C2["Mobius Integrity Index Credit<br/>Moral Economics"]
         C3["Proof of Integrity<br/>Ethical Verification"]
     end
     
@@ -37,7 +37,7 @@ graph TB
         F1["GitHub/Cursor<br/>Code Creation"]
         F2["Ledger<br/>Verification"]
         F3["Reflections<br/>Learning"]
-        F4["GIC<br/>Economic Alignment"]
+        F4["MIC<br/>Economic Alignment"]
         F5["Action<br/>Informed Behavior"]
     end
     

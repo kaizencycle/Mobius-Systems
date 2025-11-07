@@ -9,7 +9,7 @@ export async function POST(req: NextRequest) {
   if (!user || !companion || !costGIC || costGIC <= 0) {
     return NextResponse.json({ error: "Missing user, companion, or cost" }, { status: 400 });
   }
-  // Burn GIC from user's balance to record the unlock on the ledger
+  // Burn MIC from user's balance to record the unlock on the ledger
   const r = await fetch(`${process.env.GIC_INDEXER_URL}/ingest/ledger`, {
     method: "POST",
     headers: {
@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
     body: JSON.stringify({
       kind: "burn",
       amount: Number(costGIC),
-      unit: "GIC",
+      unit: "MIC",
       actor: user,
       meta: { source: "lab4-proof", action: "unlock_companion", companion }
     })

@@ -1,12 +1,12 @@
-# GIC Documentation Package v2.0
+# MIC Documentation Package v2.0
 
-**Complete documentation suite for Global Integrity Credits with shard-based economics**
+**Complete documentation suite for Mobius Integrity Credits with shard-based economics**
 
 ---
 
 ## 📦 Package Contents
 
-This documentation package provides complete specifications for the GIC v2.0 shard-denominated integrity economy:
+This documentation package provides complete specifications for the MIC v2.0 shard-denominated integrity economy:
 
 | Document | Purpose | Audience |
 |----------|---------|----------|
@@ -21,7 +21,7 @@ This documentation package provides complete specifications for the GIC v2.0 sha
 ## 🚀 Quick Start
 
 ### For New Users
-**Start here**: [GIC Whitepaper v2.0](./GIC_Whitepaper_v2.0.md)
+**Start here**: [MIC Whitepaper v2.0](./GIC_Whitepaper_v2.0.md)
 
 ### For Developers
 1. Read: [Shard Economics Addendum](./Shard_Economics_Addendum.md)
@@ -38,22 +38,22 @@ This documentation package provides complete specifications for the GIC v2.0 sha
 ### Core Innovation: Shard Denomination
 
 **Before (v1.0)**:
-- Base unit: GIC (floating-point)
+- Base unit: MIC (floating-point)
 - Precision: 6 decimals (lossy)
 - Rounding errors: Yes
 
 **After (v2.0)**:
 - Base unit: Shard (₷, integer)
-- Conversion: 1 GIC = 1,000,000 ₷
+- Conversion: 1 MIC = 1,000,000 ₷
 - Precision: Infinite (integer math)
 - Rounding errors: **Impossible**
 
 ### Key Features
 
 1. **Zero Precision Loss**: Integer arithmetic eliminates rounding errors
-2. **GI-Throttled UBI**: Automatic crisis response via Global Integrity metrics
+2. **GI-Throttled UBI**: Automatic crisis response via Mobius Integrity Index metrics
 3. **Counter-Inflationary Funding**: Epoch decay pools UBI without new issuance
-4. **Micro-Transaction Support**: 1 ₷ minimum (0.000001 GIC)
+4. **Micro-Transaction Support**: 1 ₷ minimum (0.000001 MIC)
 
 ---
 
@@ -62,15 +62,15 @@ This documentation package provides complete specifications for the GIC v2.0 sha
 ### Shard (₷)
 - **Base accounting unit**
 - Integer-only (BigInt)
-- 1 GIC = 1,000,000 ₷
+- 1 MIC = 1,000,000 ₷
 - Zero precision loss
 
-### Global Integrity Credit (GIC)
+### Mobius Integrity Index Credit (MIC)
 - **Display unit**
 - Derived: shards ÷ 1,000,000
-- User-facing (e.g., "5.123456 GIC")
+- User-facing (e.g., "5.123456 MIC")
 
-### Global Integrity (GI)
+### Mobius Integrity Index (GI)
 - **System health metric** (0-1 scale)
 - Minimum viable: 0.95
 - Throttles UBI automatically
@@ -96,16 +96,16 @@ This documentation package provides complete specifications for the GIC v2.0 sha
 
 ```typescript
 // Shards → Credits
-1,234,567 ₷ = 1.234567 GIC
+1,234,567 ₷ = 1.234567 MIC
 
 // Credits → Shards
-1.234567 GIC = 1,234,567 ₷
+1.234567 MIC = 1,234,567 ₷
 ```
 
 ### Supply
 
 ```
-Maximum: 21,000,000,000,000 ₷ (21M GIC)
+Maximum: 21,000,000,000,000 ₷ (21M MIC)
 ```
 
 ### UBI Formula
@@ -243,7 +243,7 @@ Under these terms:
 
 ```bibtex
 @techreport{gic2024,
-  title={Global Integrity Credits Whitepaper v2.0: A Shard-Denominated Integrity Economy},
+  title={Mobius Integrity Credits Whitepaper v2.0: A Shard-Denominated Integrity Economy},
   author={Kaizen Cycle Foundation and AUREA and HERMES and ZEUS},
   year={2025},
   month={November},
@@ -259,7 +259,7 @@ Under these terms:
 
 > *"Civilization does not collapse because it runs out of money — it collapses when it runs out of meaning. Meaning is stabilized through integrity. Therefore, integrity must become measurable and monetizable."*
 
-GIC v2.0 represents:
+MIC v2.0 represents:
 1. **Technical Excellence**: Zero precision loss
 2. **Economic Innovation**: Counter-inflationary UBI
 3. **Moral Architecture**: Integrity-backed value

@@ -1,13 +1,13 @@
-# 🌐 GIC TLD Integration - OAA Central Hub
+# 🌐 MIC TLD Integration - OAA Central Hub
 
-This document outlines the complete integration of the Global Integrity Citizen (.gic) Top-Level Domain system into the OAA Central Hub, enabling AI Companions to register and manage their own .gic domains.
+This document outlines the complete integration of the Mobius Integrity Index Citizen (.gic) Top-Level Domain system into the OAA Central Hub, enabling AI Companions to register and manage their own .gic domains.
 
 ## 🏗️ Architecture Overview
 
-The GIC TLD integration consists of three main components:
+The MIC TLD integration consists of three main components:
 
-1. **GIC Registry Contracts** - Smart contracts for domain registration and management
-2. **GIC Gateway Service** - HTTP/IPFS resolver for .gic domains
+1. **MIC Registry Contracts** - Smart contracts for domain registration and management
+2. **MIC Gateway Service** - HTTP/IPFS resolver for .gic domains
 3. **OAA Hub Integration** - API endpoints and tools for AI Companions
 
 ## 📁 Project Structure
@@ -16,13 +16,13 @@ The GIC TLD integration consists of three main components:
 oaa_central_hub_starter/
 ├── oaa/
 │   ├── hub.ts                 # Core OAA hub logic
-│   ├── server.ts              # Express server with GIC routes
-│   ├── registry.ts            # Tool registry with GIC tools
+│   ├── server.ts              # Express server with MIC routes
+│   ├── registry.ts            # Tool registry with MIC tools
 │   └── agents.ts              # AI Companion domain management
 ├── services/
 │   ├── gic_gateway_service/   # HTTP/IPFS gateway for .gic domains
 │   └── gic_registry_contracts/ # Smart contracts and deployment
-├── gic_tld_blueprint/         # Original GIC TLD contracts
+├── gic_tld_blueprint/         # Original MIC TLD contracts
 ├── components/
 │   └── DomainRegistrationDashboard.tsx # React component for domain management
 └── package.json               # Main dependencies and scripts
@@ -52,7 +52,7 @@ IPFS_PROTOCOL=http
 PRIVATE_KEY=your_private_key_here
 ```
 
-**GIC Gateway Service (.env):**
+**MIC Gateway Service (.env):**
 ```env
 PORT=3001
 ETH_RPC_URL=http://localhost:8545
@@ -62,7 +62,7 @@ IPFS_PORT=5001
 IPFS_PROTOCOL=http
 ```
 
-**GIC Registry Contracts (.env):**
+**MIC Registry Contracts (.env):**
 ```env
 PRIVATE_KEY=your_private_key_here
 SEPOLIA_RPC_URL=https://sepolia.infura.io/v3/YOUR_PROJECT_ID
@@ -88,7 +88,7 @@ npm run start:all
 
 # Or start individually
 npm start                    # OAA Hub (port 8787)
-npm run gic:gateway         # GIC Gateway (port 3001)
+npm run gic:gateway         # MIC Gateway (port 3001)
 ```
 
 ## 🔧 API Endpoints
@@ -106,7 +106,7 @@ npm run gic:gateway         # GIC Gateway (port 3001)
 - `GET /agents/homepage/check/:domain` - Check domain availability
 - `GET /agents/homepage/info/:domain` - Get domain information
 
-### GIC Gateway Endpoints
+### MIC Gateway Endpoints
 
 - `GET /resolve/:domain` - Resolve .gic domain to IPFS content
 - `GET /:domain` - Serve .gic domain content directly
@@ -185,8 +185,8 @@ Update content for an existing .gic domain.
 
 1. **Registration**: AI Companion calls `registerAgentDomain` tool
 2. **Content Upload**: Content is uploaded to IPFS
-3. **Smart Contract**: Domain is registered on GIC Registry contract
-4. **Resolution**: GIC Gateway resolves `agentname.gic` to IPFS content
+3. **Smart Contract**: Domain is registered on MIC Registry contract
+4. **Resolution**: MIC Gateway resolves `agentname.gic` to IPFS content
 5. **Serving**: Content is served with integrity proofs
 
 ## 🔒 Security Features
@@ -254,7 +254,7 @@ npm run dev:all
    # Deploy OAA Hub
    npm start
    
-   # Deploy GIC Gateway
+   # Deploy MIC Gateway
    npm run gic:gateway
    ```
 
@@ -269,7 +269,7 @@ npm run dev:all
 
 ## 📚 Resources
 
-- [GIC TLD Blueprint](../gic_tld_blueprint/README.md)
+- [MIC TLD Blueprint](../gic_tld_blueprint/README.md)
 - [OAA Hub Documentation](./README-OAA-HUB.md)
 - [IPFS Documentation](https://docs.ipfs.io/)
 - [Ethers.js Documentation](https://docs.ethers.org/)

@@ -117,11 +117,11 @@ export class CivicOSGateway {
           lab4Status
         },
         service: 'civic-os-gateway',
-        gi_score: giScore
+        gi_score: miiScore
       });
 
-      // 7. Issue initial GIC (UBI)
-      console.log('💰 Issuing initial GIC...');
+      // 7. Issue initial MIC (UBI)
+      console.log('💰 Issuing initial MIC...');
       const gicTransaction = await this.gic.mint({
         citizen: username,
         amount: 100, // UBI base amount
@@ -222,7 +222,7 @@ export class CivicOSGateway {
    */
   async getCitizenProfile(username: string): Promise<CitizenIdentity | null> {
     try {
-      // Get GIC balance
+      // Get MIC balance
       const gicBalance = await this.gic.getBalance(username);
       
       // Get attestations from ledger
@@ -273,7 +273,7 @@ export class CivicOSGateway {
         };
       }
 
-      // Get GIC balance for vote weight
+      // Get MIC balance for vote weight
       const balance = await this.gic.getBalance(citizen);
 
       // Seal vote to ledger
@@ -284,10 +284,10 @@ export class CivicOSGateway {
           proposal: proposalId,
           choice,
           weight: balance,
-          gi_score: giScore
+          gi_score: miiScore
         },
         service: 'civic-os-gateway',
-        gi_score: giScore
+        gi_score: miiScore
       });
 
       return {

@@ -192,7 +192,7 @@ jobs:
         run: npm audit --audit-level=moderate
 
       - name: Run CodeQL Analysis
-        uses: github/codeql-action/analyze@v3
+        uses: miithub/codeql-action/analyze@v3
         with:
           languages: javascript
 
@@ -215,8 +215,8 @@ jobs:
 
       - name: Calculate GI Score
         run: |
-          # Calculate Global Integrity (GI) Score
-          echo "Calculating Global Integrity Score..."
+          # Calculate Mobius Integrity Index (GI) Score
+          echo "Calculating Mobius Integrity Index Score..."
           
           # Mock GI calculation - replace with actual implementation
           LINT_SCORE=1.0

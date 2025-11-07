@@ -69,7 +69,7 @@ export default function TokenMinting() {
 
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-4">🪙 Mint GIC Tokens</h1>
+          <h1 className="text-5xl font-bold mb-4">🪙 Mint MIC Tokens</h1>
           <p className="text-xl text-gray-700">
             Create the first Good Intent Credit tokens on Proof-of-Integrity blockchain
           </p>
@@ -85,7 +85,7 @@ export default function TokenMinting() {
                 {/* Amount */}
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Amount (GIC) *
+                    Amount (MIC) *
                   </label>
                   <input
                     type="number"
@@ -98,7 +98,7 @@ export default function TokenMinting() {
                     required
                   />
                   <p className="mt-2 text-sm text-gray-500">
-                    Suggested amounts: 10 GIC (daily UBI) | 100 GIC (standard) | 1000 GIC (premium)
+                    Suggested amounts: 10 MIC (daily UBI) | 100 MIC (standard) | 1000 MIC (premium)
                   </p>
                 </div>
 
@@ -128,7 +128,7 @@ export default function TokenMinting() {
 
                   {balance && (
                     <div className="mt-2 text-green-600 flex items-center gap-2">
-                      Current balance: {balance} GIC
+                      Current balance: {balance} MIC
                     </div>
                   )}
                 </div>
@@ -184,7 +184,7 @@ export default function TokenMinting() {
                   disabled={loading || !amount || !recipient || !purpose}
                   className="w-full bg-green-600 text-white font-semibold py-3 px-6 rounded-lg hover:bg-green-700 disabled:opacity-50 disabled:cursor-not-allowed transition"
                 >
-                  {loading ? 'Minting...' : `Mint ${amount} GIC`}
+                  {loading ? 'Minting...' : `Mint ${amount} MIC`}
                 </button>
 
                 <p className="text-sm text-gray-500 text-center">
@@ -201,13 +201,13 @@ export default function TokenMinting() {
                 <EconomicsStat
                   icon="🏦"
                   label="Total Supply"
-                  value="1,000,000,000 GIC"
+                  value="1,000,000,000 MIC"
                   description="Fixed cap, no inflation"
                 />
                 <EconomicsStat
                   icon="🎁"
                   label="Daily UBI"
-                  value="10 GIC"
+                  value="10 MIC"
                   description="Per verified citizen"
                 />
                 <EconomicsStat
@@ -219,7 +219,7 @@ export default function TokenMinting() {
                 <EconomicsStat
                   icon="💰"
                   label="Transaction Fees"
-                  value="0 GIC"
+                  value="0 MIC"
                   description="Zero-fee transfers"
                 />
               </div>
@@ -254,7 +254,7 @@ export default function TokenMinting() {
 
             {/* Token Features */}
             <div className="bg-gradient-to-br from-green-600 to-emerald-600 text-white rounded-lg shadow-lg p-6">
-              <h3 className="font-bold text-lg mb-4">✨ GIC Features</h3>
+              <h3 className="font-bold text-lg mb-4">✨ MIC Features</h3>
 
               <ul className="space-y-3 text-sm">
                 <FeatureItem text="Zero transaction fees" />
@@ -275,15 +275,15 @@ export default function TokenMinting() {
               <ul className="space-y-3 text-sm text-blue-900">
                 <li className="flex items-start gap-2">
                   <span className="font-bold">UBI:</span>
-                  <span>10 GIC daily per verified citizen</span>
+                  <span>10 MIC daily per verified citizen</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="font-bold">Rewards:</span>
-                  <span>10-100 GIC for contributions</span>
+                  <span>10-100 MIC for contributions</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="font-bold">Consensus:</span>
-                  <span>5-20 GIC per deliberation</span>
+                  <span>5-20 MIC per deliberation</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="font-bold">Treasury:</span>

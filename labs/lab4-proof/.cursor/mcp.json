@@ -27,14 +27,14 @@
     },
     {
       "name": "verify",
-      "description": "Verify a day's ledger (counts, GIC sum, links)",
+      "description": "Verify a day's ledger (counts, MIC sum, links)",
       "method": "GET",
       "path": "/verify/{date}",
       "headers": { "x-api-key": "${env:PROD_API_KEY}" }
     },
     {
       "name": "index",
-      "description": "List all days with counts + GIC",
+      "description": "List all days with counts + MIC",
       "method": "GET",
       "path": "/index",
       "headers": { "x-api-key": "${env:PROD_API_KEY}" }

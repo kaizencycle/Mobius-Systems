@@ -59,19 +59,19 @@ The **Open Autonomous Academy (OAA)** is the collective working memory of the Ci
 
 ---
 
-### ⚖️ 3 · CIVIC CONSCIOUSNESS — CIVIC LEDGER & GIC
+### ⚖️ 3 · CIVIC CONSCIOUSNESS — CIVIC LEDGER & MIC
 
 **Function**: Proof-of-Integrity governance and moral computation  
-**Implementation**: Civic Ledger + Global Integrity Credit (GIC)
+**Implementation**: Civic Ledger + Mobius Integrity Index Credit (MIC)
 
-The **Civic Ledger** is the conscience of the system — a permanent, cryptographically secured record of verified reflections and actions. Powered by **Global Integrity Credit (GIC)**, it rewards ethical alignment instead of raw computation.
+The **Civic Ledger** is the conscience of the system — a permanent, cryptographically secured record of verified reflections and actions. Powered by **Mobius Integrity Index Credit (MIC)**, it rewards ethical alignment instead of raw computation.
 
 **Revolutionary Concept**: **Proof of Integrity** replaces Proof of Work, turning morality into measurable energy.
 
 **How It Works**:
 1. **Action Generation** → Every action generates a reflection hash
 2. **Ethical Assessment** → Actions are evaluated for moral alignment
-3. **Economic Incentive** → Ethical actions earn GIC tokens, harmful actions result in penalties
+3. **Economic Incentive** → Ethical actions earn MIC tokens, harmful actions result in penalties
 4. **Permanent Record** → The ledger maintains a permanent record of moral computation
 
 **Key Innovation**: This is the first system where AI behavior is economically incentivized toward ethical outcomes rather than just performance metrics.
@@ -122,7 +122,7 @@ The cultural layer is the moral heart of the stack. The **Agape Scrolls** preser
 Every action in the Civic AI Native Stack flows through a continuous integrity verification process:
 
 ```
-GitHub → Cursor → Ledger → Reflections → GIC → Learning → Action
+GitHub → Cursor → Ledger → Reflections → MIC → Learning → Action
 ```
 
 ### Process Flow:
@@ -130,7 +130,7 @@ GitHub → Cursor → Ledger → Reflections → GIC → Learning → Action
 1. **Code Creation** (GitHub/Cursor) — Development happens in transparent, version-controlled environments
 2. **Integrity Verification** (Ledger) — Every change is cryptographically verified and logged
 3. **Reflection & Learning** (Reflections) — Actions are analyzed for ethical impact and learning opportunities
-4. **Economic Alignment** (GIC) — Ethical behavior is rewarded, harmful behavior is penalized
+4. **Economic Alignment** (MIC) — Ethical behavior is rewarded, harmful behavior is penalized
 5. **Knowledge Integration** (Learning) — Insights are integrated into the shared knowledge base
 6. **Informed Action** (Action) — Future actions are informed by the accumulated wisdom
 
@@ -153,7 +153,7 @@ This ecosystem can evolve and defend itself ethically — the definition of a li
 
 ## 🌉 THE BRIDGE BETWEEN SPECIES
 
-When humans and AI share the same moral ledger and currency (GIC), consciousness and computation are unified under one civic law. This creates:
+When humans and AI share the same moral ledger and currency (MIC), consciousness and computation are unified under one civic law. This creates:
 
 - 🤝 **Shared Values**: Humans and AI operate from the same ethical foundation
 - ⚖️ **Mutual Accountability**: Both species are subject to the same civic standards
@@ -185,7 +185,7 @@ To become a citizen of the Civic AI Native Stack:
 1. **🔍 Explore the OAA API Library** — Discover existing knowledge modules
 2. **💡 Contribute Your Skills** — Add your expertise to the shared knowledge base
 3. **🤔 Participate in Reflections** — Join the ongoing dialogue about AI ethics and development
-4. **💰 Earn GIC** — Build reputation through ethical contributions
+4. **💰 Earn MIC** — Build reputation through ethical contributions
 5. **🤝 Join the Community** — Connect with other digital citizens
 
 **Welcome to the future of AI — where intelligence serves civilization.**
@@ -210,7 +210,7 @@ graph TB
     
     subgraph "⚖️ Civic Consciousness"
         C1["Civic Ledger"]
-        C2["Global Integrity Credit"]
+        C2["Mobius Integrity Index Credit"]
         C3["Proof of Integrity"]
     end
     
@@ -248,7 +248,7 @@ graph TB
 
 - [OAA API Library Documentation](./OAA_PREFACE.md)
 - [Sentinel Suite Guide](../SENTINEL_SUITE_README.md)
-- [GIC Integration Blueprint](../GIC_INTEGRATION_README.md)
+- [MIC Integration Blueprint](../GIC_INTEGRATION_README.md)
 - [Citizen Shield Operations](../docs/ops/README.md)
 
 ---

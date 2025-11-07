@@ -125,7 +125,7 @@ def _require_admin(x_admin_token: Optional[str] = Header(None)):
     if not ADMIN_TOKEN or x_admin_token != ADMIN_TOKEN:
         raise HTTPException(status_code=401, detail="Unauthorized")
 
-# GIC REWARDS CONFIG + HELPERS
+# MIC REWARDS CONFIG + HELPERS
 DEMO_MODE = os.getenv("DEMO_MODE", "false").lower() == "true"
 
 def safe_int(val: str, default: int) -> int:
@@ -152,7 +152,7 @@ FEATURE_QUEUE_FILENAME = "{}.featured_queue.jsonl"
 _gic_seen: Dict[Tuple[str, str], Set[str]] = {}
 
 def _gic_file(date_str: str) -> str:
-    """daily GIC transactions file"""
+    """daily MIC transactions file"""
     return f"{date_str}/{date_str}.gic.jsonl"
 
 def _mark_seen(user_id: str, date_str: str, h: str) -> None:
@@ -327,7 +327,7 @@ def _safe_counts_for(date_str: str) -> dict:
             "echo": echo_p_l.exists() or echo_p_j.exists(),
             "seal": seal is not None,
             "ledger": ledger is not None,
-            "gic": gic_p.exists(),
+            "gic": miic_p.exists(),
         },
         "counts": {
             "seeds": 1 if seed else 0,
@@ -336,7 +336,7 @@ def _safe_counts_for(date_str: str) -> dict:
             "gic_txs": len(gic_txs),
         },
         "gic": {
-            "sum": gic_sum,
+            "sum": miic_sum,
             "file": str(gic_p) if gic_p.exists() else None,
         },
         "day_root": (ledger or {}).get("day_root"),
@@ -522,7 +522,7 @@ def post_sweep(payload: Sweep):
     write_json(files["echo"], sweeps)
     attestation = sha256_json(record)
 
-    # GIC REWARD LOGIC
+    # MIC REWARD LOGIC
     meta = payload.meta or {}
     tier = meta.get("gic_intent", "private").lower()
     user_id = meta.get("user", "anon")
@@ -549,12 +549,12 @@ def post_sweep(payload: Sweep):
         else:
             _mark_seen(user_id, date_str, content_hash)
 
-    # Append GIC transaction
+    # Append MIC transaction
     gic_tx = {
         "type": "gic_tx",
         "date": date_str,
         "user": user_id,
-        "amount": gic,
+        "amount": miic,
         "reason": f"reflection:{tier}",
         "hash": content_hash,
         "ts": datetime.utcnow().isoformat() + "Z",
@@ -577,9 +577,9 @@ def post_sweep(payload: Sweep):
     return {
         "attestation": attestation,
         "sweep_file": files["echo"],
-        "gic": gic,
-        "gic_file": gic_file,
-        "gic_attestation": gic_att,
+        "gic": miic,
+        "gic_file": miic_file,
+        "gic_attestation": miic_att,
     }
 
 @app.post("/seal")
@@ -650,7 +650,7 @@ def ledger_latest():
 
 @app.get("/verify/{date}")
 def verify_day(date: str):
-    """Verifies the day's presence of seed/echo/seal files, returns counts, and includes GIC totals."""
+    """Verifies the day's presence of seed/echo/seal files, returns counts, and includes MIC totals."""
     return _safe_counts_for(date)
 
 @app.get("/export/{date}")
@@ -682,7 +682,7 @@ def index_all(order: str = "desc", limit: int = 100):
 
 @app.post("/bonus/run")
 def bonus_run(req: BonusRun, x_admin_key: str = Header(default="")):
-    """Admin: compute weekly featured bonuses and write GIC txs."""
+    """Admin: compute weekly featured bonuses and write MIC txs."""
     ADMIN_KEY = os.environ.get("ADMIN_KEY", "")
     if not ADMIN_KEY or x_admin_key != ADMIN_KEY:
         raise HTTPException(status_code=401, detail="Unauthorized")

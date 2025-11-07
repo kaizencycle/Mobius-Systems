@@ -3,7 +3,7 @@ info:
   title: OAA Gateway API
   version: 0.1.0
   description: |
-    Online Apprenticeship Agent — Mentor drafts, critique, rubric→XP→Level→GIC.
+    Online Apprenticeship Agent — Mentor drafts, critique, rubric→XP→Level→MIC.
 servers:
   - url: http://localhost:8080
     description: Dev

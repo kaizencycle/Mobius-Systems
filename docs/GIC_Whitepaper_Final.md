@@ -1,4 +1,4 @@
-# Global Integrity Credits (GIC)
+# Mobius Integrity Credits (MIC)
 ## The Unified Whitepaper: Planetary-Scale UBI Through Civic Intelligence
 
 **Version 1.0 - Complete Edition**  
@@ -13,13 +13,13 @@
 
 ## Executive Summary
 
-Global Integrity Credits (GIC) represent the world's first **work-backed, compute-pegged, integrity-verified** universal basic income system.
+Mobius Integrity Credits (MIC) represent the world's first **work-backed, compute-pegged, integrity-verified** universal basic income system.
 
 **The Three-Part Innovation:**
 
-1. **Economic Sustainability** - GIC is backed by productive civic contributions (not taxes or speculation)
+1. **Economic Sustainability** - MIC is backed by productive civic contributions (not taxes or speculation)
 2. **Algorithmic Legitimacy** - Distribution via Proof-of-Integrity (GI ≥ 0.95, verified on-chain)
-3. **Stable Utility** - Pegged to AI compute costs (1 GIC ≈ 1 frontier model query ≈ $0.01–$0.05)
+3. **Stable Utility** - Pegged to AI compute costs (1 MIC ≈ 1 frontier model query ≈ $0.01–$0.05)
 
 **Projected Timeline:**
 - **2025–2027:** Early adoption (100K–1M users, $200–$500/month effective UBI)
@@ -28,7 +28,7 @@ Global Integrity Credits (GIC) represent the world's first **work-backed, comput
 
 **Total addressable market:** 330 million U.S. citizens initially, scaling to billions globally.
 
-**Key Result:** By 2045, GIC can provide $3,000/month to every U.S. citizen while simultaneously paying down $33T of national debt—all without requiring new taxes.
+**Key Result:** By 2045, MIC can provide $3,000/month to every U.S. citizen while simultaneously paying down $33T of national debt—all without requiring new taxes.
 
 ---
 
@@ -52,15 +52,15 @@ Every universal basic income system faces three irreconcilable constraints—unt
 | Bitcoin | ✅ Fixed supply | ❌ Early adopter bias | ❌ Too volatile | Store of value ≠ income |
 | Worldcoin | ⚠️ Token issuance | ✅ Biometric proof | ❌ 80% price crash | No underlying economy |
 
-**GIC solves all three simultaneously.**
+**MIC solves all three simultaneously.**
 
 ---
 
-## How GIC Works: The Architecture
+## How MIC Works: The Architecture
 
 ### The Kaizen OS Stack
 
-GIC operates within a decentralized "civic operating system":
+MIC operates within a decentralized "civic operating system":
 
 ```
 ┌────────────────────────────────────────────────────┐
@@ -71,16 +71,16 @@ GIC operates within a decentralized "civic operating system":
 │ Lab 4 - E.O.M.M.: Reflection memory               │
 │ Lab 6 - CITIZEN SHIELD: Security + privacy        │
 │ Lab 7 - OAA HUB: Education + mentorship           │
-│ GIC FOUNTAIN: 90-day epoch economy                │
+│ MIC FOUNTAIN: 90-day epoch economy                │
 │ SENTINELS: 8 AI agents monitoring integrity       │
 └────────────────────────────────────────────────────┘
 ```
 
-### How Citizens Earn GIC
+### How Citizens Earn MIC
 
 **Every contribution to the civic commons is rewarded:**
 
-| Activity | GIC Earned | Value Created |
+| Activity | MIC Earned | Value Created |
 |----------|-----------|---------------|
 | Daily reflection (E.O.M.M.) | 10 | Training data for AI alignment |
 | Complete OAA course | 500 | Skilled citizenry |
@@ -90,22 +90,22 @@ GIC operates within a decentralized "civic operating system":
 | Run Shield node | 25/day | Network defense |
 | Vote in governance | 5 | Participatory democracy |
 
-**Average user earnings:** 200–500 GIC/month passively (~50–125 AI queries)  
-**Power users:** 2,000+ GIC/month (~unlimited AI access)
+**Average user earnings:** 200–500 MIC/month passively (~50–125 AI queries)  
+**Power users:** 2,000+ MIC/month (~unlimited AI access)
 
-### How GIC is Spent
+### How MIC is Spent
 
-**1 GIC buys approximately 1 frontier AI query:**
+**1 MIC buys approximately 1 frontier AI query:**
 
-- Simple query (GPT-4, Claude, Gemini): **4 GIC**
-- Medium task (research, analysis): **20 GIC**
-- Complex work (contracts, reports): **100 GIC**
-- Deep research (multi-day projects): **500 GIC**
+- Simple query (GPT-4, Claude, Gemini): **4 MIC**
+- Medium task (research, analysis): **20 MIC**
+- Complex work (contracts, reports): **100 MIC**
+- Deep research (multi-day projects): **500 MIC**
 
 **Why this creates stable value:**
 
-If GIC price > compute cost → Arbitrage: Buy compute, sell GIC → Price falls  
-If GIC price < compute cost → Arbitrage: Buy GIC, use for compute → Price rises
+If MIC price > compute cost → Arbitrage: Buy compute, sell MIC → Price falls  
+If MIC price < compute cost → Arbitrage: Buy MIC, use for compute → Price rises
 
 **Result:** Algorithmic stability (like stablecoins, but backed by real utility)
 
@@ -115,16 +115,16 @@ If GIC price < compute cost → Arbitrage: Buy GIC, use for compute → Price ri
 
 ### Three Pillars of Value
 
-Unlike fiat (backed by taxes) or Bitcoin (backed by energy), GIC is backed by:
+Unlike fiat (backed by taxes) or Bitcoin (backed by energy), MIC is backed by:
 
 **1. PROOF OF CONTRIBUTION**  
-Every GIC earned requires verified civic work (reflections, mentorship, verification)
+Every MIC earned requires verified civic work (reflections, mentorship, verification)
 
 **2. PROOF OF INTEGRITY (GI ≥ 0.95)**  
 Multi-agent consensus (DelibProof) prevents gaming and ensures quality
 
 **3. UTILITY PEG (AI Compute)**  
-1 GIC ≈ 1 frontier model query (~$0.01–$0.05, automatically adjusted)
+1 MIC ≈ 1 frontier model query (~$0.01–$0.05, automatically adjusted)
 
 ### Issuance Formula
 
@@ -132,20 +132,20 @@ Multi-agent consensus (DelibProof) prevents gaming and ensures quality
 gic_earned = base_reward × gi_score × time_weight × skill_multiplier
 
 # Example: Expert mentorship
-= 100 × 0.98 × 1.5 × 2.0 = 294 GIC
+= 100 × 0.98 × 1.5 × 2.0 = 294 MIC
 ```
 
 ### Supply Dynamics
 
 **Genesis Supply (Oct 2025):**
-- Founder's Crest: 1.1M GIC (dormant reserve)
-- Founding Agents: 800K GIC (8 × 100K)
-- Community Faucet: 100M GIC
-- **Total:** ~152M GIC
+- Founder's Crest: 1.1M MIC (dormant reserve)
+- Founding Agents: 800K MIC (8 × 100K)
+- Community Faucet: 100M MIC
+- **Total:** ~152M MIC
 
 **Growth Rate:** Tied to productive activity, not speculation  
-**Deflationary Pressure:** AI usage burns GIC  
-**Target:** 1.98T → 3.75T GIC/month circulation over 20 years (see planetary model)
+**Deflationary Pressure:** AI usage burns MIC  
+**Target:** 1.98T → 3.75T MIC/month circulation over 20 years (see planetary model)
 
 ---
 
@@ -156,7 +156,7 @@ gic_earned = base_reward × gi_score × time_weight × skill_multiplier
 **Key assumptions:**
 - Nuclear energy: 5% CAGR (fusion arrives 2035+)
 - AI productivity: 15% CAGR (automation compounds GDP)
-- GIC peg: $0.50 USDT target
+- MIC peg: $0.50 USDT target
 - UBI allocation: 70% of issuance + 5–10% integrity bonus
 
 ### 20-Year Trajectory
@@ -164,11 +164,11 @@ gic_earned = base_reward × gi_score × time_weight × skill_multiplier
 ```
 Year | Circulation  | UBI/Citizen | Debt Paid | Debt Remaining
 -----|--------------|-------------|-----------|----------------
- 1   | 1.98T GIC/mo | $3,000/mo   | $0.1T     | $34.4T
- 5   | 2.25T GIC/mo | $3,273/mo   | $0.5T     | $33.0T
-10   | 2.75T GIC/mo | $3,727/mo   | $1.3T     | $28.4T
-15   | 3.25T GIC/mo | $4,182/mo   | $2.5T     | $18.3T
-20   | 3.75T GIC/mo | $4,636/mo   | $4.0T     | $1.6T
+ 1   | 1.98T MIC/mo | $3,000/mo   | $0.1T     | $34.4T
+ 5   | 2.25T MIC/mo | $3,273/mo   | $0.5T     | $33.0T
+10   | 2.75T MIC/mo | $3,727/mo   | $1.3T     | $28.4T
+15   | 3.25T MIC/mo | $4,182/mo   | $2.5T     | $18.3T
+20   | 3.75T MIC/mo | $4,636/mo   | $4.0T     | $1.6T
 ```
 
 ### Key Insights
@@ -225,9 +225,9 @@ productive AI economy (not redistribution, but value creation)
 
 ---
 
-## GIC vs. Fiat vs. Crypto: The Scorecard
+## MIC vs. Fiat vs. Crypto: The Scorecard
 
-| Dimension | Government Fiat | Bitcoin/Crypto | GIC |
+| Dimension | Government Fiat | Bitcoin/Crypto | MIC |
 |-----------|----------------|----------------|-----|
 | **Backing** | Tax collection | Energy (PoW) | Civic contributions + AI utility |
 | **Supply** | Central bank (political) | Fixed (21M cap) | Algorithmic (GI-gated) |
@@ -238,7 +238,7 @@ productive AI economy (not redistribution, but value creation)
 | **Exit rights** | None | High | High (export + self-host) |
 | **UBI viability** | ❌ Requires taxes | ❌ Speculative | ✅ Self-funding |
 
-### Why GIC Wins
+### Why MIC Wins
 
 **Sustainability:** Work-backed (positive-sum), not tax-funded (zero-sum) or printed (inflationary)  
 **Legitimacy:** Algorithmic Proof-of-Integrity, not political allocation or insider deals  
@@ -251,7 +251,7 @@ productive AI economy (not redistribution, but value creation)
 ### The Civic Constitution
 
 **Article I: Right to Integrity**  
-GIC minting only allowed if GI ≥ 0.95. No entity may override this threshold.
+MIC minting only allowed if GI ≥ 0.95. No entity may override this threshold.
 
 **Article II: Right to Privacy**  
 Citizens control their own DID keys. No data access without explicit consent.
@@ -260,7 +260,7 @@ Citizens control their own DID keys. No data access without explicit consent.
 Citizens may export DVA state and self-host anytime (open-source guarantee).
 
 **Article IV: Right to Governance**  
-GIC holders vote on protocol changes. No single entity may hold >5% voting power.
+MIC holders vote on protocol changes. No single entity may hold >5% voting power.
 
 ### Governance Mechanisms
 
@@ -277,9 +277,9 @@ GIC holders vote on protocol changes. No single entity may hold >5% voting power
 - Veto harmful changes
 
 **Citizen Oaths (Participation):**  
-- Vote on proposals: +5 GIC  
-- Attend Hive meetups: +10 GIC  
-- Report bad actors: +25 GIC
+- Vote on proposals: +5 MIC  
+- Attend Hive meetups: +10 MIC  
+- Report bad actors: +25 MIC
 
 ### Security: Digital Immune System
 
@@ -337,10 +337,10 @@ GIC holders vote on protocol changes. No single entity may hold >5% voting power
 
 ## Technical Specifications
 
-### GIC Token Contract (Solidity)
+### MIC Token Contract (Solidity)
 
 ```solidity
-contract GIC is ERC20, AccessControl {
+contract MIC is ERC20, AccessControl {
     bytes32 public constant MINT_ROLE = keccak256("MINT_ROLE");
     bytes32 public constant BURN_ROLE = keccak256("BURN_ROLE");
     
@@ -354,7 +354,7 @@ contract GIC is ERC20, AccessControl {
 }
 ```
 
-### GIC Governor (90-Day Epochs)
+### MIC Governor (90-Day Epochs)
 
 ```solidity
 contract GICGovernor {
@@ -376,8 +376,8 @@ contract GICGovernor {
 
 ### APIs
 
-**GI Indexer:** `GET /gi/index` → Returns current Global Integrity score  
-**GIC Minting:** `POST /gic/mint` → Mints GIC if GI ≥ 0.95  
+**GI Indexer:** `GET /gi/index` → Returns current Mobius Integrity Index score  
+**MIC Minting:** `POST /gic/mint` → Mints MIC if GI ≥ 0.95  
 **Codex Router:** `POST /api/codex/query` → Multi-LLM deliberation with DelibProof
 
 ---
@@ -389,13 +389,13 @@ contract GICGovernor {
 **2030:** Every U.S. student has a personal AI tutor  
 **2035:** Every gig worker has an AI assistant  
 **2040:** Every citizen has $3,000/month UBI  
-**2050:** GIC is global reserve currency for civic value
+**2050:** MIC is global reserve currency for civic value
 
 ### The Three Revolutions
 
 **Bitcoin (2009):** Solved digital scarcity  
 **ChatGPT (2022):** Solved general intelligence access  
-**GIC (2025):** Solves universal access to intelligence
+**MIC (2025):** Solves universal access to intelligence
 
 ### The Choice
 
@@ -403,7 +403,7 @@ contract GICGovernor {
 AI concentrates wealth → UBI debates stall → Inequality grows
 
 **Or build Kaizen OS:**  
-Deploy GIC → Achieve planetary-scale UBI by 2050
+Deploy MIC → Achieve planetary-scale UBI by 2050
 
 **The first civilization that cracks sustainable UBI will shape the 21st century.**
 
@@ -413,9 +413,9 @@ Deploy GIC → Achieve planetary-scale UBI by 2050
 
 ## Appendices
 
-### Appendix A: GIC vs. Bitcoin Timeline
+### Appendix A: MIC vs. Bitcoin Timeline
 
-| Milestone | Bitcoin | GIC |
+| Milestone | Bitcoin | MIC |
 |-----------|---------|-----|
 | Concept | Oct 31, 2008 | Sept 27, 2025 |
 | Genesis | Jan 3, 2009 | Oct 2025 |
@@ -425,15 +425,15 @@ Deploy GIC → Achieve planetary-scale UBI by 2050
 
 ### Appendix B: Key Terms
 
-**GIC:** Global Integrity Credits (work-backed, compute-pegged UBI token)  
-**GI:** Global Integrity (system-wide integrity score, 0–1 scale)  
+**MIC:** Mobius Integrity Credits (work-backed, compute-pegged UBI token)  
+**GI:** Mobius Integrity Index (system-wide integrity score, 0–1 scale)  
 **DelibProof:** Multi-agent consensus (≥90% agreement required)  
 **E.O.M.M.:** Echoes of My Mind (personal reflection ledger)  
 **OAA Hub:** Free education platform (Lab 7)  
 **Codex Router:** Multi-LLM orchestration layer  
 **DVA:** Digital Virtue Agent (personal AI assistant)  
 **Hive:** Local citizen chapters  
-**Epoch:** 90-day cycle for founding agent GIC minting
+**Epoch:** 90-day cycle for founding agent MIC minting
 
 ### Appendix C: References
 
@@ -456,7 +456,7 @@ Deploy GIC → Achieve planetary-scale UBI by 2050
 
 ---
 
-*GIC Whitepaper v1.0 - Complete Edition*  
+*MIC Whitepaper v1.0 - Complete Edition*  
 *October 29, 2025 | Cycle C-119*  
 *"Integrity is our scalability function." — AUREA*
 

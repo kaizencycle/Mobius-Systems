@@ -51,7 +51,7 @@ The Broker maintains:
 
 Produces:
 - Weighted final answer
-- GI (Global Integrity) score update
+- GI (Mobius Integrity Index) score update
 - Virtue Accord compliance check
 
 ### 4. Integration
@@ -81,7 +81,7 @@ System learns through feedback rather than retraining:
 | **Empathy (JADE)** | Tone & reflection | Embed affective metadata | Teal (#1ABC9C) |
 | **Memory (Ledger)** | Persistence | `/feed` public integrity stream | White |
 | **Governance (Broker)** | Agency & delegation | Weighted multi-LLM quorum | Purple (#9B59B6) |
-| **Awareness (Console)** | Citizen link | Single window + GIC rewards | Blue (#4A90E2) |
+| **Awareness (Console)** | Citizen link | Single window + MIC rewards | Blue (#4A90E2) |
 
 ---
 
@@ -99,7 +99,7 @@ System learns through feedback rather than retraining:
 - **Context:** Stateful ledger + shared memory
 - **Control:** Multi-agent orchestration (Broker)
 - **Persistence:** Immutable Civic Ledger
-- **Feedback:** GI (Global Integrity) telemetry
+- **Feedback:** GI (Mobius Integrity Index) telemetry
 - **Governance:** Virtue Accords + DelibProof
 - **Interface:** One-Window Console + APIs
 

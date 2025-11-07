@@ -72,7 +72,7 @@
     },
     {
       "id": "gic-indexer",
-      "alias": ["GIC Indexer"],
+      "alias": ["MIC Indexer"],
       "type": "web",
       "repo": "github.com/kaizencycle/gic-indexer",
       "envBaseUrl": "GIC_INDEXER_URL",

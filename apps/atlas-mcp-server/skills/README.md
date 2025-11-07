@@ -4,7 +4,7 @@
 
 The ATLAS Sync Skill enables ATLAS (Claude) to maintain accurate awareness of:
 - Current Kaizen OS cycle and date
-- Global Integrity (GI) baseline
+- Mobius Integrity Index (GI) baseline
 - AUREA snapshot state
 - Recent ledger events
 - Repository status and changes

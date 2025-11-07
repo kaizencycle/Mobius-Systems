@@ -15,7 +15,7 @@ This folder contains the minimum set of artifacts to operationalize drift contro
 3. CI will execute `tools/drift_check.py` against `docs/drift/drift_test_vectors.json` and fail on violations.
 
 ## GI & DS
-- Global Integrity (GI) target ≥ 0.95 (steady), ≥ 0.99 (ideal).  
+- Mobius Integrity Index (GI) target ≥ 0.95 (steady), ≥ 0.99 (ideal).  
 - Drift Score (DS) = |GI_t – GI_(t-1)| + λ·ΔBias + μ·ΔEntropy.
 
 ## Extending

@@ -6,7 +6,7 @@ export async function POST(req: Request) {
   try { body = await req.json(); } catch {}
   const sr = {
     cycle: body.cycle ?? process.env.NEXT_PUBLIC_KAIZEN_CURRENT_CYCLE ?? "C-121",
-    gi: Number(body.gi ?? process.env.NEXT_PUBLIC_KAIZEN_GI_BASELINE ?? 0).toFixed(3),
+    mii: Number(body.gi ?? process.env.NEXT_PUBLIC_KAIZEN_GI_BASELINE ?? 0).toFixed(3),
     details: {
       verdict: String(body.verdict ?? process.env.NEXT_PUBLIC_SR_VERDICT ?? "UNKNOWN").toUpperCase(),
       notes: body.notes ?? "(dry-run)",

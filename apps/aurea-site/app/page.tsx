@@ -58,7 +58,7 @@ export default function HomePage() {
         </Link>
       </section>
 
-      {/* GIC Panel */}
+      {/* MIC Panel */}
       <section className="mb-16">
         <GICPanel />
       </section>

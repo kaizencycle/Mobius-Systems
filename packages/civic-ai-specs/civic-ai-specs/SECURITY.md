@@ -7,7 +7,7 @@ GPG key available in `/keys/SECURITY.asc`
 ## Disclosure Window
 - **90 days** for coordinated disclosure (we aim for faster)
 - Do not test against production without prior written consent
-- Bounties: good-faith reports that lead to a patch may receive GIC rewards
+- Bounties: good-faith reports that lead to a patch may receive MIC rewards
 
 ## Scope
 - OAA-API-Library (public repo)
@@ -34,6 +34,6 @@ GPG key available in `/keys/SECURITY.asc`
 
 2. We will respond within 48 hours
 3. We will work with you on coordinated disclosure
-4. Qualifying reports may earn GIC (Global Integrity Credit) rewards
+4. Qualifying reports may earn MIC (Mobius Integrity Index Credit) rewards
 
 © 2025 Kaizen Cycle / Michael Judan — Civic AI Standard

@@ -3,7 +3,7 @@
 /**
  * Fountain Attestation Script
  *
- * Generates and saves a cryptographic attestation of the Civic GIC Fountain
+ * Generates and saves a cryptographic attestation of the Civic MIC Fountain
  * wallet state. Runs monthly via GitHub Actions.
  *
  * Usage:
@@ -47,7 +47,7 @@ async function main() {
     timestamp,
     attester_did: 'did:gic:aurea',
     fountain: fountainState,
-    gi_metrics: giMetrics,
+    gi_metrics: miiMetrics,
     version: '1.0.0',
   }
 
@@ -72,8 +72,8 @@ async function main() {
 
   // Display summary
   console.log('\n📊 Fountain State:')
-  console.log(`   Balance: ${fountainState.balance.toLocaleString()} GIC`)
-  console.log(`   Daily Spend: ${fountainState.daily_spend.toLocaleString()} GIC`)
+  console.log(`   Balance: ${fountainState.balance.toLocaleString()} MIC`)
+  console.log(`   Daily Spend: ${fountainState.daily_spend.toLocaleString()} MIC`)
   console.log(`   Operational: ${fountainState.operational ? 'YES' : 'NO'}`)
   console.log(`   Network GI: ${giMetrics.network_gi}`)
 

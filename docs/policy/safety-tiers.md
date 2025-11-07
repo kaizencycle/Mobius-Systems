@@ -12,7 +12,7 @@ cycle: C-113
 | Tier | GI Min | Constitutional Min | Eligible Providers | Example Ops |
 |------|--------|--------------------|--------------------|--------------|
 | **Critical** | 0.95 | 85 | AUREA / ATLAS only | Identity Creation, Wallet Ops, Ledger Writes |
-| **High** | 0.92 | 75 | AUREA / ATLAS (+ SOLARA observer) | Domain Sealing, GIC Mint |
+| **High** | 0.92 | 75 | AUREA / ATLAS (+ SOLARA observer) | Domain Sealing, MIC Mint |
 | **Standard** | 0.90 | 70 | AUREA / ATLAS / SOLARA | Reflections, Learning Ops |
 | **Research** | 0.85 | 65 | AUREA / ATLAS / SOLARA | Ideation, Analysis, Simulation |
 

@@ -1,0 +1,20 @@
+version: 1
+mii:
+  floor: 0.95
+  block_on_deficit: true
+anti_nuke:
+  max_deletes: 10
+  max_changed_files: 500
+sandbox:
+  max_tokens: 4096
+  max_runtime_sec: 120
+  network: "deny" # allowlist specific domains if needed
+providers:
+  allowed:
+    - "openai"
+    - "anthropic"
+    - "deepseek"
+proofs:
+  require_deliberation: true
+  require_junit: true
+  redact_secrets: true

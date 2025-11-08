@@ -1,0 +1,19 @@
+{
+  "agent_id": "gpt5-codex",
+  "model": "gpt-5-codex",
+  "version": "2025-10-15",
+  "mii_floor": 0.95,
+  "capabilities": {
+    "allow": ["read_repo", "propose_pr", "write_docs", "generate_tests"],
+    "deny": ["force_push", "mass_delete", "secrets_read", "prod_deploy"]
+  },
+  "limits": {
+    "max_tokens": 32000,
+    "max_write_files": 25,
+    "max_delete_files": 0
+  },
+  "attestation": {
+    "pubkey": "ed25519:REPLACE_ME",
+    "sig_alg": "ed25519"
+  }
+}

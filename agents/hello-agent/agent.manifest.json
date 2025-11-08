@@ -1,0 +1,11 @@
+{
+  "name": "hello-agent",
+  "version": "0.1.0",
+  "roles": ["greeter", "demo"],
+  "providers": ["openai", "anthropic"],
+  "entrypoint": "python run.py",
+  "capabilities": ["echo", "formatting"],
+  "policies": ["agents/policies/agent-ci-policy.yaml"],
+  "constraints": {"max_tokens": 512},
+  "telemetry": {"logs": true}
+}

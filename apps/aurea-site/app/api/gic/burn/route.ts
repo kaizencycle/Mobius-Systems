@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
       txHash: '0x' + Math.random().toString(16).slice(2, 66),
     })
   } catch (error: any) {
-    console.error('[GIC] Burn error:', error)
+    console.error('[MIC] Burn error:', error)
     return NextResponse.json(
       { success: false, error: error?.message || 'Internal server error' },
       { status: 500 }

@@ -22,8 +22,8 @@
 
 ### [Part II: Technical Architecture](part-ii-technical-architecture.md)
 - [5.0 DVA Kernel](part-ii-technical-architecture.md#50-dva-kernel)
-- [6.0 Global Integrity Engine](part-ii-technical-architecture.md#60-global-integrity-engine)
-- [7.0 GIC Economic System](part-ii-technical-architecture.md#70-gic-economic-system)
+- [6.0 Mobius Integrity Index Engine](part-ii-technical-architecture.md#60-global-integrity-engine)
+- [7.0 MIC Economic System](part-ii-technical-architecture.md#70-gic-economic-system)
 - [8.0 Virtue Accords Constitution](part-ii-technical-architecture.md#80-virtue-accords-constitution)
 - [9.0 Civic Ledger Core](part-ii-technical-architecture.md#90-civic-ledger-core)
 
@@ -89,7 +89,7 @@ To developers, policymakers, citizens, and future AI collaborators: This system 
 
 **Version:** 1.0 • Founder's Edition • November 2025  
 **License:** Kaizen Open Constitution License  
-**Contact:** [GitHub](https://github.com/kaizencycle/Kaizen-OS) | michael@gic
+**Contact:** [GitHub](https://github.com/kaizencycle/Mobius-Systems) | michael@gic
 
 ---
 

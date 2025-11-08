@@ -39,8 +39,8 @@ def print_reflection(reflection):
 def print_balance(balance):
     """Print balance information"""
     print(f"  Address: {balance.address}")
-    print(f"  Balance: {balance.balance} GIC")
-    print(f"  Vesting: {balance.vesting} GIC")
+    print(f"  Balance: {balance.balance} MIC")
+    print(f"  Vesting: {balance.vesting} MIC")
     print(f"  Nonce: {balance.nonce}")
     print(f"  Last Updated: {balance.last_updated}")
     print()
@@ -153,7 +153,7 @@ def main():
                 print(f"✗ Failed to get specific reflection: {e}")
         
         # Check balance
-        print_separator("7. Checking GIC Balance")
+        print_separator("7. Checking MIC Balance")
         try:
             balance = client.get_balance("citizen_001")
             print("Balance information:")

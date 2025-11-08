@@ -69,7 +69,7 @@ All of these actions should go through Gatekeeper:
 - `execute_script` - Code execution
 - `http_request` - Outbound HTTP requests
 - `db_query` - Database queries
-- `mint_gic` - GIC minting
+- `mint_gic` - MIC minting
 - `write_file` - File system writes
 
 ### 4. DID Signature Requirements

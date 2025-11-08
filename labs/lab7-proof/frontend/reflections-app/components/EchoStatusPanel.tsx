@@ -60,7 +60,7 @@ export default function EchoStatusPanel({
     ['Lab4', 'Lab4 — Reflections'],
     ['Lab6', 'Lab6 — Citizen Shield'],
     ['CivicLedger', 'Civic Ledger — Core'],
-    ['GICIndexer', 'GIC Indexer — Economy'],
+    ['GICIndexer', 'MIC Indexer — Economy'],
     ['Lab7', 'Lab7 — OAA'],
   ];
 

@@ -76,10 +76,10 @@ export const labs: Lab[] = [
   },
   {
     id: "gic-indexer",
-    name: "GIC Indexer",
+    name: "MIC Indexer",
     routes: ["/gic/*"],
     status: "active",
-    description: "Global Integrity Chain indexing services",
+    description: "Mobius Integrity Index Chain indexing services",
     health_endpoint: "/gic/health"
   }
 ];

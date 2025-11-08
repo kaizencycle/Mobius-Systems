@@ -1,7 +1,7 @@
 {
-  "name": "@kaizen/delibproof",
+  "name": "@mobius/delibproof",
   "version": "0.1.0",
-  "description": "DelibProof consensus labeler for Truth Rail attestations",
+  "description": "DelibProof consensus labeler for Truth Rail attestations in Mobius Systems",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {

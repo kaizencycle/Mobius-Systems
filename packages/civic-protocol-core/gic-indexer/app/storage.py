@@ -35,11 +35,11 @@ def apply_event(db, kind: str, amount: float, unit: str, actor: str | None, targ
 
     if kind == "xp_award" and target:
         bump(target, dx_xp=amount)
-    elif kind == "grant" and target and unit=="GIC":
+    elif kind == "grant" and target and unit=="MIC":
         bump(target, dx_gic=amount)
-    elif kind == "burn" and actor and unit=="GIC":
+    elif kind == "burn" and actor and unit=="MIC":
         bump(actor, dx_gic= -amount)
-    elif kind == "transfer" and actor and target and unit=="GIC":
+    elif kind == "transfer" and actor and target and unit=="MIC":
         bump(actor, dx_gic= -amount); bump(target, dx_gic= amount)
 
 def compute_supply(db):
@@ -49,6 +49,6 @@ def compute_supply(db):
     return {
         "xp_pool": float(xp_pool),
         "total_gic": float(gic_direct + gic_from_xp),
-        "circulating_gic": float(gic_direct)  # direct GIC grants/transfers considered circulating
+        "circulating_gic": float(gic_direct)  # direct MIC grants/transfers considered circulating
     }
 

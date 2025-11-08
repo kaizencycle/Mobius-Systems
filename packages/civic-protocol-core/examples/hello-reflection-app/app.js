@@ -31,8 +31,8 @@ function printReflection(reflection) {
 
 function printBalance(balance) {
     console.log(`  Address: ${balance.address}`);
-    console.log(`  Balance: ${balance.balance} GIC`);
-    console.log(`  Vesting: ${balance.vesting} GIC`);
+    console.log(`  Balance: ${balance.balance} MIC`);
+    console.log(`  Vesting: ${balance.vesting} MIC`);
     console.log(`  Nonce: ${balance.nonce}`);
     console.log(`  Last Updated: ${balance.last_updated}`);
     console.log();
@@ -161,7 +161,7 @@ async function main() {
         }
         
         // Check balance
-        printSeparator("7. Checking GIC Balance");
+        printSeparator("7. Checking MIC Balance");
         try {
             const balance = await client.getBalance("citizen_001");
             console.log("Balance information:");

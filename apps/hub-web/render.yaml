@@ -63,9 +63,9 @@ services:
         value: "1"
     healthCheckPath: /
 
-  # GIC Gateway Service
+  # MIC Gateway Service
   - type: web
-    name: gic-gateway
+    name: miic-gateway
     env: node
     rootDir: oaa-central-hub/closed_loop_safety_pack
     buildCommand: npm ci
@@ -81,7 +81,7 @@ services:
       - key: IPFS_HTTP_GATEWAY
         value: https://ipfs.io/ipfs/
       - key: GATEWAY_NAME
-        value: gic-gateway
+        value: miic-gateway
       - key: GATEWAY_HMAC_SECRET
         generateValue: true
 
@@ -109,12 +109,12 @@ services:
       - key: GIC_GATEWAY_BASE_URL
         fromService:
           type: web
-          name: gic-gateway
+          name: miic-gateway
           property: url
       - key: GATEWAY_HMAC_SECRET
         fromService:
           type: web
-          name: gic-gateway
+          name: miic-gateway
           envVarKey: GATEWAY_HMAC_SECRET
 
   # Redis Cache

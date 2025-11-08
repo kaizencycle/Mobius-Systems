@@ -25,7 +25,7 @@ const faqData = {
       "name": "What is the Civic Ledger?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The Civic Ledger is a blockchain-based system that records and verifies civic contributions, attestations, and integrity scores. It provides cryptographic proof of civic work, enables the GIC reward system, and ensures transparency and accountability in the ecosystem."
+        "text": "The Civic Ledger is a blockchain-based system that records and verifies civic contributions, attestations, and integrity scores. It provides cryptographic proof of civic work, enables the MIC reward system, and ensures transparency and accountability in the ecosystem."
       }
     },
     {
@@ -65,7 +65,7 @@ const faqData = {
       "name": "How can I participate in the Civic AI ecosystem?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "You can participate by contributing verified content, participating in governance, developing civic applications, maintaining high integrity scores, earning GIC through civic contributions, and helping to build the community infrastructure that supports ethical AI development."
+        "text": "You can participate by contributing verified content, participating in governance, developing civic applications, maintaining high integrity scores, earning MIC through civic contributions, and helping to build the community infrastructure that supports ethical AI development."
       }
     }
   ]

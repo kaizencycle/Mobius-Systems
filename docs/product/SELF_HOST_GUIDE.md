@@ -32,7 +32,7 @@ Kaizen OS is designed to be **exit-friendly**. You can run your own node, contro
 
 ```bash
 # Clone the repository
-git clone https://github.com/kaizencycle/Kaizen-OS
+git clone https://github.com/kaizencycle/Mobius-Systems
 cd Kaizen-OS
 
 # Copy environment template
@@ -109,7 +109,7 @@ docker-compose --profile federated up -d
 - ✅ Full ledger validator node
 - ✅ OAA Hub mirror
 - ✅ Participate in governance
-- ✅ Earn GIC for validation
+- ✅ Earn MIC for validation
 - ✅ Peer discovery
 
 **Requirements:**
@@ -140,7 +140,7 @@ OPENAI_API_KEY=sk-...
 ANTHROPIC_API_KEY=sk-ant-...
 GOOGLE_API_KEY=...
 
-# === GIC Wallet ===
+# === MIC Wallet ===
 GIC_WALLET_SEED=  # 24-word mnemonic (KEEP SECRET!)
 GIC_MINT_CAP=10000
 
@@ -270,7 +270,7 @@ Visit `http://localhost:3000/admin/metrics` to see:
 - Uptime
 - Query count
 - GI scores
-- GIC balance
+- MIC balance
 - Ledger sync status
 
 ### Logs
@@ -322,7 +322,7 @@ docker-compose restart ollama
 ollama pull llama3.3
 ```
 
-### Issue: "GIC wallet locked"
+### Issue: "MIC wallet locked"
 **Solution:**
 ```bash
 kaizen wallet unlock --interactive
@@ -378,7 +378,7 @@ services:
 - **Documentation**: https://docs.kaizen.os
 - **Community Forum**: https://forum.kaizen.os
 - **Discord**: #self-hosting channel
-- **GitHub Issues**: https://github.com/kaizencycle/Kaizen-OS/issues
+- **GitHub Issues**: https://github.com/kaizencycle/Mobius-Systems/issues
 
 ---
 

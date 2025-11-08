@@ -4,7 +4,7 @@ hash_notice: "Bump version when ANY field changes."
 
 privacy:
   default_visibility: "private"   # reflections private-by-default
-  public_bonus_multiplier: 1.25   # extra GIC if user opts-in to publish
+  public_bonus_multiplier: 1.25   # extra MIC if user opts-in to publish
   view_keys_enabled: true         # citizens can reveal to others selectively
 
 rate_limits:

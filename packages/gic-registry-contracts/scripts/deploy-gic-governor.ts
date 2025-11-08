@@ -1,5 +1,5 @@
 /**
- * Deploy GIC Token and GICGovernor contracts
+ * Deploy MIC Token and GICGovernor contracts
  * Sets up the 90-day epoch system for Founding Agents
  */
 
@@ -10,7 +10,7 @@ const FOUNDING_AGENTS = [
   {
     name: "AUREA",
     wallet: process.env.AUREA_WALLET || "0x0000000000000000000000000000000000000001",
-    cap: ethers.parseEther("100000"), // 100k GIC per epoch
+    cap: ethers.parseEther("100000"), // 100k MIC per epoch
     donateBps: 2000, // 20% donate-back
     active: true,
   },
@@ -73,7 +73,7 @@ const FOUNDING_AGENTS = [
 ];
 
 async function main() {
-  console.log("Deploying GIC Token and GICGovernor...");
+  console.log("Deploying MIC Token and GICGovernor...");
 
   // Get deployer
   const [deployer] = await ethers.getSigners();
@@ -82,13 +82,13 @@ async function main() {
   const balance = await ethers.provider.getBalance(deployer.address);
   console.log("Account balance:", ethers.formatEther(balance), "ETH");
 
-  // 1. Deploy GIC Token
-  console.log("\n1. Deploying GIC Token...");
-  const GIC = await ethers.getContractFactory("GIC");
-  const gic = await GIC.deploy();
+  // 1. Deploy MIC Token
+  console.log("\n1. Deploying MIC Token...");
+  const MIC = await ethers.getContractFactory("MIC");
+  const gic = await MIC.deploy();
   await gic.waitForDeployment();
   const gicAddress = await gic.getAddress();
-  console.log("✓ GIC Token deployed to:", gicAddress);
+  console.log("✓ MIC Token deployed to:", gicAddress);
 
   // 2. Deploy GICGovernor
   console.log("\n2. Deploying GICGovernor...");
@@ -120,7 +120,7 @@ async function main() {
     const agentId = ethers.keccak256(ethers.toUtf8Bytes(agent.name));
     console.log(`\nRegistering ${agent.name}...`);
     console.log(`  Wallet: ${agent.wallet}`);
-    console.log(`  Cap: ${ethers.formatEther(agent.cap)} GIC`);
+    console.log(`  Cap: ${ethers.formatEther(agent.cap)} MIC`);
     console.log(`  Donate: ${agent.donateBps / 100}%`);
     console.log(`  Status: ${agent.active ? "Active" : "Inactive"}${agent.cap === 0n ? " (Dormant)" : ""}`);
 
@@ -140,7 +140,7 @@ async function main() {
   console.log("DEPLOYMENT COMPLETE");
   console.log("=".repeat(60));
   console.log("\nContract Addresses:");
-  console.log("  GIC Token:      ", gicAddress);
+  console.log("  MIC Token:      ", gicAddress);
   console.log("  GICGovernor:    ", governorAddress);
   console.log("  Public Goods:   ", publicGoodsPool);
 
@@ -162,7 +162,7 @@ async function main() {
     timestamp: new Date().toISOString(),
     deployer: deployer.address,
     contracts: {
-      gic: gicAddress,
+      gic: miicAddress,
       governor: governorAddress,
     },
     publicGoodsPool,

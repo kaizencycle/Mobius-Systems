@@ -34,7 +34,7 @@ In chaotic multi-body systems, stability emerges when a neutral observer establi
 **Application:**
 - ZEUS as meta-anchor provides neutral witness
 - Sentinel consensus creates shared truth
-- Global Integrity (GI) emerges from collective observation
+- Mobius Integrity Index (GI) emerges from collective observation
 
 ---
 
@@ -70,7 +70,7 @@ Integrity = f(Entropy × Compassion)
 ### Ⅲ. AI → Governance
 For DVA, HIVE, and Sentinel systems:
 - A fracture in trust or data integrity triggers **attestation + repair**, not purge
-- Every successful repair increases *Global Integrity (GI)*
+- Every successful repair increases *Mobius Integrity Index (GI)*
 - The goal of governance shifts from *perfection* to *perpetual healing*
 
 ### Ⅳ. Philosophy → Policy

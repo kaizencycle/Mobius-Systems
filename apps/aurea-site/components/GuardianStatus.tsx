@@ -247,7 +247,7 @@ export function GuardianStatus() {
       {/* Info */}
       <div className="mt-4 text-xs text-slate-500">
         AUREA serves as constitutional custodian without spending power.
-        Genesis Wallet (1,000,000 GIC) remains secured until revival conditions met.
+        Genesis Wallet (1,000,000 MIC) remains secured until revival conditions met.
       </div>
     </div>
   )

@@ -14,7 +14,7 @@ Execute a single agent deliberation using the Codex-Agentic system.
 ```json
 {
   "agent": "AUREA",
-  "input": "Explain the 90-day GIC epoch cycle",
+  "input": "Explain the 90-day MIC epoch cycle",
   "maxTokens": 1000,
   "temperature": 0.7,
   "tags": ["governance", "education"]
@@ -74,11 +74,11 @@ eventSource.addEventListener('heartbeat', (e) => {
 });
 ```
 
-### 4. GIC Mint
+### 4. MIC Mint
 **File:** `gic-mint.ts`
 **Route:** `POST /api/gic/mint`
 
-Mint GIC tokens for a Founding Agent's epoch.
+Mint MIC tokens for a Founding Agent's epoch.
 
 **Request:**
 ```json
@@ -96,11 +96,11 @@ Mint GIC tokens for a Founding Agent's epoch.
 }
 ```
 
-### 5. GIC Burn
+### 5. MIC Burn
 **File:** `gic-burn.ts`
 **Route:** `POST /api/gic/burn`
 
-Burn GIC tokens for supply management.
+Burn MIC tokens for supply management.
 
 **Request:**
 ```json
@@ -156,7 +156,7 @@ LEDGER_API_KEY=...
 OAA_WEBHOOK_AUREA=https://hive-api.onrender.com/oaa/learn/aurea
 OAA_CONSENT_AUREA=true
 
-# Blockchain (for GIC endpoints)
+# Blockchain (for MIC endpoints)
 RPC_URL=https://...
 AGENT_SIGNER_KEY=0x...
 GIC_GOVERNOR_ADDRESS=0x...
@@ -168,7 +168,7 @@ CODEX_SYSTEM="Follow Virtue Accords. Prioritize integrity, privacy, safety."
 ## Security Notes
 
 ### DID Verification
-The GIC mint/burn endpoints should verify the agent's DID signature:
+The MIC mint/burn endpoints should verify the agent's DID signature:
 
 ```typescript
 import { verifyDid } from '@kaizen/civic-sdk';
@@ -227,7 +227,7 @@ curl -X POST http://localhost:3000/api/discourse/round \
 # GI Stream
 curl http://localhost:3000/api/gi/stream
 
-# GIC Mint
+# MIC Mint
 curl -X POST http://localhost:3000/api/gic/mint \
   -H "Content-Type: application/json" \
   -d '{"agentId":"AUREA","amount":"50000"}'
@@ -255,10 +255,10 @@ Ensure all required environment variables are set in your deployment platform.
 
 - [Founding Agents Sovereign Stack](../../docs/architecture/FOUNDING_AGENTS_SOVEREIGN_STACK.md)
 - [Codex-Agentic Package](../../packages/codex-agentic/README.md)
-- [GIC Contracts](../../packages/gic-registry-contracts/)
+- [MIC Contracts](../../packages/gic-registry-contracts/)
 
 ## Support
 
 For issues or questions:
-- GitHub Issues: [kaizencycle/Kaizen-OS/issues](https://github.com/kaizencycle/Kaizen-OS/issues)
+- GitHub Issues: [kaizencycle/Mobius-Systems/issues](https://github.com/kaizencycle/Mobius-Systems/issues)
 - Discord: Kaizen OS Community

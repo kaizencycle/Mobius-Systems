@@ -1,6 +1,6 @@
-# @kaizen/codex-agentic
+# @mobius/codex-agentic
 
-Multi-LLM routing and consensus system for Kaizen OS Founding Agents. This package implements the Codex-Agentic Federation, enabling DelibProof consensus across multiple AI providers.
+Multi-LLM routing and consensus system for Mobius Systems Founding Agents. This package implements the Codex-Agentic Federation, enabling DelibProof consensus across multiple AI providers, supporting the Kaizen Turing Test (KTT) evaluation framework.
 
 ## Features
 
@@ -15,20 +15,20 @@ Multi-LLM routing and consensus system for Kaizen OS Founding Agents. This packa
 ## Installation
 
 ```bash
-npm install @kaizen/codex-agentic
+npm install @mobius/codex-agentic
 # or
-pnpm add @kaizen/codex-agentic
+pnpm add @mobius/codex-agentic
 ```
 
 ## Quick Start
 
 ```typescript
-import { codexDeliberate } from '@kaizen/codex-agentic';
+import { codexDeliberate } from '@mobius/codex-agentic';
 
 // Execute a single agent deliberation
 const proof = await codexDeliberate({
   agent: 'AUREA',
-  input: 'Explain the 90-day GIC epoch cycle',
+  input: 'Explain the 90-day MIC epoch cycle',
 });
 
 console.log(proof.winner.output); // Winner's response
@@ -144,7 +144,7 @@ interface CodexVote {
 ### Stability Anchors
 
 ```typescript
-import { STABILITY_ANCHORS, getAnchor } from '@kaizen/codex-agentic';
+import { STABILITY_ANCHORS, getAnchor } from '@mobius/codex-agentic';
 
 // Get all anchors
 console.log(STABILITY_ANCHORS);
@@ -158,7 +158,7 @@ console.log(aurea.minAgreement); // 0.90
 ### GI Metrics
 
 ```typescript
-import { giScoreFor, calculateAgreement } from '@kaizen/codex-agentic';
+import { giScoreFor, calculateAgreement } from '@mobius/codex-agentic';
 
 // Calculate GI score
 const gi = giScoreFor({
@@ -177,7 +177,7 @@ const agreement = calculateAgreement(votes, 0.80); // 0.80 = similarity threshol
 ### Ledger Attestation
 
 ```typescript
-import { attestToLedger } from '@kaizen/codex-agentic';
+import { attestToLedger } from '@mobius/codex-agentic';
 
 // Attest to Civic Ledger (fire-and-forget)
 await attestToLedger({
@@ -193,7 +193,7 @@ await attestToLedger({
 ### OAA Learning
 
 ```typescript
-import { oaaLearn, hasOAAConsent } from '@kaizen/codex-agentic';
+import { oaaLearn, hasOAAConsent } from '@mobius/codex-agentic';
 
 // Check if agent has opted into learning
 if (hasOAAConsent('AUREA')) {
@@ -227,7 +227,7 @@ if (hasOAAConsent('AUREA')) {
 ### Custom Provider Routing
 
 ```typescript
-import { codexDeliberate } from '@kaizen/codex-agentic';
+import { codexDeliberate } from '@mobius/codex-agentic';
 
 // Override default routing
 const proof = await codexDeliberate({
@@ -241,7 +241,7 @@ const proof = await codexDeliberate({
 ### Monitoring & Debugging
 
 ```typescript
-import { codexDeliberate } from '@kaizen/codex-agentic';
+import { codexDeliberate } from '@mobius/codex-agentic';
 
 const proof = await codexDeliberate({
   agent: 'ZEUS',
@@ -306,12 +306,12 @@ MIT
 
 ## Related Packages
 
-- `@kaizen/civic-protocol-core` - Civic Ledger client
-- `@kaizen/oaa-api-library` - OAA Hub integration
-- `@kaizen/gic-contracts` - GIC token & governor contracts
+- `@mobius/civic-protocol-core` - Civic Ledger client
+- `@mobius/oaa-api-library` - OAA Hub integration
+- `@mobius/gic-contracts` - MIC token & governor contracts
 
 ## Support
 
 - Documentation: [docs/architecture/FOUNDING_AGENTS_SOVEREIGN_STACK.md](../../docs/architecture/FOUNDING_AGENTS_SOVEREIGN_STACK.md)
-- Issues: [GitHub Issues](https://github.com/kaizencycle/Kaizen-OS/issues)
-- Discord: [Kaizen OS Community](https://discord.gg/kaizenos)
+- Issues: [GitHub Issues](https://github.com/kaizencycle/Mobius-Systems/issues)
+- Discord: [Mobius Systems Community](https://discord.gg/kaizenos)

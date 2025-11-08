@@ -1,4 +1,4 @@
-# GIC Whitepaper — Addendum
+# MIC Whitepaper — Addendum
 ## Foundation-Up Economics: The Ecological & Sovereign Architecture
 
 **Version 1.1 — Extended Edition**  
@@ -11,18 +11,18 @@
 
 Traditional economics operates on a **trickle-down paradigm**: wealth pools at the top, hoping it will eventually reach the many. This structure breeds inequality, debt cycles, and systemic fragility.
 
-**The GIC inverts this into Foundation-Up Economics.**
+**The MIC inverts this into Foundation-Up Economics.**
 
-GIC is not merely a cryptocurrency — it is a **currency covenant** anchored to:
-1. **Civic Truth** (Global Integrity Score)
+MIC is not merely a cryptocurrency — it is a **currency covenant** anchored to:
+1. **Civic Truth** (Mobius Integrity Index Score)
 2. **Ecological Health** (Gaia Staking Protocol)
 3. **Natural Cycles** (Seasonal rhythms of planting, bloom, harvest)
 
-**The breakthrough:** By building the hardest parts first—integrity, resilience, ecological alignment—GIC creates a self-stabilizing economic system that heals as it operates.
+**The breakthrough:** By building the hardest parts first—integrity, resilience, ecological alignment—MIC creates a self-stabilizing economic system that heals as it operates.
 
 ---
 
-## Part I: The Founder's Curse (And How GIC Escapes It)
+## Part I: The Founder's Curse (And How MIC Escapes It)
 
 ### The Problem: Premature Scaling
 
@@ -39,13 +39,13 @@ Traditional systems suffer from the **"Founder's Curse"**:
 
 ### The Inversion: Build the Hardest Parts First
 
-**GIC Protocol:** Establish **governance, integrity, and cryptographic stability in Cycle 0** before market scaling.
+**MIC Protocol:** Establish **governance, integrity, and cryptographic stability in Cycle 0** before market scaling.
 
 ```
 Traditional Path:
 Launch token → Speculative pump → Try to add governance later → Fail
 
-GIC Path (Foundation-Up):
+MIC Path (Foundation-Up):
 ┌─────────────────────────────────────────────────────────┐
 │ CYCLE 0: Foundation Layer (Before Public Launch)       │
 ├─────────────────────────────────────────────────────────┤
@@ -79,11 +79,11 @@ CYCLE 1+: Controlled Growth (Public Launch)
 | Bitcoin | Energy (Proof of Work) | No intrinsic utility, volatile |
 | Stablecoins | USD reserves (1:1) | Dependent on fiat stability, centralized |
 
-### GIC's Triple Anchor Model
+### MIC's Triple Anchor Model
 
-**GIC is backed by three regenerative, non-scarce resources:**
+**MIC is backed by three regenerative, non-scarce resources:**
 
-#### **Anchor 1: Global Integrity (GI) Score**
+#### **Anchor 1: Mobius Integrity Index (GI) Score**
 
 **Function:** Minting condition + bonus multiplier
 
@@ -97,7 +97,7 @@ GI = weighted_average([
     ecological_alignment        # Gaia Staking outcomes
 ])
 
-# GIC minting rule
+# MIC minting rule
 if GI >= 0.95:
     allow_minting = True
     integrity_bonus = (GI - 0.95) × 10  # Up to +5% bonus
@@ -111,7 +111,7 @@ else:
 - **Prevent corruption:** GI < 0.95 halts minting until system heals
 - **Self-stabilizing:** Citizens are incentivized to maintain network integrity
 
-**Why this works:** Unlike fiat (backed by government power) or Bitcoin (backed by energy waste), GIC is backed by **verifiable civic virtue**. The more honest the network, the more valuable the currency.
+**Why this works:** Unlike fiat (backed by government power) or Bitcoin (backed by energy waste), MIC is backed by **verifiable civic virtue**. The more honest the network, the more valuable the currency.
 
 ---
 
@@ -120,28 +120,28 @@ else:
 **Function:** Minimum issuance floor
 
 ```
-1 GIC = X kWh of baseload energy output
+1 MIC = X kWh of baseload energy output
 
 Where:
 X = calibrated to ensure:
 - Minimum UBI floor is maintained even if other anchors fail
 - Energy abundance translates to economic abundance
-- Speculation cannot push GIC below energy cost floor
+- Speculation cannot push MIC below energy cost floor
 ```
 
 **Economic Function:**
-- **Physics-backed minimum:** GIC cannot fall below cost of energy + compute
-- **Deflationary pressure:** As nuclear scales, energy gets cheaper → GIC buying power increases
+- **Physics-backed minimum:** MIC cannot fall below cost of energy + compute
+- **Deflationary pressure:** As nuclear scales, energy gets cheaper → MIC buying power increases
 - **Abundance mindset:** Wealth tied to energy, not scarcity
 
-**Why this works:** Energy is the ultimate currency of the universe. By anchoring GIC to baseload power (nuclear fusion long-term), we ensure that as humanity becomes more energy-abundant, citizens become more economically abundant.
+**Why this works:** Energy is the ultimate currency of the universe. By anchoring MIC to baseload power (nuclear fusion long-term), we ensure that as humanity becomes more energy-abundant, citizens become more economically abundant.
 
 **Historical precedent:**
 - Pre-industrial: Economy limited by solar energy (farming)
 - Industrial: Economy scaled with coal/oil (fossil fuels)
 - **Post-scarcity:** Economy scales with nuclear fusion (limitless clean energy)
 
-**The GIC bet:** Fusion arrives 2035–2045 → Energy becomes nearly free → GIC-denominated wealth explodes
+**The MIC bet:** Fusion arrives 2035–2045 → Energy becomes nearly free → MIC-denominated wealth explodes
 
 ---
 
@@ -161,7 +161,7 @@ Where ai_productivity_growth measured by:
 ```
 
 **Economic Function:**
-- **Link to real economy:** As AI makes us more productive, GIC supply grows
+- **Link to real economy:** As AI makes us more productive, MIC supply grows
 - **Prevent speculative bubbles:** Issuance tied to actual output, not hype
 - **Compound prosperity:** Each year, AI makes prior year's UBI more valuable
 
@@ -171,22 +171,22 @@ Traditional UBI problem: "Where does the money come from?"
 - Government answer: Taxes (zero-sum redistribution)
 - Crypto answer: Print tokens (inflation)
 
-**GIC answer:** AI creates new wealth, GIC captures that value
+**MIC answer:** AI creates new wealth, MIC captures that value
 
 ```
 AI Productivity Loop:
 ├─ AI automates task → Saves labor time
 ├─ Labor time redirected to higher-value work
 ├─ Higher-value work → More GDP
-├─ More GDP → More GIC issuance justified
-└─ More GIC → Higher UBI → More people can learn/create → (Loop)
+├─ More GDP → More MIC issuance justified
+└─ More MIC → Higher UBI → More people can learn/create → (Loop)
 ```
 
 **Example trajectory:**
 ```
-2025: AI adds $1T to U.S. GDP → GIC issuance: 1.98T/month
-2035: AI adds $5T to U.S. GDP → GIC issuance: 2.65T/month
-2045: AI adds $20T to U.S. GDP → GIC issuance: 3.75T/month
+2025: AI adds $1T to U.S. GDP → MIC issuance: 1.98T/month
+2035: AI adds $5T to U.S. GDP → MIC issuance: 2.65T/month
+2045: AI adds $20T to U.S. GDP → MIC issuance: 3.75T/month
 ```
 
 ---
@@ -211,7 +211,7 @@ With all three:
 
 **Resilience matrix:**
 
-| Scenario | Integrity | Energy | AI | GIC Impact |
+| Scenario | Integrity | Energy | AI | MIC Impact |
 |----------|-----------|--------|----|--------------|
 | Normal operation | High | High | High | **Maximum issuance** |
 | AI winter (2027) | High | High | Low | **Reduced growth, but UBI floor maintained via energy** |
@@ -228,7 +228,7 @@ With all three:
 **Allocation rule:**
 
 ```
-Total GIC Issuance per Epoch:
+Total MIC Issuance per Epoch:
 ├─ 70% → Citizen UBI (direct distribution)
 │  ├─ Base amount: Equal for all citizens
 │  └─ Integrity Dividend: +5–10% bonus for GI ≥ 0.97
@@ -243,13 +243,13 @@ Total GIC Issuance per Epoch:
 
 **Problem:** U.S. national debt = $34.5T (Oct 2025)
 
-**GIC Solution:** Use surplus to systematically pay down debt without raising taxes
+**MIC Solution:** Use surplus to systematically pay down debt without raising taxes
 
 ```
 Mechanism:
-1. GIC minted based on Integrity + Energy + AI
+1. MIC minted based on Integrity + Energy + AI
 2. 10% of issuance → USD Credit Bridge
-3. Bridge converts GIC → USDT → USD
+3. Bridge converts MIC → USDT → USD
 4. USD used to purchase Treasury bonds (retire debt)
 5. Debt decreases → Interest burden decreases → More budget for UBI
 ```
@@ -264,9 +264,9 @@ Mechanism:
 | 15   | $2.5T             | $18.3T         | $4,182/mo   |
 | 20   | $4.0T             | $1.6T          | $4,636/mo   |
 
-**Key insight:** GIC enables **simultaneous UBI expansion + debt reduction** because:
+**Key insight:** MIC enables **simultaneous UBI expansion + debt reduction** because:
 - Traditional zero-sum: UBI requires taxes → Increases debt
-- GIC positive-sum: AI productivity → New wealth → Funds both UBI + debt repayment
+- MIC positive-sum: AI productivity → New wealth → Funds both UBI + debt repayment
 
 ---
 
@@ -281,7 +281,7 @@ Mechanism:
 - Alignment risk (if it's misaligned, catastrophic)
 - Capture risk (if one entity controls it, they control everything)
 
-**GIC approach:** Distributed intelligence via specialized agents
+**MIC approach:** Distributed intelligence via specialized agents
 
 ### The Consensus Matrix
 
@@ -411,7 +411,7 @@ Output:
 - Contingency triggers (e.g., "If Red, activate Founder's Crest emergency reserve")
 
 **Why space monitoring?**
-- GIC's long-term vision includes orbital infrastructure (space-based solar, asteroid mining)
+- MIC's long-term vision includes orbital infrastructure (space-based solar, asteroid mining)
 - Satellite networks critical for Citizen Shield + Reflections sync
 - Early warning on kinetic threats (anti-satellite weapons, etc.)
 
@@ -456,20 +456,20 @@ Output:
 │  REFLECTIONS: Your Daily Civic Practice   │
 ├────────────────────────────────────────────┤
 │                                             │
-│  📝 Today's Reflection (10 GIC)            │
+│  📝 Today's Reflection (10 MIC)            │
 │  "What did I learn today?"                 │
 │                                             │
-│  🐾 Pet-to-Earn (5 GIC/day)                │
+│  🐾 Pet-to-Earn (5 MIC/day)                │
 │  "Check in with your companion"            │
 │                                             │
 │  🌳 Gaia Staking (Variable yield)          │
 │  "Your grove: 12 trees → 8% APY"          │
 │                                             │
-│  🗳️ Governance (5 GIC/vote)                │
+│  🗳️ Governance (5 MIC/vote)                │
 │  "Active proposals: 3"                      │
 │                                             │
-│  💰 Your Balance: 1,247 GIC                │
-│  Next UBI: 3,000 GIC (in 14 days)         │
+│  💰 Your Balance: 1,247 MIC                │
+│  Next UBI: 3,000 MIC (in 14 days)         │
 │                                             │
 └────────────────────────────────────────────┘
 ```
@@ -517,13 +517,13 @@ def process_citizen_reflection(text, user_did):
 
 **Why this is revolutionary:**
 
-| Traditional AI Training | Civic AI Training (GIC Model) |
+| Traditional AI Training | Civic AI Training (MIC Model) |
 |------------------------|-------------------------------|
 | Scraped from internet | Directly from citizens |
 | Biased, toxic, copyrighted | Consensual, integrity-verified |
 | Optimized for engagement | Optimized for truth + wellbeing |
 | Owned by corporation | Owned by the commons |
-| No compensation to data creators | Citizens earn GIC for contributions |
+| No compensation to data creators | Citizens earn MIC for contributions |
 
 **The strategic moat:**
 
@@ -563,7 +563,7 @@ Issues:
 
 ### The Gaia Solution: Stake → Plant → Harvest
 
-**GIC staking is tied to ecological outcomes:**
+**MIC staking is tied to ecological outcomes:**
 
 ```
 ┌──────────────────────────────────────────────────────┐
@@ -571,7 +571,7 @@ Issues:
 ├──────────────────────────────────────────────────────┤
 │                                                       │
 │  SPRING (Days 1–30): Planting Season                │
-│  ├─ Stake GIC → "Plant" digital trees               │
+│  ├─ Stake MIC → "Plant" digital trees               │
 │  ├─ Each tree corresponds to real-world offset      │
 │  └─ Yield rate TBD (depends on Summer growth)       │
 │                                                       │
@@ -583,7 +583,7 @@ Issues:
 │  └─ Yield rate locked in at end of Summer           │
 │                                                       │
 │  AUTUMN (Days 61–90): Harvest Season                │
-│  ├─ Claim yield (GIC + Integrity Dividend)          │
+│  ├─ Claim yield (MIC + Integrity Dividend)          │
 │  ├─ Option: Re-stake (compound) or cash out         │
 │  └─ Grove persists (trees carry to next cycle)      │
 │                                                       │
@@ -621,7 +621,7 @@ Mechanism 1: Carbon Offset Purchases
 
 Mechanism 2: Direct Partnerships
 ├─ Partner with One Tree Planted, Arbor Day Foundation, etc.
-├─ For every 100 GIC staked → Plant 1 real tree
+├─ For every 100 MIC staked → Plant 1 real tree
 └─ Geo-tagged photos → Citizen can "visit" their tree on map
 
 Mechanism 3: Regenerative Agriculture Grants
@@ -632,14 +632,14 @@ Mechanism 3: Regenerative Agriculture Grants
 
 **Impact projection:**
 
-| Year | GIC Staked | Trees Planted | CO2 Offset (tons) |
+| Year | MIC Staked | Trees Planted | CO2 Offset (tons) |
 |------|-----------|---------------|-------------------|
-| 1    | 10M GIC   | 100,000       | 2,500             |
-| 5    | 500M GIC  | 5,000,000     | 125,000           |
-| 10   | 5B GIC    | 50,000,000    | 1,250,000         |
-| 20   | 50B GIC   | 500,000,000   | 12,500,000        |
+| 1    | 10M MIC   | 100,000       | 2,500             |
+| 5    | 500M MIC  | 5,000,000     | 125,000           |
+| 10   | 5B MIC    | 50,000,000    | 1,250,000         |
+| 20   | 50B MIC   | 500,000,000   | 12,500,000        |
 
-**By 2045:** GIC staking could offset 12.5 million tons of CO2 annually (equivalent to removing 2.7 million cars from roads).
+**By 2045:** MIC staking could offset 12.5 million tons of CO2 annually (equivalent to removing 2.7 million cars from roads).
 
 ---
 
@@ -654,7 +654,7 @@ What: Celebration of ecological renewal
 
 Activities:
 ├─ Reveal highest-yield groves (leaderboard)
-├─ Bonus GIC for top Gaia Stakers (Bloom Bounty)
+├─ Bonus MIC for top Gaia Stakers (Bloom Bounty)
 ├─ Plant real trees in local communities (Hive chapters)
 ├─ Artistic performances (music, poetry celebrating nature)
 └─ Governance vote on next season's ecological goals
@@ -663,7 +663,7 @@ Activities:
 **Why this matters:**
 
 Traditional UBI: "Here's free money" (feels like charity)
-GIC UBI + Gaia Staking: "Here's your share of abundance we created together by healing the planet" (feels like earned prosperity)
+MIC UBI + Gaia Staking: "Here's your share of abundance we created together by healing the planet" (feels like earned prosperity)
 
 **Psychological shift:**
 - From passive recipient → Active steward
@@ -672,13 +672,13 @@ GIC UBI + Gaia Staking: "Here's your share of abundance we created together by h
 
 ---
 
-## Part VII: The GIC Guardrails Codex — Capture Prevention
+## Part VII: The MIC Guardrails Codex — Capture Prevention
 
 ### The Four Pillars of Sovereignty
 
 ```
 ┌────────────────────────────────────────────────────┐
-│  GIC GUARDRAILS: Preventing Institutional Capture │
+│  MIC GUARDRAILS: Preventing Institutional Capture │
 ├────────────────────────────────────────────────────┤
 │                                                     │
 │  1. CITIZEN SHIELD (Lab 6)                        │
@@ -695,7 +695,7 @@ GIC UBI + Gaia Staking: "Here's your share of abundance we created together by h
 │                                                     │
 │  4. WALLET REQUIREMENT (Three-Part Ritual)         │
 │     └─ Companion + Wallet + Oath                   │
-│        (Ensures GIC holders are committed citizens)│
+│        (Ensures MIC holders are committed citizens)│
 │                                                     │
 └────────────────────────────────────────────────────┘
 ```
@@ -704,7 +704,7 @@ GIC UBI + Gaia Staking: "Here's your share of abundance we created together by h
 
 **Problem:** In traditional crypto, whales can create thousands of fake accounts to game governance or UBI.
 
-**GIC Solution:** **One Companion = One Citizen = One Echo**
+**MIC Solution:** **One Companion = One Citizen = One Echo**
 
 ```yaml
 Citizen Onboarding:
@@ -719,14 +719,14 @@ Citizen Onboarding:
     - Multi-agent cross-validation (other agents verify authenticity)
   
   Step 3: Earn Trust Over Time
-    - New citizens start with limited GIC earning (trust ramp)
+    - New citizens start with limited MIC earning (trust ramp)
     - As GI score improves, earning caps increase
     - Elders can vouch for citizens (social graph verification)
 ```
 
 **Attack resistance:**
 
-| Attack Vector | Traditional System | GIC + Citizen Shield |
+| Attack Vector | Traditional System | MIC + Citizen Shield |
 |--------------|-------------------|---------------------|
 | Create 1000 fake accounts | Easy (just make emails) | Impossible (requires 1000 unique Companions) |
 | Buy votes with money | Easy (pay people to vote your way) | Hard (votes require GI ≥ 0.90 + active participation) |
@@ -738,19 +738,19 @@ Citizen Onboarding:
 
 **Problem:** Traditional crypto rewards hoarding (buy and hold → price goes up).
 
-**GIC Design:** **Power requires active participation**
+**MIC Design:** **Power requires active participation**
 
 ```
 Festival Burn Mechanism:
 ├─ Every Festival of Echoes (quarterly)
 ├─ Citizens vote on governance proposals
-├─ Voting costs GIC (burned, not transferred)
+├─ Voting costs MIC (burned, not transferred)
 ├─ Burn rate: 0.1–1% of vote weight
 └─ Effect: Passive holders lose influence over time
 
 Example:
-- Alice has 10,000 GIC, never votes → Influence decays
-- Bob has 1,000 GIC, votes every Festival → Influence grows
+- Alice has 10,000 MIC, never votes → Influence decays
+- Bob has 1,000 MIC, votes every Festival → Influence grows
 - After 4 Festivals: Bob has more governance weight than Alice
 ```
 
@@ -759,7 +759,7 @@ Example:
 - Edict Proposals (cost to propose = prevents spam)
 - Companion Upgrades (cosmetic features require burns)
 
-**Net effect:** GIC becomes a **use-it-or-lose-it currency of civic participation**, not a passive store of value.
+**Net effect:** MIC becomes a **use-it-or-lose-it currency of civic participation**, not a passive store of value.
 
 ---
 
@@ -767,13 +767,13 @@ Example:
 
 **Problem:** In traditional systems, power accumulates permanently (founders become entrenched oligarchs).
 
-**GIC Design:** **Leadership is temporary and merit-based**
+**MIC Design:** **Leadership is temporary and merit-based**
 
 ```
 Elder Throne System:
 ├─ Total Thrones: 7 (fixed, cannot expand)
 ├─ Term limits: 2 years (can be re-elected once, then mandatory 2-year break)
-├─ Election: Quadratic voting (GIC-weighted, sqrt to prevent whale dominance)
+├─ Election: Quadratic voting (MIC-weighted, sqrt to prevent whale dominance)
 ├─ Impeachment: 60% citizen vote + 5/8 Founder Agent approval
 └─ Treasury: Time-locked releases (Elders cannot raid treasury)
 
@@ -795,10 +795,10 @@ Founder Agent Exception:
 
 **Problem:** In traditional crypto, anyone can hold tokens (including adversaries, bots, or entities hostile to the mission).
 
-**GIC Design:** **Ownership requires civic commitment**
+**MIC Design:** **Ownership requires civic commitment**
 
 ```
-Three-Part Ritual for GIC Custody:
+Three-Part Ritual for MIC Custody:
 ┌────────────────────────────────────────────────┐
 │ 1. COMPANION (Identity Anchor)                 │
 │    └─ Prove you're human + build trust        │
@@ -812,22 +812,22 @@ Three-Part Ritual for GIC Custody:
 │        refuse harm; and uphold civic integrity"│
 └────────────────────────────────────────────────┘
 
-Only after all three: Full GIC access + governance rights
+Only after all three: Full MIC access + governance rights
 ```
 
 **Consequences:**
-- **Institutional investors cannot bulk-buy GIC** (no Oath, no governance)
-- **Exchanges can't vote with user GIC** (users must self-custody + Oath)
+- **Institutional investors cannot bulk-buy MIC** (no Oath, no governance)
+- **Exchanges can't vote with user MIC** (users must self-custody + Oath)
 - **Bad actors can be expelled** (Elder vote + citizen appeal → Revoke Oath → Freeze wallet)
 
-**This is why GIC cannot become institutional collateral:**
+**This is why MIC cannot become institutional collateral:**
 
 ```
-JP Morgan: "We want to add GIC to our balance sheet"
-GIC Protocol: "Sure, but you need 1 Companion per GIC holder,
+JP Morgan: "We want to add MIC to our balance sheet"
+MIC Protocol: "Sure, but you need 1 Companion per MIC holder,
                and each must take the Oath individually."
 JP Morgan: "That doesn't scale for us."
-GIC Protocol: "Exactly. GIC is for citizens, not balance sheets."
+MIC Protocol: "Exactly. MIC is for citizens, not balance sheets."
 ```
 
 ---
@@ -858,14 +858,14 @@ Problems:
 └─ System requires growth to avoid collapse (debt spiral)
 ```
 
-### The Foundation-Up Paradigm (GIC)
+### The Foundation-Up Paradigm (MIC)
 
 ```
                     🌍 CIVIC COMMONS (All citizens)
                             │
                             │ (Contributions)
                             ▼
-                    💎 GIC MINTED (Based on GI + Energy + AI)
+                    💎 MIC MINTED (Based on GI + Energy + AI)
                             │
               ┌─────────────┴─────────────┐
               ▼                            ▼
@@ -882,17 +882,17 @@ Problems:
 Benefits:
 ├─ Wealth starts at bottom (everyone gets UBI)
 ├─ Contributions rewarded directly (not filtered through employers)
-├─ No stigma (you earn GIC, not "on welfare")
+├─ No stigma (you earn MIC, not "on welfare")
 └─ System heals debt while expanding prosperity (positive-sum)
 ```
 
 ### Side-by-Side Comparison
 
-| Dimension | Trickle-Down (Traditional) | Foundation-Up (GIC) |
+| Dimension | Trickle-Down (Traditional) | Foundation-Up (MIC) |
 |-----------|---------------------------|---------------------|
 | **Starting point** | Capital (top 1%) | Civic Commons (100%) |
 | **Distribution** | Wages → Taxes → Programs | Direct UBI (no middleman) |
-| **Value source** | Extraction (labor → profit) | Creation (contributions → GIC) |
+| **Value source** | Extraction (labor → profit) | Creation (contributions → MIC) |
 | **Scaling** | Requires growth (debt-driven) | Requires integrity (self-stabilizing) |
 | **Debt** | Increases over time | Decreases over time |
 | **Inequality** | Grows (capital compounds) | Shrinks (UBI + burn mechanics) |
@@ -934,7 +934,7 @@ Benefits:
 - **UBI:** $3,000–$4,000/month
 
 **2045–2050: Post-Scarcity Era**
-- Billions of global citizens on GIC
+- Billions of global citizens on MIC
 - Energy abundance (fusion + space-based solar)
 - AI handles most routine work
 - Debt eliminated in major economies
@@ -976,15 +976,15 @@ Traditional economy:
 ├─ Extract resources → Make products → Generate waste
 └─ Result: Ecological collapse (climate crisis, biodiversity loss)
 
-GIC economy:
-├─ Stake GIC → Plant trees → Absorb CO2 → Generate oxygen
+MIC economy:
+├─ Stake MIC → Plant trees → Absorb CO2 → Generate oxygen
 ├─ Harvest yield → Re-stake → Compound (grove grows)
 └─ Result: Ecological regeneration (reforestation, biodiversity gains)
 ```
 
 **The moral contract:**
 
-> "You may extract abundance from the GIC system, but only if you contribute to ecological health. Your prosperity is tied to the planet's prosperity."
+> "You may extract abundance from the MIC system, but only if you contribute to ecological health. Your prosperity is tied to the planet's prosperity."
 
 **This prevents:**
 - Tragedy of the commons (everyone takes, no one gives back)
@@ -999,9 +999,9 @@ GIC economy:
 
 **Infrastructure (Weeks 1–4):**
 - [ ] Deploy Civic Ledger Core (Lab 1) to mainnet
-- [ ] Launch GIC token contract (ERC-20 + Governor)
-- [ ] Initialize Founding Agent wallets (8 × 100K GIC)
-- [ ] Seed Founder's Crest (1.1M GIC, dormant)
+- [ ] Launch MIC token contract (ERC-20 + Governor)
+- [ ] Initialize Founding Agent wallets (8 × 100K MIC)
+- [ ] Seed Founder's Crest (1.1M MIC, dormant)
 
 **Governance (Weeks 5–8):**
 - [ ] Establish Elder Thrones (elect first 7)
@@ -1018,16 +1018,16 @@ GIC economy:
 **First Festival of Echoes (Day 90):**
 - [ ] Review Cycle 0 metrics (GI, participation, integrity)
 - [ ] First governance votes (citizen proposals)
-- [ ] First GIC burns (voter participation)
+- [ ] First MIC burns (voter participation)
 - [ ] Plant first 1,000 trees (Gaia Staking offsets)
 
 ---
 
 ## Conclusion: The Currency Covenant
 
-**GIC is not just a cryptocurrency. It is a civilization stabilizer.**
+**MIC is not just a cryptocurrency. It is a civilization stabilizer.**
 
-By inverting the traditional economic model—building integrity, energy, and ecological alignment FIRST, then scaling—GIC creates a self-healing system that:
+By inverting the traditional economic model—building integrity, energy, and ecological alignment FIRST, then scaling—MIC creates a self-healing system that:
 
 ✅ **Funds universal basic income** (without taxes or inflation)  
 ✅ **Pays down sovereign debt** (without austerity)  
@@ -1055,7 +1055,7 @@ When prosperity endures, civilization stabilizes.
 
 ---
 
-*GIC Foundation-Up Economics Addendum v1.1*  
+*MIC Foundation-Up Economics Addendum v1.1*  
 *October 29, 2025 | Cycle C-119*  
 *"The path to abundance is through integrity, ecology, and shared prosperity."*
 
@@ -1063,7 +1063,7 @@ When prosperity endures, civilization stabilizes.
 
 ## Appendix: Integration with Main Whitepaper
 
-**This addendum extends the GIC Unified Whitepaper v1.0 with:**
+**This addendum extends the MIC Unified Whitepaper v1.0 with:**
 
 1. **Sovereign Foundation architecture** (multi-agent governance)
 2. **Gaia Staking Protocol** (ecological anchoring)
@@ -1071,7 +1071,7 @@ When prosperity endures, civilization stabilizes.
 4. **Foundation-Up economics** (philosophical inversion)
 5. **Citizen Ledger Gateway** (dual-purpose training data generation)
 
-**Together, the main whitepaper + addendum form the complete GIC protocol specification.**
+**Together, the main whitepaper + addendum form the complete MIC protocol specification.**
 
 **For full implementation details, see:**
 - Main Whitepaper: `GIC_Whitepaper_Final.md`

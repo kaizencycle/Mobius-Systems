@@ -47,7 +47,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Genesis Wallet parameters
-    const totalSupply = 1_000_000 // 1M GIC
+    const totalSupply = 1_000_000 // 1M MIC
     const donationRate = 0.01 // 1%
     const giStabilityFactor = Math.min(netGI / 0.99, 1.0) // Cap at 1.0
 
@@ -63,11 +63,11 @@ export async function POST(request: NextRequest) {
       genesis_wallet: 'did:gic:kaizen.genesis',
       recipient: 'did:gic:community_treasury',
       amount: donationAmount,
-      denomination: 'GIC',
+      denomination: 'MIC',
       calculation: {
         total_supply: totalSupply,
         rate: donationRate,
-        gi_stability_factor: giStabilityFactor,
+        gi_stability_factor: miiStabilityFactor,
         network_gi: netGI,
       },
       attestors: {
@@ -95,7 +95,7 @@ export async function POST(request: NextRequest) {
       donation: donationRecord,
       ledger_tx: `0xmock${Date.now()}`,
       audit_report_url: `/reports/genesis_audit/epoch-${epoch}.json`,
-      message: `Donated ${donationAmount} GIC to Community Treasury (mock mode)`,
+      message: `Donated ${donationAmount} MIC to Community Treasury (mock mode)`,
     })
   } catch (error) {
     console.error('Fountain donation error:', error)

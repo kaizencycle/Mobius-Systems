@@ -200,7 +200,7 @@ async def run_lattice(
     state = {
         "prompt": prompt,
         "user_id": user_id,
-        "gi_user": gi_user,
+        "gi_user": mii_user,
         "operation_tier": tier,
         "meta": {}
     }

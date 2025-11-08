@@ -30,7 +30,7 @@
 ### Economic Justice
 - Fair compensation for data contributions
 - Universal basic access to AI tools
-- Wealth redistribution through GIC tokens
+- Wealth redistribution through MIC tokens
 
 ### Ecological Responsibility
 - Carbon-neutral computing requirements
@@ -48,7 +48,7 @@
 
 1. Proposals must be submitted with cryptographic signatures
 2. Community discussion period (minimum 7 days)
-3. Voting weighted by GIC token holdings and reputation
+3. Voting weighted by MIC token holdings and reputation
 4. Implementation requires 2/3 majority approval
 5. All changes are sealed to the Civic Ledger
 

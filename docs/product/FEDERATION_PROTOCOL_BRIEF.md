@@ -111,7 +111,7 @@ Every significant AI interaction produces an **attestation record** stored on th
     },
     "cost": {
       "type": "number",
-      "description": "Cost in GIC tokens"
+      "description": "Cost in MIC tokens"
     },
     "epoch": {
       "type": "string",
@@ -246,7 +246,7 @@ kaizen federate ping fedp://aurea.kaizen.os:4001
 
 1. **Proposal** submitted to Cathedral (governance dapp)
 2. **Deliberation** period (30 days)
-3. **Voting** by GIC holders (quadratic voting)
+3. **Voting** by MIC holders (quadratic voting)
 4. **Execution** if threshold met
 5. **Attestation** logged to Civic Ledger
 
@@ -255,7 +255,7 @@ kaizen federate ping fedp://aurea.kaizen.os:4001
 ```json
 {
   "proposalId": "GIP-042",
-  "title": "Increase Pro tier GIC allocation to 150/month",
+  "title": "Increase Pro tier MIC allocation to 150/month",
   "type": "parameter_change",
   "changes": {
     "config.pro_gic_monthly": { "from": 100, "to": 150 }
@@ -373,8 +373,8 @@ curl https://api.kaizen.os/v1/codex/inference \
 
 | Tier | Requests/min | Cost |
 |------|--------------|------|
-| **Free** | 10 | 0 GIC |
-| **Pro** | 100 | 100 GIC/month |
+| **Free** | 10 | 0 MIC |
+| **Pro** | 100 | 100 MIC/month |
 | **Enterprise** | Unlimited | Custom |
 
 ---
@@ -461,7 +461,7 @@ await validator.start();
 
 - **Protocol Spec**: https://spec.kaizen.os
 - **API Docs**: https://docs.kaizen.os/api
-- **GitHub**: https://github.com/kaizencycle/Kaizen-OS
+- **GitHub**: https://github.com/kaizencycle/Mobius-Systems
 - **Discord**: #federation channel
 - **Forum**: https://forum.kaizen.os/c/federation
 
@@ -489,7 +489,7 @@ await validator.start();
 - `fedp://` - Federation peering
 - `ledger://` - Ledger proof reference
 - `did:kaizen:` - Kaizen DID method
-- `gic:` - GIC token reference
+- `gic:` - MIC token reference
 
 ---
 

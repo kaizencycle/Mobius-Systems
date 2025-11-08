@@ -83,9 +83,9 @@ Input Query → [Anthropic, OpenAI, Gemini, DeepSeek, Local] → Agreement Score
 6. **GI calculation:** Integrate agreement, provider diversity, latency
 
 **Agreement Thresholds:**
-- **High consensus** (≥ 0.90): Safe to proceed, mint GIC reward
+- **High consensus** (≥ 0.90): Safe to proceed, mint MIC reward
 - **Medium consensus** (0.70-0.89): Proceed with caution flag
-- **Low consensus** (< 0.70): Human review required, no GIC reward
+- **Low consensus** (< 0.70): Human review required, no MIC reward
 
 ### 2. Provider Ecosystem
 
@@ -299,7 +299,7 @@ print(f"Output: {proof['winner']['output']}")
 
 ### Lab 1 (Civic Ledger)
 - **Attestation sink:** All DelibProof results written to ledger
-- **GIC minting:** Consensus with agreement ≥ 0.90 earns 0.05 GIC
+- **MIC minting:** Consensus with agreement ≥ 0.90 earns 0.05 MIC
 - **DID resolution:** Agent identity lookup for signatures
 
 ### Lab 3 (Resource Orchestration)

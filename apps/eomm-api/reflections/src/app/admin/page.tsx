@@ -223,7 +223,7 @@ function AgentTable({agents}:{agents:Agent[]}) {
       <table style={{width:"100%", borderCollapse:"collapse"}}>
         <thead>
           <tr>
-            {["Companion","Archetype","User","Reflections","GIC","Last Seen"].map(h=>(
+            {["Companion","Archetype","User","Reflections","MIC","Last Seen"].map(h=>(
               <th key={h} style={{textAlign:"left", padding:"8px 6px", borderBottom:"1px solid #2a2a2a"}}>{h}</th>
             ))}
           </tr>

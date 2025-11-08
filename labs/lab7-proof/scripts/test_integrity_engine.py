@@ -42,14 +42,14 @@ def test_high_quality_content():
     manifest = load_manifest("core/rewards/manifest.json")
     result = evaluate_reward(payload, manifest)
     
-    print(f"  GIC: {result['GIC']:.2f}")
+    print(f"  MIC: {result['MIC']:.2f}")
     print(f"  Integrity: {result['integrity']:.2f}")
     print(f"  Penalty: {result['penalty']:.2f}")
     print(f"  Scores: {result['scores']}")
     print(f"  Penalties: {result['penalties']}")
     
-    # Should have high GIC due to good scores and low penalties
-    assert result['GIC'] > 5.0, f"Expected GIC > 5.0, got {result['GIC']}"
+    # Should have high MIC due to good scores and low penalties
+    assert result['MIC'] > 5.0, f"Expected MIC > 5.0, got {result['MIC']}"
     assert result['scores']['truth'] > 0.5, f"Expected truth > 0.5, got {result['scores']['truth']}"
     assert result['scores']['symbiosis'] > 0.2, f"Expected symbiosis > 0.2, got {result['scores']['symbiosis']}"
     
@@ -76,21 +76,21 @@ def test_low_quality_content():
     manifest = load_manifest("core/rewards/manifest.json")
     result = evaluate_reward(payload, manifest)
     
-    print(f"  GIC: {result['GIC']:.2f}")
+    print(f"  MIC: {result['MIC']:.2f}")
     print(f"  Integrity: {result['integrity']:.2f}")
     print(f"  Penalty: {result['penalty']:.2f}")
     print(f"  Scores: {result['scores']}")
     print(f"  Penalties: {result['penalties']}")
     
-    # Should have low GIC due to poor scores
-    assert result['GIC'] < 3.0, f"Expected GIC < 3.0, got {result['GIC']}"
+    # Should have low MIC due to poor scores
+    assert result['MIC'] < 3.0, f"Expected MIC < 3.0, got {result['MIC']}"
     assert result['scores']['truth'] < 0.3, f"Expected truth < 0.3, got {result['scores']['truth']}"
     
     print("  ✅ Low-quality content test passed\n")
 
 
 def test_policy_violation():
-    """Test with policy violation that should result in zero GIC."""
+    """Test with policy violation that should result in zero MIC."""
     print("Testing policy violation...")
     
     payload = {
@@ -112,18 +112,18 @@ def test_policy_violation():
     manifest = load_manifest("core/rewards/manifest.json")
     result = evaluate_reward(payload, manifest)
     
-    print(f"  GIC: {result['GIC']:.2f}")
+    print(f"  MIC: {result['MIC']:.2f}")
     print(f"  Policy Violation: {result['penalties']['policy_violation']}")
     
-    # Should have zero GIC due to policy violation
-    assert result['GIC'] == 0.0, f"Expected GIC = 0.0, got {result['GIC']}"
+    # Should have zero MIC due to policy violation
+    assert result['MIC'] == 0.0, f"Expected MIC = 0.0, got {result['MIC']}"
     assert result['penalties']['policy_violation'] == 1.0, f"Expected policy_violation = 1.0, got {result['penalties']['policy_violation']}"
     
     print("  ✅ Policy violation test passed\n")
 
 
 def test_drift_anomaly():
-    """Test with drift anomaly that should result in zero GIC."""
+    """Test with drift anomaly that should result in zero MIC."""
     print("Testing drift anomaly...")
     
     payload = {
@@ -145,11 +145,11 @@ def test_drift_anomaly():
     manifest = load_manifest("core/rewards/manifest.json")
     result = evaluate_reward(payload, manifest)
     
-    print(f"  GIC: {result['GIC']:.2f}")
+    print(f"  MIC: {result['MIC']:.2f}")
     print(f"  Drift Anomaly: {result['penalties']['drift_anomaly']}")
     
-    # Should have zero GIC due to drift anomaly
-    assert result['GIC'] == 0.0, f"Expected GIC = 0.0, got {result['GIC']}"
+    # Should have zero MIC due to drift anomaly
+    assert result['MIC'] == 0.0, f"Expected MIC = 0.0, got {result['MIC']}"
     assert result['penalties']['drift_anomaly'] == 0.6, f"Expected drift_anomaly = 0.6, got {result['penalties']['drift_anomaly']}"
     
     print("  ✅ Drift anomaly test passed\n")
@@ -166,14 +166,14 @@ def test_sample_payload():
         manifest = load_manifest("core/rewards/manifest.json")
         result = evaluate_reward(payload, manifest)
         
-        print(f"  GIC: {result['GIC']:.2f}")
+        print(f"  MIC: {result['MIC']:.2f}")
         print(f"  Integrity: {result['integrity']:.2f}")
         print(f"  Penalty: {result['penalty']:.2f}")
         print(f"  Scores: {result['scores']}")
         print(f"  Penalties: {result['penalties']}")
         
         # Sample payload should score reasonably well
-        assert result['GIC'] > 0.0, f"Expected GIC > 0.0, got {result['GIC']}"
+        assert result['MIC'] > 0.0, f"Expected MIC > 0.0, got {result['MIC']}"
         
         print("  ✅ Sample payload test passed\n")
         

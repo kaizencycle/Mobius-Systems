@@ -17,7 +17,7 @@ Role: monitor service health endpoints, run light scenario checks, and emit **ve
 - Lab6 (Citizen Shield)
 - Lab7 (OAA)
 - Civic Ledger Core
-- GIC Indexer
+- MIC Indexer
 
 ## Attestation Design
 - Minimal service health data; aggregated status only.

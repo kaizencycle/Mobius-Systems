@@ -1,4 +1,4 @@
-# Global Integrity Credits Whitepaper v1.0 [DEPRECATED]
+# Mobius Integrity Credits Whitepaper v1.0 [DEPRECATED]
 
 ---
 
@@ -18,29 +18,29 @@
 
 ## Deprecation Notice
 
-**This document describes the original GIC v1.0 credit-based model which has been superseded by the shard-denominated model introduced in v2.0 (Cycle C-124).**
+**This document describes the original MIC v1.0 credit-based model which has been superseded by the shard-denominated model introduced in v2.0 (Cycle C-124).**
 
 ### What Changed
 
 | Aspect | v1.0 (This Document) | v2.0 (Current) |
 |--------|----------------------|----------------|
-| **Base Unit** | GIC (float, 6 decimals) | Shard (₷, integer) |
-| **Conversion** | N/A | 1 GIC = 1,000,000 ₷ |
+| **Base Unit** | MIC (float, 6 decimals) | Shard (₷, integer) |
+| **Conversion** | N/A | 1 MIC = 1,000,000 ₷ |
 | **Precision** | Floating-point (lossy) | Integer (exact) |
 | **UBI** | Fixed pools | GI-throttled + epoch decay |
 | **Accounting** | Rounds/drifts over time | Zero drift, deterministic |
 
 ### What Stayed the Same
 
-✅ **Total Supply**: 21,000,000 GIC maximum
+✅ **Total Supply**: 21,000,000 MIC maximum
 ✅ **Economic Philosophy**: Integrity-backed value
 ✅ **Governance Model**: Sentinel + human consensus
 ✅ **Core Principles**: All foundational theorems apply
 
 ### Migration Path
 
-If you are an existing v1.0 GIC holder:
-- **Your value is preserved**: 1 v1.0 GIC → 1 v2.0 GIC (displayed as 1,000,000 ₷ internally)
+If you are an existing v1.0 MIC holder:
+- **Your value is preserved**: 1 v1.0 MIC → 1 v2.0 MIC (displayed as 1,000,000 ₷ internally)
 - **No action required**: Conversion happens automatically
 - **Read**: [Migration Guide v1 to v2](./Migration_Guide_v1_to_v2.md)
 
@@ -50,7 +50,7 @@ If you are an existing v1.0 GIC holder:
 
 **Please refer to these updated documents:**
 
-1. 📘 [GIC Whitepaper v2.0](./GIC_Whitepaper_v2.0.md) - **Current canonical version**
+1. 📘 [MIC Whitepaper v2.0](./GIC_Whitepaper_v2.0.md) - **Current canonical version**
 2. 🔬 [Shard Economics Addendum](./Shard_Economics_Addendum.md) - Technical deep-dive
 3. 💰 [UBI Mechanism v2.0](./UBI_Mechanism_v2.0.md) - Complete distribution spec
 4. 🔄 [Migration Guide v1→v2](./Migration_Guide_v1_to_v2.md) - Transition instructions
@@ -60,7 +60,7 @@ If you are an existing v1.0 GIC holder:
 ## Historical Context
 
 This document is preserved for:
-- **Historical Reference**: Understanding the evolution of GIC economics
+- **Historical Reference**: Understanding the evolution of MIC economics
 - **Academic Research**: Studying the transition from float to integer-based economies
 - **Transparency**: Complete audit trail of architectural decisions
 
@@ -113,7 +113,7 @@ The following core tenets from v1.0 remain unchanged in v2.0:
 
 ### Supply Economics
 
-- **Maximum Supply**: 21,000,000 GIC
+- **Maximum Supply**: 21,000,000 MIC
 - **Distribution**: Treasury (30%), UBI (25%), PoI (20%), Ecosystem (15%), Team (10%)
 - **Minting Requirements**: Dual-signature + GI ≥ 0.950
 - **Deflationary Mechanics**: Transaction fee burn + epoch decay (v2.0)
@@ -124,7 +124,7 @@ The following core tenets from v1.0 remain unchanged in v2.0:
 
 ### 1. Transparency
 Complete record of architectural evolution shows:
-- **What we tried**: Float-based GIC (v1.0)
+- **What we tried**: Float-based MIC (v1.0)
 - **Why it didn't work**: Precision loss at scale
 - **How we fixed it**: Integer-based shards (v2.0)
 
@@ -153,12 +153,12 @@ Shows we:
 | Feature | v1.0 (Deprecated) | v2.0 (Current) |
 |---------|-------------------|----------------|
 | **Philosophy** | ✅ Integrity-backed | ✅ Integrity-backed |
-| **Supply Cap** | ✅ 21M GIC | ✅ 21M GIC |
-| **Base Unit** | ❌ GIC (float) | ✅ Shard (integer) |
+| **Supply Cap** | ✅ 21M MIC | ✅ 21M MIC |
+| **Base Unit** | ❌ MIC (float) | ✅ Shard (integer) |
 | **Precision** | ❌ 6 decimals (lossy) | ✅ Infinite (integer) |
 | **UBI Model** | ❌ Fixed pools | ✅ GI-throttled + decay |
 | **Epoch Mechanics** | ❌ None | ✅ 90-day decay cycles |
-| **Min Transaction** | ❌ 0.000001 GIC | ✅ 1 ₷ (same value, exact) |
+| **Min Transaction** | ❌ 0.000001 MIC | ✅ 1 ₷ (same value, exact) |
 | **Rounding Errors** | ❌ Yes | ✅ No |
 | **Governance** | ✅ Sentinel consensus | ✅ Sentinel consensus |
 | **Security** | ✅ Dual-signature | ✅ Dual-signature |
@@ -180,8 +180,8 @@ Shows we:
 👉 **Study**: v1.0 design → v2.0 evolution
 👉 **Contact**: research@kaizen.cycle
 
-### If You're New to GIC
-👉 **Start Here**: [GIC Whitepaper v2.0](./GIC_Whitepaper_v2.0.md)
+### If You're New to MIC
+👉 **Start Here**: [MIC Whitepaper v2.0](./GIC_Whitepaper_v2.0.md)
 
 ---
 
@@ -217,7 +217,7 @@ This deprecation notice is attested by:
 
 ## Legal Notice
 
-**No Value Loss**: All v1.0 GIC holders receive equivalent v2.0 value (1:1 at display level, 1:1,000,000 at shard level).
+**No Value Loss**: All v1.0 MIC holders receive equivalent v2.0 value (1:1 at display level, 1:1,000,000 at shard level).
 
 **No Liability**: This deprecation is an architectural improvement, not a security breach or failure. All holder rights preserved.
 
@@ -234,7 +234,7 @@ This deprecation notice is attested by:
 ---
 
 **For Current Documentation, Always Start Here:**
-📘 [GIC Whitepaper v2.0 (Current)](./GIC_Whitepaper_v2.0.md)
+📘 [MIC Whitepaper v2.0 (Current)](./GIC_Whitepaper_v2.0.md)
 
 ---
 

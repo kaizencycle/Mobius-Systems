@@ -1,5 +1,5 @@
 // packages/civic-sdk/src/CivicOSHub.ts
-// INTEGRATION HUB - Connects all 6 APIs + GIC Gateway + .gic Registry
+// INTEGRATION HUB - Connects all 6 APIs + MIC Gateway + .gic Registry
 
 /**
  * Kaizen OS Integration Hub
@@ -11,8 +11,8 @@
  * 3. Lab6 (Citizen Shield) - https://lab6-proof-api.onrender.com
  * 4. OAA-API-Library - https://oaa-api-library.onrender.com
  * 5. Civic Ledger - https://civic-protocol-core-ledger.onrender.com
- * 6. GIC Indexer - https://gic-indexer.onrender.com
- * 7. GIC Gateway (local) - apps/gic-gateway
+ * 6. MIC Indexer - https://gic-indexer.onrender.com
+ * 7. MIC Gateway (local) - apps/gic-gateway
  * 8. .gic Registry (local) - apps/website-creator
  */
 
@@ -98,8 +98,8 @@ export class CivicOSHub {
         tag: 'onboarding',
       });
       
-      // Step 6: Mint initial GIC (100 UBI)
-      console.log('  6/7 Minting initial GIC...');
+      // Step 6: Mint initial MIC (100 UBI)
+      console.log('  6/7 Minting initial MIC...');
       await this.mintGIC(username, 100, 'welcome_ubi');
       identity.gicBalance = 100;
       
@@ -208,7 +208,7 @@ export class CivicOSHub {
     return response.json();
   }
 
-  // GIC Indexer: Mint GIC
+  // MIC Indexer: Mint MIC
   async mintGIC(citizen: string, amount: number, reason: string): Promise<void> {
     const response = await fetch(`${this.config.gicIndexerUrl}/api/gic/mint`, {
       method: 'POST',
@@ -216,24 +216,24 @@ export class CivicOSHub {
       body: JSON.stringify({ citizen, amount, reason }),
     });
     
-    if (!response.ok) throw new Error('GIC mint failed');
+    if (!response.ok) throw new Error('MIC mint failed');
   }
 
-  // GIC Indexer: Get Balance
+  // MIC Indexer: Get Balance
   async getGICBalance(citizen: string): Promise<number> {
     const response = await fetch(
       `${this.config.gicIndexerUrl}/api/gic/balance/${citizen}`
     );
     
-    if (!response.ok) throw new Error('GIC balance fetch failed');
+    if (!response.ok) throw new Error('MIC balance fetch failed');
     const result = await response.json() as { balance: number };
     return result.balance;
   }
 
-  // GIC Gateway: Register Domain
+  // MIC Gateway: Register Domain
   async registerGicDomain(username: string): Promise<string> {
     if (!this.config.gicGatewayUrl) {
-      throw new Error('GIC Gateway not configured');
+      throw new Error('MIC Gateway not configured');
     }
     
     const response = await fetch(`${this.config.gicGatewayUrl}/api/register`, {
@@ -242,7 +242,7 @@ export class CivicOSHub {
       body: JSON.stringify({ username }),
     });
     
-    if (!response.ok) throw new Error('GIC domain registration failed');
+    if (!response.ok) throw new Error('MIC domain registration failed');
     const result = await response.json() as { domain: string };
     return result.domain;
   }
@@ -258,7 +258,7 @@ export class CivicOSHub {
       { name: 'Lab6', url: `${this.config.lab6Url}/healthz` },
       { name: 'OAA', url: `${this.config.oaaUrl}/healthz` },
       { name: 'Ledger', url: `${this.config.ledgerUrl}/healthz` },
-      { name: 'GIC Indexer', url: `${this.config.gicIndexerUrl}/healthz` },
+      { name: 'MIC Indexer', url: `${this.config.gicIndexerUrl}/healthz` },
     ];
 
     const results: Record<string, boolean> = {};
@@ -322,9 +322,9 @@ export async function example() {
 
   console.log('Created identity:', identity);
 
-  // Check GIC balance
+  // Check MIC balance
   const balance = await hub.getGICBalance('michael');
-  console.log('GIC Balance:', balance);
+  console.log('MIC Balance:', balance);
 }
 
 export default CivicOSHub;

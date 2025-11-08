@@ -330,7 +330,7 @@ Validating: gi_metrics.json... ✅
 ✅ All 1 schema(s) valid!
 
 📊 Schema Details:
-   • Global Integrity (GI) Metrics Schema (v1.0.0)
+   • Mobius Integrity Index (GI) Metrics Schema (v1.0.0)
 ```
 
 ### Workflow Syntax Validation

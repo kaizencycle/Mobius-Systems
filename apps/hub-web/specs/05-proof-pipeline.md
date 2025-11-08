@@ -27,7 +27,7 @@ The Proof-of-Integrity Pipeline ensures that all content and contributions in th
 - **History Tracking**: Complete audit trail
 
 ### 5. Reward Distribution
-- **GIC Calculation**: Integrity × Impact × GeoWeight
+- **MIC Calculation**: Integrity × Impact × GeoWeight
 - **Automatic Distribution**: Smart contract execution
 - **Reputation Update**: Score adjustment
 

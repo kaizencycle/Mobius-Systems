@@ -43,7 +43,7 @@
     "type": "sweep",
     "date": "2025-09-22",
     "chamber": "Reflections",
-    "note": "This is a test reflection for GIC rewards",
+    "note": "This is a test reflection for MIC rewards",
     "meta": {
       "gic_intent": "publish",
       "user": "test-user",
@@ -59,7 +59,7 @@
     "type": "sweep",
     "date": "2025-09-22",
     "chamber": "Reflections",
-    "note": "This is a longer reflection that should qualify for the publish tier since it has more than 200 characters. This is a test of the GIC reward system where private reflections get 10 GIC and published reflections get 25 GIC. The system should detect this as a publish tier reflection based on length and the gic_intent flag.",
+    "note": "This is a longer reflection that should qualify for the publish tier since it has more than 200 characters. This is a test of the MIC reward system where private reflections get 10 MIC and published reflections get 25 MIC. The system should detect this as a publish tier reflection based on length and the gic_intent flag.",
     "meta": {
       "gic_intent": "publish",
       "user": "test-user",
@@ -124,7 +124,7 @@
     "type": "sweep",
     "date": "2025-09-22",
     "chamber": "Reflections",
-    "note": "This is a featured reflection that should qualify for the publish_feature tier with enough substance to clear the minimum length threshold and be eligible for weekly bonus consideration. This reflection contains substantial content about the importance of daily journaling, personal growth, and the value of sharing insights with the community. It discusses how the GIC reward system encourages both private reflection and public sharing, creating a balanced approach to personal development. The featured tier allows for additional recognition through weekly bonuses, motivating users to create high-quality content that benefits the entire community. This system promotes both individual growth and collective knowledge sharing, making it a powerful tool for personal and professional development.",
+    "note": "This is a featured reflection that should qualify for the publish_feature tier with enough substance to clear the minimum length threshold and be eligible for weekly bonus consideration. This reflection contains substantial content about the importance of daily journaling, personal growth, and the value of sharing insights with the community. It discusses how the MIC reward system encourages both private reflection and public sharing, creating a balanced approach to personal development. The featured tier allows for additional recognition through weekly bonuses, motivating users to create high-quality content that benefits the entire community. This system promotes both individual growth and collective knowledge sharing, making it a powerful tool for personal and professional development.",
     "meta": {
       "gic_intent": "publish_feature",
       "user": "test-user",
@@ -141,7 +141,7 @@
     "type": "sweep",
     "date": "2025-09-22",
     "chamber": "Reflections",
-    "note": "This is a test featured reflection with enough content to qualify for the publish_feature tier and be eligible for weekly bonus consideration. This reflection discusses the importance of daily journaling and personal growth through the GIC reward system.",
+    "note": "This is a test featured reflection with enough content to qualify for the publish_feature tier and be eligible for weekly bonus consideration. This reflection discusses the importance of daily journaling and personal growth through the MIC reward system.",
     "meta": {
       "gic_intent": "publish_feature",
       "user": "test-user-new",
@@ -173,7 +173,7 @@
     "type": "sweep",
     "date": "2025-09-22",
     "chamber": "Reflections",
-    "note": "This is a test featured reflection with enough content to qualify for the publish_feature tier and be eligible for weekly bonus consideration. This reflection discusses the importance of daily journaling and personal growth through the GIC reward system.",
+    "note": "This is a test featured reflection with enough content to qualify for the publish_feature tier and be eligible for weekly bonus consideration. This reflection discusses the importance of daily journaling and personal growth through the MIC reward system.",
     "meta": {
       "gic_intent": "publish_feature",
       "user": "smoke-tester",

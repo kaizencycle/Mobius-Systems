@@ -1,8 +1,8 @@
 wallet:
-  name: "Civic GIC Fountain"
+  name: "Civic MIC Fountain"
   did: "did:gic:civic.fountain"
   address: "0xFountain"
-  denomination: GIC
+  denomination: MIC
   policy_ref: "/packages/policies/fountain.policy.json"
 
 controllers:

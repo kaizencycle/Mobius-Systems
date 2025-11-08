@@ -80,7 +80,7 @@ class VIPEmbedder:
             #         "vip": {
             #             "integrity_score": verdict["integrity_score"],
             #             "constitutional_score": verdict["constitutional_score"],
-            #             "gi": verdict["gi"],
+            #             "mii": verdict["mii"],
             #             "timestamp": int(time.time())
             #         }
             #     }
@@ -99,7 +99,7 @@ class VIPEmbedder:
             "scores": {
                 "integrity": verdict["integrity_score"],
                 "constitutional": verdict["constitutional_score"],
-                "gi": verdict["gi"]
+                "mii": verdict["mii"]
             },
             "timestamp": time.time()
         }

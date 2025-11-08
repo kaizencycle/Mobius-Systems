@@ -8,7 +8,7 @@ Security is a core principle of Kaizen OS. We are committed to maintaining the i
 
 Kaizen OS is built on three security pillars:
 
-1. **Integrity First** - All operations maintain GI ≥ 0.95 (Global Integrity)
+1. **Integrity First** - All operations maintain GI ≥ 0.95 (Mobius Integrity Index)
 2. **Defense in Depth** - Multiple security layers (Citizen Shield, attestations, monitoring)
 3. **Transparency** - Open security practices and responsible disclosure
 

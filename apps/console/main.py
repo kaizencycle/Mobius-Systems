@@ -81,7 +81,7 @@ def api_sync() -> Dict:
         aur = _get(f"{SYNC_BASE}/api/sentinels/aurea/status")
     except Exception:
         aur = {
-            "gi": MIN_GI,
+            "mii": MIN_GI,
             "epoch": "E-???",
             "last_attestation_id": "-",
             "ts": datetime.utcnow().isoformat() + "Z"
@@ -94,7 +94,7 @@ def api_agent(name: str, content: str) -> Dict:
     url = f"{BROKER_BASE}/api/sentinels/{name}/query"
     payload = {
         "intent": content,
-        "gi": float(os.getenv("KAIZEN_BASELINE_GI", "0.993"))
+        "mii": float(os.getenv("KAIZEN_BASELINE_GI", "0.993"))
     }
     try:
         return _post(url, payload)
@@ -135,7 +135,7 @@ def api_consensus(
             result = _post(url, payload)
             # Transform to consensus format
             return {
-                "gi": result.get("consensus", 0.95),
+                "mii": result.get("consensus", 0.95),
                 "final_answer": result.get("decision", ""),
                 "votes": [
                     {
@@ -149,7 +149,7 @@ def api_consensus(
         raise
 
 
-def api_attest(text: str, gi: float) -> Dict:
+def api_attest(text: str, mii: float) -> Dict:
     """Attest to ledger"""
     # Try multiple endpoints
     endpoints = [
@@ -161,7 +161,7 @@ def api_attest(text: str, gi: float) -> Dict:
     payload = {
         "session": SESSION_NAME,
         "text": text,
-        "gi": gi,
+        "mii": mii,
         "event_type": "console.attestation",
         "civic_id": f"console-{SESSION_NAME}",
         "lab_source": "console"
@@ -226,7 +226,7 @@ def api_hvc():
 def render_header(sync_data: Dict):
     """Render console header with sync status"""
     cyc, aur = sync_data["cycle"], sync_data["aurea"]
-    gi_val = aur.get("gi", MIN_GI)
+    gi_val = aur.get("mii", MIN_GI)
     cycle_id = cyc.get("cycle_id", "C-???")
     date_str = cyc.get("date_local", datetime.now().isoformat())
     hours = int(cyc.get("next_epoch_eta_sec", 86400) // 3600)
@@ -284,7 +284,7 @@ def handle_at_agent(line: str):
             console.print(f"[red]Agent error:[/] {e}")
             return
     
-    gi = float(resp.get("gi", resp.get("consensus", 0.0)))
+    gi = float(resp.get("mii", resp.get("consensus", 0.0)))
     body = (
         resp.get("illumination")
         or resp.get("output")
@@ -361,7 +361,7 @@ def handle_consensus(cmd: str):
             console.print(f"[red]Consensus error:[/] {e}")
             return
     
-    gi = float(data.get("gi", MIN_GI))
+    gi = float(data.get("mii", MIN_GI))
     tbl = Table(title=f"Consensus • GI {gi:.3f}", box=box.MINIMAL_DOUBLE_HEAD)
     tbl.add_column("Agent")
     tbl.add_column("Vote")
@@ -414,7 +414,7 @@ def handle_attest(cmd: str):
     
     text = parts[1]
     flags = parse_flags(parts[2:])
-    gi = float(flags.get("gi", MIN_GI))
+    gi = float(flags.get("mii", MIN_GI))
     
     try:
         att = api_attest(text, gi)
@@ -435,7 +435,7 @@ def handle_feed(limit: int):
     for it in rows:
         ts = it.get("timestamp", "")[:19].replace("T", " ")
         kind = it.get("kind", it.get("event_type", "-"))
-        gi = it.get("gi", 0.0)
+        gi = it.get("mii", 0.0)
         title = (
             it.get("title")
             or it.get("details")

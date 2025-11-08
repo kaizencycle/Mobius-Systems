@@ -24,7 +24,7 @@ export async function POST(req: NextRequest) {
     const url = `${gicIndexerUrl}/stake/trees?handle=${encodeURIComponent(user)}&amount=${encodeURIComponent(amount)}`;
     const r = await fetch(url, {
       method: "POST",
-      headers: { "X-API-Key": gicIndexerKey as string }
+      headers: { "X-API-Key": miicIndexerKey as string }
     });
     
     const j = await r.json();

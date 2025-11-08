@@ -9,7 +9,7 @@ The quality tracking system implements the "AI slop" prevention strategy through
 1. **Provenance-by-default**: Every output is tracked with source attribution
 2. **Memory hygiene**: Schema validation and quarantine for malformed data
 3. **Human-in-the-loop**: Multi-agent cross-checks and Copilot verification
-4. **Incentive alignment**: Quality gates tied to GIC rewards
+4. **Incentive alignment**: Quality gates tied to MIC rewards
 5. **Retrieval grounding**: Beaconed objects with verifiable metadata
 
 ## Environment Setup

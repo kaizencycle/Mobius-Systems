@@ -153,7 +153,7 @@ async def execute(req: ExecRequest, request: Request):
                         mint_data = mint_response.json()
                         result = {
                             "rc": 0,
-                            "stdout": f"GIC minted: {amount_shards} shards, attestation: {mint_data.get('attestation', {}).get('hash', 'N/A')}",
+                            "stdout": f"MIC minted: {amount_shards} shards, attestation: {mint_data.get('attestation', {}).get('hash', 'N/A')}",
                             "stderr": ""
                         }
                     else:

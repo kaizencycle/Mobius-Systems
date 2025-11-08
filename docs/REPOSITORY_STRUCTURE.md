@@ -41,7 +41,7 @@ Kaizen-OS/
 │   ├── portal/                       ← Main portal (Vercel)
 │   ├── website-creator/              ← .gic site builder (Vercel-ready)
 │   ├── ledger-api/                   ← Civic Ledger Core
-│   ├── indexer-api/                  ← GIC Indexer
+│   ├── indexer-api/                  ← MIC Indexer
 │   ├── eomm-api/                     ← E.O.M.M. Reflections
 │   ├── broker-api/                   ← Thought Broker
 │   ├── shield-api/                   ← Citizen Shield
@@ -78,7 +78,7 @@ Kaizen-OS/
 │   ├── architecture/                 ← System architecture
 │   ├── product/                      ← Product documentation
 │   ├── deployment/                   ← Deployment guides
-│   ├── economics/                    ← GIC Whitepaper
+│   ├── economics/                    ← MIC Whitepaper
 │   ├── governance/                   ← Governance docs
 │   ├── founding-agents/              ← Agent profiles
 │   └── archive/                      ← Historical records
@@ -102,7 +102,7 @@ This table shows how our current structure maps to the ideal structure:
 | Ideal Structure | Current Location | Status | Notes |
 |----------------|------------------|--------|-------|
 | **contracts/** | `packages/civic-protocol-core/` | ✅ Implemented | Smart contracts + deployment |
-| **civic-ledger/** | `apps/ledger-api/` | ✅ Implemented | GI scoring + GIC minting |
+| **civic-ledger/** | `apps/ledger-api/` | ✅ Implemented | GI scoring + MIC minting |
 | **codex-router/** | `apps/broker-api/` + `packages/codex-agentic/` | ✅ Implemented | Multi-LLM orchestration |
 | **resource-orchestration/** | `apps/orchestrator/` | ⚠️ Partial | Compute allocation implemented |
 | **eomm/** | `apps/eomm-api/` + `labs/lab4-proof/` | ✅ Implemented | Reflection app + backend |
@@ -111,7 +111,7 @@ This table shows how our current structure maps to the ideal structure:
 | **oaa-hub/** | `apps/hub-web/` + `labs/lab7-proof/` | ✅ Implemented | Education + API gateway |
 | **simulations/** | `docs/economics/` (in whitepaper) | ⚠️ Partial | Models documented, code TBD |
 | **community/** | Not yet created | 📋 Planned | Hive starter kit needed |
-| **docs/whitepapers/** | `docs/economics/` | ✅ Implemented | GIC Whitepaper exists |
+| **docs/whitepapers/** | `docs/economics/` | ✅ Implemented | MIC Whitepaper exists |
 | **docs/architecture/** | `docs/architecture/` | ✅ Implemented | Architecture docs exist |
 | **docs/protocols/** | `packages/civic-protocol-core/` | ✅ Implemented | Protocol implementations |
 | **docs/governance/** | `docs/governance/` | ✅ Implemented | Governance frameworks |
@@ -143,7 +143,7 @@ Current Location:
 docs/economics/
 └── GIC_WHITEPAPER.md                  ← Core economic model (READ FIRST)
     ├── 1. Introduction: The Integrity Economy
-    ├── 2. The UBI Trilemma & How GIC Solves It
+    ├── 2. The UBI Trilemma & How MIC Solves It
     ├── 3. System Architecture
     ├── 4. Economic Model: Planetary-Scale Simulation
     ├── 5. Issuance Mechanisms & Peg Stability
@@ -184,7 +184,7 @@ apps/                                   ← Implementation of 7 Labs
 Current Location:
 packages/civic-protocol-core/          ← Smart contracts + protocols
 ├── contracts/
-│   ├── GIC.sol                       ← ERC-20 token (planned)
+│   ├── MIC.sol                       ← ERC-20 token (planned)
 │   ├── GICGovernor.sol               ← Epoch + auto-donate (planned)
 │   └── [other contracts]
 │
@@ -210,7 +210,7 @@ packages/civic-protocol-core/
 Future Location (after migration):
 contracts/                             ← Top-level contracts directory
 ├── contracts/
-│   ├── GIC.sol
+│   ├── MIC.sol
 │   ├── GICGovernor.sol
 │   ├── PublicGoodsPool.sol
 │   └── [others]
@@ -228,7 +228,7 @@ contracts/                             ← Top-level contracts directory
 ```
 Current Location:
 
-apps/ledger-api/                       ← Lab 1: GI scoring + GIC minting
+apps/ledger-api/                       ← Lab 1: GI scoring + MIC minting
 apps/broker-api/                       ← Lab 2: Multi-LLM routing
 apps/eomm-api/                         ← Lab 4: Reflection app
 apps/shield-api/                       ← Lab 6: Security + identity
@@ -314,7 +314,7 @@ Future: community/hive-starter-kit/ (coming soon)
 
 | Specification | Current Location |
 |--------------|------------------|
-| GIC token economics | `docs/economics/GIC_WHITEPAPER.md` |
+| MIC token economics | `docs/economics/GIC_WHITEPAPER.md` |
 | GI scoring algorithm | `packages/integrity-core/` + whitepaper |
 | Governance framework | `docs/governance/` + `apps/cathedral-app/` |
 | Founding Agents | `docs/founding-agents/` + `docs/architecture/FOUNDING_AGENTS_SOVEREIGN_STACK.md` |
@@ -391,10 +391,10 @@ apps/website-creator/vercel.json
 2. Reflection analyzed for integrity (GI score)
    └─ apps/ledger-api/ (indexer) → calculates GI
 
-3. If GI ≥ 0.95, citizen earns GIC
-   └─ apps/ledger-api/ (API) → mints GIC via smart contracts
+3. If GI ≥ 0.95, citizen earns MIC
+   └─ apps/ledger-api/ (API) → mints MIC via smart contracts
 
-4. Citizen spends GIC on AI query
+4. Citizen spends MIC on AI query
    └─ apps/broker-api/ (Codex Router) → routes to optimal LLM
 
 5. Query cost logged
@@ -530,7 +530,7 @@ npm run test --filter civic-sdk
    └─ git push origin feature/my-awesome-feature
 
 9. Open pull request
-   └─ Base: kaizencycle/Kaizen-OS:main
+   └─ Base: kaizencycle/Mobius-Systems:main
        Compare: YOUR_USERNAME/Kaizen-OS:feature/my-awesome-feature
 
 10. Code review + CI tests
@@ -546,7 +546,7 @@ npm run test --filter civic-sdk
 
 ```bash
 # Clone the repository
-git clone https://github.com/kaizencycle/Kaizen-OS.git
+git clone https://github.com/kaizencycle/Mobius-Systems.git
 cd Kaizen-OS
 
 # Install all dependencies (monorepo)
@@ -623,8 +623,8 @@ docker-compose down
                    │
 ┌──────────────────▼──────────────────────────┐
 │  Smart Contracts (planned)                  │
-│  • GIC token                               │
-│  • GIC Governor                            │
+│  • MIC token                               │
+│  • MIC Governor                            │
 │  • Public Goods Pool                       │
 └─────────────────────────────────────────────┘
 ```
@@ -676,4 +676,4 @@ The structure should evolve as the project grows. Current priorities:
 
 **Last Updated:** October 30, 2025
 **Current Branch:** `claude/add-founding-agents-sovereign-stack-011CUbjRDnqMJUuq71a2kkPT`
-**Repository:** github.com/kaizencycle/Kaizen-OS
+**Repository:** github.com/kaizencycle/Mobius-Systems

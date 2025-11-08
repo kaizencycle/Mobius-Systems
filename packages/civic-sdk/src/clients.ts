@@ -439,7 +439,7 @@ export class CivicLedgerClient extends CivicClient {
   }
 }
 
-// GIC Indexer Client - GIC tracking, UBI distribution
+// MIC Indexer Client - MIC tracking, UBI distribution
 export class GICIndexerClient extends CivicClient {
   constructor(baseUrl: string = 'https://gic-indexer.onrender.com', apiKey?: string) {
     super(baseUrl, apiKey);
@@ -455,7 +455,7 @@ export class GICIndexerClient extends CivicClient {
     amount: number;
     reason: string;
   }): Promise<GICTransaction> {
-    // Mock GIC minting
+    // Mock MIC minting
     return {
       id: `tx-${Date.now()}`,
       from: 'system',
@@ -474,7 +474,7 @@ export class GICIndexerClient extends CivicClient {
     amount: number;
     reason: string;
   }): Promise<GICTransaction> {
-    // Mock GIC transfer
+    // Mock MIC transfer
     return {
       id: `tx-${Date.now()}`,
       from: data.from,

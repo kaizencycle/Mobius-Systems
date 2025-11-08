@@ -6,7 +6,7 @@
 
 ```bash
 # Clone the repository
-git clone https://github.com/kaizencycle/Kaizen-OS
+git clone https://github.com/kaizencycle/Mobius-Systems
 
 # Navigate to directory
 cd Kaizen-OS
@@ -73,7 +73,7 @@ record_event(
 
 **Your GI Score represents your civic health** - it measures your cooperative, truthful, and ethical behavior across all Kaizen-integrated systems.
 
-**GIC rewards come from cooperative behavior** - the more you contribute to system integrity, the more economic access you receive.
+**MIC rewards come from cooperative behavior** - the more you contribute to system integrity, the more economic access you receive.
 
 **All AI decisions are contestable** - if an automated decision affects you, you have the right to explanation and appeal.
 
@@ -85,7 +85,7 @@ record_event(
 
 | Activity | Kaizen Enhancement |
 |----------|-------------------|
-| **Financial Transactions** | GIC transfers with integrity bonuses |
+| **Financial Transactions** | MIC transfers with integrity bonuses |
 | **AI Interactions** | Transparent, contestable decisions |
 | **Community Governance** | GI-weighted voting on local issues |
 | **Work & Contribution** | OAA-tracked value creation |

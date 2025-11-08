@@ -10,7 +10,7 @@
  */
 
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { councilDeliberate } from '@kaizen/codex-agentic';
+import { councilDeliberate } from '@mobius/codex-agentic';
 
 interface DiscourseRequest {
   input: string;

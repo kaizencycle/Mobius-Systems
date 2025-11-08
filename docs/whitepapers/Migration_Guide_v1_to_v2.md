@@ -1,4 +1,4 @@
-# GIC Migration Guide: v1.0 → v2.0
+# MIC Migration Guide: v1.0 → v2.0
 ## Transitioning to Shard-Based Economics
 
 ---
@@ -15,9 +15,9 @@
 ## Executive Summary
 
 **What's Changing:**
-- Base unit: GIC (float) → Shard (integer)
-- Conversion: 1 v1.0 GIC = 1,000,000 v2.0 ₷
-- Display: Still shows as GIC (e.g., "1.234567 GIC")
+- Base unit: MIC (float) → Shard (integer)
+- Conversion: 1 v1.0 MIC = 1,000,000 v2.0 ₷
+- Display: Still shows as MIC (e.g., "1.234567 MIC")
 - **Your value**: UNCHANGED (1:1 conversion at shard level)
 
 **Timeline:**
@@ -33,10 +33,10 @@
 
 **Example:**
 ```
-v1.0 Balance: 5.123456 GIC
+v1.0 Balance: 5.123456 MIC
               ↓ (multiply by 1,000,000)
 v2.0 Balance: 5,123,456 ₷
-Display:      5.123456 GIC (same as before!)
+Display:      5.123456 MIC (same as before!)
 ```
 
 **No action required** - conversion happens automatically.
@@ -94,13 +94,13 @@ v2.0: 100,000₷ + 200,000₷ = 300,000₷ (exact)
 Before (v1.0):
 ┌─────────────────┐
 │ Balance         │
-│ 5.123456 GIC    │
+│ 5.123456 MIC    │
 └─────────────────┘
 
 After (v2.0):
 ┌─────────────────┐
 │ Balance         │
-│ 5.123456 GIC    │  ← Same display!
+│ 5.123456 MIC    │  ← Same display!
 │ 5,123,456 ₷     │  ← New: shard view (optional)
 └─────────────────┘
 ```
@@ -128,7 +128,7 @@ GET /balance/0x123
 {
   "balance_shards": "5123456",      // String (BigInt)
   "balance_credits": 5.123456,      // Number (display)
-  "balance_credits_formatted": "5.123456 GIC"
+  "balance_credits_formatted": "5.123456 MIC"
 }
 ```
 
@@ -148,7 +148,7 @@ GET /balance/0x123
 1. **Update Deposit Detection:**
 ```typescript
 // Before
-if (tx.amount >= 0.000001) {  // 1 micro-GIC
+if (tx.amount >= 0.000001) {  // 1 micro-MIC
 
 // After
 if (tx.amount_shards >= 1n) {  // 1 shard
@@ -219,7 +219,7 @@ export function BalanceDisplay({ shards }: { shards: string }) {
 
   return (
     <div className="balance">
-      <span className="credits">{credits.toFixed(6)} GIC</span>
+      <span className="credits">{credits.toFixed(6)} MIC</span>
       <span className="shards-detail">{BigInt(shards).toLocaleString()} ₷</span>
     </div>
   );
@@ -267,7 +267,7 @@ curl https://api.kaizen.cycle/balance/0x123
 
 ### Q1: Will my balance value change?
 
-**A**: No. 1 v1.0 GIC = 1 v2.0 GIC (displayed). The only change is internal precision.
+**A**: No. 1 v1.0 MIC = 1 v2.0 MIC (displayed). The only change is internal precision.
 
 ### Q2: Do I need to claim my v2.0 balance?
 
@@ -287,7 +287,7 @@ curl https://api.kaizen.cycle/balance/0x123
 
 ### Q6: Will my UBI change?
 
-**A**: Displayed UBI amount stays the same (e.g., "0.04 GIC"), but internal calculation becomes more precise.
+**A**: Displayed UBI amount stays the same (e.g., "0.04 MIC"), but internal calculation becomes more precise.
 
 ### Q7: What if I find a discrepancy?
 
@@ -302,7 +302,7 @@ curl https://api.kaizen.cycle/balance/0x123
 
 ### 7.1 Documentation
 - [Shard Protocol Spec](../specs/shard_protocol_v1.md)
-- [GIC Whitepaper v2.0](./GIC_Whitepaper_v2.0.md)
+- [MIC Whitepaper v2.0](./GIC_Whitepaper_v2.0.md)
 - [API Migration Guide](https://docs.kaizen.cycle/migration)
 
 ### 7.2 Developer Tools
@@ -333,7 +333,7 @@ import { shardsToCredits, creditsToShards } from '@civic/integrity-units';
 // Display user balance
 function displayBalance(shards: bigint): string {
   const credits = shardsToCredits(shards);
-  return `${credits.toFixed(6)} GIC`;
+  return `${credits.toFixed(6)} MIC`;
 }
 
 // Process user input

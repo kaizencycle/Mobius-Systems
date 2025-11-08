@@ -1,7 +1,7 @@
 {
   "name": "indexer-api",
   "version": "1.0.0",
-  "description": "GIC Indexer - GIC economy indexing and attestation storage",
+  "description": "MIC Indexer - MIC economy indexing and attestation storage",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",

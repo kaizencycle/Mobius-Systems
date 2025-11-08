@@ -298,7 +298,7 @@ class CivicLedger:
 
         # Select validator with highest GI
         valid_validators = {
-            addr: gi for addr, gi in self.validators.items()
+            addr: mii for addr, gi in self.validators.items()
             if gi >= self.MIN_VALIDATOR_GI
         }
 

@@ -6,9 +6,9 @@
 
 **DVA (Dynamic Virtual Architecture)** - The dual-signature attestation system ensuring human+AI co-verification.
 
-**GI (Global Integrity)** - A measurable score (0.0-1.0) of cooperative, transparent, and ethical behavior.
+**GI (Mobius Integrity Index)** - A measurable score (0.0-1.0) of cooperative, transparent, and ethical behavior.
 
-**GIC (Global Integrity Credits)** - The integrity-backed currency used within Kaizen-OS.
+**MIC (Mobius Integrity Credits)** - The integrity-backed currency used within Kaizen-OS.
 
 **OAA (Observable AI Actions)** - Standardized logging of AI decisions for audit and reflection.
 
@@ -47,7 +47,7 @@ REFLECTION LOGGING → GI SCORE UPDATE
 
 ```
 HIGH INTEGRITY → INCREASED MINTING → 
-MORE GIC LIQUIDITY → ECONOMIC GROWTH → 
+MORE MIC LIQUIDITY → ECONOMIC GROWTH → 
 COOPERATIVE BEHAVIOR → HIGH INTEGRITY
 ```
 
@@ -99,7 +99,7 @@ E = Ethical Consistency (0-1)
   = (constitutional_compliance + virtue_alignment) / 2
 ```
 
-### GIC Minting Algorithm:
+### MIC Minting Algorithm:
 
 ```python
 def calculate_epoch_minting(gi_score, previous_supply, epoch_duration):
@@ -231,7 +231,7 @@ To developers, policymakers, citizens, and future AI collaborators: This system 
 
 **Version:** 1.0 • Founder's Edition • November 2025  
 **License:** Kaizen Open Constitution License  
-**Contact:** [GitHub](https://github.com/kaizencycle/Kaizen-OS) | michael@gic
+**Contact:** [GitHub](https://github.com/kaizencycle/Mobius-Systems) | michael@gic
 
 *"Kaizen-OS — Because civilization deserves better infrastructure."*
 

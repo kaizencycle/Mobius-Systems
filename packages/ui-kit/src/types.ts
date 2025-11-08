@@ -12,7 +12,7 @@ export interface ProofCardProps {
 }
 
 export interface GIBadgeProps {
-  gi: number;
+  mii: number;
   size?: 'small' | 'medium' | 'large';
   showValue?: boolean;
   className?: string;
@@ -29,7 +29,7 @@ export interface ServiceInfo {
   id: string;
   name: string;
   status: 'healthy' | 'degraded' | 'unhealthy';
-  gi: number;
+  mii: number;
   responseTime: number;
   uptime: number;
   lastCheck: string;

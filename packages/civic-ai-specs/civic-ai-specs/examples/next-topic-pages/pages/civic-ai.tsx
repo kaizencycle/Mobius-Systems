@@ -73,7 +73,7 @@ export default function CivicAI() {
                     <span className="text-3xl">⭐</span>
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    GIC (Global Integrity Credit)
+                    MIC (Mobius Integrity Index Credit)
                   </h3>
                   <p className="text-gray-600">
                     Incentive and reputation economy that rewards ethical behavior,

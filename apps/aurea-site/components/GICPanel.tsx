@@ -22,7 +22,7 @@ export function GICPanel() {
       const data = await res.json()
 
       if (data.success) {
-        setMessage(`✓ Minted ${amount} GIC! TX: ${data.txHash?.slice(0, 10)}...`)
+        setMessage(`✓ Minted ${amount} MIC! TX: ${data.txHash?.slice(0, 10)}...`)
       } else {
         setMessage(`✗ Error: ${data.error}`)
       }
@@ -38,7 +38,7 @@ export function GICPanel() {
     setMessage('')
 
     try {
-      const burnAmount = prompt('Amount to burn (GIC):')
+      const burnAmount = prompt('Amount to burn (MIC):')
       if (!burnAmount) return
 
       const res = await fetch('/api/gic/burn', {
@@ -50,7 +50,7 @@ export function GICPanel() {
       const data = await res.json()
 
       if (data.success) {
-        setMessage(`✓ Burned ${burnAmount} GIC! TX: ${data.txHash?.slice(0, 10)}...`)
+        setMessage(`✓ Burned ${burnAmount} MIC! TX: ${data.txHash?.slice(0, 10)}...`)
       } else {
         setMessage(`✗ Error: ${data.error}`)
       }
@@ -69,14 +69,14 @@ export function GICPanel() {
     <div className="card-gold">
       <h2 className="text-2xl font-bold text-aurea-gold mb-4 flex items-center gap-2">
         <Coins className="w-6 h-6" />
-        GIC Epoch Controls
+        MIC Epoch Controls
       </h2>
 
       <div className="space-y-4">
         {/* Mint Section */}
         <div className="space-y-2">
           <label className="block text-sm font-medium text-slate-300">
-            Mint Amount (GIC)
+            Mint Amount (MIC)
           </label>
           <input
             type="number"
@@ -88,7 +88,7 @@ export function GICPanel() {
                        focus:outline-none focus:ring-2 focus:ring-aurea-gold/50"
           />
           <p className="text-xs text-slate-400">
-            Max: 100,000 GIC per epoch · 20% auto-donated to Public Goods Pool
+            Max: 100,000 MIC per epoch · 20% auto-donated to Public Goods Pool
           </p>
         </div>
 
@@ -149,11 +149,11 @@ export function GICPanel() {
           </div>
           <div className="flex justify-between">
             <span className="text-slate-400">Total Minted:</span>
-            <span className="text-slate-300">50,000 GIC</span>
+            <span className="text-slate-300">50,000 MIC</span>
           </div>
           <div className="flex justify-between">
             <span className="text-slate-400">Auto-Donated:</span>
-            <span className="text-emerald-400">10,000 GIC (20%)</span>
+            <span className="text-emerald-400">10,000 MIC (20%)</span>
           </div>
         </div>
       </div>

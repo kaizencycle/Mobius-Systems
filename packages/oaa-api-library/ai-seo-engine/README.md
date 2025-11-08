@@ -1,7 +1,7 @@
 # AI SEO Engine (OAA)
 
 Crawls OAA signals (pulses, ledger seals, memory digests), ranks them with
-GIC × Virtue Accord weights, and publishes JSON-LD for machine-native discovery.
+MIC × Virtue Accord weights, and publishes JSON-LD for machine-native discovery.
 
 Pipeline:
 1) crawler → writes `ai-seo-engine/out/crawl.json`

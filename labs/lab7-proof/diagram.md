@@ -16,8 +16,8 @@ graph TD
   OAA --> ATT[Attestation Service]
   OAA --> XP[XP Engine]
   XP --> RWD[Reward Minter]
-  RWD --> LED[Ledger (GIC)]
-  LED --> IDX[GIC Indexer]
+  RWD --> LED[Ledger (MIC)]
+  LED --> IDX[MIC Indexer]
   IDX --> A
 
   OAA --> QST[Quest Engine]
@@ -56,14 +56,14 @@ sequenceDiagram
   O->>T: Commit Attestation(sig+hash)
   T-->>O: attestation_id
   O->>W: RewardIntent(user, level, attestation_id)
-  W->>L: Mint/Transfer GIC
+  W->>L: Mint/Transfer MIC
   L-->>I: New tx
   I-->>A: Updated balance/tx feed
 
 ```
-  A-->>U: XP/Level + GIC reward shown  
+  A-->>U: XP/Level + MIC reward shown  
   
-**3) Reward Loop (XP → Level → GIC → Ledger)**  
+**3) Reward Loop (XP → Level → MIC → Ledger)**  
 	•	Rubric threshold gates XP.  
 	•	Level thresholds mint small, frequent rewards; every 5 levels adds a bonus.  
 	•	All rewards require Attestation.sig + Shield OK.  

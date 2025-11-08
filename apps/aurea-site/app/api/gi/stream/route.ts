@@ -30,7 +30,7 @@ export async function GET(request: NextRequest) {
         const mockGI = 0.993 - Math.random() * 0.003 // 0.990-0.993 range
 
         send('heartbeat', {
-          gi: parseFloat(mockGI.toFixed(3)),
+          mii: parseFloat(mockGI.toFixed(3)),
           timestamp: new Date().toISOString(),
         })
       }, 5000)

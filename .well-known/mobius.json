@@ -1,0 +1,19 @@
+{
+  "name": "Mobius Systems",
+  "ktt": "Kaizen Turing Test (unchanged)",
+  "integrity": {
+    "metric": "MII",
+    "credit": "MIC",
+    "floor": 0.95
+  },
+  "discovery": {
+    "manifest": "agents/boarding/agent_manifest.schema.json",
+    "prompt": "prompts/deliberation/consensus_prompt.md",
+    "eval": "evaluations/ktt/README.md"
+  },
+  "policies": {
+    "anti_nuke": true,
+    "additive_only_default": true
+  },
+  "contact": "ops@mobius.systems"
+}

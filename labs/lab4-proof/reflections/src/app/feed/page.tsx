@@ -52,7 +52,7 @@ export default function FeedPage(){
             <Image src="/sigil.svg" alt="Concord Sigil" width={24} height={24} />
             <span>Reflections</span>
           </div>
-          <span className="pill">balance: {gic.toFixed(2)} GIC</span>
+          <span className="pill">balance: {gic.toFixed(2)} MIC</span>
           <div style={{flex:1}}/>
           <Link href="/companion" className="pill">Companion</Link>
           <Link href="/forest" className="pill">Forest</Link>
@@ -65,7 +65,7 @@ export default function FeedPage(){
             <Image src="/sigil.svg" alt="" width={36} height={36}/>
             <div>
               <div style={{fontWeight:700}}>{handle || "Guest"}</div>
-              <div className="mini">🪙 {gic.toFixed(2)} GIC</div>
+              <div className="mini">🪙 {gic.toFixed(2)} MIC</div>
             </div>
           </div>
           <div className="divider"></div>

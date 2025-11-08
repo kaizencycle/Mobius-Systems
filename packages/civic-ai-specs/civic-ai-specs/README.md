@@ -8,7 +8,7 @@ Open specifications for ethical, verifiable, and geocivic AI systems.
 - **OAA (Online Apprenticeship Agent)** — learning & reflection engine  
 - **DVA (Digital Vector Architecture)** — governance & integrity kernel  
 - **Civic Ledger Core** — proof-of-integrity ledger  
-- **GIC (Global Integrity Credit)** — incentive & reputation economy  
+- **MIC (Mobius Integrity Index Credit)** — incentive & reputation economy  
 
 ## Quick Start
 📚 Start with [`specs/01-overview.md`](specs/01-overview.md)  

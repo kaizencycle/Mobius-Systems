@@ -1,12 +1,12 @@
 /**
  * UBI Distributor Module
  *
- * Manages Universal Basic Income distributions from the Civic GIC Fountain.
+ * Manages Universal Basic Income distributions from the Civic MIC Fountain.
  * Distributes to both human citizens and verified AI automations.
  *
  * Rules:
- * - Daily pool cap: 10,000 GIC
- * - Per-address daily cap: 100 GIC
+ * - Daily pool cap: 10,000 MIC
+ * - Per-address daily cap: 100 MIC
  * - Requires network GI ≥ 0.95
  * - Requires controller avg GI ≥ 0.985
  * - Auto-pauses if network GI < 0.92
@@ -86,9 +86,9 @@ export function calculateUBIAmount(
   hasWorkProof: boolean = false
 ): number {
   // Base UBI amounts
-  const humanBase = 50 // 50 GIC per day
-  const automationBase = 25 // 25 GIC per day
-  const workProofBonus = 25 // +25 GIC for verified work
+  const humanBase = 50 // 50 MIC per day
+  const automationBase = 25 // 25 MIC per day
+  const workProofBonus = 25 // +25 MIC for verified work
 
   let amount = recipientType === 'human' ? humanBase : automationBase
 
@@ -97,7 +97,7 @@ export function calculateUBIAmount(
     amount += workProofBonus
   }
 
-  return Math.min(amount, 100) // Cap at 100 GIC per day
+  return Math.min(amount, 100) // Cap at 100 MIC per day
 }
 
 /**
@@ -160,7 +160,7 @@ export async function distributeUBI(
     if (stats.total_distributed + amount > 10_000) {
       return {
         success: false,
-        error: 'Daily pool capacity exceeded (10,000 GIC)',
+        error: 'Daily pool capacity exceeded (10,000 MIC)',
       }
     }
 
@@ -168,7 +168,7 @@ export async function distributeUBI(
     if (amount > 100) {
       return {
         success: false,
-        error: 'Amount exceeds per-address daily cap (100 GIC)',
+        error: 'Amount exceeds per-address daily cap (100 MIC)',
       }
     }
 

@@ -30,7 +30,7 @@ export default function IntegrityBeacon(props: BeaconInput) {
     description: props.description || "",
     dateModified: props.dateModified || new Date().toISOString(),
     isAccessibleForFree: true,
-    keywords: props.keywords || ["OAA","Integrity","GIC","Virtue Accords"],
+    keywords: props.keywords || ["OAA","Integrity","MIC","Virtue Accords"],
     oaa: props.oaa
   };
   return (

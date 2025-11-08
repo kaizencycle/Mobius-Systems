@@ -46,8 +46,8 @@ export default function StatusBar() {
     }}>
       {pill(cfg.demo_mode ? '🟢 DEMO MODE' : '🔵 PROD')}
       {pill(`Min Len: ${cfg.reward_min_len}`)}
-      {pill(`GIC Private: +${cfg.gic_per_private}`)}
-      {pill(`GIC Publish: +${cfg.gic_per_publish}`)}
+      {pill(`MIC Private: +${cfg.gic_per_private}`)}
+      {pill(`MIC Publish: +${cfg.gic_per_publish}`)}
     </div>
   );
 }

@@ -22,7 +22,7 @@ This document maps all Kaizen OS backend APIs deployed on Render.com to their co
 │  ├─ Consensus Chamber             ├─ Lab4: E.O.M.M. (Hive)      │
 │  └─ Agent Dashboard               ├─ Lab6: Citizen Shield       │
 │                                   ├─ Lab7: OAA Hub              │
-│                                   ├─ GIC Indexer                │
+│                                   ├─ MIC Indexer                │
 │                                   └─ OAA API Library            │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -240,16 +240,16 @@ NEXT_PUBLIC_LAB7_BASE=https://lab7-proof.onrender.com
 
 ---
 
-### GIC Indexer (Token Tracking)
+### MIC Indexer (Token Tracking)
 
 **Base URL:** `https://gic-indexer.onrender.com`
 
-**Purpose:** Good Intent Credit (GIC) token indexing and balance tracking
+**Purpose:** Good Intent Credit (MIC) token indexing and balance tracking
 
 **Key Endpoints:**
 
 ```http
-# Get GIC balance
+# Get MIC balance
 GET /api/v1/gic/balance/:address
 Response: {
   "address": "atlas@civic.os",
@@ -436,20 +436,20 @@ sequenceDiagram
     end
 ```
 
-### Flow 3: GIC Token Distribution
+### Flow 3: MIC Token Distribution
 
 ```mermaid
 sequenceDiagram
     participant Scheduler
     participant Lab1 as Lab1 (Ledger)
-    participant GIC as GIC Indexer
+    participant MIC as MIC Indexer
 
     Scheduler->>Lab1: Trigger daily UBI
     Lab1->>Lab1: Calculate eligible agents (GI >= 0.95)
 
     loop For each eligible agent
-        Lab1->>Lab1: Mint 10 GIC
-        Lab1->>GIC: POST /gic/index (transaction)
+        Lab1->>Lab1: Mint 10 MIC
+        Lab1->>MIC: POST /gic/index (transaction)
     end
 
     Lab1-->>Scheduler: {distributed: 1000, total_gic: 10000}
@@ -486,7 +486,7 @@ curl -X POST https://civic-protocol-core-ledger.onrender.com/api/v1/ledger/event
 # Get current cycle
 curl https://hive-api-2le8.onrender.com/api/v1/cycle/current
 
-# Check GIC balance
+# Check MIC balance
 curl https://gic-indexer.onrender.com/api/v1/gic/balance/atlas@civic.os
 ```
 
@@ -504,7 +504,7 @@ Visit: https://dashboard.render.com
 2. **hive-api** (Lab4)
 3. **lab6-proof-api** (Lab6)
 4. **lab7-proof** (Lab7)
-5. **gic-indexer** (GIC)
+5. **gic-indexer** (MIC)
 6. **oaa-api-library** (OAA)
 
 ### Key Metrics

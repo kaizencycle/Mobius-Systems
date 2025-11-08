@@ -1,8 +1,8 @@
-# GIC Indexer API
+# MIC Indexer API
 
-Simple FastAPI service that indexes civic ledger events and exposes **GIC state**:
-- `/supply` — total/circulating GIC, XP pool
-- `/balances/{handle}` — XP, direct GIC, implied GIC (XP * ratio)
+Simple FastAPI service that indexes civic ledger events and exposes **MIC state**:
+- `/supply` — total/circulating MIC, XP pool
+- `/balances/{handle}` — XP, direct MIC, implied MIC (XP * ratio)
 - `/events` — recent events
 - `/scores/{handle}` — alias to balances (extendable)
 - `/ingest/ledger` — POST events from the ledger (secured via `X-API-Key`)
@@ -21,10 +21,10 @@ curl -X POST http://127.0.0.1:8000/ingest/ledger \
   -H "Content-Type: application/json" -H "X-API-Key: $GIC_API_KEY" \
   -d '{"kind":"xp_award","amount":500,"unit":"XP","target":"michael","meta":{"source":"reflections"}}'
 
-# Direct GIC grant
+# Direct MIC grant
 curl -X POST http://127.0.0.1:8000/ingest/ledger \
   -H "Content-Type: application/json" -H "X-API-Key: $GIC_API_KEY" \
-  -d '{"kind":"grant","amount":5,"unit":"GIC","target":"michael","meta":{"program":"founders"}}'
+  -d '{"kind":"grant","amount":5,"unit":"MIC","target":"michael","meta":{"program":"founders"}}'
 ```
 
 ## Query

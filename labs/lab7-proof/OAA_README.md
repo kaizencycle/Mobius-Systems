@@ -5,7 +5,7 @@ A comprehensive source validation, scoring, and attestation system for Lab7. Thi
 - **Source Ingestion**: Pull and normalize API sources from URLs or inline payloads
 - **Intelligent Scoring**: Multi-dimensional scoring (provenance, permission, freshness, quality, safety, reputation)
 - **Policy Engine**: YAML-based rules for pass/deny/review decisions
-- **Reputation System**: GIC-staked voting with cryptographic attestation
+- **Reputation System**: MIC-staked voting with cryptographic attestation
 - **Ledger Integration**: Optional anchoring to Civic Ledger for tamper-evident records
 - **Verification Tools**: Browser UI, TypeScript library, and CLI for attestation verification
 
@@ -60,7 +60,7 @@ oaa_router.ADMIN_TOKEN = os.getenv("ADMIN_TOKEN", "")
 
 ### Reputation & Attestation
 
-- `POST /oaa/repute/vote` - Cast GIC-staked reputation vote
+- `POST /oaa/repute/vote` - Cast MIC-staked reputation vote
 - `POST /oaa/verify` - Verify attestation signatures
 - `GET /oaa/state/snapshot` - Get current state snapshot
 - `POST /oaa/state/anchor` - Sign and anchor state to ledger
@@ -160,7 +160,7 @@ oaa-verify attestation.json --keyset https://your-api.com
 - **Freshness** (15%): Recency of last update
 - **Quality** (20%): Schema docs, rate limits, uptime
 - **Safety** (20%): Tag-based safety checks
-- **Reputation** (10%): Community voting with GIC stakes
+- **Reputation** (10%): Community voting with MIC stakes
 
 ## Policy Rules
 

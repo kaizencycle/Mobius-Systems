@@ -6,7 +6,7 @@ This directory contains the ledger data for the Lab4-Proof API.
 
 - `YYYY-MM-DD/` - Daily data directories
 - `*.json` - Daily ledger files (seed, echo, seal, ledger)
-- `*.jsonl` - Transaction logs and GIC records
+- `*.jsonl` - Transaction logs and MIC records
 
 ## Security
 

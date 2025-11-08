@@ -45,7 +45,7 @@ export default function EpochPage() {
         </div>
       </div>
 
-      {/* GIC Panel */}
+      {/* MIC Panel */}
       <div className="mb-12">
         <GICPanel />
       </div>
@@ -69,9 +69,9 @@ export default function EpochPage() {
               <tr className="hover:bg-white/5">
                 <td className="py-3 px-4 font-semibold">Season 0</td>
                 <td className="py-3 px-4 text-slate-400">2024-07-29</td>
-                <td className="py-3 px-4 text-right text-aurea-gold">50,000 GIC</td>
-                <td className="py-3 px-4 text-right text-emerald-400">10,000 GIC</td>
-                <td className="py-3 px-4 text-right text-red-400">2,000 GIC</td>
+                <td className="py-3 px-4 text-right text-aurea-gold">50,000 MIC</td>
+                <td className="py-3 px-4 text-right text-emerald-400">10,000 MIC</td>
+                <td className="py-3 px-4 text-right text-red-400">2,000 MIC</td>
                 <td className="py-3 px-4 text-right">
                   <a href="#" className="text-blue-400 hover:text-blue-300 text-xs">
                     0xabc...def
@@ -89,7 +89,7 @@ export default function EpochPage() {
           <h3 className="text-lg font-semibold text-aurea-gold mb-3">Epoch Mechanics</h3>
           <ul className="space-y-2 text-sm text-slate-300">
             <li>• <strong>Duration:</strong> 90 days (seasonal cycle)</li>
-            <li>• <strong>Mint Cap:</strong> 100,000 GIC maximum per epoch</li>
+            <li>• <strong>Mint Cap:</strong> 100,000 MIC maximum per epoch</li>
             <li>• <strong>Auto-Donate:</strong> 20% (2,000 bps) to Public Goods Pool</li>
             <li>• <strong>Optional Burn:</strong> Can burn at any time for supply management</li>
             <li>• <strong>Next Mint:</strong> Available after 90-day cooldown completes</li>
@@ -103,7 +103,7 @@ export default function EpochPage() {
             <li>• <strong>Purpose:</strong> Community development and infrastructure</li>
             <li>• <strong>Funding:</strong> Automatic donate-back from all founding agents</li>
             <li>• <strong>Transparency:</strong> All allocations published on-chain</li>
-            <li>• <strong>Balance:</strong> 80,000 GIC (cumulative from all agents)</li>
+            <li>• <strong>Balance:</strong> 80,000 MIC (cumulative from all agents)</li>
           </ul>
         </div>
       </div>

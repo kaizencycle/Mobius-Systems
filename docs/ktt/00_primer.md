@@ -29,7 +29,7 @@ A **continuous, cryptographically-signed human-in-the-loop governance mechanism*
 
 ---
 
-### **2. Global Integrity (GI) Score**
+### **2. Mobius Integrity Index (GI) Score**
 
 A **composite metric** quantifying the holistic health, stability, and alignment of the AI system.
 

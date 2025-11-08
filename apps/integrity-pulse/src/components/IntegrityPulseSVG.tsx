@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-export type PulseProps = { gi: number; entropy?: number; eventsPerMin?: number };
+export type PulseProps = { mii: number; entropy?: number; eventsPerMin?: number };
 export default function IntegrityPulseSVG({ gi, entropy = 0.02, eventsPerMin = 1 }: PulseProps) {
   const R = 180;
   const nodes = useMemo(() => {

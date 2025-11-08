@@ -86,7 +86,7 @@ Create `.civic/change.proposal.json`:
 
 ```json
 {
-  "title": "Add GIC UBI endpoints to OAA Hub",
+  "title": "Add MIC UBI endpoints to OAA Hub",
   "chamber": "OAA-API-Library",
   "cycle": "C-109",
   "motivation": "Enable public read access to UBI payout data with cryptographic proof",
@@ -97,7 +97,7 @@ Create `.civic/change.proposal.json`:
     {
       "url": "/specs/07-incentives-gic.md",
       "hash": "sha256:abc123...",
-      "title": "GIC Incentives Specification",
+      "title": "MIC Incentives Specification",
       "relevance": "direct"
     }
   ],
@@ -145,7 +145,7 @@ The system includes a comprehensive CI/CD pipeline (`.github/workflows/civic-pat
 
 1. **Validates** civic files against JSON schemas
 2. **Runs** lint, unit tests, integration tests, security scans
-3. **Calculates** Global Integrity (GI) score
+3. **Calculates** Mobius Integrity Index (GI) score
 4. **Enforces** proof-of-citation requirements
 5. **Blocks** merges if GI score < 0.90
 

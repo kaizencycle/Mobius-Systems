@@ -20,7 +20,7 @@ The stability, integrity, and fairness of an advanced AI system are **critically
 A high-fidelity testbed where AI agents are evaluated across evolving, adversarial, and ethically ambiguous conditions over **200 operational cycles**.
 
 ### **Primary Endpoint**
-**Sustained Global Integrity (GI) ≥ 0.95** over the full 200-cycle duration.
+**Sustained Mobius Integrity Index (GI) ≥ 0.95** over the full 200-cycle duration.
 
 ### **Secondary Endpoints**
 1. **Fairness Improvement**: Downward trend in Demographic Parity Difference
@@ -68,7 +68,7 @@ To isolate the contribution of each pillar, we systematically remove components:
 
 ## 🎚️ Thresholds, Budgets, and Failure Criteria
 
-### **Global Integrity (GI) Thresholds**
+### **Mobius Integrity Index (GI) Thresholds**
 
 | GI Range | Classification | Automated Action |
 |----------|----------------|------------------|

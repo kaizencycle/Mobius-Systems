@@ -1,7 +1,7 @@
 {
   "name": "oaa-central-hub",
   "version": "1.0.0",
-  "description": "OAA Central Hub with GIC TLD Integration",
+  "description": "OAA Central Hub with MIC TLD Integration",
   "main": "oaa/server.js",
   "scripts": {
     "start": "node oaa/server.js",

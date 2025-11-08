@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 type Tracker = {
   cycle: string;          // e.g., "C-118"
-  gi: number;             // e.g., 0.993
+  mii: number;             // e.g., 0.993
   room: string;           // e.g., "Consensus Chamber"
 };
 
@@ -18,7 +18,7 @@ export default function CycleTracker(props?: CycleTrackerProps) {
   const [now, setNow] = useState(new Date());
   const [tracker, setTracker] = useState<Tracker>({
     cycle: props?.cycle ?? 'C-118',
-    gi: props?.gi ?? 0.993,
+    mii: props?.gi ?? 0.993,
     room: props?.room ?? 'Consensus Chamber',
   });
 
@@ -37,7 +37,7 @@ export default function CycleTracker(props?: CycleTrackerProps) {
             const j = await r.json();
             setTracker({
               cycle: j.cycle ?? tracker.cycle,
-              gi:    j.gi    ?? tracker.gi,
+              mii:    j.gi    ?? tracker.gi,
               room:  j.room  ?? tracker.room,
             });
           }

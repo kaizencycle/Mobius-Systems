@@ -167,7 +167,7 @@ async def post_to_integrity_feed(sr: SRPayload, markdown: str) -> None:
         "event_id": f"evt-sr-{int(time.time())}",
         "kind": "situational_report",
         "source": "JADE",
-        "gi": round(sr.gi_impact.post, 3),
+        "mii": round(sr.gi_impact.post, 3),
         "timestamp": _now_iso(),
         "details": {
             "subject": sr.subject,
@@ -223,7 +223,7 @@ async def generate_sr(
             "subject": provider_delta.sentinel,
             "provider": provider_delta.provider,
             "model": provider_delta.model,
-            "post_gi": gi.post,
+            "post_gi": mii.post,
             "cycle": cycle
         }, sort_keys=True))
     )

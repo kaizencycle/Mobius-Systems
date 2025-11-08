@@ -1,6 +1,6 @@
 /**
  * Fountain Attestor
- * Builds attestation records for the Civic GIC Fountain Wallet
+ * Builds attestation records for the Civic MIC Fountain Wallet
  */
 
 import { fetchNetworkGI, fetchControllersGI, avgGI } from './gi-oracle'

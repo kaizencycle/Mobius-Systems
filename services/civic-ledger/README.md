@@ -6,7 +6,7 @@ Value layer API for the integrity economy. Provides GI status and unit conversio
 
 - `GET /health` → Basic health check
 - `GET /system/health` → Detailed system status
-- `GET /gi` → Current Global Integrity score
+- `GET /gi` → Current Mobius Integrity Index score
 - `POST /convert/shards-to-credits` → Convert shards to credits
 - `POST /convert/credits-to-shards` → Convert credits to shards
 

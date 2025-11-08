@@ -10,7 +10,7 @@ Civic Protocol Core implements a **Proof-of-Cycle (PoC)** consensus mechanism th
 
 * **Cycle**: The fundamental primitive (Seed → Sweep → Seal → Ledger)
 * **Reflections**: Private civic thoughts and insights (encrypted off-chain)
-* **GIC**: Governance Incentive Currency for civic participation
+* **MIC**: Governance Incentive Currency for civic participation
 * **Proof-of-Cycle**: Consensus based on verifiable civic activity
 * **Shield**: Privacy-preserving layer for private reflections with zkRL
 * **Agora**: Democratic governance system with quadratic voting
@@ -59,7 +59,7 @@ civic-protocol-core/
 │   └── proof_of_cycle.py      # PoC consensus implementation
 ├── governance/                 # Festivals, Agora contracts
 │   └── agora.py               # Agora governance system
-├── gic-indexer/               # GIC balance computation
+├── gic-indexer/               # MIC balance computation
 │   ├── app/main.py            # FastAPI indexer service
 │   ├── policy.yaml            # Policy configuration
 │   ├── render.yaml            # Deployment config
@@ -108,7 +108,7 @@ python start-all-services.py
 This will start:
 * Civic Dev Node (port 5411)
 * Shield (port 7000)
-* GIC-Indexer (port 8000)
+* MIC-Indexer (port 8000)
 
 ### Option 2: Start Services Individually
 
@@ -120,7 +120,7 @@ python sdk/python/devnode.py
 cd lab6-proof
 python app/main.py
 
-# Terminal 3: GIC-Indexer
+# Terminal 3: MIC-Indexer
 cd gic-indexer
 python app/main.py
 ```
@@ -208,7 +208,7 @@ console.log(await c.listReflections());
 * **Central Event Store**: All civic activity anchored here
 * **Immutable Events**: Chained, verified, and permanent
 * **Token Verification**: Authenticated via Lab4/Lab6
-* **Event Types**: Reflections, companions, governance, GIC transactions
+* **Event Types**: Reflections, companions, governance, MIC transactions
 
 ### 2. Lab6-Proof - Citizen Shield
 
@@ -217,19 +217,19 @@ console.log(await c.listReflections());
 * **Citizen Attestations**: Verified civic contributions
 * **Auto-Anchoring**: Every action posts to Ledger API
 
-### 3. GIC Economics & Indexing
+### 3. MIC Economics & Indexing
 
 * **Real-time Computation**: Balance calculation from ledger events
-* **Activity Rewards**: GIC earned for civic participation
+* **Activity Rewards**: MIC earned for civic participation
 * **Staking System**: Governance participation incentives
 * **Economic Policies**: Configurable reward schedules
 
 ### 4. Complete Integration
 
-* **Frontend** → **Lab6** → **Ledger API** → **GIC Indexer**
+* **Frontend** → **Lab6** → **Ledger API** → **MIC Indexer**
 * **Immutable Record**: All civic activity permanently stored
 * **Verifiable History**: Complete audit trail of civic participation
-* **Economic Incentives**: GIC rewards for civic engagement
+* **Economic Incentives**: MIC rewards for civic engagement
 
 ## Genesis Custodian Event
 
@@ -253,7 +253,7 @@ The Civic Ledger supports Genesis Events for establishing the foundation of civi
 
 ### Phase 2: Testnet
 
-* GIC blockchain implementation
+* MIC blockchain implementation
 * Proof-of-Cycle consensus
 * Shield integration with zkRL
 * Custodian node setup

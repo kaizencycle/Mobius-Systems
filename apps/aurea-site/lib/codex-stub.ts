@@ -1,4 +1,4 @@
-// Temporary stub for @kaizen/codex-agentic until properly published to npm
+// Temporary stub for @mobius/codex-agentic until properly published to npm
 // This allows Vercel deployment to work without workspace dependencies
 
 export interface CodexRequest {

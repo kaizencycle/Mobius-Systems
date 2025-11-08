@@ -38,7 +38,7 @@ export async function POST(req: NextRequest) {
     // XP rule (MVP)
     const xp = Math.min(50, Math.max(5, Math.floor((text.length || 0) / 10)));
 
-    // Fire-and-forget GIC Indexer ingest
+    // Fire-and-forget MIC Indexer ingest
     fetch(`${process.env.GIC_INDEXER_URL}/ingest/ledger`, {
       method: "POST",
       headers: {

@@ -1,8 +1,8 @@
-# GIC Indexer
+# MIC Indexer
 
-**Global Integrity Credit Universal Basic Income (GIC-UBI) Payout Engine**
+**Mobius Integrity Index Credit Universal Basic Income (MIC-UBI) Payout Engine**
 
-A Node.js service that computes, persists, and attests GIC-UBI payouts based on user merit, geographic weighting, and proof integrity.
+A Node.js service that computes, persists, and attests MIC-UBI payouts based on user merit, geographic weighting, and proof integrity.
 
 ## 🌟 Features
 
@@ -146,7 +146,7 @@ npm start
 
 ### OAA-API-Library
 
-The GIC Indexer integrates with OAA-API-Library to provide:
+The MIC Indexer integrates with OAA-API-Library to provide:
 - Public payout query endpoints
 - React components for UI display
 - Caching and performance optimization

@@ -6,7 +6,7 @@ Security gatekeeper for agent tool calls in Kaizen OS Citizen Shield (Lab 6).
 
 Single choke-point for any agent → tool call. Enforces:
 - DID signature verification
-- GI (Global Integrity) floor checks (≥ 0.95)
+- GI (Mobius Integrity Index) floor checks (≥ 0.95)
 - DelibProof consensus for high-risk actions
 - Sandboxed execution
 - RBAC (Role-Based Access Control)
@@ -36,7 +36,7 @@ docker-compose up
 
 ```bash
 GI_FLOOR=0.95                    # Minimum GI score required
-GI_INDEXER_URL=https://...        # GIC Indexer endpoint
+GI_INDEXER_URL=https://...        # MIC Indexer endpoint
 LEDGER_URL=https://...            # Civic Ledger endpoint
 SENTINEL_AUREA_URL=https://...    # Sentinel endpoints
 SENTINEL_EVE_URL=https://...
@@ -69,5 +69,5 @@ Point all agents (DVA, OAA, Reflections workers) to call Gatekeeper for:
 - `execute_script` - Code execution
 - `http_request` - Outbound HTTP
 - `db_query` - Database queries
-- `mint_gic` - GIC minting
+- `mint_gic` - MIC minting
 - `write_file` - File system writes

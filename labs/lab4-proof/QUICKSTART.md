@@ -39,8 +39,8 @@ Go to: http://localhost:3000
 1. **Seed your day**: Click "Seed" to start
 2. **Write a reflection**: Type your thoughts
 3. **Choose reward tier**:
-   - **Private (+10 GIC)**: Keep it private
-   - **Publish (+25 GIC)**: Share to civic library (200+ chars)
+   - **Private (+10 MIC)**: Keep it private
+   - **Publish (+25 MIC)**: Share to civic library (200+ chars)
 4. **Select chamber**: Pick your context
 5. **Seal the day**: Complete your cycle
 
@@ -62,7 +62,7 @@ Go to: http://localhost:3000
 
 - **Dark theme**: Easy on the eyes
 - **Mobile responsive**: Works on phone and desktop
-- **Real-time GIC tracking**: See your rewards instantly
+- **Real-time MIC tracking**: See your rewards instantly
 - **Chamber selection**: Organize by context
 - **Ledger verification**: Check daily integrity
 - **Export capabilities**: Download your data

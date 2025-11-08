@@ -6,7 +6,7 @@ This guide covers deploying the complete Civic Protocol Core system with the Led
 
 ```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   Lab4-Proof    │    │   Lab6-Proof    │    │   GIC-Indexer   │
+│   Lab4-Proof    │    │   Lab6-Proof    │    │   MIC-Indexer   │
 │  (Reflections)  │    │  (Citizen       │    │  (Balance       │
 │                 │    │   Shield)       │    │   Computation)  │
 └─────────┬───────┘    └─────────┬───────┘    └─────────┬───────┘
@@ -31,7 +31,7 @@ Deploy each service separately for maximum flexibility:
 1. **Ledger API** (Core service)
 2. **Lab4-Proof** (Reflections & Agora)
 3. **Lab6-Proof** (Citizen Shield)
-4. **GIC-Indexer** (Balance computation)
+4. **MIC-Indexer** (Balance computation)
 
 ### Option 2: Monolithic Deployment (Simple Setup)
 
@@ -190,7 +190,7 @@ def verify_reflection(civic_id, proof_data):
         print(f"Failed to anchor verification: {e}")
 ```
 
-### 4. GIC-Indexer (Balance Computation)
+### 4. MIC-Indexer (Balance Computation)
 
 #### Prerequisites
 - Python 3.8+
@@ -209,7 +209,7 @@ UPDATE_INTERVAL=300  # 5 minutes
 ```
 
 #### Integration with Ledger
-The GIC-Indexer reads events from the Ledger API and computes balances:
+The MIC-Indexer reads events from the Ledger API and computes balances:
 
 ```python
 # In your indexer service
@@ -222,7 +222,7 @@ def update_balances():
     
     # Process events and update balances
     for event in events['events']:
-        # Calculate GIC rewards
+        # Calculate MIC rewards
         # Update balance database
         pass
 ```

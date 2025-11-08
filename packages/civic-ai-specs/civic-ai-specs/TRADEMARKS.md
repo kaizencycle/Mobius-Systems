@@ -8,7 +8,7 @@ The following terms are used as open standard marks under Creative Commons Attri
 - **"Civic AI"** - The overall system and approach
 - **"OAA"** - Online Apprenticeship Agent
 - **"DVA"** - Digital Vector Architecture
-- **"GIC"** - Global Integrity Credit
+- **"MIC"** - Mobius Integrity Index Credit
 - **"HIVE"** - The integrated gaming and governance platform
 
 ## Usage Guidelines

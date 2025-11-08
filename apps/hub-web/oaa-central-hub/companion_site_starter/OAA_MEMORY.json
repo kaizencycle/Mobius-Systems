@@ -8,7 +8,7 @@
     },
     {
       "ts": 1697452800000,
-      "note": "Civic Stack online: .gic registry (concept), Civic Ledger (mock + prod), GIC Gateway (feeds, posts)."
+      "note": "Civic Stack online: .gic registry (concept), Civic Ledger (mock + prod), MIC Gateway (feeds, posts)."
     },
     {
       "ts": 1697452800000,
@@ -24,7 +24,7 @@
     },
     {
       "ts": 1697452800000,
-      "note": "Design doctrine: integrity-first learning; human+machine symbiosis; rewards via GIC for shared agreements."
+      "note": "Design doctrine: integrity-first learning; human+machine symbiosis; rewards via MIC for shared agreements."
     }
   ],
   "companions": ["jade", "eve", "zeus", "hermes"],

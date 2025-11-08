@@ -29,7 +29,7 @@ Successfully implemented three critical security components for Citizen Shield (
   - Short-lived token minting (JWT)
 
 - **GI Client** (`src/gi_client.py`)
-  - GI score fetching from GIC Indexer
+  - GI score fetching from MIC Indexer
   - GI floor enforcement (≥ 0.95)
 
 - **Policies** (`src/policies.py`)
@@ -120,7 +120,7 @@ Successfully implemented three critical security components for Citizen Shield (
 - **24-Hour Investigation**: Timeline reconstruction
 - **Recovery Procedures**: Deployment, GI checks, operations resume
 - **Post-Mortem Template**: Documentation structure
-- **Bounty & Compensation**: GIC rewards and penalties
+- **Bounty & Compensation**: MIC rewards and penalties
 - **Quick Reference**: Commands for common tasks
 
 ### Coverage
@@ -220,7 +220,7 @@ All agents should route privileged actions through Gatekeeper:
 
 Gatekeeper brokers calls to:
 - Civic Ledger (attestations)
-- GIC Indexer (GI scores)
+- MIC Indexer (GI scores)
 - Sentinels (consensus)
 - Execution sandboxes
 

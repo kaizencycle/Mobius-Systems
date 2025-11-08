@@ -350,13 +350,13 @@ kubectl scale deploy agent-123 --replicas=3
 ### Bounty & Compensation
 
 **Rewards:**
-- **Valid report**: 1,000–10,000 GIC minted to reporter DID
-- **Responsible disclosure**: Additional bonus (up to 5,000 GIC)
+- **Valid report**: 1,000–10,000 MIC minted to reporter DID
+- **Responsible disclosure**: Additional bonus (up to 5,000 MIC)
 - **Community recognition**: Attestation on ledger
 
 **Penalties (if malicious):**
 - **GI slashing**: Reduce attacker GI to 0.0
-- **Token confiscation**: Seize GIC from attacker account
+- **Token confiscation**: Seize MIC from attacker account
 - **Account suspension**: Block DID from system
 - **Legal**: Report to authorities if applicable
 

@@ -27,7 +27,7 @@ The Attestation Protocol provides cryptographic proof of civic contributions and
 2. **Verification**: System checks against Virtue Accords
 3. **Attestation**: Cryptographic proof generated
 4. **Recording**: Stored in Civic Ledger
-5. **Reward**: GIC calculated and distributed
+5. **Reward**: MIC calculated and distributed
 
 ## Verification Methods
 

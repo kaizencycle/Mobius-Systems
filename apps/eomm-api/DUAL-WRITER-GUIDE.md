@@ -83,7 +83,7 @@ data/
     ├── 2025-09-25.echo.json     # API sweep data
     ├── 2025-09-25.seal.json     # API seal data
     ├── 2025-09-25.ledger.json   # API ledger data
-    └── 2025-09-25.gic.jsonl     # GIC transactions
+    └── 2025-09-25.gic.jsonl     # MIC transactions
 ```
 
 ## Response Format

@@ -7,7 +7,7 @@ class HealthOut(BaseModel):
 class IngestEvent(BaseModel):
     kind: Literal["xp_award","burn","grant","transfer"]
     amount: float = Field(gt=0)
-    unit: Literal["XP","GIC"] = "XP"
+    unit: Literal["XP","MIC"] = "XP"
     actor: Optional[str] = None
     target: Optional[str] = None
     meta: dict = {}

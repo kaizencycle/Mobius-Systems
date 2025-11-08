@@ -26,7 +26,7 @@ export function makeBeacon(opts: BeaconOpts, site: { baseUrl: string; defaultNam
     name: opts.name || site.defaultName,
     description: opts.description || "OAA integrity-beacon page.",
     isAccessibleForFree: true,
-    keywords: Array.from(new Set([...(opts.keywords||[]), "OAA","GIC","Civic Ledger","Integrity"])),
+    keywords: Array.from(new Set([...(opts.keywords||[]), "OAA","MIC","Civic Ledger","Integrity"])),
     dateModified: now,
     oaa: {
       kind: opts.kind || "page",

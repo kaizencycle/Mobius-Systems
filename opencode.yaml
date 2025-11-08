@@ -27,7 +27,7 @@ tags:
   - GlobalIntegrityCredits
   - OAA
 
-homepage: "https://github.com/kaizencycle/Kaizen-OS"
+homepage: "https://github.com/kaizencycle/Mobius-Systems"
 license: "AGPL-3.0-or-later"
 
 languages:
@@ -52,7 +52,7 @@ workflows:
     name: "Kaizen Council Review"
     description: >
       Multi-agent pull-request review workflow (AUREA → HERMES → EVE → JADE)
-      enforcing Global Integrity thresholds across services.
+      enforcing Mobius Integrity Index thresholds across services.
 
 entrypoints:
   - path: "services/civic-ledger/src/app.ts"

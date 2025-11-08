@@ -16,7 +16,7 @@ The Civic AI ecosystem consists of three core components working together to cre
 
 ### Civic Ledger
 - **Purpose**: Blockchain-based record system
-- **Function**: Records civic contributions, enables GIC rewards
+- **Function**: Records civic contributions, enables MIC rewards
 - **Features**: Transparency, accountability, verifiable history
 
 ## Key Features
@@ -25,7 +25,7 @@ The Civic AI ecosystem consists of three core components working together to cre
 - **Geographic Optimization**: Location-aware content discovery
 - **AI-SEO Beacons**: Structured data for AI crawlers
 - **Virtue Accords**: Truth, Trust, Care principles
-- **GIC Economy**: Reward system for civic contributions
+- **MIC Economy**: Reward system for civic contributions
 
 ## Integration Points
 

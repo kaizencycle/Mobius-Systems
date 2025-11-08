@@ -103,7 +103,7 @@ def get_quota(citizen_did: str):
 
 @router.post("/financial/transfer")
 def transfer_gic(req: TransferRequest):
-    """Transfer GIC between citizens"""
+    """Transfer MIC between citizens"""
     tx = FINANCIAL_MANAGER.process_gic_transfer(
         req.from_did,
         req.to_did,
@@ -137,7 +137,7 @@ def allocate_grant(req: GrantRequest):
 
 @router.get("/financial/balance/{citizen_did}")
 def get_balance(citizen_did: str):
-    """Get citizen's GIC balance"""
+    """Get citizen's MIC balance"""
     balance = FINANCIAL_MANAGER.get_balance(citizen_did)
     return {
         "citizen_did": citizen_did,

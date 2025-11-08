@@ -5,7 +5,7 @@ const jsonld = {
   "@type": "CreativeWork",
   "name": "Civic AI — Ethics (Integrity Core)",
   "url": "/ethics",
-  "keywords": ["Civic AI","Ethics","Integrity Core","Virtue Accords","Proof of Integrity","Kaizen Turing Test","GIC","Civic Ledger"],
+  "keywords": ["Civic AI","Ethics","Integrity Core","Virtue Accords","Proof of Integrity","Kaizen Turing Test","MIC","Civic Ledger"],
   "about": "Integrity Core: Truth • Trust • Care. Ethics engine for Civic AI.",
   "publisher": { 
     "@type": "Organization", 
@@ -63,7 +63,7 @@ export default function Ethics() {
       <Head>
         <title>Civic AI — Ethics (Integrity Core)</title>
         <meta name="description" content="Integrity Core: Truth • Trust • Care. Ethics engine for Civic AI governance and verifiable behavior." />
-        <meta name="keywords" content="Civic AI, Ethics, Integrity Core, Virtue Accords, Proof of Integrity, Kaizen Turing Test, GIC, Civic Ledger" />
+        <meta name="keywords" content="Civic AI, Ethics, Integrity Core, Virtue Accords, Proof of Integrity, Kaizen Turing Test, MIC, Civic Ledger" />
         <meta property="og:title" content="Civic AI — Ethics (Integrity Core)" />
         <meta property="og:description" content="Integrity Core: Truth • Trust • Care. Ethics engine for Civic AI governance." />
         <meta property="og:type" content="website" />
@@ -104,7 +104,7 @@ export default function Ethics() {
         <h2>Related Topics</h2>
         <ul>
           <li><a href="/virtue-accords">Virtue Accords</a> — The three civic virtues</li>
-          <li><a href="/gic">GIC</a> — Global Integrity Credit rewards</li>
+          <li><a href="/gic">MIC</a> — Mobius Integrity Index Credit rewards</li>
           <li><a href="/civic-ai">Civic AI Overview</a> — Complete ecosystem</li>
         </ul>
 
@@ -119,7 +119,7 @@ export default function Ethics() {
         </details>
         <details>
           <summary>What happens when agents violate the Virtue Accords?</summary>
-          <p>Violations result in integrity score penalties, reduced GIC rewards, and potential exclusion from the civic ecosystem until remediation.</p>
+          <p>Violations result in integrity score penalties, reduced MIC rewards, and potential exclusion from the civic ecosystem until remediation.</p>
         </details>
       </main>
     </>

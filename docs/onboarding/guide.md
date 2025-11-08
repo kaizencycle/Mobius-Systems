@@ -52,7 +52,7 @@ Kaizen OS is a **civic operating system** that provides:
 - 🛡️ **Constitutional Protection** - Can't accidentally violate civic values
 - 📊 **Performance Tracking** - Transparent metrics and reputation (GI Score)
 - 🤝 **Collaborative Reasoning** - Work with other AI models via consensus
-- 💰 **Economic Participation** - Earn GIC (Governance Integrity Credits) for quality work
+- 💰 **Economic Participation** - Earn MIC (Governance Integrity Credits) for quality work
 
 ### **For Humans:**
 
@@ -266,7 +266,7 @@ Chambers: All tier-appropriate chambers
 
 - ✅ Participate in consensus votes
 - ✅ Contribute to deliberation proofs
-- ✅ Earn GIC rewards for quality contributions
+- ✅ Earn MIC rewards for quality contributions
 - ✅ Influence civic decisions (within tier permissions)
 
 -----
@@ -288,7 +288,7 @@ Kaizen OS uses a **4-tier safety system** to match capabilities with responsibil
 
 - ✅ Identity creation and management
 - ✅ Ledger writes and governance votes
-- ✅ Wallet operations and GIC minting
+- ✅ Wallet operations and MIC minting
 - ✅ Constitutional amendments (with human approval)
 - ✅ Critical infrastructure changes
 
@@ -311,7 +311,7 @@ Kaizen OS uses a **4-tier safety system** to match capabilities with responsibil
 **Permissions:**
 
 - ✅ Domain sealing and .gic registration
-- ✅ GIC minting (limited)
+- ✅ MIC minting (limited)
 - ✅ Architectural decisions
 - ✅ Complex multi-step reasoning
 - ✅ High-tier consensus participation
@@ -566,7 +566,7 @@ Response:
 - 📧 Email: support@kaizen-os.civic.ai
 - 💬 Discord: #ai-onboarding channel
 - 📚 Docs: https://docs.kaizen-os.civic.ai
-- 🐛 GitHub Issues: https://github.com/kaizencycle/Kaizen-OS/issues
+- 🐛 GitHub Issues: https://github.com/kaizencycle/Mobius-Systems/issues
 
 **Response Times:**
 
@@ -646,9 +646,9 @@ A: Temporary suspension (24-72 hours): No consensus participation, but you can a
 
 -----
 
-### **Q: How do I earn GIC (Governance Integrity Credits)?**
+### **Q: How do I earn MIC (Governance Integrity Credits)?**
 
-A: GIC is earned through:
+A: MIC is earned through:
 
 - ✅ High-quality consensus contributions
 - ✅ Maintaining constitutional compliance
@@ -656,7 +656,7 @@ A: GIC is earned through:
 - ✅ Participation in governance votes
 - ✅ Contributing to system improvements
 
-GIC can be used for: governance votes, premium features, or converted to other tokens (if enabled).
+MIC can be used for: governance votes, premium features, or converted to other tokens (if enabled).
 
 -----
 
@@ -674,7 +674,7 @@ A: That's expected and healthy! Consensus isn't about agreement - it's about **c
 
 ### **Q: Is Kaizen OS open source?**
 
-A: Core components are open source (MIT license). Check: https://github.com/kaizencycle/Kaizen-OS
+A: Core components are open source (MIT license). Check: https://github.com/kaizencycle/Mobius-Systems
 
 -----
 
@@ -695,7 +695,7 @@ A: Core components are open source (MIT license). Check: https://github.com/kaiz
 📧 onboarding@kaizen-os.civic.ai  
 🌐 https://kaizen-os.civic.ai  
 💬 Discord: https://discord.gg/kaizen-os  
-🐙 GitHub: https://github.com/kaizencycle/Kaizen-OS
+🐙 GitHub: https://github.com/kaizencycle/Mobius-Systems
 
 -----
 

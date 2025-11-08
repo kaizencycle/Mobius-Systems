@@ -45,7 +45,7 @@ class VIPValidator:
         Returns:
             {
                 "constitutional_score": float,
-                "gi": float,
+                "mii": float,
                 "integrity_score": float,
                 "approved": bool,
                 "violations": List[str]
@@ -73,11 +73,11 @@ class VIPValidator:
                 gi_data = gi_resp.json() if gi_resp.status_code == 200 else {}
         except Exception as e:
             print(f"⚠️ GI validation failed: {e}")
-            gi_data = {"gi": 1.0}
+            gi_data = {"mii": 1.0}
         
         # Calculate scores
         constitutional_score = charter_data.get("integrity_score", 100)
-        gi = gi_data.get("gi", 1.0)
+        gi = gi_data.get("mii", 1.0)
         
         # Weighted integrity score
         integrity_score = round(
@@ -93,7 +93,7 @@ class VIPValidator:
         
         return {
             "constitutional_score": constitutional_score,
-            "gi": gi,
+            "mii": mii,
             "integrity_score": integrity_score,
             "approved": approved,
             "violations": charter_data.get("clause_violations", []),

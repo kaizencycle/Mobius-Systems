@@ -58,7 +58,7 @@ If you're reading this, you're likely:
 ✅ **Regional Adaptation**
 - Want to implement in non-U.S. context
 - Different legal/cultural requirements
-- Example: "GIC for Kenya" (mobile-first, different UBI amount)
+- Example: "MIC for Kenya" (mobile-first, different UBI amount)
 
 ---
 
@@ -340,7 +340,7 @@ Month 3: Community votes on whether to follow your fork
    - Smart contract ABIs
 
 2. **Same economic rules**
-   - GIC issuance formula
+   - MIC issuance formula
    - UBI distribution (70/30 split)
    - GI threshold (≥0.95 for minting)
 
@@ -365,7 +365,7 @@ npm run test:compatibility
 
 # This checks:
 # - GI payload schema validation
-# - GIC token compatibility (same ABI)
+# - MIC token compatibility (same ABI)
 # - E.O.M.M. data format
 # - API endpoint responses
 
@@ -553,7 +553,7 @@ These are **negotiable** as long as you preserve core principles:
 
 ### Trademark Considerations
 
-**"Kaizen Cycle" and "GIC" are trademarks (defensive registration).**
+**"Kaizen Cycle" and "MIC" are trademarks (defensive registration).**
 
 **You can:**
 - ✅ Use for non-commercial, civic purposes
@@ -568,7 +568,7 @@ These are **negotiable** as long as you preserve core principles:
 **Best practice:** Use a different name for your fork
 - "Kaizen Europe" ✅
 - "Civic Intelligence for Barcelona" ✅
-- "GIC Fork by [Your Name]" ✅
+- "MIC Fork by [Your Name]" ✅
 
 ---
 

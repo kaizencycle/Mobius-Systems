@@ -1,6 +1,6 @@
 # Labs Directory
 
-This directory contains the Lab proof systems that form the core components of Kaizen OS.
+This directory contains the Lab proof systems that form the core components of Mobius Systems.
 
 ## Lab Repositories
 

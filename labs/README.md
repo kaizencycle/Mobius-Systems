@@ -8,7 +8,7 @@ This directory contains the Lab proof systems that form the core components of M
 - **Purpose**: E.O.M.M. Reflections API and Civic Ledger integration
 - **Technology**: Python, FastAPI
 - **Function**: Handles reflection cycles, command ledger operations, and E.O.M.M. (Echo of Memory Management) processes
-- **Integration**: Provides the reflection and memory management layer for Kaizen OS
+- **Integration**: Provides the reflection and memory management layer for Mobius Systems
 
 ### Lab6 Proof (`lab6-proof/`)
 - **Purpose**: Citizen Shield application
@@ -20,7 +20,7 @@ This directory contains the Lab proof systems that form the core components of M
 - **Purpose**: OAA Hub and Mobius Systems shell/init system
 - **Technology**: Python, FastAPI
 - **Function**: Acts as the central hub for Open Agent Architecture, parsing human intent and coordinating system operations
-- **Integration**: Serves as the main shell/init system for Kaizen OS
+- **Integration**: Serves as the main shell/init system for Mobius Systems
 
 ## Development
 

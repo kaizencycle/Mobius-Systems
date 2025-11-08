@@ -1,4 +1,4 @@
-# Kaizen-OS Handbook
+# Mobius Systems Handbook
 
 <div style="text-align: center; margin: 2rem 0;">
   <p style="font-size: 1.2em; color: #FFD700; font-style: italic;">
@@ -11,7 +11,7 @@
 
 ---
 
-## Welcome to Kaizen-OS
+## Welcome to Mobius Systems
 
 **Kaizen-OS** (formerly *Civic OS*) is a self-healing operating system for civilization: a framework that fuses DVA Kernel logic, Virtue Accords, and global integrity telemetry into a continuous improvement loop.
 

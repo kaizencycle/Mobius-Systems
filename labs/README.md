@@ -17,7 +17,7 @@ This directory contains the Lab proof systems that form the core components of M
 - **Integration**: Provides the citizen-facing security interface
 
 ### Lab7 Proof (`lab7-proof/`)
-- **Purpose**: OAA Hub and Kaizen OS shell/init system
+- **Purpose**: OAA Hub and Mobius Systems shell/init system
 - **Technology**: Python, FastAPI
 - **Function**: Acts as the central hub for Open Agent Architecture, parsing human intent and coordinating system operations
 - **Integration**: Serves as the main shell/init system for Kaizen OS

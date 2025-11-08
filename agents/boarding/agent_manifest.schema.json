@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Mobius Agent Manifest",
+  "type": "object",
+  "required": ["agent_id", "model", "version", "capabilities", "limits", "mii_floor"],
+  "properties": {
+    "agent_id": {"type": "string"},
+    "model": {"type": "string"},
+    "version": {"type": "string"},
+    "mii_floor": {"type": "number", "minimum": 0, "maximum": 1, "default": 0.95},
+    "capabilities": {
+      "type": "object",
+      "properties": {
+        "allow": {"type": "array", "items": {"type": "string"}},
+        "deny": {"type": "array", "items": {"type": "string"}}
+      },
+      "required": ["allow", "deny"]
+    },
+    "limits": {
+      "type": "object",
+      "properties": {
+        "max_tokens": {"type": "integer"},
+        "max_write_files": {"type": "integer"},
+        "max_delete_files": {"type": "integer"}
+      }
+    },
+    "attestation": {
+      "type": "object",
+      "properties": {
+        "pubkey": {"type": "string"},
+        "sig_alg": {"type": "string", "enum": ["ed25519", "secp256k1"]}
+      }
+    }
+  }
+}

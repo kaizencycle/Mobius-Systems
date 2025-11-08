@@ -13,7 +13,7 @@
 
 ## Welcome to Mobius Systems
 
-**Kaizen-OS** (formerly *Civic OS*) is a self-healing operating system for civilization: a framework that fuses DVA Kernel logic, Virtue Accords, and global integrity telemetry into a continuous improvement loop.
+**Mobius Systems** (formerly *Civic OS*) is a self-healing operating system for civilization: a framework that fuses DVA Kernel logic, Virtue Accords, and global integrity telemetry into a continuous improvement loop.
 
 ### Core Principles
 

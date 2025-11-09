@@ -251,6 +251,7 @@ docs/
 4. ✅ **Documentation updated** if needed
 5. ✅ **Commits follow** convention
 6. ✅ **Branch is up-to-date** with main
+7. ✅ **spec-ci workflow passes** for any schema or OpenAPI change
 
 ### PR Checklist
 
@@ -262,6 +263,7 @@ When creating a PR, ensure:
 - [ ] **Breaking changes** clearly documented
 - [ ] **Screenshots** included for UI changes
 - [ ] **Links** to related issues/PRs
+- [ ] **spec-ci** status is green when touching `docs/schemas/**` or `apps/**/openapi.yaml`
 
 ### Review Process
 

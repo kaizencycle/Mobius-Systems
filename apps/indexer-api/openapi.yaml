@@ -1,0 +1,59 @@
+openapi: 3.1.0
+info:
+  title: Mobius Indexer API
+  version: 0.1.0
+paths:
+  /attestations:
+    get:
+      summary: List attestations with optional filters
+      parameters:
+        - name: service_id
+          in: query
+          schema:
+            type: string
+        - name: since
+          in: query
+          schema:
+            type: string
+            format: date-time
+      responses:
+        "200":
+          description: Attestation list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: ../../docs/schemas/attestation.schema.json
+  /attestations/{id}:
+    get:
+      summary: Fetch a single attestation
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Attestation
+          content:
+            application/json:
+              schema:
+                $ref: ../../docs/schemas/attestation.schema.json
+  /mic/{mic_id}:
+    get:
+      summary: Retrieve Mobius Integrity Capsule
+      parameters:
+        - name: mic_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: MIC record
+          content:
+            application/json:
+              schema:
+                $ref: ../../docs/schemas/data-models/mic.schema.json

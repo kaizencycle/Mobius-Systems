@@ -3,6 +3,7 @@ export * from './gi-calculator';
 export * from './integrity-checker';
 export * from './middleware';
 export * from './types';
+export * from './crypto/mii_sign';
 
 import { GICalculator } from './gi-calculator';
 import { IntegrityChecker } from './integrity-checker';

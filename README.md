@@ -10,6 +10,9 @@
 [![Node.js](https://img.shields.io/badge/Node.js-≥18.0.0-green.svg)](https://nodejs.org/)
 [![KTT Native](https://img.shields.io/badge/KTT-Native-6E00FF)](#)
 [![Security Policy](https://img.shields.io/badge/Security-Policy-red)](.github/SECURITY.md)
+[![Spec CI](https://img.shields.io/github/actions/workflow/status/kaizencycle/Mobius-Systems/spec-ci.yml?label=spec-ci&logo=github)](.github/workflows/spec-ci.yml)
+[![Schemas Valid](https://img.shields.io/badge/Schemas-Valid-brightgreen)](docs/schemas)
+[![OpenAPI Linted](https://img.shields.io/badge/OpenAPI-Linted-0AA5FF)](apps/ledger-api/openapi.yaml)
 
 <!-- MII Live badge (auto-updates) -->
 [![MII Live](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/kaizencycle/Mobius-Systems/main/badges/mii.json)](./docs/synthesis/01_metrics.md)

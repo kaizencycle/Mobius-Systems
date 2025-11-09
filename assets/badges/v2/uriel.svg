@@ -1,13 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="210" height="30">
+<svg xmlns="http://www.w3.org/2000/svg" width="210" height="30" viewBox="0 0 210 30">
   <defs>
     <linearGradient id="urielGrad" x1="0" x2="1">
       <stop offset="0%" stop-color="#FFF7A6"/>
       <stop offset="100%" stop-color="#FFC800"/>
     </linearGradient>
-    <radialGradient id="pulseUriel">
+    <radialGradient id="pulseUriel" cx="50%" cy="50%">
       <stop offset="0%" stop-color="#FFF7A644"/>
       <stop offset="100%" stop-color="#FFF7A600"/>
-      <animate attributeName="r" values="0;26;0" dur="2.2s" repeatCount="indefinite"/>
     </radialGradient>
   </defs>
 

@@ -11,11 +11,13 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "crypto": "^1.0.1"
+    "crypto": "^1.0.1",
+    "tweetnacl": "^1.0.3"
   },
   "devDependencies": {
     "typescript": "^5.0.0",
-    "@types/node": "^20.0.0"
+    "@types/node": "^20.0.0",
+    "@types/tweetnacl": "^1.0.3"
   },
   "exports": {
     ".": {
@@ -24,5 +26,3 @@
     }
   }
 }
-
-

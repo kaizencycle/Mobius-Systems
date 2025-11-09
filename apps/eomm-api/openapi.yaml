@@ -1,0 +1,49 @@
+openapi: 3.1.0
+info:
+  title: Mobius EOMM API
+  version: 0.1.0
+paths:
+  /journal/entries:
+    post:
+      summary: Append command ledger entry
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: ../../docs/schemas/data-models/command-ledger-entry.schema.json
+      responses:
+        "202":
+          description: Entry accepted for processing
+  /journal/entries/{entry_id}:
+    get:
+      summary: Fetch command ledger entry
+      parameters:
+        - name: entry_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Command ledger entry
+          content:
+            application/json:
+              schema:
+                $ref: ../../docs/schemas/data-models/command-ledger-entry.schema.json
+  /mfs/{mic_id}:
+    get:
+      summary: Retrieve Mobius Financial Statement snapshot
+      parameters:
+        - name: mic_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: MFS snapshot
+          content:
+            application/json:
+              schema:
+                $ref: ../../docs/schemas/data-models/mfs.schema.json

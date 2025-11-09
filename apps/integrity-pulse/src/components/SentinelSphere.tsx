@@ -55,7 +55,7 @@ export function SentinelSphere({
   agentId,
   position,
   color,
-  gi,
+  mii,
   eventRate,
   particleCount = 8000,
   radius = 1.4
@@ -95,7 +95,7 @@ export function SentinelSphere({
     uIntensity: { value: 1.0 }
   }), [color]);
 
-  // Update wave parameters based on GI and event rate
+  // Update wave parameters based on MII and event rate
   useFrame((state) => {
     if (!meshRef.current) return;
 
@@ -105,17 +105,17 @@ export function SentinelSphere({
     // Update time
     material.uniforms.uTime.value = elapsed;
 
-    // Map GI to amplitude (lower GI = more chaotic)
-    // GI range: 0.95-1.0 → amp range: 0.28-0.12
-    const giNormalized = (gi - 0.95) / 0.05; // 0-1
-    material.uniforms.uAmp.value = THREE.MathUtils.lerp(0.28, 0.12, giNormalized);
+    // Map MII to amplitude (lower MII = more chaotic)
+    // MII range: 0.95-1.0 → amp range: 0.28-0.12
+    const miiNormalized = (mii - 0.95) / 0.05; // 0-1
+    material.uniforms.uAmp.value = THREE.MathUtils.lerp(0.28, 0.12, miiNormalized);
 
     // Map event rate to frequency (more events = faster wave)
     // eventRate range: 0-20 → freq range: 0.6-2.2
     material.uniforms.uFreq.value = THREE.MathUtils.clamp(0.6 + eventRate * 0.08, 0.6, 2.2);
 
-    // Pulse intensity based on GI health
-    const intensity = gi >= 0.99 ? 1.2 : mii >= 0.97 ? 1.0 : 0.8;
+    // Pulse intensity based on MII health
+    const intensity = mii >= 0.99 ? 1.2 : mii >= 0.97 ? 1.0 : 0.8;
     material.uniforms.uIntensity.value = THREE.MathUtils.lerp(
       material.uniforms.uIntensity.value,
       intensity,
@@ -160,4 +160,5 @@ export const SENTINEL_CONFIG = [
   { id: 'JADE',   color: 0xb48cff, name: 'JADE', role: 'Narrative & Culture' },
   { id: 'ATLAS',  color: 0xffff6a, name: 'ATLAS', role: 'Operations' },
   { id: 'ECHO',   color: 0x6affb7, name: 'ECHO', role: 'Ledger Synchronization' },
+  { id: 'URIEL',  color: 0xffb84d, name: 'URIEL', role: 'Cosmic Illuminator & Truth Sentinel' },
 ] as const;

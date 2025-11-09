@@ -23,15 +23,16 @@ export function MultiAgentGrid({
 }: MultiAgentGridProps) {
   const [metrics, setMetrics] = useState<Record<string, SentinelMetrics>>({});
 
-  // Grid layout positions (3 top, 4 bottom)
+  // Grid layout positions (4 top, 4 bottom)
   const positions: Record<string, [number, number, number]> = {
     AUREA:  [-6,  2, 0],
     ZEUS:   [-2,  2, 0],
     HERMES: [ 2,  2, 0],
     EVE:    [ 6,  2, 0],
-    JADE:   [-4, -2, 0],
-    ATLAS:  [ 0, -2, 0],
-    ECHO:   [ 4, -2, 0],
+    JADE:   [-6, -2, 0],
+    ATLAS:  [-2, -2, 0],
+    ECHO:   [ 2, -2, 0],
+    URIEL:  [ 6, -2, 0],
   };
 
   // Mock data generator for development
@@ -75,7 +76,7 @@ export function MultiAgentGrid({
           ...prev,
           [data.agentId]: {
             id: data.agentId,
-            mii: data.gi,
+            mii: data.mii ?? data.gi,
             eventRate: data.eventRate,
             lastUpdate: data.timestamp
           }
@@ -103,14 +104,14 @@ export function MultiAgentGrid({
           <div className="text-xs text-gray-400 mb-3">Cycle C-125 | November 5, 2025</div>
           {SENTINEL_CONFIG.map(sentinel => {
             const m = metrics[sentinel.id];
-            const giColor = m && m.gi >= 0.99 ? 'text-green-400' :
-                           m && m.gi >= 0.97 ? 'text-yellow-400' : 'text-red-400';
+            const giColor = m && m.mii >= 0.99 ? 'text-green-400' :
+                           m && m.mii >= 0.97 ? 'text-yellow-400' : 'text-red-400';
 
             return (
               <div key={sentinel.id} className="flex items-center justify-between mb-2">
                 <span className="w-16">{sentinel.id}</span>
                 <span className={`w-16 text-right font-bold ${giColor}`}>
-                  {m ? `GI ${m.gi.toFixed(3)}` : '---'}
+                  {m ? `GI ${m.mii.toFixed(3)}` : '---'}
                 </span>
                 <span className="w-20 text-right text-gray-400">
                   {m ? `${m.eventRate.toFixed(1)}/s` : '---'}
@@ -151,7 +152,7 @@ export function MultiAgentGrid({
               agentId={sentinel.id}
               position={positions[sentinel.id]}
               color={sentinel.color}
-              gi={m?.gi ?? 0.97}
+              mii={m?.mii ?? 0.97}
               eventRate={m?.eventRate ?? 5}
             />
           );

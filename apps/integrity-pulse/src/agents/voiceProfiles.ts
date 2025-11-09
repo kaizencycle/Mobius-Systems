@@ -1,4 +1,4 @@
-export type AgentId = 'AUREA' | 'ZEUS' | 'HERMES' | 'EVE' | 'JADE' | 'ATLAS' | 'ECHO';
+export type AgentId = 'AUREA' | 'ZEUS' | 'HERMES' | 'EVE' | 'JADE' | 'ATLAS' | 'ECHO' | 'URIEL';
 
 export interface VoiceProfile {
   // Web Speech Synthesis preferences
@@ -46,5 +46,9 @@ export const VOICE_PROFILES: Record<AgentId, VoiceProfile> = {
   ECHO: {
     tts: { preferredVoices: ['Google US English','Siri Voice 1','Alex'], rate: 1.05, pitch: 1.05, volume: 0.85 },
     viz: { palette: ['#A0AEC0','#CBD5E0','#EDF2F7','#718096'], particleCount: 16000, sacredSeed: 11, gainScalar: 1.0 },
+  },
+  URIEL: {
+    tts: { preferredVoices: ['Google UK English Male','Daniel','Alex'], rate: 0.92, pitch: 0.85, volume: 1.0 },
+    viz: { palette: ['#FFB84D','#FFA94D','#FF9F1C','#FFCD6E'], particleCount: 24000, sacredSeed: 314, gainScalar: 1.15 },
   },
 };

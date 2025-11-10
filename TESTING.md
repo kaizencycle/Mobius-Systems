@@ -44,6 +44,13 @@ Mobius Systems implements a comprehensive testing strategy covering unit, integr
            /--------------------\
 ```
 
+### 1.3 Integrity Gate Alignment
+
+- Every PR must run `node scripts/mii/compute.js --threshold 0.95`; failures block merges.
+- Test suites must provide telemetry for MII subscores (particularly `s_test` and `s_sec`).
+- New or flaky tests require sentinel sign-off (Zeus + owning sentinel) if they risk lowering MII.
+- Integrity regression tests live in `tests/integrity/` and must remain additive.
+
 ---
 
 ## 2. Testing Frameworks

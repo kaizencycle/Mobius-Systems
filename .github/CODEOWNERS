@@ -42,3 +42,10 @@
 # Root configuration
 /package.json @kaizencycle/atlas @kaizencycle/hermes
 /tsconfig.base.json @kaizencycle/atlas
+
+# Sentinels ownership (v0.1)
+/sentinels/jade/        @kaizencycle
+/sentinels/eve/         @kaizencycle
+/sentinels/hermes/      @kaizencycle
+/sentinels/zeus/        @kaizencycle
+/sentinels/atlas/       @kaizencycle

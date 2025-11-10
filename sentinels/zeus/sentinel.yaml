@@ -1,0 +1,31 @@
+version: "0.1"
+name: zeus
+role:
+  primary: logic
+  secondary: custodian
+owner:
+  team: mobius-core
+  codeowners: ["@kaizencycle"]
+integrations:
+  lab: "labs/lab6-proof"
+  api: "apps/api-gateway"
+  app: "apps/cathedral-app"
+  domain: "https://zeus.your-domain.tld"
+policies:
+  mii_threshold: 0.95
+  modes:
+    - name: correction
+      allowed_actions: ["guardrails:update","lint","fix","docs","tests:add","issue:open","pr:prepare"]
+      requires_human_approval: true
+    - name: creative
+      allowed_actions: ["spec:update:minor"]
+      requires_human_approval: true
+attestation:
+  signing: "ed25519"
+  ledger_endpoint: "http://ledger-api:4001/attest"
+ci:
+  run:
+    - "pnpm -w lint"
+    - "pnpm -w type-check"
+    - "pnpm -w test -- --coverage"
+    - "pnpm -w integrity:report"

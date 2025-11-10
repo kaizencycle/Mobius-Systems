@@ -1,0 +1,31 @@
+version: "0.1"
+name: jade
+role:
+  primary: morale
+  secondary: null
+owner:
+  team: mobius-core
+  codeowners: ["@kaizencycle"]
+integrations:
+  lab: "labs/lab4-proof"
+  api: "apps/eomm-api"
+  app: "apps/hive-app"
+  domain: "https://jade.your-domain.tld"
+policies:
+  mii_threshold: 0.95
+  modes:
+    - name: correction
+      allowed_actions: ["docs","tests:add","lint","fix","issue:open","pr:prepare"]
+      requires_human_approval: true
+    - name: creative
+      allowed_actions: ["feature:small","docs:major"]
+      requires_human_approval: true
+attestation:
+  signing: "ed25519"
+  ledger_endpoint: "http://ledger-api:4001/attest"
+ci:
+  run:
+    - "pnpm -w lint"
+    - "pnpm -w type-check"
+    - "pnpm -w test -- --coverage"
+    - "pnpm -w integrity:report"

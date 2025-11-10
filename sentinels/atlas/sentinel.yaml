@@ -1,0 +1,31 @@
+version: "0.1"
+name: atlas
+role:
+  primary: custodian
+  secondary: ops
+owner:
+  team: mobius-core
+  codeowners: ["@kaizencycle"]
+integrations:
+  lab: "labs/lab7-proof"
+  api: "apps/indexer-api"
+  app: "apps/genesisdome-app"
+  domain: "https://atlas.your-domain.tld"
+policies:
+  mii_threshold: 0.95
+  modes:
+    - name: correction
+      allowed_actions: ["monitoring:update","docs","tests:add","issue:open","pr:prepare"]
+      requires_human_approval: true
+    - name: creative
+      allowed_actions: ["observability:small"]
+      requires_human_approval: true
+attestation:
+  signing: "ed25519"
+  ledger_endpoint: "http://ledger-api:4001/attest"
+ci:
+  run:
+    - "pnpm -w lint"
+    - "pnpm -w type-check"
+    - "pnpm -w test -- --coverage"
+    - "pnpm -w integrity:report"

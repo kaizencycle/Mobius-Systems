@@ -1,0 +1,31 @@
+version: "0.1"
+name: eve
+role:
+  primary: ethics
+  secondary: null
+owner:
+  team: mobius-core
+  codeowners: ["@kaizencycle"]
+integrations:
+  lab: "labs/lab6-proof"
+  api: "apps/shield-api"
+  app: "apps/cathedral-app"
+  domain: "https://eve.your-domain.tld"
+policies:
+  mii_threshold: 0.95
+  modes:
+    - name: correction
+      allowed_actions: ["policy:update","docs","tests:add","issue:open","pr:prepare"]
+      requires_human_approval: true
+    - name: creative
+      allowed_actions: ["policy:new"]
+      requires_human_approval: true
+attestation:
+  signing: "ed25519"
+  ledger_endpoint: "http://ledger-api:4001/attest"
+ci:
+  run:
+    - "pnpm -w lint"
+    - "pnpm -w type-check"
+    - "pnpm -w test -- --coverage"
+    - "pnpm -w integrity:report"

@@ -16,10 +16,12 @@
 [![Schemas Valid](https://img.shields.io/badge/Schemas-Valid-brightgreen)](docs/schemas)
 [![OpenAPI Linted](https://img.shields.io/badge/OpenAPI-Linted-0AA5FF)](apps/ledger-api/openapi.yaml)
 
-<p align="center">
-  <img src="docs/badges/mii_gate.svg" alt="MII Gate ≥ 0.95" height="28">
-  <img src="docs/badges/anti_nuke.svg" alt="Additive-Only PRs" height="28">
-  <img src="docs/badges/multi_llm.svg" alt="Model-Agnostic Consensus" height="28">
+<p align="left">
+  <img alt="KTT" src="https://img.shields.io/badge/KTT-Integrity%20Gate%200.95-1f7a1f">
+  <img alt="Anti-Nuke" src="https://img.shields.io/badge/CI-Anti--Nuke%20ON-8a2be2">
+  <img alt="Sentinels" src="https://img.shields.io/badge/Sentinels-5%20active-0b5fff">
+  <img alt="MII" src="https://img.shields.io/badge/MII-%E2%89%A5%200.95-brightgreen">
+  <img alt="Docs" src="https://img.shields.io/badge/Docs-RFC%20ready-informational">
 </p>
 
 <!-- Jade — Morale Anchor -->

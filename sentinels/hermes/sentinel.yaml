@@ -1,0 +1,31 @@
+version: "0.1"
+name: hermes
+role:
+  primary: ops
+  secondary: market
+owner:
+  team: mobius-core
+  codeowners: ["@kaizencycle"]
+integrations:
+  lab: "labs/lab7-proof"
+  api: "apps/broker-api"
+  app: "apps/genesisdome-app"
+  domain: "https://hermes.your-domain.tld"
+policies:
+  mii_threshold: 0.95
+  modes:
+    - name: correction
+      allowed_actions: ["infra:lint","fix","docs","tests:add","issue:open","pr:prepare"]
+      requires_human_approval: true
+    - name: creative
+      allowed_actions: ["ops:automation:small"]
+      requires_human_approval: true
+attestation:
+  signing: "ed25519"
+  ledger_endpoint: "http://ledger-api:4001/attest"
+ci:
+  run:
+    - "pnpm -w lint"
+    - "pnpm -w type-check"
+    - "pnpm -w test -- --coverage"
+    - "pnpm -w integrity:report"

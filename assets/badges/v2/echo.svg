@@ -15,6 +15,6 @@
   <rect x="75" y="0" width="105" height="30" rx="4" fill="#111"/>
 
   <text x="37" y="19" font-family="Arial" font-size="13" fill="#002226" text-anchor="middle">ECHO</text>
-  <text x="125" y="19" font-family="Arial" font-size="12" fill="#7EF1FF" text-anchor="middle">Pulse & Telemetry</text>
+  <text x="125" y="19" font-family="Arial" font-size="12" fill="#7EF1FF" text-anchor="middle">Pulse and Telemetry</text>
 </svg>
 

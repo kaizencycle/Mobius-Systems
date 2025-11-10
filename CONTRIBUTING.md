@@ -54,12 +54,13 @@ kaizen-os/
 
 ### Branch Strategy
 
-- **`main`** - Production-ready code, protected branch
-- **`develop`** - Integration branch for features (if used)
-- **`feature/*`** - Feature branches (e.g., `feature/add-telemetry-dashboard`)
-- **`fix/*`** - Bug fix branches (e.g., `fix/memory-leak-in-ledger`)
-- **`docs/*`** - Documentation updates
-- **`cursor/*`** - Background agent work branches
+- **`main`** – Production releases (protected; requires approvals + green CI).
+- **`develop`** – Optional integration branch for staging larger drops.
+- **`sentinel/<name>/main`** – Long-lived lanes for each Sentinel (e.g., `sentinel/jade/main`).
+- **`feat/<sentinel>/<topic>`** – Short-lived feature branches targeting the owning Sentinel lane.
+- **`fix/<sentinel>/<issue>`** – Hotfix branches for urgent remediation.
+- **`docs/<topic>`** – Documentation-only changes.
+- **`cursor/*`** – Background agent work (must target owning Sentinel lane on merge).
 
 ### Creating a Feature Branch
 
@@ -76,6 +77,13 @@ git add .
 git commit -m "feat: add your feature description"
 git push origin feature/your-feature-name
 ```
+
+### Additive-Only & Integrity Gates
+
+- All contributions should be additive; destructive changes (file deletions, large refactors) require maintainer + Zeus approval and must pass the anti-nuke workflow.
+- Run `npm run lint`, `npm run type-check`, `npm run build`, `npm run test --workspaces --if-present`, and `node scripts/mii/compute.js --threshold 0.95` before requesting review.
+- PRs that trigger the anti-nuke guard or drop MII below 0.95 are auto-blocked until remediated.
+- Align with the Sentinel owning the surface (see CODEOWNERS) and obtain sign-off when required.
 
 ### Commit Message Convention
 
@@ -268,32 +276,33 @@ When creating a PR, ensure:
 ### Review Process
 
 1. **Automated checks** run via GitHub Actions
-2. **Code review** by maintainer or contributor
-3. **Integrity checks** verify GI ≥ 0.95
-4. **Merge** when approved and checks pass
+2. **Code review** by the relevant Sentinel team or maintainer
+3. **Integrity checks** verify MII ≥ 0.95
+4. **Merge** when approvals recorded and all required checks pass
 
 ### PR Template
 
 ```markdown
-## Summary
-Brief description of changes
+### Summary
+- What changed & why
 
-## Changes
-- Added feature X
-- Fixed bug Y
-- Updated documentation Z
+### Integrity Checklist
+- [ ] MII local check ≥ 0.95
+- [ ] Additive-only (no destructive changes)
+- [ ] Affected services listed with risks
 
-## Testing
-How to test these changes
+### Evidence
+- Logs / screenshots / test output
 
-## Breaking Changes
-List any breaking changes or migration needed
+### Linked Issues
+Closes #
 
-## Checklist
-- [ ] Tests pass
-- [ ] Linter passes
-- [ ] Documentation updated
-- [ ] CHANGELOG.md updated (if applicable)
+### Sentinel Sign-off
+- [ ] AUREA  - logic
+- [ ] EVE    - ethics/policy
+- [ ] HERMES - ops
+- [ ] JADE   - morale/user exp
+- [ ] ZEUS   - arbiter (required)
 ```
 
 ## 🤝 Code Review Guidelines

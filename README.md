@@ -9,13 +9,18 @@
 [![License: AGPL-3.0](https://img.shields.io/badge/license-AGPL--3.0-blue)](FOUNDATION/LICENSES/LICENSE-Ethical-Addendum.md)
 [![Foundation](https://img.shields.io/badge/foundation-charter-8A2BE2)](FOUNDATION/CHARTER.md)
 [![Security Policy](https://img.shields.io/badge/security-policy-critical)](.github/SECURITY.md)
-[![Mobius Integrity](https://img.shields.io/badge/MII-Integrity%20≥%200.95-brightgreen)](https://civic-ledger.onrender.com)
 [![Ethical License](https://img.shields.io/badge/Ethics-Addendum-purple)](FOUNDATION/LICENSES/LICENSE-Ethical-Addendum.md)
 [![Node.js](https://img.shields.io/badge/Node.js-≥18.0.0-green.svg)](https://nodejs.org/)
 [![KTT Native](https://img.shields.io/badge/KTT-Native-6E00FF)](#)
 [![Spec CI](https://img.shields.io/github/actions/workflow/status/kaizencycle/Mobius-Systems/spec-ci.yml?label=spec-ci&logo=github)](.github/workflows/spec-ci.yml)
 [![Schemas Valid](https://img.shields.io/badge/Schemas-Valid-brightgreen)](docs/schemas)
 [![OpenAPI Linted](https://img.shields.io/badge/OpenAPI-Linted-0AA5FF)](apps/ledger-api/openapi.yaml)
+
+<p align="center">
+  <img src="docs/badges/mii_gate.svg" alt="MII Gate ≥ 0.95" height="28">
+  <img src="docs/badges/anti_nuke.svg" alt="Additive-Only PRs" height="28">
+  <img src="docs/badges/multi_llm.svg" alt="Model-Agnostic Consensus" height="28">
+</p>
 
 <!-- Jade — Morale Anchor -->
 [<img src="assets/badges/jade-morale-anchor.svg" alt="Jade — Morale Anchor" height="20">](docs/codex/jade/_index.md)

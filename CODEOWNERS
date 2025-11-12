@@ -4,3 +4,18 @@
 /packages/ @kaizencycle
 /.github/workflows/ @kaizencycle
 
+# Sentinel ownership
+/apps/ledger-api/            @sentinel-zeus
+/apps/indexer-api/           @sentinel-hermes
+/apps/shield-api/            @sentinel-eve
+/apps/eomm-api/              @sentinel-jade
+/apps/broker-api/            @sentinel-aurea
+/apps/cathedral-app/         @sentinel-zeus
+/apps/reflections-app/       @sentinel-jade
+/apps/oaa-console-app/       @sentinel-aurea
+/labs/lab7-proof/            @sentinel-aurea
+/labs/lab6-proof/            @sentinel-eve
+/labs/lab4-proof/            @sentinel-jade
+/infra/                      @sentinel-zeus
+/.github/                    @sentinel-zeus
+

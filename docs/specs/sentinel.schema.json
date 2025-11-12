@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Mobius Sentinel Manifest v0.1",
+  "type": "object",
+  "required": ["version","name","role","owner","integrations","policies","attestation","ci"],
+  "properties": {
+    "version": { "type": "string", "const": "0.1" },
+    "name": { "type": "string", "minLength": 1 },
+    "role": {
+      "type": "object",
+      "required": ["primary"],
+      "properties": {
+        "primary": { "type": "string", "enum": ["logic","ops","ethics","morale","market","custodian"] },
+        "secondary": { "type": ["string","null"] }
+      },
+      "additionalProperties": false
+    },
+    "owner": {
+      "type": "object",
+      "required": ["team","codeowners"],
+      "properties": {
+        "team": { "type": "string" },
+        "codeowners": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "pattern": "^@.+$" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "integrations": {
+      "type": "object",
+      "required": ["lab","api","app","domain"],
+      "properties": {
+        "lab": { "type": "string" },
+        "api": { "type": "string" },
+        "app": { "type": "string" },
+        "domain": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "policies": {
+      "type": "object",
+      "required": ["mii_threshold","modes"],
+      "properties": {
+        "mii_threshold": { "type": "number", "minimum": 0.0, "maximum": 1.0, "exclusiveMinimum": true },
+        "modes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["name","allowed_actions","requires_human_approval"],
+            "properties": {
+              "name": { "type": "string" },
+              "allowed_actions": { "type": "array", "items": { "type": "string" } },
+              "requires_human_approval": { "type": "boolean" }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "attestation": {
+      "type": "object",
+      "required": ["signing","ledger_endpoint"],
+      "properties": {
+        "signing": { "type": "string", "enum": ["ed25519"] },
+        "ledger_endpoint": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "ci": {
+      "type": "object",
+      "required": ["run"],
+      "properties": {
+        "run": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

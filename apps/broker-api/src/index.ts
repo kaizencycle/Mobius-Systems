@@ -1,9 +1,15 @@
-// Thought Broker API - Placeholder implementation
+// Thought Broker API - Production Implementation
 import express, { Request, Response } from 'express';
 import cors from 'cors';
 import { urielDeliberate, UrielQuery } from '../../sentinels/uriel/index';
 
 import urielRouter from './sentinels/uriel';
+import { initDB } from './db/client';
+import { initCrypto } from './crypto/attestation';
+import { authenticateAPIKey, deliberationRateLimit } from './middleware/auth';
+import deliberateRouter from './routes/deliberate';
+import healthRouter from './routes/health';
+import metricsRouter from './routes/metrics';
 
 const app = express();
 const PORT = process.env.PORT || 4005;
@@ -15,6 +21,11 @@ const URIEL_DOMAINS = ['physics', 'curiosity', 'entropy', 'cosmos', 'delib_proof
 // Middleware
 app.use(cors());
 app.use(express.json());
+
+// Production API routes (authenticated)
+app.use('/v1/deliberate', authenticateAPIKey, deliberationRateLimit, deliberateRouter);
+app.use('/v1/health', healthRouter);
+app.use('/v1/metrics', metricsRouter);
 
 // Sentinel routes
 app.use('/api/sentinels/uriel', urielRouter);
@@ -273,8 +284,27 @@ app.get('/api/sentinels/aurea/status', (_req: Request, res: Response) => {
 });
 
 // Start server
-app.listen(PORT, () => {
-  console.log(`🚀 Thought Broker API running on port ${PORT}`);
+async function start() {
+  console.log('🔴 Initializing Thought Broker...');
+
+  // Initialize database
+  initDB();
+  console.log('✅ Database initialized');
+
+  // Initialize cryptographic keys
+  await initCrypto();
+  console.log('✅ Crypto initialized');
+
+  app.listen(PORT, () => {
+    console.log(`🔴 Thought Broker operational on port ${PORT}`);
+    console.log(`📊 Health: http://localhost:${PORT}/v1/health`);
+    console.log(`📈 Metrics: http://localhost:${PORT}/v1/metrics`);
+  });
+}
+
+start().catch(error => {
+  console.error('Failed to start Thought Broker:', error);
+  process.exit(1);
 });
 
 export default app;

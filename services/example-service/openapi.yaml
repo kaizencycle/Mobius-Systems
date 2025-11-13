@@ -1,0 +1,44 @@
+openapi: 3.0.3
+info:
+  title: Example Mobius Service API
+  version: 0.1.0
+servers:
+  - url: http://localhost:4000
+paths:
+  /healthz:
+    get:
+      summary: Health check
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: ok
+  /api/companion/create:
+    post:
+      summary: Create AI Companion
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                owner_id: { type: string }
+                persona_seed: { type: string }
+                ledger_id: { type: string }
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  companion_id: { type: string }
+

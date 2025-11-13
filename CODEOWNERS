@@ -4,7 +4,15 @@
 /packages/ @kaizencycle
 /.github/workflows/ @kaizencycle
 
-# Sentinel ownership
+# CODEOWNERS — tighten reviews on critical paths
+/ledger/ @aurea-sentinel @zeus-guardian
+/sentinels/ @aurea-sentinel @eve-ethics
+/security/ @zeus-guardian @eve-ethics
+/agents/ @aurea-sentinel @atlas-ops
+/services/ @atlas-ops
+
+# Sentinel ownership (general patterns first, then specific - last match wins)
+/apps/                       @atlas-ops
 /apps/ledger-api/            @sentinel-zeus
 /apps/indexer-api/           @sentinel-hermes
 /apps/shield-api/            @sentinel-eve

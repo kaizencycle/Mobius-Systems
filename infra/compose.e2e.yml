@@ -1,0 +1,25 @@
+version: '3.9'
+services:
+  ledger:
+    image: ghcr.io/example/civic-ledger:latest
+    ports: [ "8080:8080" ]
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/healthz"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  oaa:
+    image: ghcr.io/example/oaa-api:latest
+    environment:
+      CIVIC_LEDGER_API: http://ledger:8080
+    depends_on: [ ledger ]
+
+  website:
+    image: ghcr.io/example/mobius-website:latest
+    environment:
+      OAA_API_BASE: http://oaa:3000
+      CIVIC_LEDGER_API: http://ledger:8080
+    ports: [ "3000:3000" ]
+    depends_on: [ oaa, ledger ]
+

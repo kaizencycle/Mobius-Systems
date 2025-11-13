@@ -292,7 +292,37 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     }
     
     // Get current integrity metrics
-    const integrityResponse = await fetch(`${req.headers.origin}/api/integrity-check`);
+    // Validate origin header to prevent SSRF - only allow same-origin or trusted domains
+    let integrityUrl: string;
+    const origin = req.headers.origin;
+    if (origin) {
+      try {
+        const originUrl = new URL(origin);
+        // Only allow HTTPS and same hostname or trusted internal domains
+        if (originUrl.protocol !== 'https:') {
+          throw new Error('Only HTTPS origins allowed');
+        }
+        // Allow same origin or localhost for development
+        const hostname = originUrl.hostname.toLowerCase();
+        const reqHostname = req.headers.host?.toLowerCase() || '';
+        if (hostname !== reqHostname && hostname !== 'localhost' && !hostname.endsWith('.localhost')) {
+          throw new Error(`Untrusted origin: ${hostname}`);
+        }
+        integrityUrl = `${origin}/api/integrity-check`;
+      } catch (error) {
+        // Fallback to absolute URL using host header if origin is invalid
+        const protocol = req.headers['x-forwarded-proto'] || (req.headers.host?.includes('localhost') ? 'http' : 'https');
+        const host = req.headers.host || 'localhost:3000';
+        integrityUrl = `${protocol}://${host}/api/integrity-check`;
+      }
+    } else {
+      // No origin header, construct absolute URL from host header
+      const protocol = req.headers['x-forwarded-proto'] || (req.headers.host?.includes('localhost') ? 'http' : 'https');
+      const host = req.headers.host || 'localhost:3000';
+      integrityUrl = `${protocol}://${host}/api/integrity-check`;
+    }
+    
+    const integrityResponse = await fetch(integrityUrl);
     const integrityData = await integrityResponse.json();
     
     // Generate attestation

@@ -13,9 +13,31 @@ from fastapi.responses import JSONResponse
 import httpx
 from pydantic import BaseModel, Field, ValidationError
 import uvicorn
+from urllib.parse import quote
 
 # Target API (your main FastAPI)
 TARGET_API = "http://127.0.0.1:8000"
+
+def sanitize_path(path: str) -> str:
+    """Sanitize URL path to prevent SSRF and path traversal."""
+    if not path:
+        return ""
+    
+    # Remove leading/trailing slashes and normalize
+    path = path.strip('/')
+    
+    # Block path traversal attempts
+    if '..' in path or '//' in path:
+        raise HTTPException(status_code=400, detail="Path traversal not allowed")
+    
+    # Only allow alphanumeric, hyphens, underscores, slashes, and dots
+    if not re.match(r'^[a-zA-Z0-9._/-]+$', path):
+        raise HTTPException(status_code=400, detail="Invalid characters in path")
+    
+    # URL encode each segment to prevent injection
+    segments = path.split('/')
+    sanitized_segments = [quote(seg, safe='') for seg in segments]
+    return '/'.join(sanitized_segments)
 
 # Pydantic models for validation
 class SeedModel(BaseModel):
@@ -265,9 +287,11 @@ async def proxy_seal(request: Request):
 @app.get("/{path:path}")
 async def proxy_get(path: str, request: Request):
     """Proxy all GET requests to main API."""
+    # Sanitize path to prevent SSRF
+    sanitized_path = sanitize_path(path)
     async with httpx.AsyncClient() as client:
         try:
-            response = await client.get(f"{TARGET_API}/{path}")
+            response = await client.get(f"{TARGET_API}/{sanitized_path}")
             return JSONResponse(
                 status_code=response.status_code,
                 content=response.json()

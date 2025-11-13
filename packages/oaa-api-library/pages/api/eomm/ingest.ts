@@ -28,10 +28,42 @@ async function writeToDisk(relPath: string, body: string) {
   return abs;
 }
 
+/**
+ * Validate GitHub repository name to prevent SSRF
+ */
+function validateGitHubRepo(repo: string): string {
+  if (!/^[a-zA-Z0-9._-]+\/[a-zA-Z0-9._-]+$/.test(repo)) {
+    throw new Error(`Invalid GitHub repository format: ${repo}`);
+  }
+  return repo;
+}
+
+/**
+ * Validate GitHub branch name to prevent SSRF
+ */
+function validateGitHubBranch(branch: string): string {
+  if (!/^[a-zA-Z0-9._\/-]+$/.test(branch)) {
+    throw new Error(`Invalid GitHub branch format: ${branch}`);
+  }
+  return branch;
+}
+
 async function writeToGitHub(relPath: string, body: string) {
   if (!GH_TOKEN || !GH_REPO) throw new Error("Missing GITHUB_TOKEN or GITHUB_REPO");
-  const url = `https://api.github.com/repos/${GH_REPO}/contents/${relPath}`;
-  const get = await fetch(`${url}?ref=${encodeURIComponent(GH_BRANCH)}`, { headers: { authorization: `Bearer ${GH_TOKEN}` }});
+  
+  // Validate inputs to prevent SSRF
+  const safeRepo = validateGitHubRepo(GH_REPO);
+  const safeBranch = validateGitHubBranch(GH_BRANCH);
+  
+  // Validate relPath to prevent path traversal
+  if (relPath.includes('..') || relPath.includes('//') || relPath.startsWith('/')) {
+    throw new Error(`Invalid path: ${relPath}`);
+  }
+  
+  // Construct safe URL - only allow api.github.com
+  const baseUrl = 'https://api.github.com';
+  const url = `${baseUrl}/repos/${safeRepo}/contents/${encodeURIComponent(relPath)}`;
+  const get = await fetch(`${url}?ref=${encodeURIComponent(safeBranch)}`, { headers: { authorization: `Bearer ${GH_TOKEN}` }});
   const exists = get.ok ? await get.json().catch(()=>null) : null;
   const sha = exists?.sha;
 

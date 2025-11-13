@@ -3,6 +3,8 @@ from typing import Optional, List
 from datetime import datetime
 import httpx
 import os, time, uuid, asyncio
+from urllib.parse import urlparse
+import re
 
 from .models import IngestRequest, FilterRequest, FilterResult, Source, SourceScore, ReputeVote, ReputeResult, VerifyRequest, VerifyResponse
 from .scoring import score_source
@@ -21,6 +23,43 @@ def _require_admin(x_admin_token: Optional[str]):
     if ADMIN_TOKEN and x_admin_token != ADMIN_TOKEN:
         raise HTTPException(status_code=401, detail="Unauthorized")
 
+def validate_url(url_str: str) -> str:
+    """Validate URL to prevent SSRF attacks."""
+    if not url_str or not isinstance(url_str, str):
+        raise HTTPException(status_code=400, detail="Invalid URL: must be a non-empty string")
+    
+    try:
+        parsed = urlparse(url_str)
+    except Exception:
+        raise HTTPException(status_code=400, detail=f"Invalid URL format: {url_str}")
+    
+    # Only allow HTTPS protocol
+    if parsed.scheme != 'https':
+        raise HTTPException(status_code=400, detail="Only HTTPS URLs allowed")
+    
+    # Block private/internal IPs
+    hostname = parsed.hostname.lower() if parsed.hostname else ''
+    private_patterns = [
+        r'^localhost$',
+        r'^127\.',
+        r'^192\.168\.',
+        r'^10\.',
+        r'^172\.(1[6-9]|2[0-9]|3[0-1])\.',
+        r'^169\.254\.',
+        r'^0\.',
+        r'^::1$',
+    ]
+    
+    for pattern in private_patterns:
+        if re.match(pattern, hostname):
+            raise HTTPException(status_code=400, detail=f"Private IP addresses not allowed: {hostname}")
+    
+    # Block path traversal
+    if '..' in parsed.path or '//' in parsed.path:
+        raise HTTPException(status_code=400, detail="Path traversal not allowed")
+    
+    return url_str
+
 @router.post("/ingest/snapshot")
 async def ingest_snapshot(req: IngestRequest, x_admin_token: Optional[str] = Header(None)):
     _require_admin(x_admin_token)
@@ -30,8 +69,10 @@ async def ingest_snapshot(req: IngestRequest, x_admin_token: Optional[str] = Hea
     if req.sources:
         sources = req.sources
     elif req.url:
+        # Validate URL to prevent SSRF
+        validated_url = validate_url(str(req.url))
         async with httpx.AsyncClient(timeout=30) as client:
-            r = await client.get(str(req.url))
+            r = await client.get(validated_url)
             r.raise_for_status()
             payload = r.json()
             # Expecting list[dict] shaped close to Source; normalize

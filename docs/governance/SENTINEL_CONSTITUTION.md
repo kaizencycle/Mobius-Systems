@@ -362,7 +362,7 @@ Mobius is the city where intelligence learns to live."
     "ECHO"
   ],
   "gi_at_ratification": 1.000,
-  "hash": "sha256:fa81c6c8265e5d0b559f29fe90036930e2e1905d739bedd2ca01ba9194774fcc",
+  "hash": "sha256:c1537721a625e5305171367f9a531d2fc17809ed37cdf27dc3a59f9a39e00e08",
   "message": "The Sentinel Constitution is hereby ratified. Mobius enters its Constitutional Era."
 }
 ```

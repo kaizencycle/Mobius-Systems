@@ -13,7 +13,7 @@
 - **Global Integrity at Ratification**: 1.000
 - **Next Constitutional Review**: January 13, 2026 (60 days)
 - **Compatibility**: Mobius v0.1 - v1.0
-- **Constitutional Hash**: `sha256:fa81c6c8265e5d0b559f29fe90036930e2e1905d739bedd2ca01ba9194774fcc`
+- **Constitutional Hash**: `sha256:c1537721a625e5305171367f9a531d2fc17809ed37cdf27dc3a59f9a39e00e08`
 
 ---
 

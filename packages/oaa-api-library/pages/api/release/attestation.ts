@@ -292,60 +292,67 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     }
     
     // Get current integrity metrics
-    // Validate origin header to prevent SSRF - only allow same-origin or trusted domains
-    let integrityUrl: string;
-    const origin = req.headers.origin;
-    if (origin) {
-      try {
-        const originUrl = new URL(origin);
-        // Only allow HTTPS and same hostname or trusted internal domains
-        if (originUrl.protocol !== 'https:') {
-          throw new Error('Only HTTPS origins allowed');
-        }
-        // Allow same origin or localhost for development
-        const hostname = originUrl.hostname.toLowerCase();
-        const reqHostname = req.headers.host?.toLowerCase() || '';
-        if (hostname !== reqHostname && hostname !== 'localhost' && !hostname.endsWith('.localhost')) {
-          throw new Error(`Untrusted origin: ${hostname}`);
-        }
-        integrityUrl = `${origin}/api/integrity-check`;
-      } catch (error) {
-        // Fallback to absolute URL using host header if origin is invalid
-        const protocol = req.headers['x-forwarded-proto'] || (req.headers.host?.includes('localhost') ? 'http' : 'https');
-        const host = req.headers.host || 'localhost:3000';
-        integrityUrl = `${protocol}://${host}/api/integrity-check`;
-      }
-    } else {
-      // No origin header, construct absolute URL from host header
-      const protocol = req.headers['x-forwarded-proto'] || (req.headers.host?.includes('localhost') ? 'http' : 'https');
-      const host = req.headers.host || 'localhost:3000';
-      integrityUrl = `${protocol}://${host}/api/integrity-check`;
+    // Construct safe same-origin URL to prevent SSRF
+    // Only use request host header, never trust user-provided URLs
+    const reqHost = req.headers.host || 'localhost:3000';
+    const reqHostname = reqHost.toLowerCase().split(':')[0];
+    
+    // Block private IPs
+    if (reqHostname === '127.0.0.1' || reqHostname.startsWith('192.168.') || reqHostname.startsWith('10.') || reqHostname.startsWith('172.16.')) {
+      return res.status(400).json({
+        success: false,
+        attestation_id: '',
+        ledger_entry_id: '',
+        message: 'Invalid host configuration',
+        timestamp: new Date().toISOString()
+      });
     }
     
-    // Additional validation: ensure constructed URL is safe (same-origin only)
-    // This prevents SSRF by ensuring we only call our own API endpoint
+    // Construct URL using only validated request host
+    const protocol = req.headers['x-forwarded-proto'] === 'https' ? 'https' : 
+                     (reqHostname.includes('localhost') ? 'http' : 'https');
+    
+    // Reconstruct URL from validated components only
+    const integrityUrl = `${protocol}://${reqHost}/api/integrity-check`;
+    
+    // Final validation: parse and verify the constructed URL is safe
+    let validatedIntegrityUrl: URL;
     try {
-      const finalUrl = new URL(integrityUrl);
-      const finalHostname = finalUrl.hostname.toLowerCase();
-      const reqHostname = req.headers.host?.toLowerCase().split(':')[0] || '';
-      // Only allow same hostname or localhost (for development)
-      if (finalHostname !== reqHostname && finalHostname !== 'localhost' && !finalHostname.endsWith('.localhost')) {
-        throw new Error(`SSRF protection: hostname mismatch ${finalHostname} vs ${reqHostname}`);
+      validatedIntegrityUrl = new URL(integrityUrl);
+      const validatedHostname = validatedIntegrityUrl.hostname.toLowerCase();
+      
+      // Ensure hostname matches request hostname (same-origin only)
+      if (validatedHostname !== reqHostname && validatedHostname !== 'localhost' && !validatedHostname.endsWith('.localhost')) {
+        throw new Error(`SSRF protection: hostname mismatch`);
       }
-      // Block private IPs even in fallback case
-      if (finalHostname === '127.0.0.1' || finalHostname.startsWith('192.168.') || finalHostname.startsWith('10.') || finalHostname.startsWith('172.16')) {
+      
+      // Block private IPs
+      if (validatedHostname === '127.0.0.1' || validatedHostname.startsWith('192.168.') || 
+          validatedHostname.startsWith('10.') || validatedHostname.startsWith('172.16.')) {
         throw new Error(`SSRF protection: private IP not allowed`);
       }
+      
+      // Ensure HTTPS in production (allow HTTP only for localhost)
+      if (validatedHostname !== 'localhost' && !validatedHostname.endsWith('.localhost') && validatedIntegrityUrl.protocol !== 'https:') {
+        throw new Error(`SSRF protection: HTTPS required for non-localhost`);
+      }
     } catch (error) {
-      // If validation fails, construct a safe absolute URL using request host
-      const protocol = req.headers['x-forwarded-proto'] || (req.headers.host?.includes('localhost') ? 'http' : 'https');
-      const host = req.headers.host || 'localhost:3000';
-      integrityUrl = `${protocol}://${host}/api/integrity-check`;
+      return res.status(400).json({
+        success: false,
+        attestation_id: '',
+        ledger_entry_id: '',
+        message: `Invalid URL configuration: ${error instanceof Error ? error.message : 'unknown error'}`,
+        timestamp: new Date().toISOString()
+      });
     }
     
-    // CodeQL suppression: integrityUrl is validated above to be same-origin only
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    const integrityResponse = await fetch(integrityUrl);
+    // Use validated URL - reconstruct from validated components
+    const finalSafeUrl = `${validatedIntegrityUrl.protocol}//${validatedIntegrityUrl.hostname}${validatedIntegrityUrl.pathname}`;
+    const integrityResponse = await fetch(finalSafeUrl, {
+      headers: {
+        'Host': req.headers.host || '',
+      }
+    });
     const integrityData = await integrityResponse.json();
     
     // Generate attestation

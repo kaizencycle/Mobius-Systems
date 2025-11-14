@@ -1,9 +1,72 @@
 import fetch from 'node-fetch';
 
+const PRIVATE_HOSTNAME_PATTERNS = [
+  /^localhost$/,
+  /^127\./,
+  /^192\.168\./,
+  /^10\./,
+  /^172\.(1[6-9]|2[0-9]|3[0-1])\./,
+  /^169\.254\./,
+  /^0\./,
+  /^::1$/,
+];
+
+const DEFAULT_WEBHOOK_HOSTS = [
+  'hooks.slack.com',
+  'hooks.slack-edge.com',
+  'discord.com',
+  'discordapp.com',
+];
+
+function normalizeHostEntry(entry?: string): string | null {
+  if (!entry) {
+    return null;
+  }
+  const trimmed = entry.trim();
+  if (!trimmed) {
+    return null;
+  }
+  if (trimmed.includes('://')) {
+    try {
+      return new URL(trimmed).hostname.toLowerCase();
+    } catch {
+      return null;
+    }
+  }
+  return trimmed.toLowerCase();
+}
+
+const configuredWebhookHosts = (process.env.BROKER_WEBHOOK_ALLOWLIST || '')
+  .split(',')
+  .map(normalizeHostEntry)
+  .filter((value): value is string => Boolean(value));
+
+const WEBHOOK_HOST_ALLOWLIST = Array.from(
+  new Set([...DEFAULT_WEBHOOK_HOSTS, ...configuredWebhookHosts]),
+);
+
+const configuredWebhookPorts = (process.env.BROKER_WEBHOOK_ALLOWED_PORTS || '')
+  .split(',')
+  .map((port) => port.trim())
+  .filter(Boolean);
+
+const allowedPorts = new Set<string>(['', '443', ...configuredWebhookPorts]);
+
+function hostMatchesAllowlist(hostname: string): boolean {
+  const lowerHost = hostname.toLowerCase();
+  return WEBHOOK_HOST_ALLOWLIST.some((entry) => {
+    const normalized = entry.startsWith('*.') ? entry.slice(2) : entry;
+    if (!normalized) {
+      return false;
+    }
+    return lowerHost === normalized || lowerHost.endsWith(`.${normalized}`);
+  });
+}
+
 /**
  * Validate webhook URL to prevent SSRF attacks
  */
-function validateWebhookUrl(url: string): string {
+function validateWebhookUrl(url: string): URL {
   if (!url || typeof url !== 'string') {
     throw new Error('Invalid webhook URL: must be a non-empty string');
   }
@@ -15,67 +78,47 @@ function validateWebhookUrl(url: string): string {
     throw new Error(`Invalid webhook URL format: ${url}`);
   }
   
-  // Only allow HTTPS protocol
   if (parsedUrl.protocol !== 'https:') {
     throw new Error(`Only HTTPS webhooks allowed: ${url}`);
   }
   
-  // Block private/internal IPs
   const hostname = parsedUrl.hostname.toLowerCase();
-  const privatePatterns = [
-    /^localhost$/,
-    /^127\./,
-    /^192\.168\./,
-    /^10\./,
-    /^172\.(1[6-9]|2[0-9]|3[0-1])\./,
-    /^169\.254\./,
-    /^0\./,
-    /^::1$/,
-  ];
-  
-  if (privatePatterns.some(pattern => pattern.test(hostname))) {
+  if (PRIVATE_HOSTNAME_PATTERNS.some((pattern) => pattern.test(hostname))) {
     throw new Error(`Private IP addresses not allowed in webhook URL: ${hostname}`);
   }
   
-  // Block path traversal
+  if (!hostMatchesAllowlist(hostname)) {
+    throw new Error(`Webhook host is not allowlisted: ${hostname}`);
+  }
+  
+  if (!allowedPorts.has(parsedUrl.port)) {
+    throw new Error(`Webhook port is not allowed: ${parsedUrl.port || '443'}`);
+  }
+  
   if (parsedUrl.pathname.includes('..') || parsedUrl.pathname.includes('//')) {
     throw new Error(`Path traversal not allowed in webhook URL: ${parsedUrl.pathname}`);
   }
   
-  return url;
+  parsedUrl.username = '';
+  parsedUrl.password = '';
+  return parsedUrl;
 }
 
 export async function notifyWebhook(url: string, payload: any): Promise<void> {
+  let safeUrl: URL;
   try {
-    // Validate URL to prevent SSRF
-    const validatedUrl = validateWebhookUrl(url);
-    
-    // Additional explicit validation for CodeQL static analysis
-    const parsedUrl = new URL(validatedUrl);
-    if (parsedUrl.protocol !== 'https:') {
-      throw new Error('Only HTTPS webhooks allowed');
-    }
-    const hostname = parsedUrl.hostname.toLowerCase();
-    const privatePatterns = [/^localhost$/, /^127\./, /^192\.168\./, /^10\./, /^172\.(1[6-9]|2[0-9]|3[0-1])\./, /^169\.254\./, /^0\./, /^::1$/];
-    if (privatePatterns.some(pattern => pattern.test(hostname))) {
-      throw new Error(`Private IP addresses not allowed: ${hostname}`);
-    }
-    
-    // Reconstruct URL from validated components to prevent SSRF
-    // This ensures CodeQL sees we're using only validated components
-    const safeUrl = `${parsedUrl.protocol}//${parsedUrl.hostname}${parsedUrl.pathname}${parsedUrl.search}${parsedUrl.hash}`;
-    
-    // Double-check the reconstructed URL is still safe
-    const doubleCheck = new URL(safeUrl);
-    if (doubleCheck.protocol !== 'https:' || privatePatterns.some(pattern => pattern.test(doubleCheck.hostname.toLowerCase()))) {
-      throw new Error('URL validation failed during reconstruction');
-    }
-    
-    const response = await fetch(safeUrl, {
+    safeUrl = validateWebhookUrl(url);
+  } catch (error) {
+    console.error('Webhook URL validation failed:', error);
+    return;
+  }
+
+  try {
+    const response = await fetch(safeUrl.toString(), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
-      timeout: 5000
+      timeout: 5000,
     });
 
     if (!response.ok) {

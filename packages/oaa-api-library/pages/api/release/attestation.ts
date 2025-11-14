@@ -87,6 +87,117 @@ interface AttestationResponse {
   timestamp: string;
 }
 
+const INTEGRITY_ENDPOINT_PATH = '/api/integrity-check';
+const PRIVATE_HOSTNAME_PATTERNS = [
+  /^127\./,
+  /^10\./,
+  /^169\.254\./,
+  /^172\.(1[6-9]|2[0-9]|3[0-1])\./,
+  /^192\.168\./,
+  /^0\./,
+  /^::1$/,
+];
+
+function normalizeHostEntry(entry?: string): string | null {
+  if (!entry) {
+    return null;
+  }
+  const trimmed = entry.trim();
+  if (!trimmed) {
+    return null;
+  }
+  if (trimmed.includes('://')) {
+    try {
+      return new URL(trimmed).hostname.toLowerCase();
+    } catch {
+      return null;
+    }
+  }
+  return trimmed.toLowerCase();
+}
+
+function buildIntegrityAllowlist(baseHost: string): string[] {
+  const envHosts = (process.env.INTEGRITY_ALLOWED_HOSTS || '')
+    .split(',')
+    .map(normalizeHostEntry)
+    .filter((value): value is string => Boolean(value));
+
+  const hosts = new Set<string>(['localhost']);
+  if (baseHost) {
+    hosts.add(baseHost.toLowerCase());
+  }
+  for (const host of envHosts) {
+    hosts.add(host);
+  }
+  return Array.from(hosts);
+}
+
+function hostMatchesAllowlist(hostname: string, allowlist: string[]): boolean {
+  const lowerHost = hostname.toLowerCase();
+  return allowlist.some((entry) => {
+    const normalized = entry.startsWith('*.') ? entry.slice(2) : entry;
+    if (!normalized) {
+      return false;
+    }
+    if (normalized === 'localhost') {
+      return lowerHost === 'localhost' || lowerHost.endsWith('.localhost');
+    }
+    return lowerHost === normalized || lowerHost.endsWith(`.${normalized}`);
+  });
+}
+
+function isPrivateHostname(hostname: string): boolean {
+  return PRIVATE_HOSTNAME_PATTERNS.some((pattern) => pattern.test(hostname));
+}
+
+function resolveIntegrityEndpoint(): URL {
+  const baseCandidate = process.env.INTEGRITY_SERVICE_URL || process.env.NEXT_PUBLIC_BASE_URL;
+  if (!baseCandidate) {
+    throw new Error('INTEGRITY_SERVICE_URL or NEXT_PUBLIC_BASE_URL must be configured');
+  }
+
+  const normalizedBase = baseCandidate.startsWith('http')
+    ? baseCandidate
+    : `https://${baseCandidate}`;
+
+  let parsedBase: URL;
+  try {
+    parsedBase = new URL(normalizedBase);
+  } catch (error) {
+    throw new Error(
+      `Invalid integrity base URL: ${error instanceof Error ? error.message : 'unknown error'}`,
+    );
+  }
+
+  const hostname = parsedBase.hostname.toLowerCase();
+  const isLocalHost = hostname === 'localhost' || hostname.endsWith('.localhost');
+
+  if (!isLocalHost && isPrivateHostname(hostname)) {
+    throw new Error(`Integrity endpoint cannot target private addresses: ${hostname}`);
+  }
+
+  const allowlist = buildIntegrityAllowlist(hostname);
+  if (!isLocalHost && !hostMatchesAllowlist(hostname, allowlist)) {
+    throw new Error(`Integrity endpoint host '${hostname}' is not allowlisted`);
+  }
+
+  if (!isLocalHost && parsedBase.protocol !== 'https:') {
+    throw new Error('Integrity endpoint must use HTTPS');
+  }
+
+  if (!isLocalHost && parsedBase.port && parsedBase.port !== '443') {
+    throw new Error('Integrity endpoint cannot specify a custom port');
+  }
+
+  parsedBase.pathname = INTEGRITY_ENDPOINT_PATH;
+  parsedBase.search = '';
+  parsedBase.hash = '';
+  parsedBase.username = '';
+  parsedBase.password = '';
+
+  return parsedBase;
+}
+
 // Calculate file hash
 function calculateFileHash(filePath: string): string {
   try {
@@ -291,69 +402,42 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
       });
     }
     
-    // Get current integrity metrics
-    // Construct safe same-origin URL to prevent SSRF
-    // Only use request host header, never trust user-provided URLs
-    const reqHost = req.headers.host || 'localhost:3000';
-    const reqHostname = reqHost.toLowerCase().split(':')[0];
-    
-    // Block private IPs
-    if (reqHostname === '127.0.0.1' || reqHostname.startsWith('192.168.') || reqHostname.startsWith('10.') || reqHostname.startsWith('172.16.')) {
-      return res.status(400).json({
-        success: false,
-        attestation_id: '',
-        ledger_entry_id: '',
-        message: 'Invalid host configuration',
-        timestamp: new Date().toISOString()
-      });
-    }
-    
-    // Construct URL using only validated request host
-    const protocol = req.headers['x-forwarded-proto'] === 'https' ? 'https' : 
-                     (reqHostname.includes('localhost') ? 'http' : 'https');
-    
-    // Reconstruct URL from validated components only
-    const integrityUrl = `${protocol}://${reqHost}/api/integrity-check`;
-    
-    // Final validation: parse and verify the constructed URL is safe
-    let validatedIntegrityUrl: URL;
-    try {
-      validatedIntegrityUrl = new URL(integrityUrl);
-      const validatedHostname = validatedIntegrityUrl.hostname.toLowerCase();
-      
-      // Ensure hostname matches request hostname (same-origin only)
-      if (validatedHostname !== reqHostname && validatedHostname !== 'localhost' && !validatedHostname.endsWith('.localhost')) {
-        throw new Error(`SSRF protection: hostname mismatch`);
+      let safeIntegrityUrl: URL;
+      try {
+        safeIntegrityUrl = resolveIntegrityEndpoint();
+      } catch (error) {
+        console.error('Integrity endpoint misconfiguration:', error);
+        return res.status(500).json({
+          success: false,
+          attestation_id: '',
+          ledger_entry_id: '',
+          message: `Integrity endpoint misconfigured: ${error instanceof Error ? error.message : 'unknown error'}`,
+          timestamp: new Date().toISOString()
+        });
       }
       
-      // Block private IPs
-      if (validatedHostname === '127.0.0.1' || validatedHostname.startsWith('192.168.') || 
-          validatedHostname.startsWith('10.') || validatedHostname.startsWith('172.16.')) {
-        throw new Error(`SSRF protection: private IP not allowed`);
+      let integrityData: any;
+      try {
+        const integrityResponse = await fetch(safeIntegrityUrl.toString(), {
+          headers: {
+            Accept: 'application/json',
+            'User-Agent': 'Release-Attestation/1.0'
+          }
+        });
+        if (!integrityResponse.ok) {
+          throw new Error(`Integrity endpoint responded with status ${integrityResponse.status}`);
+        }
+        integrityData = await integrityResponse.json();
+      } catch (error) {
+        console.error('Integrity metrics request failed:', error);
+        return res.status(502).json({
+          success: false,
+          attestation_id: '',
+          ledger_entry_id: '',
+          message: `Unable to retrieve integrity metrics: ${error instanceof Error ? error.message : 'unknown error'}`,
+          timestamp: new Date().toISOString()
+        });
       }
-      
-      // Ensure HTTPS in production (allow HTTP only for localhost)
-      if (validatedHostname !== 'localhost' && !validatedHostname.endsWith('.localhost') && validatedIntegrityUrl.protocol !== 'https:') {
-        throw new Error(`SSRF protection: HTTPS required for non-localhost`);
-      }
-    } catch (error) {
-      return res.status(400).json({
-        success: false,
-        attestation_id: '',
-        ledger_entry_id: '',
-        message: `Invalid URL configuration: ${error instanceof Error ? error.message : 'unknown error'}`,
-        timestamp: new Date().toISOString()
-      });
-    }
-    
-    // Use validated URL - reconstruct from validated components
-    const finalSafeUrl = `${validatedIntegrityUrl.protocol}//${validatedIntegrityUrl.hostname}${validatedIntegrityUrl.pathname}`;
-    const integrityResponse = await fetch(finalSafeUrl, {
-      headers: {
-        'Host': req.headers.host || '',
-      }
-    });
-    const integrityData = await integrityResponse.json();
     
     // Generate attestation
     const attestation = generateReleaseAttestation(

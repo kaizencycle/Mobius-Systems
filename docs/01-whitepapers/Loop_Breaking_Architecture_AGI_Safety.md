@@ -5,7 +5,7 @@
 *Corresponding Author: michael@mobius-systems.com*
 
 **Version**: 1.0.0  
-**Date**: January 27, 2025  
+**Date**: November 15, 2025  
 **Status**: Publication Candidate
 
 ---
